@@ -1,0 +1,54 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "bash --login -c 'cd build && make -j4'",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {                                                 
+            "label": "Build (With ISO)",
+            "type": "shell",
+            "command": "bash --login -c 'cd build && make -j4 iso'",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "bash --login -c 'cd build && make -j4'; &('C:/Program Files/qemu/qemu-system-i386') -kernel bin/i686/LimeOS.bin -serial mon:stdio",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run (With ISO)",
+            "type": "shell",
+            "command": "bash --login -c 'cd build && make -j4 iso'; &('C:/Program Files/qemu/qemu-system-i386') -cdrom bin/i686/LimeOS.iso -serial mon:stdio",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run in BOCHS (Rqrs. ISO)",
+            "type": "shell",
+            "command": "bash --login -c 'cd build && make -j4 iso'; &('C:/Program Files (x86)/Bochs-2.6.9/bochsdbg.exe') -f emu/bochsrc.bxrc -q",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}

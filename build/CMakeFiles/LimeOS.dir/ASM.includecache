@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/Documents/Code/LimeOS/src/arch/i686/gdt/asm_gdt.asm
+
+/mnt/d/Documents/Code/LimeOS/src/arch/i686/init/loader.asm
+
+/mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/asm_isr.asm
+
+/mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/asm_paging.asm
+

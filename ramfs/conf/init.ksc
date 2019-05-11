@@ -1,0 +1,2 @@
+load /mod/vga_term.elf
+stdout /fio/dev/tty0
