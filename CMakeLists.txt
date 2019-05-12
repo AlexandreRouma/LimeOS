@@ -23,6 +23,8 @@ file(GLOB LIB_VFS "src/common/vfs/*.cpp" "src/common/vfs/*.asm")
 file(GLOB LIB_RAMFS "src/common/ramfs/*.cpp" "src/common/ramfs/*.asm")
 file(GLOB LIB_KIO "src/common/kernio/*.cpp" "src/common/kernio/*.asm")
 file(GLOB LIB_ELF "src/common/elf/*.cpp" "src/common/elf/*.asm")
+file(GLOB LIB_KSC "src/common/kscript/*.cpp" "src/common/kscript/*.asm")
+file(GLOB LIB_KMOD "src/common/kmod/*.cpp" "src/common/kmod/*.asm")
 
 if(${ARCH} STREQUAL "i686")
     # Toolchain config
@@ -30,7 +32,7 @@ if(${ARCH} STREQUAL "i686")
     set(CMAKE_C_COMPILER "i686-elf-gcc")
     set(CMAKE_CXX_COMPILER "i686-elf-g++")
 
-    set(CMAKE_CXX_FLAGS "-DARCH_I686 -DSKSTDOUT=Terminal -DKSTDOUT_MOD= -ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs -Wno-pointer-arith -Wno-varargs ${CMAKE_CXX_FLAGS}")
+    set(CMAKE_CXX_FLAGS "-ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs -Wno-pointer-arith -Wno-varargs ${CMAKE_CXX_FLAGS}")
     set(CMAKE_EXE_LINKER_FLAGS "-T ../src/arch/i686/linker.ld -ffreestanding -O2 -nostdlib -lgcc -Wwrite-strings ${CMAKE_EXE_LINKER_FLAGS}")
 
     # Library source
@@ -39,14 +41,17 @@ if(${ARCH} STREQUAL "i686")
     file(GLOB LIB_IDT "src/arch/i686/interrupts/*.cpp" "src/arch/i686/interrupts/*.asm")
     file(GLOB LIB_PAGING "src/arch/i686/paging/*.cpp" "src/arch/i686/paging/*.asm")
     file(GLOB LIB_VGA "src/arch/i686/temp_vga/*.cpp" "src/arch/i686/temp_vga/*.asm")
+    file(GLOB LIB_KAPI "src/arch/i686/kapi/*.cpp" "src/arch/i686/kapi/*.asm")
 
     include_directories(LimeOS "src/arch/i686")
 
-    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF})
+    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF} ${LIB_KSC} ${LIB_KMOD} ${LIB_KAPI})
     
     # GRUB target
     add_custom_target(iso COMMAND cp ../bin/i686/LimeOS.bin ../bin/i686/iso/boot/LimeOS.bin && grub-mkrescue -o ../bin/i686/LimeOS.iso ../bin/i686/iso)
     add_custom_target(ramfs COMMAND cd ../ramfs && tar -cvf ../bin/i686/iso/ramfs.tar *)
+    add_custom_target(driver_cmake COMMAND cd ../drivers/i686/build && cmake ..)
+    add_custom_target(driver COMMAND cd ../drivers/i686/build && make && echo done)
     add_dependencies(iso LimeOS)
 
     # Output
@@ -58,7 +63,7 @@ elseif(${ARCH} STREQUAL "arm")
     set(CMAKE_C_COMPILER "arm-none-eabi-gcc")
     set(CMAKE_CXX_COMPILER "arm-none-eabi-g++")
 
-    set(CMAKE_CXX_FLAGS "-DARCH_I686 -ffreestanding -O2 ${CMAKE_CXX_FLAGS}")
+    set(CMAKE_CXX_FLAGS "-ffreestanding -O2 ${CMAKE_CXX_FLAGS}")
     set(CMAKE_EXE_LINKER_FLAGS "-ffreestanding -O2 -nostdlib -lgcc ${CMAKE_EXE_LINKER_FLAGS}")
 
     include_directories(LimeOS "src/arch/arm")

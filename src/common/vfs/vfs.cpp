@@ -79,13 +79,13 @@ namespace vfs {
         return res;
     }
 
-    stream getStream(char* dir) {
+    stream_t getStream(char* dir) {
         string tempstr = dir;
         if (!tempstr.endWith("/")) {
             tempstr += '/';
         }
         FSHandler_t handler = getHandler(tempstr.c_str());
-        stream res;
+        stream_t res;
         if (!strcmp(handler.root, "")) {
             string subpath = tempstr.substring(strlen(handler.root) - 1);
             if (!subpath.startsWith("/")) {

@@ -31,6 +31,4 @@ void _init(multiboot_info* multiboot_info) {
     idt::enableInt();
 
     // ========== INTERRUPTS ENABLED ==========
-
-    Terminal.println("Dat shit booted!");
 }

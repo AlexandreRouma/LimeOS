@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ramfs
+
+# Build rule for target.
+ramfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ramfs
+.PHONY : ramfs
+
+# fast build rule for target.
+ramfs/fast:
+	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
+.PHONY : ramfs/fast
+
+#=============================================================================
+# Target rules for targets named driver_cmake
+
+# Build rule for target.
+driver_cmake: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 driver_cmake
+.PHONY : driver_cmake
+
+# fast build rule for target.
+driver_cmake/fast:
+	$(MAKE) -f CMakeFiles/driver_cmake.dir/build.make CMakeFiles/driver_cmake.dir/build
+.PHONY : driver_cmake/fast
+
+#=============================================================================
 # Target rules for targets named LimeOS
 
 # Build rule for target.
@@ -137,17 +163,17 @@ iso/fast:
 .PHONY : iso/fast
 
 #=============================================================================
-# Target rules for targets named ramfs
+# Target rules for targets named driver
 
 # Build rule for target.
-ramfs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ramfs
-.PHONY : ramfs
+driver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 driver
+.PHONY : driver
 
 # fast build rule for target.
-ramfs/fast:
-	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
-.PHONY : ramfs/fast
+driver/fast:
+	$(MAKE) -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/build
+.PHONY : driver/fast
 
 src/arch/i686/gdt/asm_gdt.o: src/arch/i686/gdt/asm_gdt.asm.o
 
@@ -311,6 +337,33 @@ src/arch/i686/interrupts/pic.cpp.s:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.s
 .PHONY : src/arch/i686/interrupts/pic.cpp.s
 
+src/arch/i686/kapi/kapi.o: src/arch/i686/kapi/kapi.cpp.o
+
+.PHONY : src/arch/i686/kapi/kapi.o
+
+# target to build an object file
+src/arch/i686/kapi/kapi.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o
+.PHONY : src/arch/i686/kapi/kapi.cpp.o
+
+src/arch/i686/kapi/kapi.i: src/arch/i686/kapi/kapi.cpp.i
+
+.PHONY : src/arch/i686/kapi/kapi.i
+
+# target to preprocess a source file
+src/arch/i686/kapi/kapi.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.i
+.PHONY : src/arch/i686/kapi/kapi.cpp.i
+
+src/arch/i686/kapi/kapi.s: src/arch/i686/kapi/kapi.cpp.s
+
+.PHONY : src/arch/i686/kapi/kapi.s
+
+# target to generate assembly for a file
+src/arch/i686/kapi/kapi.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.s
+.PHONY : src/arch/i686/kapi/kapi.cpp.s
+
 src/arch/i686/paging/asm_paging.o: src/arch/i686/paging/asm_paging.asm.o
 
 .PHONY : src/arch/i686/paging/asm_paging.o
@@ -428,6 +481,60 @@ src/common/kernio/kernio.cpp.s:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.s
 .PHONY : src/common/kernio/kernio.cpp.s
 
+src/common/kmod/modules.o: src/common/kmod/modules.cpp.o
+
+.PHONY : src/common/kmod/modules.o
+
+# target to build an object file
+src/common/kmod/modules.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o
+.PHONY : src/common/kmod/modules.cpp.o
+
+src/common/kmod/modules.i: src/common/kmod/modules.cpp.i
+
+.PHONY : src/common/kmod/modules.i
+
+# target to preprocess a source file
+src/common/kmod/modules.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.i
+.PHONY : src/common/kmod/modules.cpp.i
+
+src/common/kmod/modules.s: src/common/kmod/modules.cpp.s
+
+.PHONY : src/common/kmod/modules.s
+
+# target to generate assembly for a file
+src/common/kmod/modules.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.s
+.PHONY : src/common/kmod/modules.cpp.s
+
+src/common/kscript/kscript.o: src/common/kscript/kscript.cpp.o
+
+.PHONY : src/common/kscript/kscript.o
+
+# target to build an object file
+src/common/kscript/kscript.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o
+.PHONY : src/common/kscript/kscript.cpp.o
+
+src/common/kscript/kscript.i: src/common/kscript/kscript.cpp.i
+
+.PHONY : src/common/kscript/kscript.i
+
+# target to preprocess a source file
+src/common/kscript/kscript.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.i
+.PHONY : src/common/kscript/kscript.cpp.i
+
+src/common/kscript/kscript.s: src/common/kscript/kscript.cpp.s
+
+.PHONY : src/common/kscript/kscript.s
+
+# target to generate assembly for a file
+src/common/kscript/kscript.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.s
+.PHONY : src/common/kscript/kscript.cpp.s
+
 src/common/misc/liballoc.o: src/common/misc/liballoc.cpp.o
 
 .PHONY : src/common/misc/liballoc.o
@@ -481,6 +588,33 @@ src/common/misc/memory.s: src/common/misc/memory.cpp.s
 src/common/misc/memory.cpp.s:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.s
 .PHONY : src/common/misc/memory.cpp.s
+
+src/common/misc/random.o: src/common/misc/random.cpp.o
+
+.PHONY : src/common/misc/random.o
+
+# target to build an object file
+src/common/misc/random.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o
+.PHONY : src/common/misc/random.cpp.o
+
+src/common/misc/random.i: src/common/misc/random.cpp.i
+
+.PHONY : src/common/misc/random.i
+
+# target to preprocess a source file
+src/common/misc/random.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.i
+.PHONY : src/common/misc/random.cpp.i
+
+src/common/misc/random.s: src/common/misc/random.cpp.s
+
+.PHONY : src/common/misc/random.s
+
+# target to generate assembly for a file
+src/common/misc/random.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.s
+.PHONY : src/common/misc/random.cpp.s
 
 src/common/ramfs/ramfs.o: src/common/ramfs/ramfs.cpp.o
 
@@ -562,6 +696,33 @@ src/common/vfs/fileio.s: src/common/vfs/fileio.cpp.s
 src/common/vfs/fileio.cpp.s:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.s
 .PHONY : src/common/vfs/fileio.cpp.s
+
+src/common/vfs/miscstreams.o: src/common/vfs/miscstreams.cpp.o
+
+.PHONY : src/common/vfs/miscstreams.o
+
+# target to build an object file
+src/common/vfs/miscstreams.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o
+.PHONY : src/common/vfs/miscstreams.cpp.o
+
+src/common/vfs/miscstreams.i: src/common/vfs/miscstreams.cpp.i
+
+.PHONY : src/common/vfs/miscstreams.i
+
+# target to preprocess a source file
+src/common/vfs/miscstreams.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.i
+.PHONY : src/common/vfs/miscstreams.cpp.i
+
+src/common/vfs/miscstreams.s: src/common/vfs/miscstreams.cpp.s
+
+.PHONY : src/common/vfs/miscstreams.s
+
+# target to generate assembly for a file
+src/common/vfs/miscstreams.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.s
+.PHONY : src/common/vfs/miscstreams.cpp.s
 
 src/common/vfs/vfs.o: src/common/vfs/vfs.cpp.o
 
@@ -759,10 +920,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... ramfs"
+	@echo "... driver_cmake"
 	@echo "... LimeOS"
 	@echo "... iso"
-	@echo "... ramfs"
+	@echo "... driver"
+	@echo "... edit_cache"
 	@echo "... src/arch/i686/gdt/asm_gdt.o"
 	@echo "... src/arch/i686/gdt/gdt.o"
 	@echo "... src/arch/i686/gdt/gdt.i"
@@ -781,6 +944,9 @@ help:
 	@echo "... src/arch/i686/interrupts/pic.o"
 	@echo "... src/arch/i686/interrupts/pic.i"
 	@echo "... src/arch/i686/interrupts/pic.s"
+	@echo "... src/arch/i686/kapi/kapi.o"
+	@echo "... src/arch/i686/kapi/kapi.i"
+	@echo "... src/arch/i686/kapi/kapi.s"
 	@echo "... src/arch/i686/paging/asm_paging.o"
 	@echo "... src/arch/i686/paging/paging.o"
 	@echo "... src/arch/i686/paging/paging.i"
@@ -794,12 +960,21 @@ help:
 	@echo "... src/common/kernio/kernio.o"
 	@echo "... src/common/kernio/kernio.i"
 	@echo "... src/common/kernio/kernio.s"
+	@echo "... src/common/kmod/modules.o"
+	@echo "... src/common/kmod/modules.i"
+	@echo "... src/common/kmod/modules.s"
+	@echo "... src/common/kscript/kscript.o"
+	@echo "... src/common/kscript/kscript.i"
+	@echo "... src/common/kscript/kscript.s"
 	@echo "... src/common/misc/liballoc.o"
 	@echo "... src/common/misc/liballoc.i"
 	@echo "... src/common/misc/liballoc.s"
 	@echo "... src/common/misc/memory.o"
 	@echo "... src/common/misc/memory.i"
 	@echo "... src/common/misc/memory.s"
+	@echo "... src/common/misc/random.o"
+	@echo "... src/common/misc/random.i"
+	@echo "... src/common/misc/random.s"
 	@echo "... src/common/ramfs/ramfs.o"
 	@echo "... src/common/ramfs/ramfs.i"
 	@echo "... src/common/ramfs/ramfs.s"
@@ -809,6 +984,9 @@ help:
 	@echo "... src/common/vfs/fileio.o"
 	@echo "... src/common/vfs/fileio.i"
 	@echo "... src/common/vfs/fileio.s"
+	@echo "... src/common/vfs/miscstreams.o"
+	@echo "... src/common/vfs/miscstreams.i"
+	@echo "... src/common/vfs/miscstreams.s"
 	@echo "... src/common/vfs/vfs.o"
 	@echo "... src/common/vfs/vfs.i"
 	@echo "... src/common/vfs/vfs.s"

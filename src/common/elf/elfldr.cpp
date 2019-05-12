@@ -57,10 +57,10 @@ vector<ELFSymbol_t> ELFExec::getSymbols() {
 
 namespace elfldr {
     void run(char* path){
-        stream s = vfs::getStream(path);
+        stream_t s = vfs::getStream(path);
         char* buf = (char*)malloc(s.slen);
-        s.read(buf, s.slen);
-        s.close();
+        stream::read(s, buf, s.slen);
+        stream::close(s);
         ELFExec exec((uint32_t)buf);
 
         uint32_t end = 0;
@@ -98,7 +98,5 @@ namespace elfldr {
         void (*func_ptr)() = (void (*)())(entryPtr);
 
         func_ptr();
-
-        kio::println("<== Returned ==>");
     }
 }

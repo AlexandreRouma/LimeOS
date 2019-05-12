@@ -129,9 +129,33 @@ CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o.provides: CMakeFiles/LimeOS.d
 CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o
 
 
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o: CMakeFiles/LimeOS.dir/flags.make
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o: ../src/common/misc/random.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o"
+	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/misc/random.cpp
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.i"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documents/Code/LimeOS/src/common/misc/random.cpp > CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.i
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.s"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documents/Code/LimeOS/src/common/misc/random.cpp -o CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.s
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.requires:
+
+.PHONY : CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.requires
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.provides: CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.provides.build
+.PHONY : CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.provides
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o
+
+
 CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o: ../src/arch/i686/init/init.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/init/init.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o: ../src/arch/i686/init/loader.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o"
 	i686-elf-as $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/init/loader.asm
 
 CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o.requires:
@@ -171,7 +195,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o.provides.build: CMakeFiles
 
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o: ../src/arch/i686/gdt/gdt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/gdt/gdt.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.i: cmake_force
@@ -195,7 +219,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o.provides.build: CMakeFiles/Lim
 
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o: ../src/arch/i686/gdt/asm_gdt.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o"
 	i686-elf-as $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/gdt/asm_gdt.asm
 
 CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o.requires:
@@ -211,7 +235,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/gdt/asm_gdt.asm.o.provides.build: CMakeFiles
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/arch/i686/interrupts/c_isr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/c_isr.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.i: cmake_force
@@ -235,7 +259,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o.provides.build: CMake
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o: ../src/arch/i686/interrupts/idt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/idt.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.i: cmake_force
@@ -259,7 +283,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/idt.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/arch/i686/interrupts/pic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/pic.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.i: cmake_force
@@ -283,7 +307,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o: ../src/arch/i686/interrupts/asm_isr.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o"
 	i686-elf-as $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/asm_isr.asm
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o.requires:
@@ -299,7 +323,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/asm_isr.asm.o.provides.build: CMa
 
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o: ../src/arch/i686/paging/paging.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/paging.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o: ../src/arch/i686/paging/asm_paging.asm
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building ASM object CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o"
 	i686-elf-as $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/asm_paging.asm
 
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o.requires:
@@ -339,7 +363,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o.provides.build: CMak
 
 CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o: ../src/arch/i686/temp_vga/terminal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/temp_vga/terminal.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.i: cmake_force
@@ -363,7 +387,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o.provides.build: CMak
 
 CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o: ../src/kstd/icxxabi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/kstd/icxxabi.cpp
 
 CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.i: cmake_force
@@ -387,7 +411,7 @@ CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o.provides.build: CMakeFiles/LimeOS.d
 
 CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o: ../src/kstd/new.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/kstd/new.cpp
 
 CMakeFiles/LimeOS.dir/src/kstd/new.cpp.i: cmake_force
@@ -411,7 +435,7 @@ CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o.provides.build: CMakeFiles/LimeOS.dir/s
 
 CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o: ../src/kstd/stream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/kstd/stream.cpp
 
 CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.i: cmake_force
@@ -435,7 +459,7 @@ CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o.provides.build: CMakeFiles/LimeOS.di
 
 CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o: ../src/kstd/string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/kstd/string.cpp
 
 CMakeFiles/LimeOS.dir/src/kstd/string.cpp.i: cmake_force
@@ -459,7 +483,7 @@ CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o.provides.build: CMakeFiles/LimeOS.di
 
 CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o: ../src/kstd/syscalls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/kstd/syscalls.cpp
 
 CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.i: cmake_force
@@ -483,7 +507,7 @@ CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o.provides.build: CMakeFiles/LimeOS.
 
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/vfs/fileio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/vfs/fileio.cpp
 
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.i: cmake_force
@@ -505,9 +529,33 @@ CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o.provides: CMakeFiles/LimeOS.di
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o
 
 
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: CMakeFiles/LimeOS.dir/flags.make
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/vfs/miscstreams.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o"
+	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/vfs/miscstreams.cpp
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.i"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documents/Code/LimeOS/src/common/vfs/miscstreams.cpp > CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.i
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.s"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documents/Code/LimeOS/src/common/vfs/miscstreams.cpp -o CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.s
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.requires:
+
+.PHONY : CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.requires
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.provides: CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.provides.build
+.PHONY : CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.provides
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o
+
+
 CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o: ../src/common/vfs/vfs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/vfs/vfs.cpp
 
 CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.i: cmake_force
@@ -531,7 +579,7 @@ CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o.provides.build: CMakeFiles/LimeOS
 
 CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o: ../src/common/ramfs/ramfs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/ramfs/ramfs.cpp
 
 CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.i: cmake_force
@@ -555,7 +603,7 @@ CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o.provides.build: CMakeFiles/Li
 
 CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o: ../src/common/ramfs/tarfs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/ramfs/tarfs.cpp
 
 CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.i: cmake_force
@@ -579,7 +627,7 @@ CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o.provides.build: CMakeFiles/Li
 
 CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o: ../src/common/kernio/kernio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/kernio/kernio.cpp
 
 CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.i: cmake_force
@@ -603,7 +651,7 @@ CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o: CMakeFiles/LimeOS.dir/flags.make
 CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o: ../src/common/elf/elfldr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o"
 	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/elf/elfldr.cpp
 
 CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.i: cmake_force
@@ -625,11 +673,84 @@ CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o.provides: CMakeFiles/LimeOS.di
 CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o
 
 
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: CMakeFiles/LimeOS.dir/flags.make
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kscript/kscript.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o"
+	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/kscript/kscript.cpp
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.i"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documents/Code/LimeOS/src/common/kscript/kscript.cpp > CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.i
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.s"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documents/Code/LimeOS/src/common/kscript/kscript.cpp -o CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.s
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.requires:
+
+.PHONY : CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.requires
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.provides: CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.provides.build
+.PHONY : CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.provides
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o
+
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: CMakeFiles/LimeOS.dir/flags.make
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kmod/modules.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o"
+	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/common/kmod/modules.cpp
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.i"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documents/Code/LimeOS/src/common/kmod/modules.cpp > CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.i
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.s"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documents/Code/LimeOS/src/common/kmod/modules.cpp -o CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.s
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.requires:
+
+.PHONY : CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.requires
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.provides: CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.provides.build
+.PHONY : CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.provides
+
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o
+
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: CMakeFiles/LimeOS.dir/flags.make
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/kapi/kapi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o"
+	i686-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o -c /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/kapi.cpp
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.i"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/kapi.cpp > CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.i
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.s"
+	i686-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/kapi.cpp -o CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.s
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.requires:
+
+.PHONY : CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.requires
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.provides: CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.provides.build
+.PHONY : CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.provides
+
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.provides.build: CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o
+
+
 # Object files for target LimeOS
 LimeOS_OBJECTS = \
 "CMakeFiles/LimeOS.dir/src/kernel.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o" \
+"CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o" \
 "CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o" \
@@ -647,11 +768,15 @@ LimeOS_OBJECTS = \
 "CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o" \
+"CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o" \
 "CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o" \
-"CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o"
+"CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o" \
+"CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o" \
+"CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o" \
+"CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o"
 
 # External object files for target LimeOS
 LimeOS_EXTERNAL_OBJECTS =
@@ -659,6 +784,7 @@ LimeOS_EXTERNAL_OBJECTS =
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/kernel.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o
+../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o
@@ -676,14 +802,18 @@ LimeOS_EXTERNAL_OBJECTS =
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o
+../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o
+../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o
+../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o
+../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/build.make
 ../bin/i686/LimeOS.bin: CMakeFiles/LimeOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable ../bin/i686/LimeOS.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ../bin/i686/LimeOS.bin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LimeOS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -694,6 +824,7 @@ CMakeFiles/LimeOS.dir/build: ../bin/i686/LimeOS.bin
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/kernel.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o.requires
+CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/arch/i686/init/loader.asm.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/arch/i686/gdt/gdt.cpp.o.requires
@@ -711,11 +842,15 @@ CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o.requ
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o.requires
+CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/ramfs/tarfs.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o.requires
 CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/elf/elfldr.cpp.o.requires
+CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o.requires
+CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o.requires
+CMakeFiles/LimeOS.dir/requires: CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o.requires
 
 .PHONY : CMakeFiles/LimeOS.dir/requires
 

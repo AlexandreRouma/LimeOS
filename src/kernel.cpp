@@ -13,6 +13,9 @@
 #include <syscalls.h>
 #include <kernio/kernio.h>
 #include <elf/elfldr.h>
+#include <vfs/miscstreams.h>
+#include <kscript/kscript.h>
+#include <kmod/modules.h>
 
 struct VBEPMTable_t {
     uint16_t f5_offset;
@@ -22,95 +25,88 @@ struct VBEPMTable_t {
 
 void allocModule(multiboot_module_t mod) {
     paging::setPresent(mod.mod_start, ((mod.mod_end - mod.mod_start) / 4096) + 1);
-    // TODO: Fix pages not being added
-    
-    uint32_t count = ((mod.mod_end - mod.mod_start) / 4096) + 1;
-    for (int i = 0; i < count; i++) {
-        //paging::setPresent(mod.mod_start + (i * 4096), 1);
-    }
 }
 
 void listNodes(char* path) {
-    Terminal.print("Listing ");
-    Terminal.println(path);
+    kio::print("Listing ");
+    kio::println(path);
     if (vfs::nodeExists(path)) {
         vector<FSNode_t> nodes = vfs::listNodes(path);
         for (int i = 0; i < nodes.size(); i++) {
             if (nodes[i].flags & FS_FLAG_D) {
-                Terminal.setColor(0x09);
+                kio::setFore(0x09);
             }
             else {
-                Terminal.setColor(0x07);
+                kio::setFore(0x07);
             }
-            Terminal.print("> ");
-            Terminal.println(nodes[i].name);
+            kio::print("> ");
+            kio::println(nodes[i].name);
         }
-        Terminal.println("");
-        Terminal.setColor(0x0F);
+        kio::println("");
+        kio::setFore(0x0F);
     }
     else {
-        Terminal.print("No such directory: ");
-        Terminal.println(path);
+        kio::print("No such directory: ");
+        kio::println(path);
     }
     
 }
 
 void printFile(char* path) {
     if (vfs::nodeExists(path)) {
-        stream s = vfs::getStream(path);
+        stream_t s = vfs::getStream(path);
         if (s.slen > 0) {
-            Terminal.println("Printing file:");
-            Terminal.println("--------------");
+            kio::println("Printing file:");
+            kio::println("--------------");
             char* buf = (char*)malloc(s.slen + 1);
             buf[s.slen] = 0;
-            s.read(buf, s.slen);
-            Terminal.print(buf);
+            stream::read(s, buf, s.slen);
+            kio::print(buf);
         }
     }
     else {
-        Terminal.print("No such file: ");
-        Terminal.println(path);
+        kio::print("No such file: ");
+        kio::println(path);
     }
 }
 
-uint32_t _writeHndlr(stream* s, uint32_t len, uint64_t pos) {
-    char* str = (char*)malloc(len + 1);
-    memcpy(str, s->buffer, len);
-    str[len] = 0;
-    Terminal.print(str);
-    free(str);
+uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
+    char* buf = (char*)malloc(len + 1);
+    memcpy(buf, s.buffer, len);
+    buf[len] = 0;
+    Terminal.print(buf);
+    free(buf);
     return len;
 }
 
-uint32_t _readHndlr(stream* s, uint32_t len, uint64_t pos) {
+uint32_t _readHndlr(stream_t s, uint32_t len, uint64_t pos) {
     return 0;
 }
 
-void _closeHndlr(stream* s) {
+void _closeHndlr(stream_t s) {
     
 }
 
 extern "C"
 void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     _init(multiboot_info);
-    kio::stdout = stream(0x1000, 10,_writeHndlr, _readHndlr, _closeHndlr, 0);
 
-    kio::printf("THIS WAS PRINTED WITH STDOUT!!! %08x\n", 0xDEADBEEF);
-
-
-    Terminal.println("LimeOS v1.2");
-
+    // Init VFS
     vfs::init();
-    Terminal.println("VFS driver initialized");
 
+    // Init fileio
     fio::init();
-    Terminal.println("Fileio driver initialized");
+    miscstrms::init();
 
-    kio::printf("\n\nUsed memory: %u bytes\n\n", paging::getUsedPages() * 4096);
+    // Init term driver
+    fio::mountStream("/dev/tty0", FS_FLAG_O_W, stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, NULL));
 
+    // Redirect kernel stdout
+    kio::stdout = vfs::getStream("/fio/dev/tty0");
+
+    // Load ram filesystem
     multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
-    
-    Terminal.println("Loading ramfs...");
+    kio::println("Loading ramfs...");
     int id = -1;
 
     for (int i = 0; i < multiboot_info->mods_count; i++) {
@@ -124,12 +120,13 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     allocModule(mods[id]);
     tarfs::init(mods[id].mod_start, "/");
 
-    listNodes("/");
-    listNodes("/bin");
+    // Init module interface
+    kmod::init();
+    kmod::load("/mod/vga_textmode.elf");
 
-    kio::printf("\n\nUsed memory: %u bytes\n\n", paging::getUsedPages() * 4096);
-
-    elfldr::run("/bin/test.elf");
+    // run kscript
+    ksc::init();
+    ksc::run("/conf/init.ksc");
 
     /*
     - drivers are loaded via a kernscript

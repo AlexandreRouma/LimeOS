@@ -60,13 +60,77 @@ CMAKE_SOURCE_DIR = /mnt/d/Documents/Code/LimeOS
 CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/ramfs.dir
+
+# All Build rule for target.
+CMakeFiles/ramfs.dir/all:
+	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/depend
+	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num= "Built target ramfs"
+.PHONY : CMakeFiles/ramfs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ramfs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ramfs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
+.PHONY : CMakeFiles/ramfs.dir/rule
+
+# Convenience name for target.
+ramfs: CMakeFiles/ramfs.dir/rule
+
+.PHONY : ramfs
+
+# clean rule for target.
+CMakeFiles/ramfs.dir/clean:
+	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/clean
+.PHONY : CMakeFiles/ramfs.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ramfs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/driver_cmake.dir
+
+# All Build rule for target.
+CMakeFiles/driver_cmake.dir/all:
+	$(MAKE) -f CMakeFiles/driver_cmake.dir/build.make CMakeFiles/driver_cmake.dir/depend
+	$(MAKE) -f CMakeFiles/driver_cmake.dir/build.make CMakeFiles/driver_cmake.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num= "Built target driver_cmake"
+.PHONY : CMakeFiles/driver_cmake.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/driver_cmake.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/driver_cmake.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
+.PHONY : CMakeFiles/driver_cmake.dir/rule
+
+# Convenience name for target.
+driver_cmake: CMakeFiles/driver_cmake.dir/rule
+
+.PHONY : driver_cmake
+
+# clean rule for target.
+CMakeFiles/driver_cmake.dir/clean:
+	$(MAKE) -f CMakeFiles/driver_cmake.dir/build.make CMakeFiles/driver_cmake.dir/clean
+.PHONY : CMakeFiles/driver_cmake.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/driver_cmake.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/LimeOS.dir
 
 # All Build rule for target.
 CMakeFiles/LimeOS.dir/all:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/depend
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target LimeOS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target LimeOS"
 .PHONY : CMakeFiles/LimeOS.dir/all
 
 # Include target in all.
@@ -76,7 +140,7 @@ all: CMakeFiles/LimeOS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LimeOS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LimeOS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
 .PHONY : CMakeFiles/LimeOS.dir/rule
@@ -108,7 +172,7 @@ CMakeFiles/iso.dir/all: CMakeFiles/LimeOS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/iso.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/iso.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
 .PHONY : CMakeFiles/iso.dir/rule
@@ -129,34 +193,34 @@ clean: CMakeFiles/iso.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ramfs.dir
+# Target rules for target CMakeFiles/driver.dir
 
 # All Build rule for target.
-CMakeFiles/ramfs.dir/all:
-	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/depend
-	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num= "Built target ramfs"
-.PHONY : CMakeFiles/ramfs.dir/all
+CMakeFiles/driver.dir/all:
+	$(MAKE) -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/depend
+	$(MAKE) -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/build/CMakeFiles --progress-num= "Built target driver"
+.PHONY : CMakeFiles/driver.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ramfs.dir/rule: cmake_check_build_system
+CMakeFiles/driver.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ramfs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/driver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/build/CMakeFiles 0
-.PHONY : CMakeFiles/ramfs.dir/rule
+.PHONY : CMakeFiles/driver.dir/rule
 
 # Convenience name for target.
-ramfs: CMakeFiles/ramfs.dir/rule
+driver: CMakeFiles/driver.dir/rule
 
-.PHONY : ramfs
-
-# clean rule for target.
-CMakeFiles/ramfs.dir/clean:
-	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/clean
-.PHONY : CMakeFiles/ramfs.dir/clean
+.PHONY : driver
 
 # clean rule for target.
-clean: CMakeFiles/ramfs.dir/clean
+CMakeFiles/driver.dir/clean:
+	$(MAKE) -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/clean
+.PHONY : CMakeFiles/driver.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/driver.dir/clean
 
 .PHONY : clean
 

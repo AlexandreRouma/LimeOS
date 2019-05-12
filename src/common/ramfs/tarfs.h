@@ -19,5 +19,5 @@ namespace tarfs {
     TARFSNode_t getTARFSNode(char* dir);
     bool nodeExists(char* dir);
     //FSNode_t getNode(char* path);
-    stream getStream(char* path);
+    stream_t getStream(char* path);
 }

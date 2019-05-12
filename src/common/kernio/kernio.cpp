@@ -3,14 +3,14 @@
 #include <stdarg.h>
 
 namespace kio {
-    stream stdout;
+    stream_t stdout;
 
     void print(char* str) {
-        stdout.write(str, strlen(str));
+        stream::write(stdout, str, strlen(str));
     }
 
     void print(string str) {
-        stdout.write(str.c_str(), str.length());
+        stream::write(stdout, str.c_str(), str.length());
     }
     
     void println(char* str) {
@@ -18,14 +18,14 @@ namespace kio {
         memcpy(_str, str, strlen(str));
         _str[strlen(str)] = '\n';
         _str[strlen(str) + 1] = 0;
-        stdout.write(_str, strlen(_str));
+        stream::write(stdout, _str, strlen(_str));
         free(_str);
     }
     
     void println(string str) {
         string _str = str;
         _str += '\n';
-        stdout.write(_str.c_str(), _str.length());
+        stream::write(stdout, _str.c_str(), _str.length());
     }
 
     void printf(string str, ...) {
@@ -132,5 +132,31 @@ namespace kio {
         }
         va_end(arguments);
         print(out);
+    }
+
+    void setFore(uint8_t color) {
+        if (color > 7) {
+            printf("\x1B[1;%um", (color - 8) + 30);
+        }
+        else {
+            printf("\x1B[%um", color + 30);
+        }
+    }
+
+    void setBack(uint8_t color) {
+        if (color > 7) {
+            printf("\x1B[1;%um", (color - 8) + 40);
+        }
+        else {
+            printf("\x1B[%um", color + 40);
+        }
+    }
+    
+    void setCursor(uint32_t x, uint32_t y) {
+        printf("\x1B[%u;%uH", y, x);
+    }
+    
+    void clear() {
+        // TODO: Implement
     }
 }

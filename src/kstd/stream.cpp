@@ -1,95 +1,61 @@
 #include <stream.h>
 
-stream::stream(uint32_t bufsz, uint64_t len, uint32_t (*_write)(stream*,uint32_t,uint64_t), uint32_t (*_read)(stream*,uint32_t,uint64_t), void (*_close)(stream*), void* _tag) {
-    buffer = (char*)malloc(bufsz);
-    buffersz = bufsz;
-    slen = len;
-    writeHndlr = _write;
-    readHndlr = _read;
-    closeHndlr = _close;
-    tag = _tag;
-    wpos = 0;
-    rpos = 0;
-}
+namespace stream {
+    stream_t create(uint32_t buffersz, uint64_t slen, uint32_t (*writeHndlr)(stream_t,uint32_t,uint64_t), uint32_t (*readHndlr)(stream_t,uint32_t,uint64_t), void (*closeHndlr)(stream_t), void* tag) {
+        stream_t s;
+        s.buffersz = buffersz;
+        s.slen = slen;
+        s.rpos = 0;
+        s.wpos = 0;
+        s.writeHndlr = writeHndlr;
+        s.readHndlr = readHndlr;
+        s.closeHndlr = closeHndlr;
+        s.tag = tag;
+        s.buffer = (char*)malloc(buffersz);
+        return s;
+    }
 
-stream::stream(const stream& s) {
-    buffer = s.buffer;
-    buffersz = s.buffersz;
-    slen = s.slen;
-    rpos = s.rpos;
-    wpos = s.wpos;
-    writeHndlr = s.writeHndlr;
-    readHndlr = s.readHndlr;
-    closeHndlr = s.closeHndlr;
-    tag = s.tag;
-}
+    void close(stream_t s) {
+        s.closeHndlr(s);
+    }
 
-stream::stream() {
-
-}
-
-stream::~stream() {
-    
-}
-
-void stream::close() {
-    closeHndlr(this);
-    free(buffer);
-    buffersz = 0;
-    slen = 0;
-    wpos = 0;
-    rpos = 0;
-}
-
-uint32_t stream::write(char* buf, uint32_t len) {
-    int n = len / buffersz;
-    int last = len % buffersz;
-    int written = 0;
-    for (int i = 0; i < n; i++) {
-        memcpy(buffer, buf + (buffersz * i), buffersz);
-        int w = writeHndlr(this, buffersz, wpos);
-        wpos += w;
+    uint32_t write(stream_t s, char* buf, uint32_t len) {
+        int n = len / s.buffersz;
+        int last = len % s.buffersz;
+        int written = 0;
+        for (int i = 0; i < n; i++) {
+            memcpy(s.buffer, buf + (s.buffersz * i), s.buffersz);
+            int w = s.writeHndlr(s, s.buffersz, s.wpos);
+            s.wpos += w;
+            written += w;
+            if (w == 0) {
+                return written;
+            }
+        }
+        memcpy(s.buffer, buf + (s.buffersz * n), s.buffersz);
+        int w = s.writeHndlr(s, last, s.wpos);
+        s.wpos += w;
         written += w;
-        if (w == 0) {
-            return written;
-        }
+        return written;
     }
-    memcpy(buffer, buf + (buffersz * n), buffersz);
-    int w = writeHndlr(this, last, wpos);
-    wpos += w;
-    written += w;
-    return written;
-}
 
-uint32_t stream::read(char* buf, uint32_t len) {
-    int n = len / buffersz;
-    int last = len % buffersz;
-    int read = 0;
-    for (int i = 0; i < n; i++) {
-        int r = readHndlr(this, buffersz, rpos);
-        memcpy(buf + (buffersz * i), buffer, r);
-        rpos += r;
+    uint32_t read(stream_t s, char* buf, uint32_t len) {
+        int n = len / s.buffersz;
+        int last = len % s.buffersz;
+        int read = 0;
+        for (int i = 0; i < n; i++) {
+            int r = s.readHndlr(s, s.buffersz, s.rpos);
+            memcpy(buf + (s.buffersz * i), s.buffer, r);
+            s.rpos += r;
+            read += r;
+            if (r == 0) {
+                return read;
+            }
+        }
+        int r = s.readHndlr(s, last, s.rpos);
+        memcpy(buf + (s.buffersz * n), s.buffer, r);
+        s.rpos += r;
         read += r;
-        if (r == 0) {
-            return read;
-        }
+        return read;
     }
-    int r = readHndlr(this, last, rpos);
-    memcpy(buf + (buffersz * n), buffer, r);
-    rpos += r;
-    read += r;
-    return read;
-}
-
-stream & stream::operator=(const stream& s) {
-    buffer = s.buffer;
-    buffersz = s.buffersz;
-    slen = s.slen;
-    rpos = s.rpos;
-    wpos = s.wpos;
-    writeHndlr = s.writeHndlr;
-    readHndlr = s.readHndlr;
-    closeHndlr = s.closeHndlr;
-    tag = s.tag;
-    return *this;
 }

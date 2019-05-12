@@ -27,7 +27,7 @@ struct FSHandler_t {
     int (*createNode)(char*, uint16_t flags);
     int (*deleteNodes)(char*);
     bool (*nodeExists)(char*);
-    stream (*getStream)(char*);
+    stream_t (*getStream)(char*);
     bool writable;
     bool editable;
 };
@@ -38,7 +38,7 @@ namespace vfs {
     int createNode(char* dir);
     int deleteNode(char* dir);
     bool nodeExists(char* dir);
-    stream getStream(char* dir);
+    stream_t getStream(char* dir);
     bool registerFSHndlr(FSHandler_t handler);
     FSHandler_t getHandler(char* dir);
 }

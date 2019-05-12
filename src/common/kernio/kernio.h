@@ -28,5 +28,10 @@ namespace kio {
     void println(string str);
     void printf(string str, ...);
 
-    extern stream stdout;
+    void setFore(uint8_t color);
+    void setBack(uint8_t color);
+    void setCursor(uint32_t x, uint32_t y);
+    void clear();
+
+    extern stream_t stdout;
 }

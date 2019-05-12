@@ -22,6 +22,14 @@ stdint.h
 stdint.h
 -
 
+../src/arch/i686/kapi/kapi.h
+stdint.h
+-
+stdarg.h
+-
+stream.h
+-
+
 ../src/arch/i686/paging/paging.h
 stdint.h
 -
@@ -54,6 +62,18 @@ stream.h
 stdarg.h
 -
 
+../src/common/kmod/modules.h
+stdint.h
+-
+elf/elfldr.h
+-
+string.h
+-
+
+../src/common/kscript/kscript.h
+stdint.h
+-
+
 ../src/common/misc/cpuio.h
 stdint.h
 -
@@ -61,6 +81,10 @@ stdint.h
 ../src/common/misc/liballoc.h
 
 ../src/common/misc/memory.h
+stdint.h
+-
+
+../src/common/misc/random.h
 stdint.h
 -
 
@@ -96,6 +120,10 @@ stdint.h
 vfs/vfs.h
 -
 vector.h
+-
+
+../src/common/vfs/miscstreams.h
+vfs/fileio.h
 -
 
 ../src/common/vfs/vfs.h
@@ -202,6 +230,12 @@ misc/cpuio.h
 interrupts/pic.h
 -
 
+/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/kapi.cpp
+kapi/kapi.h
+-
+kernio/kernio.h
+-
+
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/paging.cpp
 stdint.h
 -
@@ -240,6 +274,36 @@ temp_vga/terminal.h
 stdarg.h
 -
 
+/mnt/d/Documents/Code/LimeOS/src/common/kmod/modules.cpp
+kmod/modules.h
+-
+elf/elfldr.h
+-
+map.h
+-
+paging/paging.h
+-
+kernio/kernio.h
+-
+vfs/vfs.h
+-
+kapi/kapi.h
+-
+
+/mnt/d/Documents/Code/LimeOS/src/common/kscript/kscript.cpp
+kscript/kscript.h
+-
+vfs/vfs.h
+-
+panic.h
+-
+kernio/kernio.h
+-
+map.h
+-
+elf/elfldr.h
+-
+
 /mnt/d/Documents/Code/LimeOS/src/common/misc/liballoc.cpp
 misc/liballoc.h
 -
@@ -250,6 +314,10 @@ kernio/kernio.h
 
 /mnt/d/Documents/Code/LimeOS/src/common/misc/memory.cpp
 misc/memory.h
+-
+
+/mnt/d/Documents/Code/LimeOS/src/common/misc/random.cpp
+misc/random.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/common/ramfs/ramfs.cpp
@@ -284,6 +352,16 @@ kernio/kernio.h
 
 /mnt/d/Documents/Code/LimeOS/src/common/vfs/fileio.cpp
 vfs/fileio.h
+-
+map.h
+-
+
+/mnt/d/Documents/Code/LimeOS/src/common/vfs/miscstreams.cpp
+vfs/miscstreams.h
+-
+vfs/fileio.h
+-
+misc/random.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/common/vfs/vfs.cpp
@@ -328,6 +406,12 @@ syscalls.h
 kernio/kernio.h
 -
 elf/elfldr.h
+-
+vfs/miscstreams.h
+-
+kscript/kscript.h
+-
+kmod/modules.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/kstd/./icxxabi.h

@@ -48,6 +48,18 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/common/misc/cpu
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/kstd/stdint.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/arch/i686/interrupts/pic.cpp
 
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/kapi/kapi.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/temp_vga/terminal.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/kernio/kernio.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/misc/liballoc.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/stdarg.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/stream.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/string.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/vector.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/kapi/kapi.cpp
+
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o: ../src/arch/i686/paging/paging.h
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/arch/i686/paging/paging.cpp.o: ../src/common/misc/liballoc.h
@@ -92,6 +104,41 @@ CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o: ../src/kstd/string.h
 CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o: ../src/kstd/vector.h
 CMakeFiles/LimeOS.dir/src/common/kernio/kernio.cpp.o: ../src/common/kernio/kernio.cpp
 
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/arch/i686/kapi/kapi.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/arch/i686/paging/paging.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/arch/i686/temp_vga/terminal.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/elf/elf.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/elf/elfldr.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kernio/kernio.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kmod/modules.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/misc/liballoc.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/vfs/vfs.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/map.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/stdarg.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/stream.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/string.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/vector.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kmod/modules.cpp
+
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/arch/i686/temp_vga/terminal.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/elf/elf.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/elf/elfldr.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kernio/kernio.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kscript/kscript.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/misc/liballoc.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/panic.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/vfs/vfs.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/map.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/stdarg.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/stream.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/string.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/vector.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kscript/kscript.cpp
+
 CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o: ../src/arch/i686/paging/paging.h
 CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o: ../src/common/kernio/kernio.h
@@ -107,6 +154,10 @@ CMakeFiles/LimeOS.dir/src/common/misc/liballoc.cpp.o: ../src/common/misc/liballo
 CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o: ../src/common/misc/memory.h
 CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o: ../src/kstd/stdint.h
 CMakeFiles/LimeOS.dir/src/common/misc/memory.cpp.o: ../src/common/misc/memory.cpp
+
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o: ../src/common/misc/random.h
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/common/misc/random.cpp.o: ../src/common/misc/random.cpp
 
 CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/common/ramfs/ramfs.cpp.o: ../src/common/misc/liballoc.h
@@ -141,11 +192,25 @@ CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/misc/memory.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/vfs/fileio.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/vfs/vfs.h
+CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/kstd/map.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/kstd/stdint.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/kstd/stream.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/kstd/string.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/kstd/vector.h
 CMakeFiles/LimeOS.dir/src/common/vfs/fileio.cpp.o: ../src/common/vfs/fileio.cpp
+
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/arch/i686/temp_vga/terminal.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/misc/liballoc.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/misc/random.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/vfs/fileio.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/vfs/miscstreams.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/vfs/vfs.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/kstd/stream.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/kstd/string.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/kstd/vector.h
+CMakeFiles/LimeOS.dir/src/common/vfs/miscstreams.cpp.o: ../src/common/vfs/miscstreams.cpp
 
 CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o: ../src/common/misc/liballoc.h
@@ -164,12 +229,15 @@ CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/elf/elf.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/elf/elfldr.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/kernio/kernio.h
+CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/kmod/modules.h
+CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/kscript/kscript.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/misc/memory.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/multiboot/multiboot.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/panic.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/ramfs/tarfs.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/vfs/fileio.h
+CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/vfs/miscstreams.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/common/vfs/vfs.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/kstd/stdarg.h
 CMakeFiles/LimeOS.dir/src/kernel.cpp.o: ../src/kstd/stdint.h

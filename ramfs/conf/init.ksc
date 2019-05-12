@@ -1,2 +1,3 @@
-load /mod/vga_term.elf
-stdout /fio/dev/tty0
+print Running /bin/helloworld.elf
+run /bin/helloworld.elf
+

@@ -9,7 +9,7 @@ ASM_DEFINES =
 
 ASM_INCLUDES = -I/mnt/d/Documents/Code/LimeOS/LimeOS -I/mnt/d/Documents/Code/LimeOS/src/common -I/mnt/d/Documents/Code/LimeOS/src/kstd -I/mnt/d/Documents/Code/LimeOS/src/arch/i686 
 
-CXX_FLAGS = -DARCH_I686 -DSKSTDOUT=Terminal -DKSTDOUT_MOD= -ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs -Wno-pointer-arith -Wno-varargs   
+CXX_FLAGS = -ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs -Wno-pointer-arith -Wno-varargs   
 
 CXX_DEFINES = 
 
