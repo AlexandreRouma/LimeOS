@@ -1,4 +1,6 @@
-bin/i686/LimeOS.bin
-bin/i686/LimeOS.iso
-bin/i686/iso/ramfs.tar
-bin/i686/iso/boot/LimeOS.bin
+/build
+
+/bin/i686/LimeOS.bin
+/bin/i686/LimeOS.iso
+/bin/i686/iso/ramfs.tar
+/bin/i686/iso/boot/LimeOS.bin
