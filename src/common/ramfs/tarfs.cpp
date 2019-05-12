@@ -51,6 +51,7 @@ namespace tarfs {
     FSHandler_t _handler;
 
     void fillIndex() {
+        vector<uint32_t> testvec;
         bool done = false;
         uint32_t boffset = 0;
         uint8_t* buffer = (uint8_t*)offset;
@@ -79,9 +80,7 @@ namespace tarfs {
             node.size = length;
             node.data = (char*)(offset + boffset + 512);
 
-            kio::println(_name);
             _index.insert(_name, node); // copy name
-            kio::println("__inserted__");
 
             boffset += (length / 512) * 512;
             if (length % 512 > 0) {

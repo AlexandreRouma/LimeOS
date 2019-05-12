@@ -89,6 +89,7 @@ stream & stream::operator=(const stream& s) {
     wpos = s.wpos;
     writeHndlr = s.writeHndlr;
     readHndlr = s.readHndlr;
+    closeHndlr = s.closeHndlr;
     tag = s.tag;
     return *this;
 }

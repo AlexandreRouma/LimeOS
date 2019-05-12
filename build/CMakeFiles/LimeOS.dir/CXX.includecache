@@ -120,6 +120,10 @@ temp_vga/terminal.h
 stdint.h
 -
 
+../src/kstd/new.h
+misc/liballoc.h
+-
+
 ../src/kstd/stdarg.h
 
 ../src/kstd/stdint.h
@@ -223,6 +227,10 @@ elf/elf.h
 -
 kernio/kernio.h
 -
+vfs/vfs.h
+-
+paging/paging.h
+-
 
 /mnt/d/Documents/Code/LimeOS/src/common/kernio/kernio.cpp
 kernio/kernio.h
@@ -237,7 +245,7 @@ misc/liballoc.h
 -
 paging/paging.h
 -
-stdio.h
+kernio/kernio.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/common/misc/memory.cpp
@@ -327,6 +335,14 @@ elf/elfldr.h
 /mnt/d/Documents/Code/LimeOS/src/kstd/icxxabi.cpp
 ./icxxabi.h
 /mnt/d/Documents/Code/LimeOS/src/kstd/./icxxabi.h
+misc/liballoc.h
+-
+
+/mnt/d/Documents/Code/LimeOS/src/kstd/new.cpp
+new.h
+-
+misc/liballoc.h
+-
 
 /mnt/d/Documents/Code/LimeOS/src/kstd/stream.cpp
 stream.h

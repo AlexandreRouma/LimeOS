@@ -12,7 +12,7 @@ void KERN_EXEC_SYSCALL(uint32_t id, uint32_t ebx, uint32_t ecx, uint32_t edx) {
         char* str = (char*)(ebx + ecx);
         Terminal.print(str);
     }
-    if (id == 0x01) {
+    else if (id == 0x01) {
         //char* c = Keyboard.getKeyChar(Keyboard.readEvent(true));
     }
     else {

@@ -43,6 +43,8 @@ vector<T>::vector(const vector<T>& v) {
 
 template<class T>
 vector<T>::~vector() {
+    //delete[] _items;
+    // TODO: FIX ALL THIS CRAP (use new to init items and fix delete)
     free(_items);
     _items = (T*)0;
     itemCount = 0;
@@ -51,9 +53,13 @@ vector<T>::~vector() {
 
 template<class T>
 void vector<T>::push_back(T item) {
+    T* temp = new T[itemCount + 1];
+    for (int i = 0; i < itemCount; i++) {
+        temp[i] = _items[i];
+    }
+    temp[itemCount] = item;
     itemCount++;
-    _items = (T*)realloc(_items, itemCount * sizeof(T));
-    _items[itemCount - 1] = item;
+    _items = temp;
 }
 
 template<class T>

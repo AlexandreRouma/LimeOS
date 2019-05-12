@@ -26,7 +26,6 @@ namespace kio {
     void print(string str);
     void println(char* str);
     void println(string str);
-    void printf(char* str, ...);
     void printf(string str, ...);
 
     extern stream stdout;

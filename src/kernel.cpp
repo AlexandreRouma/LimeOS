@@ -129,24 +129,7 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
 
     kio::printf("\n\nUsed memory: %u bytes\n\n", paging::getUsedPages() * 4096);
 
-    kio::println("Loading elf...");
-    stream s = vfs::getStream("/bin/i8080_tests.elf");
-    kio::printf("ELF size: %u bytes\n", s.slen);
-    char* buf = (char*)malloc(s.slen);
-    s.read(buf, s.slen);
-    s.close();
-
-    ELFExec exec((uint32_t)buf);
-    kio::printf("ELF magic: 0x%08x\n", exec.header->magic);
-
-    vector<ELFSection_t> sect = exec.getSections();
-
-    kio::println("Sections:");
-    kio::printf("%u\n", sect.size());
-    for (int i = 0; i < sect.size(); i++) {
-        //kio::println(sect[i].name);
-    }
-    
+    elfldr::run("/bin/test.elf");
 
     /*
     - drivers are loaded via a kernscript

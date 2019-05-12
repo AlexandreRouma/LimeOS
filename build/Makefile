@@ -644,6 +644,33 @@ src/kstd/icxxabi.cpp.s:
 	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.s
 .PHONY : src/kstd/icxxabi.cpp.s
 
+src/kstd/new.o: src/kstd/new.cpp.o
+
+.PHONY : src/kstd/new.o
+
+# target to build an object file
+src/kstd/new.cpp.o:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o
+.PHONY : src/kstd/new.cpp.o
+
+src/kstd/new.i: src/kstd/new.cpp.i
+
+.PHONY : src/kstd/new.i
+
+# target to preprocess a source file
+src/kstd/new.cpp.i:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/kstd/new.cpp.i
+.PHONY : src/kstd/new.cpp.i
+
+src/kstd/new.s: src/kstd/new.cpp.s
+
+.PHONY : src/kstd/new.s
+
+# target to generate assembly for a file
+src/kstd/new.cpp.s:
+	$(MAKE) -f CMakeFiles/LimeOS.dir/build.make CMakeFiles/LimeOS.dir/src/kstd/new.cpp.s
+.PHONY : src/kstd/new.cpp.s
+
 src/kstd/stream.o: src/kstd/stream.cpp.o
 
 .PHONY : src/kstd/stream.o
@@ -791,6 +818,9 @@ help:
 	@echo "... src/kstd/icxxabi.o"
 	@echo "... src/kstd/icxxabi.i"
 	@echo "... src/kstd/icxxabi.s"
+	@echo "... src/kstd/new.o"
+	@echo "... src/kstd/new.i"
+	@echo "... src/kstd/new.s"
 	@echo "... src/kstd/stream.o"
 	@echo "... src/kstd/stream.i"
 	@echo "... src/kstd/stream.s"

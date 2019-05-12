@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LimeOS.dir/src/arch/i686/paging/asm_paging.asm.o"
   "CMakeFiles/LimeOS.dir/src/arch/i686/temp_vga/terminal.cpp.o"
   "CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o"
+  "CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o"
   "CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o"
   "CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o"
   "CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o"

@@ -37,6 +37,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/Documents/Code/LimeOS/src/common/vfs/vfs.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/common/vfs/vfs.cpp.o"
   "/mnt/d/Documents/Code/LimeOS/src/kernel.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kernel.cpp.o"
   "/mnt/d/Documents/Code/LimeOS/src/kstd/icxxabi.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kstd/icxxabi.cpp.o"
+  "/mnt/d/Documents/Code/LimeOS/src/kstd/new.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kstd/new.cpp.o"
   "/mnt/d/Documents/Code/LimeOS/src/kstd/stream.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kstd/stream.cpp.o"
   "/mnt/d/Documents/Code/LimeOS/src/kstd/string.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kstd/string.cpp.o"
   "/mnt/d/Documents/Code/LimeOS/src/kstd/syscalls.cpp" "/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir/src/kstd/syscalls.cpp.o"
