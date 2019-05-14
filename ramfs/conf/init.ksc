@@ -1,3 +1,4 @@
-print Running /bin/helloworld.elf
-run /bin/helloworld.elf
+loadmod /mod/vga_textmode.elf
+#stdout /fio/dev/tty0
 
+print Everything worked!

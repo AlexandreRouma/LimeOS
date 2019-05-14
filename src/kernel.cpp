@@ -87,6 +87,12 @@ void _closeHndlr(stream_t s) {
     
 }
 
+stream_t teststream;
+
+stream_t provider() {
+    return teststream;
+}
+
 extern "C"
 void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     _init(multiboot_info);
@@ -99,10 +105,11 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     miscstrms::init();
 
     // Init term driver
-    fio::mountStream("/dev/tty0", FS_FLAG_O_W, stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, NULL));
+    teststream = stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, NULL);
+    fio::mountStreamProvider("/dev/tty1", FS_FLAG_O_W, provider);
 
     // Redirect kernel stdout
-    kio::stdout = vfs::getStream("/fio/dev/tty0");
+    kio::stdout = vfs::getStream("/fio/dev/tty1");
 
     // Load ram filesystem
     multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
@@ -122,11 +129,14 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
 
     // Init module interface
     kmod::init();
-    kmod::load("/mod/vga_textmode.elf");
+
+    listNodes("/fio/dev");
 
     // run kscript
     ksc::init();
     ksc::run("/conf/init.ksc");
+
+    listNodes("/fio/dev");
 
     /*
     - drivers are loaded via a kernscript

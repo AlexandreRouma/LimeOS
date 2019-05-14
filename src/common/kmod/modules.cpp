@@ -4,7 +4,7 @@
 #include <paging/paging.h>
 #include <kernio/kernio.h>
 #include <vfs/vfs.h>
-#include <kapi/kapi.h>
+#include <kapi/api/kapi.h>
 
 namespace kmod {
     map<string,KModule_t> modules;
@@ -53,9 +53,7 @@ namespace kmod {
         }
 
         bool (*func_ptr)(KAPI_t) = (bool (*)(KAPI_t))(entryPtr);
-
-        kio::printf("print_addr = 0x%X", kapi::api.kio.print);
-
+        
         bool ret = func_ptr(kapi::api);
         if (ret == true) {
             // TODO: Save module

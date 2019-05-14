@@ -4,6 +4,7 @@
 #include <kernio/kernio.h>
 #include <map.h>
 #include <elf/elfldr.h>
+#include <kmod/modules.h>
 
 namespace ksc {
     map<string, void (*)(string, vector<string>)> commands;
@@ -28,6 +29,14 @@ namespace ksc {
         }
         elfldr::run(text.c_str());
     }
+
+    void _cmd_loadmod(string text, vector<string> args) {
+        if (!vfs::nodeExists(text.c_str())) {
+            kpanic("Tried to load inexistant module", 0);
+            return;
+        }
+        kmod::load(text.c_str());
+    }
     // <=== COMMANDS ===>
 
     void init() {
@@ -35,6 +44,7 @@ namespace ksc {
         commands.insert("print", _cmd_print);
         commands.insert("stdout", _cmd_stdout);
         commands.insert("run", _cmd_run);
+        commands.insert("loadmod", _cmd_loadmod);
     }
 
     void run(char* path) {

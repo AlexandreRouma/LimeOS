@@ -6,7 +6,8 @@
                 "${workspaceFolder}/src",
                 "${workspaceFolder}/src/kstd",
                 "${workspaceFolder}/src/common",
-                "${workspaceFolder}/src/arch/i686"
+                "${workspaceFolder}/src/arch/i686",
+                "${workspaceFolder}/src/arch/i686/kapi/api"
             ],
             "defines": [
                 "_DEBUG",

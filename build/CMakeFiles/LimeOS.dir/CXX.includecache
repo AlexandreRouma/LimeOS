@@ -22,7 +22,7 @@ stdint.h
 stdint.h
 -
 
-../src/arch/i686/kapi/kapi.h
+../src/arch/i686/kapi/api/kapi.h
 stdint.h
 -
 stdarg.h
@@ -231,9 +231,13 @@ interrupts/pic.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/kapi.cpp
-kapi/kapi.h
+kapi/api/kapi.h
 -
 kernio/kernio.h
+-
+vfs/fileio.h
+-
+misc/liballoc.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/paging.cpp
@@ -287,7 +291,7 @@ kernio/kernio.h
 -
 vfs/vfs.h
 -
-kapi/kapi.h
+kapi/api/kapi.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/common/kscript/kscript.cpp
@@ -302,6 +306,8 @@ kernio/kernio.h
 map.h
 -
 elf/elfldr.h
+-
+kmod/modules.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/common/misc/liballoc.cpp

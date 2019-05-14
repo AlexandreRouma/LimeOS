@@ -105,7 +105,7 @@ namespace fio {
         if (path.endWith("/")) {
             path = path.substring(0, path.length() - 1);
         }
-        return _index[path].s;
+        return _index[path].provider();
     }
 
     bool createDir(char* dir) {
@@ -126,14 +126,14 @@ namespace fio {
         return true;
     }
 
-    bool mountStream(char* dir, uint16_t flags, stream_t s) {
+    bool mountStreamProvider(char* dir, uint16_t flags, stream_t (*_provider)()) {
         if (nodeExists(dir)) {
             return false;
         }
         FILEIONode_t node;
         node.path = dir;
         node.flags = flags;
-        node.s = s;
+        node.provider = _provider;
         string path = dir;
         if (path.startsWith("/")) {
             path = path.substring(1);
