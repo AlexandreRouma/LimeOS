@@ -9,9 +9,9 @@
 namespace kmod {
     map<string,KModule_t> modules;
 
-    void init() {
+    void init(multiboot_info* boot_info) {
         modules = map<string, KModule_t>();
-        kapi::init();
+        kapi::init(boot_info);
     }
 
     bool load(char* path) {

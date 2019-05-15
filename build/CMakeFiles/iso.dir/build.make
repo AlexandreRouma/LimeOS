@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/build
 include CMakeFiles/iso.dir/progress.make
 
 CMakeFiles/iso:
-	cp ../bin/i686/LimeOS.bin ../bin/i686/iso/boot/LimeOS.bin && grub-mkrescue -o ../bin/i686/LimeOS.iso ../bin/i686/iso
+	sh ../tools/build_iso.sh
 
 iso: CMakeFiles/iso
 iso: CMakeFiles/iso.dir/build.make

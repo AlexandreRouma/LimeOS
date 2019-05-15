@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <elf/elfldr.h>
 #include <string.h>
+#include <multiboot/multiboot.h>
 
 struct KModule_t {
     string name;
@@ -10,7 +11,7 @@ struct KModule_t {
 };
 
 namespace kmod {
-    void init();
+    void init(multiboot_info* boot_info);
     bool load(char* path);
     bool unload(char* name);
 }

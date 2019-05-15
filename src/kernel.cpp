@@ -128,7 +128,7 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     tarfs::init(mods[id].mod_start, "/");
 
     // Init module interface
-    kmod::init();
+    kmod::init(multiboot_info);
 
     listNodes("/fio/dev");
 

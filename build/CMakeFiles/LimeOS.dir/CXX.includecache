@@ -29,6 +29,10 @@ stdarg.h
 -
 stream.h
 -
+multiboot/multiboot.h
+-
+multiboot.h
+-
 
 ../src/arch/i686/paging/paging.h
 stdint.h
@@ -68,6 +72,8 @@ stdint.h
 elf/elfldr.h
 -
 string.h
+-
+multiboot/multiboot.h
 -
 
 ../src/common/kscript/kscript.h

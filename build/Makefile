@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ramfs
-
-# Build rule for target.
-ramfs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ramfs
-.PHONY : ramfs
-
-# fast build rule for target.
-ramfs/fast:
-	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
-.PHONY : ramfs/fast
-
-#=============================================================================
-# Target rules for targets named driver_cmake
-
-# Build rule for target.
-driver_cmake: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 driver_cmake
-.PHONY : driver_cmake
-
-# fast build rule for target.
-driver_cmake/fast:
-	$(MAKE) -f CMakeFiles/driver_cmake.dir/build.make CMakeFiles/driver_cmake.dir/build
-.PHONY : driver_cmake/fast
-
-#=============================================================================
 # Target rules for targets named LimeOS
 
 # Build rule for target.
@@ -163,17 +137,17 @@ iso/fast:
 .PHONY : iso/fast
 
 #=============================================================================
-# Target rules for targets named driver
+# Target rules for targets named ramfs
 
 # Build rule for target.
-driver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 driver
-.PHONY : driver
+ramfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ramfs
+.PHONY : ramfs
 
 # fast build rule for target.
-driver/fast:
-	$(MAKE) -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/build
-.PHONY : driver/fast
+ramfs/fast:
+	$(MAKE) -f CMakeFiles/ramfs.dir/build.make CMakeFiles/ramfs.dir/build
+.PHONY : ramfs/fast
 
 src/arch/i686/gdt/asm_gdt.o: src/arch/i686/gdt/asm_gdt.asm.o
 
@@ -920,12 +894,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... ramfs"
-	@echo "... driver_cmake"
+	@echo "... edit_cache"
 	@echo "... LimeOS"
 	@echo "... iso"
-	@echo "... driver"
-	@echo "... edit_cache"
+	@echo "... ramfs"
 	@echo "... src/arch/i686/gdt/asm_gdt.o"
 	@echo "... src/arch/i686/gdt/gdt.o"
 	@echo "... src/arch/i686/gdt/gdt.i"

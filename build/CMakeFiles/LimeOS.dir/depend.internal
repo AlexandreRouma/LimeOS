@@ -54,6 +54,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o
  ../src/common/kernio/kernio.h
  ../src/common/misc/liballoc.h
  ../src/common/misc/memory.h
+ ../src/common/multiboot/multiboot.h
  ../src/common/vfs/fileio.h
  ../src/common/vfs/vfs.h
  ../src/kstd/stdarg.h
@@ -116,6 +117,7 @@ CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o
  ../src/common/kmod/modules.h
  ../src/common/misc/liballoc.h
  ../src/common/misc/memory.h
+ ../src/common/multiboot/multiboot.h
  ../src/common/vfs/vfs.h
  ../src/kstd/map.h
  ../src/kstd/stdarg.h
@@ -133,6 +135,7 @@ CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o
  ../src/common/kscript/kscript.h
  ../src/common/misc/liballoc.h
  ../src/common/misc/memory.h
+ ../src/common/multiboot/multiboot.h
  ../src/common/panic.h
  ../src/common/vfs/vfs.h
  ../src/kstd/map.h

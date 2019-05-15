@@ -53,6 +53,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/temp_vga/t
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/kernio/kernio.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/multiboot/multiboot.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/vfs/fileio.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/vfs/vfs.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/kstd/stdarg.h
@@ -115,6 +116,7 @@ CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kernio/kernio
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/kmod/modules.h
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/multiboot/multiboot.h
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/common/vfs/vfs.h
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/map.h
 CMakeFiles/LimeOS.dir/src/common/kmod/modules.cpp.o: ../src/kstd/stdarg.h
@@ -132,6 +134,7 @@ CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kmod/modul
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/kscript/kscript.h
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/misc/memory.h
+CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/multiboot/multiboot.h
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/panic.h
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/common/vfs/vfs.h
 CMakeFiles/LimeOS.dir/src/common/kscript/kscript.cpp.o: ../src/kstd/map.h

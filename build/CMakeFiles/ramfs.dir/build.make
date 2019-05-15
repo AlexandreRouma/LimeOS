@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/build
 include CMakeFiles/ramfs.dir/progress.make
 
 CMakeFiles/ramfs:
-	cd ../ramfs && tar -cvf ../bin/i686/iso/ramfs.tar *
+	sh ../tools/build_ramfs.sh
 
 ramfs: CMakeFiles/ramfs
 ramfs: CMakeFiles/ramfs.dir/build.make

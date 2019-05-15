@@ -45,9 +45,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ramfs.dir/DependInfo.cmake"
-  "CMakeFiles/driver_cmake.dir/DependInfo.cmake"
   "CMakeFiles/LimeOS.dir/DependInfo.cmake"
   "CMakeFiles/iso.dir/DependInfo.cmake"
-  "CMakeFiles/driver.dir/DependInfo.cmake"
+  "CMakeFiles/ramfs.dir/DependInfo.cmake"
   )
