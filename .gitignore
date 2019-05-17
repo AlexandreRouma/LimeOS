@@ -1,10 +1,10 @@
 # Binaries
 bin/i686/*
 
-# Drivers
-!bin/i686/drivers
-bin/i686/drivers/*
-!bin/i686/drivers/.gitkeep
+# Modules
+!bin/i686/modules
+bin/i686/modules/*
+!bin/i686/modules/.gitkeep
 
 # ISO
 !bin/i686/iso
