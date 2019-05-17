@@ -1,11 +1,16 @@
+# Binaries
+bin/i686/*
+
 # Drivers
+!bin/i686/drivers
 bin/i686/drivers/*
 !bin/i686/drivers/.gitkeep
 
-# Kernel
-bin/i686/*
-!bin/i686/iso
-
 # ISO
-!bin/i686/iso/ramfs.tar
-!bin/i686/iso/boot/LimeOS.bin
+!bin/i686/iso
+bin/i686/iso/ramfs.tar
+bin/i686/iso/boot/LimeOS.bin
+
+# Kernel build
+src/build/*
+!src/build/.gitkeep
