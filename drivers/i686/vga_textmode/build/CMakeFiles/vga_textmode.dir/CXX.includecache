@@ -15,7 +15,11 @@ stream.h
 -
 multiboot/multiboot.h
 -
+vfs/vfs.h
+-
 multiboot.h
+-
+vfs.h
 -
 
 ../../../../src/arch/i686/kapi/api/memory.h
@@ -27,6 +31,8 @@ stdint.h
 -
 
 ../../../../src/arch/i686/kapi/api/new.h
+
+../../../../src/arch/i686/kapi/api/stdint.h
 
 ../../../../src/arch/i686/kapi/api/stream.h
 stdint.h
@@ -45,9 +51,19 @@ stdint.h
 -
 kapi.h
 -
+memory.h
+-
+
+../../../../src/arch/i686/kapi/api/vfs.h
+stdint.h
+-
+stream.h
+-
 
 /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp
 kapi.h
+-
+string.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp
@@ -69,6 +85,10 @@ stream.h
 -
 kapi.h
 -
+memory.h
+-
+string.h
+-
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp
 string.h
@@ -76,5 +96,7 @@ string.h
 stdint.h
 -
 kapi.h
+-
+memory.h
 -
 

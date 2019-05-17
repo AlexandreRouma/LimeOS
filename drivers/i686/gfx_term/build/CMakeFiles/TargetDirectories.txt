@@ -1,0 +1,3 @@
+/mnt/d/Documents/Code/LimeOS/drivers/i686/gfx_term/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Documents/Code/LimeOS/drivers/i686/gfx_term/build/CMakeFiles/gfx_term.dir
+/mnt/d/Documents/Code/LimeOS/drivers/i686/gfx_term/build/CMakeFiles/edit_cache.dir

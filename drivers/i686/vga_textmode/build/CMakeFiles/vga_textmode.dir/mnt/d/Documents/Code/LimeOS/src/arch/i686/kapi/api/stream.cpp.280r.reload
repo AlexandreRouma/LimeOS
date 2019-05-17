@@ -1,0 +1,4073 @@
+
+;; Function stream::create (_ZN6stream6createEjyPFj8stream_tjyES2_PFvS0_EPv, funcdef_no=6, decl_uid=1069, cgraph_uid=6, symbol_order=6)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=32, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=16, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 49:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 2:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 3:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 4:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 5:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 11:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) =r  (1) riFo {*movdi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 14:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 17:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 18:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 20:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 21:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 24:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 27:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 28:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 29:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 30:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 33:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 36:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 39:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 45:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 46: point = 0, n_alt = -1
+   Insn 45: point = 0, n_alt = 0
+   Insn 48: point = 0, n_alt = -1
+   Insn 39: point = 0, n_alt = 1
+   Insn 38: point = 1, n_alt = 0
+   Insn 37: point = 2, n_alt = -2
+   Insn 36: point = 3, n_alt = 0
+   Insn 35: point = 3, n_alt = 0
+   Insn 34: point = 4, n_alt = 0
+   Insn 33: point = 4, n_alt = 0
+   Insn 32: point = 4, n_alt = 0
+   Insn 31: point = 6, n_alt = 0
+   Insn 30: point = 8, n_alt = 1
+   Insn 29: point = 9, n_alt = 0
+   Insn 28: point = 10, n_alt = 0
+   Insn 27: point = 11, n_alt = 1
+   Insn 26: point = 12, n_alt = 0
+   Insn 25: point = 13, n_alt = 0
+   Insn 24: point = 14, n_alt = 1
+   Insn 23: point = 15, n_alt = 0
+   Insn 22: point = 16, n_alt = 0
+   Insn 21: point = 17, n_alt = 1
+   Insn 20: point = 18, n_alt = 0
+   Insn 19: point = 19, n_alt = 0
+   Insn 18: point = 20, n_alt = 1
+   Insn 17: point = 21, n_alt = 0
+   Insn 16: point = 22, n_alt = 1
+   Insn 15: point = 23, n_alt = 0
+   Insn 14: point = 24, n_alt = 1
+   Insn 13: point = 25, n_alt = 0
+   Insn 12: point = 26, n_alt = 0
+   Insn 11: point = 27, n_alt = 1
+   Insn 10: point = 28, n_alt = 0
+   Insn 9: point = 29, n_alt = 0
+   Insn 5: point = 30, n_alt = 1
+   Insn 4: point = 31, n_alt = 0
+   Insn 3: point = 32, n_alt = 1
+   Insn 2: point = 33, n_alt = 0
+   Insn 49: point = 34, n_alt = 0
+ r87: [7..34]
+ r88: [3..4]
+ r89: [0..2]
+ r90: [32..33]
+ r91: [30..31]
+ r92: [27..29]
+ r93: [27..28]
+ r94: [24..26]
+ r95: [24..25]
+ r96: [22..23]
+ r97: [20..21]
+ r98: [17..19]
+ r99: [17..18]
+ r100: [14..16]
+ r101: [14..15]
+ r102: [11..13]
+ r103: [11..12]
+ r104: [8..10]
+ r105: [8..9]
+ r106: [5..6]
+ r107: [0..1]
+Compressing live ranges: from 35 to 26 - 74%
+Ranges after the compression:
+ r87: [6..25]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [24..25]
+ r91: [22..23]
+ r92: [20..21]
+ r93: [20..21]
+ r94: [18..19]
+ r95: [18..19]
+ r96: [16..17]
+ r97: [14..15]
+ r98: [12..13]
+ r99: [12..13]
+ r100: [10..11]
+ r101: [10..11]
+ r102: [8..9]
+ r103: [8..9]
+ r104: [6..7]
+ r105: [6..7]
+ r106: [4..5]
+ r107: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=32, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=16, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=-8)
+changing reg in insn 49
+changing reg in insn 31
+changing reg in insn 32
+changing reg in insn 35
+changing reg in insn 37
+changing reg in insn 39
+changing reg in insn 2
+changing reg in insn 3
+changing reg in insn 4
+changing reg in insn 5
+changing reg in insn 9
+changing reg in insn 11
+changing reg in insn 10
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 14
+changing reg in insn 13
+changing reg in insn 14
+changing reg in insn 15
+changing reg in insn 16
+changing reg in insn 17
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 21
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 22
+changing reg in insn 24
+changing reg in insn 23
+changing reg in insn 24
+changing reg in insn 25
+changing reg in insn 27
+changing reg in insn 26
+changing reg in insn 27
+changing reg in insn 28
+changing reg in insn 30
+changing reg in insn 29
+changing reg in insn 30
+changing reg in insn 31
+changing reg in insn 32
+changing reg in insn 38
+changing reg in insn 39
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 35.
+
+
+stream::create
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={16d,16u} r1={9d,7u} r2={3d,1u} r3={1d,1u} r6={1d,23u} r7={4d,8u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={4d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 166{109d,57u,0e} in 39{38 regular + 1 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107
+(note 7 1 49 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 49 7 2 2 (parallel [
+            (set (reg:SI 2 cx [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(insn 2 49 3 2 (set (reg:SI 0 ax [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [3 slen+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 79 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [3 slen+0 S4 A64])
+        (reg:SI 0 ax [90])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 79 {*movsi_internal}
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 0 ax [91])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 slen+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 79 {*movsi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [3 slen+4 S4 A32])
+        (reg:SI 0 ax [91])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 79 {*movsi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 0 ax [92])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 dx [93])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (reg/f:SI 0 ax [92]) [2 <retval>.buffersz+0 S4 A32])
+        (reg:SI 1 dx [93])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 3 bx [94])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 79 {*movsi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 0 ax [95])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [3 slen+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 78 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:DI (plus:SI (reg/f:SI 3 bx [94])
+                (const_int 4 [0x4])) [3 <retval>.slen+0 S8 A32])
+        (reg:DI 0 ax [95])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 78 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 0 ax [96])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 79 {*movsi_internal}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:DI (plus:SI (reg/f:SI 0 ax [96])
+                (const_int 20 [0x14])) [3 <retval>.rpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 78 {*movdi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 0 ax [97])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 79 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (mem/c:DI (plus:SI (reg/f:SI 0 ax [97])
+                (const_int 12 [0xc])) [3 <retval>.wpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 78 {*movdi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 0 ax [98])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 79 {*movsi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 1 dx [99])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [4 writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 79 {*movsi_internal}
+     (nil))
+(insn 21 20 22 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [98])
+                (const_int 36 [0x24])) [4 <retval>.writeHndlr+0 S4 A32])
+        (reg/f:SI 1 dx [99])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 79 {*movsi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 0 ax [100])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 1 dx [101])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [4 readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 79 {*movsi_internal}
+     (nil))
+(insn 24 23 25 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [100])
+                (const_int 40 [0x28])) [4 <retval>.readHndlr+0 S4 A32])
+        (reg/f:SI 1 dx [101])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 79 {*movsi_internal}
+     (nil))
+(insn 25 24 26 2 (set (reg/f:SI 0 ax [102])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 79 {*movsi_internal}
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 1 dx [103])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [5 closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 79 {*movsi_internal}
+     (nil))
+(insn 27 26 28 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [102])
+                (const_int 44 [0x2c])) [5 <retval>.closeHndlr+0 S4 A32])
+        (reg/f:SI 1 dx [103])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 79 {*movsi_internal}
+     (nil))
+(insn 28 27 29 2 (set (reg/f:SI 0 ax [104])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 79 {*movsi_internal}
+     (nil))
+(insn 29 28 30 2 (set (reg/f:SI 1 dx [105])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [6 tag+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 79 {*movsi_internal}
+     (nil))
+(insn 30 29 31 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [104])
+                (const_int 32 [0x20])) [6 <retval>.tag+0 S4 A32])
+        (reg/f:SI 1 dx [105])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 79 {*movsi_internal}
+     (nil))
+(insn 31 30 32 2 (set (reg/f:SI 0 ax [106])
+        (mem/u/c:SI (plus:SI (reg:SI 2 cx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 32 31 33 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [106])
+                (const_int 16 [0x10])) [16 api.mm.malloc+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 34 33 35 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 35 34 36 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 565 {*call_value}
+     (nil)
+    (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 37 36 38 2 (set (reg/f:SI 1 dx [orig:89 _2 ] [89])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 38 37 39 2 (set (reg/f:SI 0 ax [107])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 39 38 48 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [107])
+                (const_int 28 [0x1c])) [8 <retval>.buffer+0 S4 A32])
+        (reg/f:SI 1 dx [orig:89 _2 ] [89])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 48 39 45 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":16 584 {nop}
+     (nil))
+(insn 45 48 46 2 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":17 79 {*movsi_internal}
+     (nil))
+(insn 46 45 50 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":17 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 50 46 0 NOTE_INSN_DELETED)
+
+;; Function stream::close (_ZN6stream5closeE8stream_t, funcdef_no=7, decl_uid=1079, cgraph_uid=7, symbol_order=7)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 8:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-36)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 16:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-40)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 17:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-44)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) lBwBz {*call} (sp_off=-48)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 19:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-48)
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 22: point = 0, n_alt = -1
+   Insn 19: point = 0, n_alt = 0
+   Insn 18: point = 0, n_alt = 0
+   Insn 17: point = 1, n_alt = 0
+   Insn 16: point = 1, n_alt = 0
+   Insn 15: point = 1, n_alt = 0
+   Insn 14: point = 1, n_alt = 0
+   Insn 13: point = 1, n_alt = 0
+   Insn 12: point = 1, n_alt = 0
+   Insn 11: point = 1, n_alt = 0
+   Insn 10: point = 1, n_alt = 0
+   Insn 9: point = 1, n_alt = 0
+   Insn 8: point = 1, n_alt = 0
+   Insn 7: point = 1, n_alt = 0
+   Insn 6: point = 1, n_alt = 0
+   Insn 5: point = 1, n_alt = 0
+   Insn 23: point = 2, n_alt = 0
+ r87: [2..2]
+ r88: [0..1]
+Compressing live ranges: from 3 to 3 - 100%
+Ranges after the compression:
+ r87: [2..2]
+ r88: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=-8)
+changing reg in insn 23
+changing reg in insn 5
+changing reg in insn 18
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 18.
+
+
+stream::close
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d,1u} r1={2d} r2={2d} r6={1d,15u} r7={14d,17u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={3d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 131{97d,34u,0e} in 17{16 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 87 88
+(note 3 1 23 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 23 3 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 23 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [5 s.closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 7 6 8 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 8 7 9 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 9 8 10 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 10 9 11 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 11 10 12 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 14 13 15 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 15 14 16 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 16 15 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 17 16 18 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(call_insn 18 17 19 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 48 [0x30])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 554 {*call}
+     (nil)
+    (nil))
+(insn 19 18 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 48 [0x30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 22 19 24 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":21 584 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 24 22 0 NOTE_INSN_DELETED)
+
+;; Function stream::write (_ZN6stream5writeE8stream_tPcj, funcdef_no=8, decl_uid=1073, cgraph_uid=8, symbol_order=8)
+
+      Creating newreg=140
+Removing SCRATCH in insn #61 (nop 2)
+rescanning insn with uid = 61.
+      Creating newreg=141
+Removing SCRATCH in insn #119 (nop 2)
+rescanning insn with uid = 119.
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=32, prev_offset=0)
+Can eliminate 20 to 6 (offset=-24, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 138:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+            1 Small class reload: reject+=3
+            1 Non input pseudo reload: reject++
+            1 Early clobber: reject++
+          alt=0,overall=11,losers=1,rld_nregs=1
+	 Choosing alt 0 in insn 7:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+      Creating newreg=142 from oldreg=125, assigning class DREG to r142
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 9:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+            1 Early clobber: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 14:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 15:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 19:  (0) r  (1) rm {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) =r  (1) 0 {*zero_extendsidi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 27:  (0) =r  (1) g {*movsi_internal}
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+            alt=2,overall=6,losers=1 -- refuse
+	 Choosing alt 2 in insn 28:  (0) r  (1) 0  (2) mr {*mulsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 29:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            alt=0,overall=6,losers=1 -- refuse
+            alt=1,overall=6,losers=1 -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 30:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =<  (1) riF*o {*pushdi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 33:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 36:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 37:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 39:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 40:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 41:  (0) =<  (1) riF*o {*pushdi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 42:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 43:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 44:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 45:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 46:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 47:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 48:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-36)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 49:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-40)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-44)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 51:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-48)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 52:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-52)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 53:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-56)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 54:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-60)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 55:  (1) lBwBz {*call_value} (sp_off=-64)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 56:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-64)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 58:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 59:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 60:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 61:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r140
+          alt=0,overall=6,losers=1,rld_nregs=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=1,overall=13,losers=1 -- refuse
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 62
+	 Choosing alt 0 in insn 62:  (0) =r  (1) %0  (2) ronF {*adddi3_doubleword}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 63:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 64:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            alt=1,overall=12,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 65:  (0) rm  (1) 0  (2) re {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 66:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 69:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 74:  (0) rm  (1) 0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 80:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 81:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 82:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 83:  (0) =r  (1) 0 {*zero_extendsidi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 84:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 85:  (0) =r  (1) g {*movsi_internal}
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+            alt=2,overall=6,losers=1 -- refuse
+	 Choosing alt 2 in insn 86:  (0) r  (1) 0  (2) mr {*mulsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 87:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            alt=0,overall=6,losers=1 -- refuse
+            alt=1,overall=6,losers=1 -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 88:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 89:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 90:  (0) =<  (1) riF*o {*pushdi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 91:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 92:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 93:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 94:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 95:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 96:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 97:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 98:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 99:  (0) =<  (1) riF*o {*pushdi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 100:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 101:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 102:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 103:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 104:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 105:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 106:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-36)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 107:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-40)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 108:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-44)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 109:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-48)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 110:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-52)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 111:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-56)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 112:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-60)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 113:  (1) lBwBz {*call_value} (sp_off=-64)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 114:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-64)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 116:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 117:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 118:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 119:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r141
+          alt=0,overall=6,losers=1,rld_nregs=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=1,overall=13,losers=1 -- refuse
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 120
+	 Choosing alt 0 in insn 120:  (0) =r  (1) %0  (2) ronF {*adddi3_doubleword}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 121:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 122:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            alt=1,overall=12,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 123:  (0) rm  (1) 0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 124:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+EBB 3 4 5
+EBB 6
+EBB 7
+EBB 8
+
+********** Pseudo live ranges #1: **********
+
+  BB 8
+   Insn 132: point = 0, n_alt = -1
+   Insn 131: point = 0, n_alt = -2
+   Insn 127: point = 1, n_alt = -2
+  BB 5
+   Insn 134: point = 4, n_alt = -1
+   Insn 69: point = 4, n_alt = 0
+  BB 7
+   Insn 124: point = 5, n_alt = 0
+   Insn 123: point = 6, n_alt = 1
+   Insn 122: point = 7, n_alt = 0
+   Insn 121: point = 8, n_alt = 1
+   Insn 120: point = 9, n_alt = 0
+   Insn 119: point = 11, n_alt = 0
+   Insn 118: point = 13, n_alt = 0
+   Insn 117: point = 14, n_alt = 0
+   Insn 116: point = 15, n_alt = 1
+   Insn 115: point = 16, n_alt = -2
+   Insn 114: point = 17, n_alt = 0
+   Insn 113: point = 17, n_alt = 0
+   Insn 112: point = 18, n_alt = 0
+   Insn 111: point = 18, n_alt = 0
+   Insn 110: point = 18, n_alt = 0
+   Insn 109: point = 18, n_alt = 0
+   Insn 108: point = 18, n_alt = 0
+   Insn 107: point = 18, n_alt = 0
+   Insn 106: point = 18, n_alt = 0
+   Insn 105: point = 18, n_alt = 0
+   Insn 104: point = 18, n_alt = 0
+   Insn 103: point = 18, n_alt = 0
+   Insn 102: point = 18, n_alt = 0
+   Insn 101: point = 18, n_alt = 0
+   Insn 100: point = 18, n_alt = 0
+   Insn 99: point = 19, n_alt = 0
+   Insn 98: point = 20, n_alt = 0
+   Insn 97: point = 20, n_alt = 0
+   Insn 96: point = 21, n_alt = 0
+   Insn 95: point = 22, n_alt = 0
+   Insn 94: point = 23, n_alt = 0
+   Insn 93: point = 23, n_alt = 0
+   Insn 92: point = 24, n_alt = 0
+   Insn 91: point = 25, n_alt = 0
+   Insn 90: point = 26, n_alt = 0
+   Insn 89: point = 27, n_alt = 0
+   Insn 88: point = 28, n_alt = 0
+   Insn 87: point = 30, n_alt = 0
+   Insn 86: point = 31, n_alt = 2
+   Insn 85: point = 33, n_alt = 0
+   Insn 84: point = 34, n_alt = 0
+   Insn 83: point = 35, n_alt = 0
+   Insn 82: point = 37, n_alt = 0
+   Insn 81: point = 38, n_alt = 0
+   Insn 80: point = 40, n_alt = 0
+  BB 3
+   Insn 20: point = 43, n_alt = -1
+   Insn 19: point = 43, n_alt = 1
+   Insn 18: point = 44, n_alt = 0
+  BB 6
+   Insn 136: point = 46, n_alt = -1
+   Insn 74: point = 46, n_alt = 1
+  BB 4
+   Insn 67: point = 47, n_alt = -1
+   Insn 66: point = 47, n_alt = 1
+   Insn 65: point = 47, n_alt = 1
+   Insn 64: point = 48, n_alt = 0
+   Insn 63: point = 49, n_alt = 1
+   Insn 62: point = 50, n_alt = 0
+   Insn 61: point = 52, n_alt = 0
+   Insn 60: point = 54, n_alt = 0
+   Insn 59: point = 55, n_alt = 0
+   Insn 58: point = 56, n_alt = 1
+   Insn 57: point = 57, n_alt = -2
+   Insn 56: point = 58, n_alt = 0
+   Insn 55: point = 58, n_alt = 0
+   Insn 54: point = 59, n_alt = 0
+   Insn 53: point = 59, n_alt = 0
+   Insn 52: point = 59, n_alt = 0
+   Insn 51: point = 59, n_alt = 0
+   Insn 50: point = 59, n_alt = 0
+   Insn 49: point = 59, n_alt = 0
+   Insn 48: point = 59, n_alt = 0
+   Insn 47: point = 59, n_alt = 0
+   Insn 46: point = 59, n_alt = 0
+   Insn 45: point = 59, n_alt = 0
+   Insn 44: point = 59, n_alt = 0
+   Insn 43: point = 59, n_alt = 0
+   Insn 42: point = 59, n_alt = 0
+   Insn 41: point = 60, n_alt = 0
+   Insn 40: point = 61, n_alt = 0
+   Insn 39: point = 61, n_alt = 0
+   Insn 38: point = 62, n_alt = 0
+   Insn 37: point = 63, n_alt = 0
+   Insn 36: point = 64, n_alt = 0
+   Insn 35: point = 64, n_alt = 0
+   Insn 34: point = 65, n_alt = 0
+   Insn 33: point = 66, n_alt = 0
+   Insn 32: point = 67, n_alt = 0
+   Insn 31: point = 68, n_alt = 0
+   Insn 30: point = 69, n_alt = 0
+   Insn 29: point = 71, n_alt = 0
+   Insn 28: point = 72, n_alt = 2
+   Insn 27: point = 74, n_alt = 0
+   Insn 26: point = 75, n_alt = 0
+   Insn 25: point = 76, n_alt = 0
+   Insn 24: point = 78, n_alt = 0
+   Insn 23: point = 79, n_alt = 0
+   Insn 22: point = 81, n_alt = 0
+  BB 2
+   Insn 16: point = 83, n_alt = 1
+   Insn 15: point = 83, n_alt = 1
+   Insn 14: point = 83, n_alt = 1
+   Insn 13: point = 84, n_alt = -2
+   Insn 12: point = 86, n_alt = 0
+   Insn 11: point = 88, n_alt = 0
+   Insn 10: point = 89, n_alt = 0
+   Insn 9: point = 90, n_alt = 1
+   Insn 8: point = 91, n_alt = -2
+   Insn 7: point = 93, n_alt = 0
+   Insn 6: point = 95, n_alt = 0
+   Insn 5: point = 96, n_alt = 0
+   Insn 138: point = 97, n_alt = 0
+ r87: [41..97]
+ r88: [94..96]
+ r89: [90..91]
+ r90: [87..89]
+ r91: [83..84]
+ r92: [64..79]
+ r93: [77..78]
+ r94: [67..76]
+ r95: [73..75]
+ r96: [73..74]
+ r97: [70..72]
+ r98: [66..69]
+ r99: [65..68]
+ r100: [58..63]
+ r101: [60..62]
+ r102: [59..61]
+ r103: [56..57]
+ r104: [51..55]
+ r105: [51..52]
+ r106: [49..50]
+ r107: [23..38]
+ r108: [36..37]
+ r109: [26..35]
+ r110: [32..34]
+ r111: [32..33]
+ r112: [29..31]
+ r113: [25..28]
+ r114: [24..27]
+ r115: [17..22]
+ r116: [19..21]
+ r117: [18..20]
+ r118: [15..16]
+ r119: [10..14]
+ r120: [10..11]
+ r121: [8..9]
+ r122: [2..5]
+ r123: [0..1]
+ r124: [92..93]
+ r126: [94..95]
+ r127: [87..88]
+ r128: [85..87]
+ r129: [86..86]
+ r130: [43..44]
+ r131: [80..81]
+ r132: [70..71]
+ r133: [53..54]
+ r134: [47..48]
+ r135: [39..40]
+ r136: [29..30]
+ r137: [12..13]
+ r138: [6..7]
+ r140: [52..52]
+ r141: [11..11]
+ r142: [93..94]
+Compressing live ranges: from 98 to 62 - 63%
+Ranges after the compression:
+ r87: [26..61]
+ r88: [60..61]
+ r89: [56..57]
+ r90: [54..55]
+ r91: [50..51]
+ r92: [40..47]
+ r93: [46..47]
+ r94: [40..45]
+ r95: [44..45]
+ r96: [44..45]
+ r97: [42..43]
+ r98: [40..41]
+ r99: [40..41]
+ r100: [38..39]
+ r101: [38..39]
+ r102: [38..39]
+ r103: [36..37]
+ r104: [32..35]
+ r105: [32..33]
+ r106: [30..31]
+ r107: [16..23]
+ r108: [22..23]
+ r109: [16..21]
+ r110: [20..21]
+ r111: [20..21]
+ r112: [18..19]
+ r113: [16..17]
+ r114: [16..17]
+ r115: [14..15]
+ r116: [14..15]
+ r117: [14..15]
+ r118: [12..13]
+ r119: [8..11]
+ r120: [8..9]
+ r121: [6..7]
+ r122: [2..3]
+ r123: [0..1]
+ r124: [58..59]
+ r126: [60..61]
+ r127: [54..55]
+ r128: [52..54]
+ r129: [53..53]
+ r130: [26..27]
+ r131: [48..49]
+ r132: [42..43]
+ r133: [34..35]
+ r134: [28..29]
+ r135: [24..25]
+ r136: [18..19]
+ r137: [10..11]
+ r138: [4..5]
+ r140: [33..33]
+ r141: [9..9]
+ r142: [59..60]
+
+********** Assignment #1: **********
+
+	 Assigning to 142 (cl=DREG, orig=125, freq=1000, tfirst=142, tfreq=1000)...
+	 Trying 1: spill 88(freq=2000)	 Now best 1(cost=1000, bad_spills=0, insn_pseudos=1)
+
+      Spill r88(hr=1, freq=2000) for r142
+	   Assign 1 to reload r142 (freq=1000)
+  Reassigning non-reload pseudos
+	   Assign 5 to r88 (freq=2000)
+
+********** Undoing inheritance #1: **********
+
+
+********** Pseudos coalescing #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+            1 Early clobber: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+Restoring SCRATCH in insn #61(nop 2)
+Restoring SCRATCH in insn #119(nop 2)
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=32, prev_offset=0)
+Can eliminate 20 to 6 (offset=-24, prev_offset=-24)
+changing reg in insn 138
+changing reg in insn 80
+changing reg in insn 22
+changing reg in insn 5
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 9
+changing reg in insn 10
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 14
+changing reg in insn 23
+changing reg in insn 35
+changing reg in insn 24
+changing reg in insn 25
+changing reg in insn 25
+changing reg in insn 32
+changing reg in insn 26
+changing reg in insn 28
+changing reg in insn 27
+changing reg in insn 28
+changing reg in insn 28
+changing reg in insn 30
+changing reg in insn 30
+changing reg in insn 30
+changing reg in insn 33
+changing reg in insn 31
+changing reg in insn 34
+changing reg in insn 37
+changing reg in insn 55
+changing reg in insn 38
+changing reg in insn 41
+changing reg in insn 39
+changing reg in insn 42
+changing reg in insn 57
+changing reg in insn 58
+changing reg in insn 59
+changing reg in insn 61
+changing reg in insn 62
+changing reg in insn 63
+changing reg in insn 81
+changing reg in insn 93
+changing reg in insn 82
+changing reg in insn 83
+changing reg in insn 83
+changing reg in insn 90
+changing reg in insn 84
+changing reg in insn 86
+changing reg in insn 85
+changing reg in insn 86
+changing reg in insn 86
+changing reg in insn 88
+changing reg in insn 88
+changing reg in insn 88
+changing reg in insn 91
+changing reg in insn 89
+changing reg in insn 92
+changing reg in insn 95
+changing reg in insn 113
+changing reg in insn 96
+changing reg in insn 99
+changing reg in insn 97
+changing reg in insn 100
+changing reg in insn 115
+changing reg in insn 116
+changing reg in insn 117
+changing reg in insn 119
+changing reg in insn 120
+changing reg in insn 121
+changing reg in insn 124
+changing reg in insn 69
+changing reg in insn 127
+changing reg in insn 127
+changing reg in insn 131
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 6
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 12
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 22
+changing reg in insn 23
+changing reg in insn 29
+changing reg in insn 30
+changing reg in insn 60
+changing reg in insn 61
+changing reg in insn 64
+changing reg in insn 65
+changing reg in insn 80
+changing reg in insn 81
+changing reg in insn 87
+changing reg in insn 88
+changing reg in insn 118
+changing reg in insn 119
+changing reg in insn 122
+changing reg in insn 123
+deleting insn with uid = 8.
+deleting insn with uid = 57.
+deleting insn with uid = 115.
+deleting insn with uid = 127.
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 35.
+rescanning insn with uid = 55.
+rescanning insn with uid = 93.
+rescanning insn with uid = 113.
+
+
+stream::write
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={30d,28u} r1={15d,9u} r2={12d,8u} r3={10d,10u} r4={4d,5u,1e} r5={4d,5u,1e} r6={1d,77u} r7={41d,58u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={2e} r17={26d,2u} r18={4d} r19={4d} r20={1d,1u} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r76={4d} r77={4d} r78={4d} r79={4d} r80={4d} 
+;;    total ref usage 631{424d,203u,4e} in 110{106 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 87 88 89 90 91 124 125 126 127 128 129
+(note 3 1 138 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 138 3 2 2 (parallel [
+            (set (reg:SI 4 si [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 138 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 5 di [orig:88 _1 ] [88])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 0 ax [126])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 79 {*movsi_internal}
+     (nil))
+(insn 7 6 9 2 (parallel [
+            (set (reg:SI 0 ax [124])
+                (udiv:SI (reg:SI 0 ax [126])
+                    (reg:SI 5 di [orig:88 _1 ] [88])))
+            (set (reg:SI 1 dx [125])
+                (umod:SI (reg:SI 0 ax [126])
+                    (reg:SI 5 di [orig:88 _1 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 326 {*udivmodsi4}
+     (nil))
+(insn 9 7 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32])
+        (reg:SI 0 ax [orig:89 _2 ] [89])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 2 cx [orig:90 _3 ] [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 0 ax [127])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 ax [129])
+                (udiv:SI (reg:SI 0 ax [127])
+                    (reg:SI 2 cx [orig:90 _3 ] [90])))
+            (set (reg:SI 1 dx [128])
+                (umod:SI (reg:SI 0 ax [127])
+                    (reg:SI 2 cx [orig:90 _3 ] [90])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 326 {*udivmodsi4}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 0 ax [orig:91 _4 ] [91])
+        (reg:SI 1 dx [128])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 last+0 S4 A32])
+        (reg:SI 0 ax [orig:91 _4 ] [91])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":26 79 {*movsi_internal}
+     (nil))
+(insn 16 15 75 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 79 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;;              6 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 130
+(code_label 75 16 17 3 8 (nil) [1 uses])
+(note 17 75 18 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 3 (set (reg:SI 0 ax [130])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 79 {*movsi_internal}
+     (nil))
+(insn 19 18 20 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 0 ax [130])
+            (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 11 {*cmpsi_1}
+     (nil))
+(jump_insn 20 19 21 3 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 78)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 548 {*jcc}
+     (nil)
+ -> 78)
+;;  succ:       7
+;;              4 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 131 132 133 134
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg/f:SI 0 ax [131])
+        (mem/u/c:SI (plus:SI (reg:SI 4 si [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 4 (set (reg/f:SI 2 cx [orig:92 _5 ] [92])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [131])
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 0 ax [orig:93 _6 ] [93])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 25 24 26 4 (set (reg:DI 0 ax [orig:94 _7 ] [94])
+        (zero_extend:DI (reg:SI 0 ax [orig:93 _6 ] [93]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 120 {*zero_extendsidi2}
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 5 di [orig:95 _8 ] [95])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 3 bx [orig:96 i.0_9 ] [96])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 28 27 29 4 (parallel [
+            (set (reg:SI 5 di [orig:97 _10 ] [97])
+                (mult:SI (reg:SI 5 di [orig:95 _8 ] [95])
+                    (reg:SI 3 bx [orig:96 i.0_9 ] [96])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 301 {*mulsi3_1}
+     (nil))
+(insn 29 28 30 4 (set (reg/f:SI 3 bx [132])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 56 [0x38])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg/f:SI 5 di [orig:98 _11 ] [98])
+                (plus:SI (reg:SI 5 di [orig:97 _10 ] [97])
+                    (reg/f:SI 3 bx [132])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 194 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 5 di [orig:97 _10 ] [97]))
+        (nil)))
+(insn 31 30 32 4 (set (reg/f:SI 3 bx [orig:99 _12 ] [99])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 79 {*movsi_internal}
+     (nil))
+(insn 32 31 33 4 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:94 _7 ] [94])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 33 32 34 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 5 di [orig:98 _11 ] [98])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 34 33 35 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 3 bx [orig:99 _12 ] [99])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 35 34 36 4 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:92 _5 ] [92]) [0 *_5 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 565 {*call_value}
+     (nil)
+    (nil))
+(insn 36 35 37 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 37 36 38 4 (set (reg/f:SI 2 cx [orig:100 _13 ] [100])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 79 {*movsi_internal}
+     (nil))
+(insn 38 37 39 4 (set (reg:DI 0 ax [orig:101 _14 ] [101])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 78 {*movdi_internal}
+     (nil))
+(insn 39 38 40 4 (set (reg:SI 3 bx [orig:102 _15 ] [102])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 79 {*movsi_internal}
+     (nil))
+(insn 40 39 41 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 41 40 42 4 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:101 _14 ] [101])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 42 41 43 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 3 bx [orig:102 _15 ] [102])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 43 42 44 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 44 43 45 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 45 44 46 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 46 45 47 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 47 46 48 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 48 47 49 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 49 48 50 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 50 49 51 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 51 50 52 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 52 51 53 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 53 52 54 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 54 53 55 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 55 54 56 4 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:100 _13 ] [100]) [0 *_13 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 565 {*call_value}
+     (nil)
+    (nil))
+(insn 56 55 58 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 58 56 59 4 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 w+0 S4 A32])
+        (reg:SI 0 ax [orig:103 _16 ] [103])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 79 {*movsi_internal}
+     (nil))
+(insn 59 58 60 4 (set (reg:DI 2 cx [orig:104 _17 ] [104])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 78 {*movdi_internal}
+     (nil))
+(insn 60 59 61 4 (set (reg:SI 0 ax [133])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 79 {*movsi_internal}
+     (nil))
+(insn 61 60 62 4 (parallel [
+            (set (reg:DI 0 ax [orig:105 _18 ] [105])
+                (sign_extend:DI (reg:SI 0 ax [133])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 132 {extendsidi2_1}
+     (nil))
+(insn 62 61 63 4 (parallel [
+            (set (reg:DI 0 ax [orig:106 _19 ] [106])
+                (plus:DI (reg:DI 0 ax [orig:105 _18 ] [105])
+                    (reg:DI 2 cx [orig:104 _17 ] [104])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 192 {*adddi3_doubleword}
+     (nil))
+(insn 63 62 64 4 (set (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])
+        (reg:DI 0 ax [orig:106 _19 ] [106])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 78 {*movdi_internal}
+     (nil))
+(insn 64 63 65 4 (set (reg:SI 0 ax [134])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 79 {*movsi_internal}
+     (nil))
+(insn 65 64 66 4 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])
+                    (reg:SI 0 ax [134])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 194 {*addsi_1}
+     (nil))
+(insn 66 65 67 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -44 [0xffffffffffffffd4])) [2 w+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 67 66 68 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 548 {*jcc}
+     (nil)
+ -> 72)
+;;  succ:       5 (FALLTHRU)
+;;              6
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 122
+(note 68 67 69 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 134 5 (set (reg:SI 0 ax [orig:122 _37 ] [122])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":33 79 {*movsi_internal}
+     (nil))
+(jump_insn 134 69 135 5 (set (pc)
+        (label_ref 125)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":33 549 {jump}
+     (nil)
+ -> 125)
+;;  succ:       8 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 122
+
+(barrier 135 134 72)
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (RTL, MODIFIED)
+;;  pred:       4
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags]
+(code_label 72 135 73 6 6 (nil) [1 uses])
+(note 73 72 74 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 136 6 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 194 {*addsi_1}
+     (nil))
+(jump_insn 136 74 137 6 (set (pc)
+        (label_ref 75)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 549 {jump}
+     (nil)
+ -> 75)
+;;  succ:       3 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+(barrier 137 136 78)
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (RTL, MODIFIED)
+;;  pred:       3
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 135 136 137 138
+(code_label 78 137 79 7 5 (nil) [1 uses])
+(note 79 78 80 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 7 (set (reg/f:SI 0 ax [135])
+        (mem/u/c:SI (plus:SI (reg:SI 4 si [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 81 80 82 7 (set (reg/f:SI 2 cx [orig:107 _20 ] [107])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [135])
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 82 81 83 7 (set (reg:SI 0 ax [orig:108 _21 ] [108])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 83 82 84 7 (set (reg:DI 0 ax [orig:109 _22 ] [109])
+        (zero_extend:DI (reg:SI 0 ax [orig:108 _21 ] [108]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 120 {*zero_extendsidi2}
+     (nil))
+(insn 84 83 85 7 (set (reg:SI 4 si [orig:110 _23 ] [110])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 85 84 86 7 (set (reg:SI 3 bx [orig:111 n.1_24 ] [111])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 86 85 87 7 (parallel [
+            (set (reg:SI 4 si [orig:112 _25 ] [112])
+                (mult:SI (reg:SI 4 si [orig:110 _23 ] [110])
+                    (reg:SI 3 bx [orig:111 n.1_24 ] [111])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 301 {*mulsi3_1}
+     (nil))
+(insn 87 86 88 7 (set (reg/f:SI 3 bx [136])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 56 [0x38])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 88 87 89 7 (parallel [
+            (set (reg/f:SI 4 si [orig:113 _26 ] [113])
+                (plus:SI (reg:SI 4 si [orig:112 _25 ] [112])
+                    (reg/f:SI 3 bx [136])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 194 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 4 si [orig:112 _25 ] [112]))
+        (nil)))
+(insn 89 88 90 7 (set (reg/f:SI 3 bx [orig:114 _27 ] [114])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 79 {*movsi_internal}
+     (nil))
+(insn 90 89 91 7 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:109 _22 ] [109])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 91 90 92 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 4 si [orig:113 _26 ] [113])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 92 91 93 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 3 bx [orig:114 _27 ] [114])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 93 92 94 7 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:107 _20 ] [107]) [0 *_20 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 565 {*call_value}
+     (nil)
+    (nil))
+(insn 94 93 95 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 95 94 96 7 (set (reg/f:SI 2 cx [orig:115 _28 ] [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 96 95 97 7 (set (reg:DI 0 ax [orig:116 _29 ] [116])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 78 {*movdi_internal}
+     (nil))
+(insn 97 96 98 7 (set (reg:SI 3 bx [orig:117 last.2_30 ] [117])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 98 97 99 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 99 98 100 7 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:116 _29 ] [116])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 100 99 101 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 3 bx [orig:117 last.2_30 ] [117])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 101 100 102 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 102 101 103 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 103 102 104 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 104 103 105 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 105 104 106 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 106 105 107 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 107 106 108 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 108 107 109 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 109 108 110 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 110 109 111 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 111 110 112 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 112 111 113 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 113 112 114 7 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:115 _28 ] [115]) [0 *_28 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 565 {*call_value}
+     (nil)
+    (nil))
+(insn 114 113 116 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 116 114 117 7 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 w+0 S4 A32])
+        (reg:SI 0 ax [orig:118 _31 ] [118])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 117 116 118 7 (set (reg:DI 2 cx [orig:119 _32 ] [119])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 78 {*movdi_internal}
+     (nil))
+(insn 118 117 119 7 (set (reg:SI 0 ax [137])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 79 {*movsi_internal}
+     (nil))
+(insn 119 118 120 7 (parallel [
+            (set (reg:DI 0 ax [orig:120 _33 ] [120])
+                (sign_extend:DI (reg:SI 0 ax [137])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 132 {extendsidi2_1}
+     (nil))
+(insn 120 119 121 7 (parallel [
+            (set (reg:DI 0 ax [orig:121 _34 ] [121])
+                (plus:DI (reg:DI 0 ax [orig:120 _33 ] [120])
+                    (reg:DI 2 cx [orig:119 _32 ] [119])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 192 {*adddi3_doubleword}
+     (nil))
+(insn 121 120 122 7 (set (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [3 s.wpos+0 S8 A32])
+        (reg:DI 0 ax [orig:121 _34 ] [121])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 78 {*movdi_internal}
+     (nil))
+(insn 122 121 123 7 (set (reg:SI 0 ax [138])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 79 {*movsi_internal}
+     (nil))
+(insn 123 122 124 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])
+                    (reg:SI 0 ax [138])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 194 {*addsi_1}
+     (nil))
+(insn 124 123 125 7 (set (reg:SI 0 ax [orig:122 _37 ] [122])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":40 79 {*movsi_internal}
+     (nil))
+;;  succ:       8 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 122
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+;;              5 [always] 
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 122
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 122
+;; lr  def 	 0 [ax] 123
+(code_label 125 124 126 8 7 (nil) [1 uses])
+(note 126 125 131 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 131 126 132 8 (set (reg/i:SI 0 ax)
+        (reg:SI 0 ax [orig:123 <retval> ] [123])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":41 79 {*movsi_internal}
+     (nil))
+(insn 132 131 139 8 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":41 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 139 132 0 NOTE_INSN_DELETED)
+
+;; Function stream::read (_ZN6stream4readE8stream_tPcj, funcdef_no=9, decl_uid=1077, cgraph_uid=9, symbol_order=9)
+
+      Creating newreg=140
+Removing SCRATCH in insn #47 (nop 2)
+rescanning insn with uid = 47.
+      Creating newreg=141
+Removing SCRATCH in insn #61 (nop 2)
+rescanning insn with uid = 61.
+      Creating newreg=142
+Removing SCRATCH in insn #105 (nop 2)
+rescanning insn with uid = 105.
+      Creating newreg=143
+Removing SCRATCH in insn #119 (nop 2)
+rescanning insn with uid = 119.
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=32, prev_offset=0)
+Can eliminate 20 to 6 (offset=-24, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 138:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+            1 Small class reload: reject+=3
+            1 Non input pseudo reload: reject++
+            1 Early clobber: reject++
+          alt=0,overall=11,losers=1,rld_nregs=1
+	 Choosing alt 0 in insn 7:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+      Creating newreg=144 from oldreg=123, assigning class DREG to r144
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 9:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+            1 Early clobber: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 14:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 15:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 19:  (0) r  (1) rm {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 25:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =<  (1) riF*o {*pushdi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 27:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 28:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 29:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 30:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 33:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-36)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-40)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-44)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 36:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-48)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 37:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-52)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-56)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 39:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-60)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 40:  (1) lBwBz {*call_value} (sp_off=-64)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 41:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-64)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 43:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 44:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 45:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 46:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 47:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r140
+            0 Non input pseudo reload: reject++
+          alt=0,overall=7,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=10,losers=1 -- refuse
+            alt=2: Bad operand -- refuse
+            alt=3: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            alt=4: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non pseudo reload: reject++
+            alt=5: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            alt=6,overall=13,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            alt=7: Bad operand -- refuse
+            alt=8: Bad operand -- refuse
+            alt=9: Bad operand -- refuse
+            alt=10: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=11: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non input pseudo reload: reject++
+            alt=12,overall=13,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            alt=13: Bad operand -- refuse
+            alt=14: Bad operand -- refuse
+            alt=15: Bad operand -- refuse
+            0 Non pseudo reload: reject++
+            alt=16: Bad operand -- refuse
+	 Choosing alt 0 in insn 48:  (0) =r  (1) g {*movsi_internal}
+      Creating newreg=145 from oldreg=98, assigning class GENERAL_REGS to r145
+   48: r145:SI=[argp:SI+0x24]
+    Inserting insn reload after:
+  140: r98:SI=r145:SI
+
+            0 Non input pseudo reload: reject++
+            1 Non pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=608,losers=1,rld_nregs=1
+            0 Non pseudo reload: reject++
+            1 Non pseudo reload: reject++
+          alt=1,overall=2,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 140:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 49:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) =r  (1) g {*movsi_internal}
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+            alt=2,overall=6,losers=1 -- refuse
+	 Choosing alt 2 in insn 51:  (0) r  (1) 0  (2) mr {*mulsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 52:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 53
+	 Choosing alt 0 in insn 53:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 54:  (0) =<  (1) riF*o {*pushdi2}
+            1 Non pseudo reload: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 55:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 56:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 57:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 58:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 59:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 60:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 61:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r141
+          alt=0,overall=6,losers=1,rld_nregs=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=1,overall=13,losers=1 -- refuse
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 62
+	 Choosing alt 0 in insn 62:  (0) =r  (1) %0  (2) ronF {*adddi3_doubleword}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 63:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 64:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            alt=1,overall=12,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 65:  (0) rm  (1) 0  (2) re {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 66:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 69:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 74:  (0) rm  (1) 0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 80:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 81:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 82:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 83:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 84:  (0) =<  (1) riF*o {*pushdi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 85:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 86:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 87:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 88:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 89:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 90:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 91:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-36)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 92:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-40)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 93:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-44)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 94:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-48)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 95:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-52)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 96:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-56)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 97:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-60)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 98:  (1) lBwBz {*call_value} (sp_off=-64)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 99:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-64)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 101:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 102:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 103:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 104:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 105:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r142
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 106:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 107:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 108:  (0) =r  (1) g {*movsi_internal}
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+            alt=0: Bad operand -- refuse
+            alt=1: Bad operand -- refuse
+            alt=2,overall=6,losers=1 -- refuse
+	 Choosing alt 2 in insn 109:  (0) r  (1) 0  (2) mr {*mulsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 110:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 111
+	 Choosing alt 0 in insn 111:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 112:  (0) =<  (1) riF*o {*pushdi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 113:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 114:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 115:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 116:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 117:  (0) =r  (1) riFo {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 118:  (0) =r  (1) g {*movsi_internal}
+            0 Costly set: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 119:  (0) =*A  (1) 0  (2) =X {extendsidi2_1}
+      Change to class NO_REGS for r143
+          alt=0,overall=6,losers=1,rld_nregs=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            alt=1,overall=13,losers=1 -- refuse
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 120
+	 Choosing alt 0 in insn 120:  (0) =r  (1) %0  (2) ronF {*adddi3_doubleword}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 121:  (0) o  (1) riF {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 122:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            alt=1,overall=12,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 123:  (0) rm  (1) 0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 124:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+EBB 3 4 5
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      Creating newreg=146 from oldreg=98, assigning class GENERAL_REGS to inheritance r146
+    Original reg change 98->146 (bb4):
+  140: r146:SI=r145:SI
+    Add original<-inheritance after:
+  141: r98:SI=r146:SI
+
+    Inheritance reuse change 98->146 (bb4):
+   55: [--sp:SI]=r146:SI
+      REG_DEAD r146:SI
+      REG_ARGS_SIZE 0xc
+	  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	    Removing dead insn:
+   141: r98:SI=r146:SI
+deleting insn with uid = 141.
+EBB 6
+EBB 7
+EBB 8
+
+********** Pseudo live ranges #1: **********
+
+  BB 8
+   Insn 132: point = 0, n_alt = -1
+   Insn 131: point = 0, n_alt = -2
+   Insn 127: point = 1, n_alt = -2
+  BB 5
+   Insn 134: point = 4, n_alt = -1
+   Insn 69: point = 4, n_alt = 0
+  BB 7
+   Insn 124: point = 5, n_alt = 0
+   Insn 123: point = 6, n_alt = 1
+   Insn 122: point = 7, n_alt = 0
+   Insn 121: point = 8, n_alt = 1
+   Insn 120: point = 9, n_alt = 0
+   Insn 119: point = 11, n_alt = 0
+   Insn 118: point = 13, n_alt = 0
+   Insn 117: point = 14, n_alt = 0
+   Insn 116: point = 15, n_alt = 0
+   Insn 115: point = 15, n_alt = 0
+   Insn 114: point = 16, n_alt = 0
+   Insn 113: point = 17, n_alt = 0
+   Insn 112: point = 18, n_alt = 0
+   Insn 111: point = 19, n_alt = 0
+   Insn 110: point = 21, n_alt = 0
+   Insn 109: point = 22, n_alt = 2
+   Insn 108: point = 24, n_alt = 0
+   Insn 107: point = 25, n_alt = 0
+   Insn 106: point = 26, n_alt = 0
+   Insn 105: point = 27, n_alt = 0
+   Insn 104: point = 29, n_alt = 0
+   Insn 103: point = 30, n_alt = 0
+   Insn 102: point = 32, n_alt = 0
+   Insn 101: point = 34, n_alt = 1
+   Insn 100: point = 35, n_alt = -2
+   Insn 99: point = 36, n_alt = 0
+   Insn 98: point = 36, n_alt = 0
+   Insn 97: point = 37, n_alt = 0
+   Insn 96: point = 37, n_alt = 0
+   Insn 95: point = 37, n_alt = 0
+   Insn 94: point = 37, n_alt = 0
+   Insn 93: point = 37, n_alt = 0
+   Insn 92: point = 37, n_alt = 0
+   Insn 91: point = 37, n_alt = 0
+   Insn 90: point = 37, n_alt = 0
+   Insn 89: point = 37, n_alt = 0
+   Insn 88: point = 37, n_alt = 0
+   Insn 87: point = 37, n_alt = 0
+   Insn 86: point = 37, n_alt = 0
+   Insn 85: point = 37, n_alt = 0
+   Insn 84: point = 38, n_alt = 0
+   Insn 83: point = 39, n_alt = 0
+   Insn 82: point = 39, n_alt = 0
+   Insn 81: point = 40, n_alt = 0
+   Insn 80: point = 41, n_alt = 0
+  BB 3
+   Insn 20: point = 43, n_alt = -1
+   Insn 19: point = 43, n_alt = 1
+   Insn 18: point = 44, n_alt = 0
+  BB 6
+   Insn 136: point = 46, n_alt = -1
+   Insn 74: point = 46, n_alt = 1
+  BB 4
+   Insn 67: point = 47, n_alt = -1
+   Insn 66: point = 47, n_alt = 1
+   Insn 65: point = 47, n_alt = 1
+   Insn 64: point = 48, n_alt = 0
+   Insn 63: point = 49, n_alt = 1
+   Insn 62: point = 50, n_alt = 0
+   Insn 61: point = 52, n_alt = 0
+   Insn 60: point = 54, n_alt = 0
+   Insn 59: point = 55, n_alt = 0
+   Insn 58: point = 56, n_alt = 0
+   Insn 57: point = 56, n_alt = 0
+   Insn 56: point = 57, n_alt = 0
+   Insn 55: point = 58, n_alt = 0
+   Insn 54: point = 59, n_alt = 0
+   Insn 53: point = 60, n_alt = 0
+   Insn 52: point = 62, n_alt = 0
+   Insn 51: point = 63, n_alt = 2
+   Insn 50: point = 65, n_alt = 0
+   Insn 49: point = 66, n_alt = 0
+   Insn 140: point = 67, n_alt = 1
+	   Creating copy r145->r146@1000
+   Insn 48: point = 69, n_alt = 0
+   Insn 47: point = 70, n_alt = 0
+   Insn 46: point = 72, n_alt = 0
+   Insn 45: point = 73, n_alt = 0
+   Insn 44: point = 75, n_alt = 0
+   Insn 43: point = 76, n_alt = 1
+   Insn 42: point = 77, n_alt = -2
+   Insn 41: point = 78, n_alt = 0
+   Insn 40: point = 78, n_alt = 0
+   Insn 39: point = 79, n_alt = 0
+   Insn 38: point = 79, n_alt = 0
+   Insn 37: point = 79, n_alt = 0
+   Insn 36: point = 79, n_alt = 0
+   Insn 35: point = 79, n_alt = 0
+   Insn 34: point = 79, n_alt = 0
+   Insn 33: point = 79, n_alt = 0
+   Insn 32: point = 79, n_alt = 0
+   Insn 31: point = 79, n_alt = 0
+   Insn 30: point = 79, n_alt = 0
+   Insn 29: point = 79, n_alt = 0
+   Insn 28: point = 79, n_alt = 0
+   Insn 27: point = 79, n_alt = 0
+   Insn 26: point = 80, n_alt = 0
+   Insn 25: point = 81, n_alt = 0
+   Insn 24: point = 81, n_alt = 0
+   Insn 23: point = 82, n_alt = 0
+   Insn 22: point = 83, n_alt = 0
+  BB 2
+   Insn 16: point = 85, n_alt = 1
+   Insn 15: point = 85, n_alt = 1
+   Insn 14: point = 85, n_alt = 1
+   Insn 13: point = 86, n_alt = -2
+   Insn 12: point = 88, n_alt = 0
+   Insn 11: point = 90, n_alt = 0
+   Insn 10: point = 91, n_alt = 0
+   Insn 9: point = 92, n_alt = 1
+   Insn 8: point = 93, n_alt = -2
+   Insn 7: point = 95, n_alt = 0
+   Insn 6: point = 97, n_alt = 0
+   Insn 5: point = 98, n_alt = 0
+   Insn 138: point = 99, n_alt = 0
+ r87: [33..99]
+ r88: [96..98]
+ r89: [92..93]
+ r90: [89..91]
+ r91: [85..86]
+ r92: [78..83]
+ r93: [80..82]
+ r94: [79..81]
+ r95: [76..77]
+ r96: [56..73]
+ r97: [59..70]
+ r99: [64..66]
+ r100: [64..65]
+ r101: [61..63]
+ r102: [57..60]
+ r103: [51..55]
+ r104: [51..52]
+ r105: [49..50]
+ r106: [36..41]
+ r107: [38..40]
+ r108: [37..39]
+ r109: [34..35]
+ r110: [15..30]
+ r111: [18..27]
+ r112: [17..26]
+ r113: [23..25]
+ r114: [23..24]
+ r115: [20..22]
+ r116: [16..19]
+ r117: [10..14]
+ r118: [10..11]
+ r119: [8..9]
+ r120: [2..5]
+ r121: [0..1]
+ r122: [94..95]
+ r124: [96..97]
+ r125: [89..90]
+ r126: [87..89]
+ r127: [88..88]
+ r128: [43..44]
+ r129: [74..75]
+ r130: [71..72]
+ r131: [61..62]
+ r132: [53..54]
+ r133: [47..48]
+ r134: [31..32]
+ r135: [28..29]
+ r136: [20..21]
+ r137: [12..13]
+ r138: [6..7]
+ r140: [70..70]
+ r141: [52..52]
+ r142: [27..27]
+ r143: [11..11]
+ r144: [95..96]
+ r145: [68..69]
+ r146: [58..67]
+Compressing live ranges: from 100 to 66 - 66%
+Ranges after the compression:
+ r87: [23..65]
+ r88: [64..65]
+ r89: [60..61]
+ r90: [58..59]
+ r91: [54..55]
+ r92: [52..53]
+ r93: [52..53]
+ r94: [52..53]
+ r95: [50..51]
+ r96: [37..47]
+ r97: [37..45]
+ r99: [41..42]
+ r100: [41..42]
+ r101: [39..40]
+ r102: [37..38]
+ r103: [33..36]
+ r104: [33..34]
+ r105: [31..32]
+ r106: [25..26]
+ r107: [25..26]
+ r108: [25..26]
+ r109: [23..24]
+ r110: [12..20]
+ r111: [12..18]
+ r112: [12..17]
+ r113: [16..17]
+ r114: [16..17]
+ r115: [14..15]
+ r116: [12..13]
+ r117: [8..11]
+ r118: [8..9]
+ r119: [6..7]
+ r120: [2..3]
+ r121: [0..1]
+ r122: [62..63]
+ r124: [64..65]
+ r125: [58..59]
+ r126: [56..58]
+ r127: [57..57]
+ r128: [27..28]
+ r129: [48..49]
+ r130: [46..47]
+ r131: [39..40]
+ r132: [35..36]
+ r133: [29..30]
+ r134: [21..22]
+ r135: [19..20]
+ r136: [14..15]
+ r137: [10..11]
+ r138: [4..5]
+ r140: [45..45]
+ r141: [34..34]
+ r142: [18..18]
+ r143: [9..9]
+ r144: [63..64]
+ r145: [43..44]
+ r146: [37..42]
+
+********** Assignment #1: **********
+
+	 Assigning to 144 (cl=DREG, orig=123, freq=1000, tfirst=144, tfreq=1000)...
+	 Trying 1: spill 88(freq=2000)	 Now best 1(cost=1000, bad_spills=0, insn_pseudos=1)
+
+      Spill r88(hr=1, freq=2000) for r144
+	   Assign 1 to reload r144 (freq=1000)
+	 Assigning to 146 (cl=GENERAL_REGS, orig=98, freq=2000, tfirst=145, tfreq=2000)...
+	 Assigning to 145 (cl=GENERAL_REGS, orig=98, freq=2000, tfirst=145, tfreq=2000)...
+	   Assign 3 to reload r145 (freq=2000)
+	Hard reg 3 is preferable by r146 with profit 1000
+  Reassigning non-reload pseudos
+	   Assign 5 to r88 (freq=2000)
+
+********** Undoing inheritance #1: **********
+
+Inherit 0 out of 1 (0.00%)
+   Insn after restoring regs:
+   55: [--sp:SI]=r98:SI
+      REG_DEAD r98:SI
+      REG_ARGS_SIZE 0xc
+   Insn after restoring regs:
+  140: r98:SI=r145:SI
+      REG_DEAD r145:SI
+
+********** Pseudo live ranges #2: **********
+
+  BB 8
+   Insn 132: point = 0, n_alt = -1
+   Insn 131: point = 0, n_alt = -2
+   Insn 127: point = 1, n_alt = -2
+  BB 5
+   Insn 134: point = 4, n_alt = -1
+   Insn 69: point = 4, n_alt = 0
+  BB 7
+   Insn 124: point = 5, n_alt = 0
+   Insn 123: point = 6, n_alt = 1
+   Insn 122: point = 7, n_alt = 0
+   Insn 121: point = 8, n_alt = 1
+   Insn 120: point = 9, n_alt = 0
+   Insn 119: point = 11, n_alt = 0
+   Insn 118: point = 13, n_alt = 0
+   Insn 117: point = 14, n_alt = 0
+   Insn 116: point = 15, n_alt = 0
+   Insn 115: point = 15, n_alt = 0
+   Insn 114: point = 16, n_alt = 0
+   Insn 113: point = 17, n_alt = 0
+   Insn 112: point = 18, n_alt = 0
+   Insn 111: point = 19, n_alt = 0
+   Insn 110: point = 21, n_alt = 0
+   Insn 109: point = 22, n_alt = 2
+   Insn 108: point = 24, n_alt = 0
+   Insn 107: point = 25, n_alt = 0
+   Insn 106: point = 26, n_alt = 0
+   Insn 105: point = 27, n_alt = 0
+   Insn 104: point = 29, n_alt = 0
+   Insn 103: point = 30, n_alt = 0
+   Insn 102: point = 32, n_alt = 0
+   Insn 101: point = 34, n_alt = 1
+   Insn 100: point = 35, n_alt = -2
+   Insn 99: point = 36, n_alt = 0
+   Insn 98: point = 36, n_alt = 0
+   Insn 97: point = 37, n_alt = 0
+   Insn 96: point = 37, n_alt = 0
+   Insn 95: point = 37, n_alt = 0
+   Insn 94: point = 37, n_alt = 0
+   Insn 93: point = 37, n_alt = 0
+   Insn 92: point = 37, n_alt = 0
+   Insn 91: point = 37, n_alt = 0
+   Insn 90: point = 37, n_alt = 0
+   Insn 89: point = 37, n_alt = 0
+   Insn 88: point = 37, n_alt = 0
+   Insn 87: point = 37, n_alt = 0
+   Insn 86: point = 37, n_alt = 0
+   Insn 85: point = 37, n_alt = 0
+   Insn 84: point = 38, n_alt = 0
+   Insn 83: point = 39, n_alt = 0
+   Insn 82: point = 39, n_alt = 0
+   Insn 81: point = 40, n_alt = 0
+   Insn 80: point = 41, n_alt = 0
+  BB 3
+   Insn 20: point = 43, n_alt = -1
+   Insn 19: point = 43, n_alt = 1
+   Insn 18: point = 44, n_alt = 0
+  BB 6
+   Insn 136: point = 46, n_alt = -1
+   Insn 74: point = 46, n_alt = 1
+  BB 4
+   Insn 67: point = 47, n_alt = -1
+   Insn 66: point = 47, n_alt = 1
+   Insn 65: point = 47, n_alt = 1
+   Insn 64: point = 48, n_alt = 0
+   Insn 63: point = 49, n_alt = 1
+   Insn 62: point = 50, n_alt = 0
+   Insn 61: point = 52, n_alt = 0
+   Insn 60: point = 54, n_alt = 0
+   Insn 59: point = 55, n_alt = 0
+   Insn 58: point = 56, n_alt = 0
+   Insn 57: point = 56, n_alt = 0
+   Insn 56: point = 57, n_alt = 0
+   Insn 55: point = 58, n_alt = 0
+   Insn 54: point = 59, n_alt = 0
+   Insn 53: point = 60, n_alt = 0
+   Insn 52: point = 62, n_alt = 0
+   Insn 51: point = 63, n_alt = 2
+   Insn 50: point = 65, n_alt = 0
+   Insn 49: point = 66, n_alt = 0
+   Insn 140: point = 67, n_alt = 1
+   Insn 48: point = 69, n_alt = 0
+   Insn 47: point = 70, n_alt = 0
+   Insn 46: point = 72, n_alt = 0
+   Insn 45: point = 73, n_alt = 0
+   Insn 44: point = 75, n_alt = 0
+   Insn 43: point = 76, n_alt = 1
+   Insn 42: point = 77, n_alt = -2
+   Insn 41: point = 78, n_alt = 0
+   Insn 40: point = 78, n_alt = 0
+   Insn 39: point = 79, n_alt = 0
+   Insn 38: point = 79, n_alt = 0
+   Insn 37: point = 79, n_alt = 0
+   Insn 36: point = 79, n_alt = 0
+   Insn 35: point = 79, n_alt = 0
+   Insn 34: point = 79, n_alt = 0
+   Insn 33: point = 79, n_alt = 0
+   Insn 32: point = 79, n_alt = 0
+   Insn 31: point = 79, n_alt = 0
+   Insn 30: point = 79, n_alt = 0
+   Insn 29: point = 79, n_alt = 0
+   Insn 28: point = 79, n_alt = 0
+   Insn 27: point = 79, n_alt = 0
+   Insn 26: point = 80, n_alt = 0
+   Insn 25: point = 81, n_alt = 0
+   Insn 24: point = 81, n_alt = 0
+   Insn 23: point = 82, n_alt = 0
+   Insn 22: point = 83, n_alt = 0
+  BB 2
+   Insn 16: point = 85, n_alt = 1
+   Insn 15: point = 85, n_alt = 1
+   Insn 14: point = 85, n_alt = 1
+   Insn 13: point = 86, n_alt = -2
+   Insn 12: point = 88, n_alt = 0
+   Insn 11: point = 90, n_alt = 0
+   Insn 10: point = 91, n_alt = 0
+   Insn 9: point = 92, n_alt = 1
+   Insn 8: point = 93, n_alt = -2
+   Insn 7: point = 95, n_alt = -1
+   Insn 6: point = 97, n_alt = 0
+   Insn 5: point = 98, n_alt = -1
+   Insn 138: point = 99, n_alt = 0
+ r87: [33..99]
+ r88: [96..98]
+ r89: [92..93]
+ r90: [89..91]
+ r91: [85..86]
+ r92: [78..83]
+ r93: [80..82]
+ r94: [79..81]
+ r95: [76..77]
+ r96: [56..73]
+ r97: [59..70]
+ r98: [58..67]
+ r99: [64..66]
+ r100: [64..65]
+ r101: [61..63]
+ r102: [57..60]
+ r103: [51..55]
+ r104: [51..52]
+ r105: [49..50]
+ r106: [36..41]
+ r107: [38..40]
+ r108: [37..39]
+ r109: [34..35]
+ r110: [15..30]
+ r111: [18..27]
+ r112: [17..26]
+ r113: [23..25]
+ r114: [23..24]
+ r115: [20..22]
+ r116: [16..19]
+ r117: [10..14]
+ r118: [10..11]
+ r119: [8..9]
+ r120: [2..5]
+ r121: [0..1]
+ r122: [94..95]
+ r124: [96..97]
+ r125: [89..90]
+ r126: [87..89]
+ r127: [88..88]
+ r128: [43..44]
+ r129: [74..75]
+ r130: [71..72]
+ r131: [61..62]
+ r132: [53..54]
+ r133: [47..48]
+ r134: [31..32]
+ r135: [28..29]
+ r136: [20..21]
+ r137: [12..13]
+ r138: [6..7]
+ r140: [70..70]
+ r141: [52..52]
+ r142: [27..27]
+ r143: [11..11]
+ r144: [95..96]
+ r145: [68..69]
+Compressing live ranges: from 100 to 66 - 66%
+Ranges after the compression:
+ r87: [23..65]
+ r88: [64..65]
+ r89: [60..61]
+ r90: [58..59]
+ r91: [54..55]
+ r92: [52..53]
+ r93: [52..53]
+ r94: [52..53]
+ r95: [50..51]
+ r96: [37..47]
+ r97: [37..45]
+ r98: [37..42]
+ r99: [41..42]
+ r100: [41..42]
+ r101: [39..40]
+ r102: [37..38]
+ r103: [33..36]
+ r104: [33..34]
+ r105: [31..32]
+ r106: [25..26]
+ r107: [25..26]
+ r108: [25..26]
+ r109: [23..24]
+ r110: [12..20]
+ r111: [12..18]
+ r112: [12..17]
+ r113: [16..17]
+ r114: [16..17]
+ r115: [14..15]
+ r116: [12..13]
+ r117: [8..11]
+ r118: [8..9]
+ r119: [6..7]
+ r120: [2..3]
+ r121: [0..1]
+ r122: [62..63]
+ r124: [64..65]
+ r125: [58..59]
+ r126: [56..58]
+ r127: [57..57]
+ r128: [27..28]
+ r129: [48..49]
+ r130: [46..47]
+ r131: [39..40]
+ r132: [35..36]
+ r133: [29..30]
+ r134: [21..22]
+ r135: [19..20]
+ r136: [14..15]
+ r137: [10..11]
+ r138: [4..5]
+ r140: [45..45]
+ r141: [34..34]
+ r142: [18..18]
+ r143: [9..9]
+ r144: [63..64]
+ r145: [43..44]
+
+********** Pseudos coalescing #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+            1 Early clobber: reject++
+          alt=0,overall=1,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =a  (1) =&d  (2) 0  (3) rm {*udivmodsi4}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+  Slot 0 regnos (width = 0):	 98
+Changing spilled pseudos to memory in insn #140
+Changing spilled pseudos to memory in insn #55
+	   Spilling non-eliminable hard regs: 6
+
+********** Local #3: **********
+
+	   Spilling non-eliminable hard regs: 6
+Reusing alternative 0 for insn #55
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 55:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+Reusing alternative 1 for insn #140
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 140:  (0) m  (1) re {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+Restoring SCRATCH in insn #47(nop 2)
+Restoring SCRATCH in insn #61(nop 2)
+Restoring SCRATCH in insn #105(nop 2)
+Restoring SCRATCH in insn #119(nop 2)
+New elimination table:
+Can't eliminate 16 to 7 (offset=80, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=48, prev_offset=0)
+Can eliminate 20 to 6 (offset=-24, prev_offset=-24)
+changing reg in insn 138
+changing reg in insn 102
+changing reg in insn 44
+changing reg in insn 5
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 9
+changing reg in insn 10
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 14
+changing reg in insn 22
+changing reg in insn 40
+changing reg in insn 23
+changing reg in insn 26
+changing reg in insn 24
+changing reg in insn 27
+changing reg in insn 42
+changing reg in insn 43
+changing reg in insn 45
+changing reg in insn 57
+changing reg in insn 47
+changing reg in insn 54
+changing reg in insn 49
+changing reg in insn 51
+changing reg in insn 50
+changing reg in insn 51
+changing reg in insn 51
+changing reg in insn 53
+changing reg in insn 53
+changing reg in insn 56
+changing reg in insn 59
+changing reg in insn 61
+changing reg in insn 62
+changing reg in insn 63
+changing reg in insn 80
+changing reg in insn 98
+changing reg in insn 81
+changing reg in insn 84
+changing reg in insn 82
+changing reg in insn 85
+changing reg in insn 100
+changing reg in insn 101
+changing reg in insn 103
+changing reg in insn 115
+changing reg in insn 105
+changing reg in insn 112
+changing reg in insn 106
+changing reg in insn 113
+changing reg in insn 107
+changing reg in insn 109
+changing reg in insn 108
+changing reg in insn 109
+changing reg in insn 109
+changing reg in insn 111
+changing reg in insn 111
+changing reg in insn 114
+changing reg in insn 117
+changing reg in insn 119
+changing reg in insn 120
+changing reg in insn 121
+changing reg in insn 124
+changing reg in insn 69
+changing reg in insn 127
+changing reg in insn 127
+changing reg in insn 131
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 6
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 12
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 44
+changing reg in insn 45
+changing reg in insn 46
+changing reg in insn 47
+changing reg in insn 52
+changing reg in insn 60
+changing reg in insn 61
+changing reg in insn 64
+changing reg in insn 65
+changing reg in insn 102
+changing reg in insn 103
+changing reg in insn 104
+changing reg in insn 105
+changing reg in insn 110
+changing reg in insn 118
+changing reg in insn 119
+changing reg in insn 122
+changing reg in insn 123
+deleting insn with uid = 8.
+deleting insn with uid = 42.
+deleting insn with uid = 100.
+deleting insn with uid = 127.
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 40.
+rescanning insn with uid = 57.
+rescanning insn with uid = 98.
+rescanning insn with uid = 115.
+
+
+stream::read
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={30d,28u} r1={15d,9u} r2={14d,10u} r3={8d,8u,1e} r4={4d,5u} r5={4d,5u,1e} r6={1d,79u} r7={41d,58u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={2e} r17={28d,2u} r18={4d} r19={4d} r20={1d,1u} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r76={4d} r77={4d} r78={4d} r79={4d} r80={4d} 
+;;    total ref usage 635{426d,205u,4e} in 111{107 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 87 88 89 90 91 122 123 124 125 126 127
+(note 3 1 138 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 138 3 2 2 (parallel [
+            (set (reg:SI 4 si [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 138 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 5 di [orig:88 _1 ] [88])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 0 ax [124])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 7 6 9 2 (parallel [
+            (set (reg:SI 0 ax [122])
+                (udiv:SI (reg:SI 0 ax [124])
+                    (reg:SI 5 di [orig:88 _1 ] [88])))
+            (set (reg:SI 1 dx [123])
+                (umod:SI (reg:SI 0 ax [124])
+                    (reg:SI 5 di [orig:88 _1 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 326 {*udivmodsi4}
+     (nil))
+(insn 9 7 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32])
+        (reg:SI 0 ax [orig:89 _2 ] [89])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 2 cx [orig:90 _3 ] [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 0 ax [125])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 ax [127])
+                (udiv:SI (reg:SI 0 ax [125])
+                    (reg:SI 2 cx [orig:90 _3 ] [90])))
+            (set (reg:SI 1 dx [126])
+                (umod:SI (reg:SI 0 ax [125])
+                    (reg:SI 2 cx [orig:90 _3 ] [90])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 326 {*udivmodsi4}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 0 ax [orig:91 _4 ] [91])
+        (reg:SI 1 dx [126])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 last+0 S4 A32])
+        (reg:SI 0 ax [orig:91 _4 ] [91])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":46 79 {*movsi_internal}
+     (nil))
+(insn 16 15 75 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 79 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;;              6 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 128
+(code_label 75 16 17 3 13 (nil) [1 uses])
+(note 17 75 18 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 3 (set (reg:SI 0 ax [128])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 79 {*movsi_internal}
+     (nil))
+(insn 19 18 20 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 0 ax [128])
+            (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 11 {*cmpsi_1}
+     (nil))
+(jump_insn 20 19 21 3 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 78)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 548 {*jcc}
+     (nil)
+ -> 78)
+;;  succ:       7
+;;              4 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 92 93 94 95 96 97 98 99 100 101 102 103 104 105 129 130 131 132 133
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg/f:SI 2 cx [orig:92 _5 ] [92])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 4 (set (reg:DI 0 ax [orig:93 _6 ] [93])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 78 {*movdi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 3 bx [orig:94 _7 ] [94])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 79 {*movsi_internal}
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 26 25 27 4 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:93 _6 ] [93])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 27 26 28 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 3 bx [orig:94 _7 ] [94])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 28 27 29 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 29 28 30 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 30 29 31 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 31 30 32 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 32 31 33 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 33 32 34 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 34 33 35 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 35 34 36 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 36 35 37 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 37 36 38 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 38 37 39 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 39 38 40 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 40 39 41 4 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:92 _5 ] [92]) [0 *_5 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 565 {*call_value}
+     (nil)
+    (nil))
+(insn 41 40 43 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 43 41 44 4 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 r+0 S4 A32])
+        (reg:SI 0 ax [orig:95 _8 ] [95])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 79 {*movsi_internal}
+     (nil))
+(insn 44 43 45 4 (set (reg/f:SI 0 ax [129])
+        (mem/u/c:SI (plus:SI (reg:SI 4 si [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 45 44 46 4 (set (reg/f:SI 5 di [orig:96 _9 ] [96])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [129])
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 46 45 47 4 (set (reg:SI 0 ax [130])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 47 46 48 4 (parallel [
+            (set (reg:DI 0 ax [orig:97 _10 ] [97])
+                (sign_extend:DI (reg:SI 0 ax [130])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 132 {extendsidi2_1}
+     (nil))
+(insn 48 47 140 4 (set (reg/f:SI 3 bx [orig:98 _11 ] [98])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 140 48 141 4 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [23 %sfp+-36 S4 A32])
+        (reg/f:SI 3 bx [orig:98 _11 ] [98])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(note 141 140 49 4 NOTE_INSN_DELETED)
+(insn 49 141 50 4 (set (reg:SI 3 bx [orig:99 _12 ] [99])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 50 49 51 4 (set (reg:SI 2 cx [orig:100 i.3_13 ] [100])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 51 50 52 4 (parallel [
+            (set (reg:SI 3 bx [orig:101 _14 ] [101])
+                (mult:SI (reg:SI 3 bx [orig:99 _12 ] [99])
+                    (reg:SI 2 cx [orig:100 i.3_13 ] [100])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 301 {*mulsi3_1}
+     (nil))
+(insn 52 51 53 4 (set (reg/f:SI 2 cx [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 56 [0x38])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 79 {*movsi_internal}
+     (nil))
+(insn 53 52 54 4 (parallel [
+            (set (reg/f:SI 2 cx [orig:102 _15 ] [102])
+                (plus:SI (reg/f:SI 2 cx [131])
+                    (reg:SI 3 bx [orig:101 _14 ] [101])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 194 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 3 bx [orig:101 _14 ] [101]))
+        (nil)))
+(insn 54 53 55 4 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:97 _10 ] [97])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 55 54 56 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [23 %sfp+-36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 56 55 57 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 2 cx [orig:102 _15 ] [102])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 57 56 58 4 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 5 di [orig:96 _9 ] [96]) [0 *_9 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 565 {*call_value}
+     (nil)
+    (nil))
+(insn 58 57 59 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 59 58 60 4 (set (reg:DI 2 cx [orig:103 _16 ] [103])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 78 {*movdi_internal}
+     (nil))
+(insn 60 59 61 4 (set (reg:SI 0 ax [132])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 79 {*movsi_internal}
+     (nil))
+(insn 61 60 62 4 (parallel [
+            (set (reg:DI 0 ax [orig:104 _17 ] [104])
+                (sign_extend:DI (reg:SI 0 ax [132])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 132 {extendsidi2_1}
+     (nil))
+(insn 62 61 63 4 (parallel [
+            (set (reg:DI 0 ax [orig:105 _18 ] [105])
+                (plus:DI (reg:DI 0 ax [orig:104 _17 ] [104])
+                    (reg:DI 2 cx [orig:103 _16 ] [103])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 192 {*adddi3_doubleword}
+     (nil))
+(insn 63 62 64 4 (set (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])
+        (reg:DI 0 ax [orig:105 _18 ] [105])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 78 {*movdi_internal}
+     (nil))
+(insn 64 63 65 4 (set (reg:SI 0 ax [133])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 79 {*movsi_internal}
+     (nil))
+(insn 65 64 66 4 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])
+                    (reg:SI 0 ax [133])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 194 {*addsi_1}
+     (nil))
+(insn 66 65 67 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -44 [0xffffffffffffffd4])) [2 r+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 67 66 68 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 548 {*jcc}
+     (nil)
+ -> 72)
+;;  succ:       5 (FALLTHRU)
+;;              6
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 120
+(note 68 67 69 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 134 5 (set (reg:SI 0 ax [orig:120 _35 ] [120])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":53 79 {*movsi_internal}
+     (nil))
+(jump_insn 134 69 135 5 (set (pc)
+        (label_ref 125)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":53 549 {jump}
+     (nil)
+ -> 125)
+;;  succ:       8 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 120
+
+(barrier 135 134 72)
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (RTL, MODIFIED)
+;;  pred:       4
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags]
+(code_label 72 135 73 6 11 (nil) [1 uses])
+(note 73 72 74 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 136 6 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -32 [0xffffffffffffffe0])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 194 {*addsi_1}
+     (nil))
+(jump_insn 136 74 137 6 (set (pc)
+        (label_ref 75)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 549 {jump}
+     (nil)
+ -> 75)
+;;  succ:       3 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+(barrier 137 136 78)
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (RTL, MODIFIED)
+;;  pred:       3
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 134 135 136 137 138
+(code_label 78 137 79 7 10 (nil) [1 uses])
+(note 79 78 80 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 7 (set (reg/f:SI 2 cx [orig:106 _19 ] [106])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 79 {*movsi_internal}
+     (nil))
+(insn 81 80 82 7 (set (reg:DI 0 ax [orig:107 _20 ] [107])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 78 {*movdi_internal}
+     (nil))
+(insn 82 81 83 7 (set (reg:SI 3 bx [orig:108 last.4_21 ] [108])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 79 {*movsi_internal}
+     (nil))
+(insn 83 82 84 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 84 83 85 7 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:107 _20 ] [107])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 85 84 86 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 3 bx [orig:108 last.4_21 ] [108])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 86 85 87 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 52 [0x34])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 87 86 88 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 48 [0x30])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 88 87 89 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 44 [0x2c])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 89 88 90 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 90 89 91 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 91 90 92 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 92 91 93 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 93 92 94 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 94 93 95 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 95 94 96 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 96 95 97 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 97 96 98 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 98 97 99 7 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:106 _19 ] [106]) [0 *_19 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 565 {*call_value}
+     (nil)
+    (nil))
+(insn 99 98 101 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 101 99 102 7 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 r+0 S4 A32])
+        (reg:SI 0 ax [orig:109 _22 ] [109])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 79 {*movsi_internal}
+     (nil))
+(insn 102 101 103 7 (set (reg/f:SI 0 ax [134])
+        (mem/u/c:SI (plus:SI (reg:SI 4 si [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 103 102 104 7 (set (reg/f:SI 2 cx [orig:110 _23 ] [110])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [134])
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 104 103 105 7 (set (reg:SI 0 ax [135])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 105 104 106 7 (parallel [
+            (set (reg:DI 0 ax [orig:111 _24 ] [111])
+                (sign_extend:DI (reg:SI 0 ax [135])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 132 {extendsidi2_1}
+     (nil))
+(insn 106 105 107 7 (set (reg/f:SI 3 bx [orig:112 _25 ] [112])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 107 106 108 7 (set (reg:SI 5 di [orig:113 _26 ] [113])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 108 107 109 7 (set (reg:SI 4 si [orig:114 n.5_27 ] [114])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 109 108 110 7 (parallel [
+            (set (reg:SI 5 di [orig:115 _28 ] [115])
+                (mult:SI (reg:SI 5 di [orig:113 _26 ] [113])
+                    (reg:SI 4 si [orig:114 n.5_27 ] [114])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 301 {*mulsi3_1}
+     (nil))
+(insn 110 109 111 7 (set (reg/f:SI 4 si [136])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 56 [0x38])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 79 {*movsi_internal}
+     (nil))
+(insn 111 110 112 7 (parallel [
+            (set (reg/f:SI 4 si [orig:116 _29 ] [116])
+                (plus:SI (reg/f:SI 4 si [136])
+                    (reg:SI 5 di [orig:115 _28 ] [115])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 194 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 5 di [orig:115 _28 ] [115]))
+        (nil)))
+(insn 112 111 113 7 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 0 ax [orig:111 _24 ] [111])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 113 112 114 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 3 bx [orig:112 _25 ] [112])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 114 113 115 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 4 si [orig:116 _29 ] [116])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 115 114 116 7 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 2 cx [orig:110 _23 ] [110]) [0 *_23 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 565 {*call_value}
+     (nil)
+    (nil))
+(insn 116 115 117 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 117 116 118 7 (set (reg:DI 2 cx [orig:117 _30 ] [117])
+        (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 78 {*movdi_internal}
+     (nil))
+(insn 118 117 119 7 (set (reg:SI 0 ax [137])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 79 {*movsi_internal}
+     (nil))
+(insn 119 118 120 7 (parallel [
+            (set (reg:DI 0 ax [orig:118 _31 ] [118])
+                (sign_extend:DI (reg:SI 0 ax [137])))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 132 {extendsidi2_1}
+     (nil))
+(insn 120 119 121 7 (parallel [
+            (set (reg:DI 0 ax [orig:119 _32 ] [119])
+                (plus:DI (reg:DI 0 ax [orig:118 _31 ] [118])
+                    (reg:DI 2 cx [orig:117 _30 ] [117])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 192 {*adddi3_doubleword}
+     (nil))
+(insn 121 120 122 7 (set (mem/c:DI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [3 s.rpos+0 S8 A32])
+        (reg:DI 0 ax [orig:119 _32 ] [119])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 78 {*movdi_internal}
+     (nil))
+(insn 122 121 123 7 (set (reg:SI 0 ax [138])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 79 {*movsi_internal}
+     (nil))
+(insn 123 122 124 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])
+                    (reg:SI 0 ax [138])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 194 {*addsi_1}
+     (nil))
+(insn 124 123 125 7 (set (reg:SI 0 ax [orig:120 _35 ] [120])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":60 79 {*movsi_internal}
+     (nil))
+;;  succ:       8 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 120
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+;;              5 [always] 
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 120
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 120
+;; lr  def 	 0 [ax] 121
+(code_label 125 124 126 8 12 (nil) [1 uses])
+(note 126 125 131 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 131 126 132 8 (set (reg/i:SI 0 ax)
+        (reg:SI 0 ax [orig:121 <retval> ] [121])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":61 79 {*movsi_internal}
+     (nil))
+(insn 132 131 139 8 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":61 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 139 132 0 NOTE_INSN_DELETED)

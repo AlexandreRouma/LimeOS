@@ -1,0 +1,2182 @@
+
+;; Function memcpy (_Z6memcpyPvS_y, funcdef_no=6, decl_uid=1040, cgraph_uid=6, symbol_order=6)
+
+memcpy (void * dstptr, void * srcptr, uint64_t size)
+{
+  uint64_t i;
+  uint64_t i;
+  uint8_t * src;
+  uint8_t * dst;
+  void * D.1088;
+  sizetype _1;
+  uint8_t * _2;
+  sizetype _3;
+  uint8_t * _4;
+  unsigned char _5;
+  unsigned int _6;
+  unsigned int _7;
+  uint8_t * _8;
+  unsigned int _9;
+  unsigned int _10;
+  uint8_t * _11;
+  unsigned char _12;
+  void * _30;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  dst_19 = dstptr_18(D);
+  src_21 = srcptr_20(D);
+  if (dst_19 < src_21)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       3
+;;                7
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  i_22 = 0;
+;;    succ:       4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+;;                5
+  # i_13 = PHI <i_22(3), i_26(5)>
+  if (i_13 >= size_24(D))
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       6
+;;                5
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  _1 = (sizetype) i_13;
+  _2 = src_21 + _1;
+  _3 = (sizetype) i_13;
+  _4 = dst_19 + _3;
+  _5 = *_2;
+  *_4 = _5;
+  i_26 = i_13 + 1;
+  goto <bb 4>; [INV]
+;;    succ:       4
+
+;;   basic block 6, loop depth 0
+;;    pred:       4
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 7, loop depth 0
+;;    pred:       2
+  i_27 = size_24(D);
+;;    succ:       8
+
+;;   basic block 8, loop depth 1
+;;    pred:       7
+;;                9
+  # i_14 = PHI <i_27(7), i_29(9)>
+  if (i_14 == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+;;    succ:       10
+;;                9
+
+;;   basic block 9, loop depth 1
+;;    pred:       8
+  _6 = (unsigned int) i_14;
+  _7 = _6 + 4294967295;
+  _8 = src_21 + _7;
+  _9 = (unsigned int) i_14;
+  _10 = _9 + 4294967295;
+  _11 = dst_19 + _10;
+  _12 = *_8;
+  *_11 = _12;
+  i_29 = i_14 + 18446744073709551615;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 10, loop depth 0
+;;    pred:       6
+;;                8
+  _30 = dstptr_18(D);
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       10
+<L9>:
+  return _30;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (i_13 - 13 )
+Partition 14 (i_14 - 14 )
+Partition 18 (dstptr_18(D) - 18 )
+Partition 19 (dst_19 - 19 )
+Partition 20 (srcptr_20(D) - 20 )
+Partition 21 (src_21 - 21 )
+Partition 22 (i_22 - 22 )
+Partition 24 (size_24(D) - 24 )
+Partition 26 (i_26 - 26 )
+Partition 27 (i_27 - 27 )
+Partition 29 (i_29 - 29 )
+Partition 30 (_30 - 30 )
+Partition 31 (_31(D) - 31 )
+
+
+Partition map 
+
+Partition 0 (i_13 - 13 )
+Partition 1 (i_14 - 14 )
+Partition 2 (dstptr_18(D) - 18 )
+Partition 3 (srcptr_20(D) - 20 )
+Partition 4 (i_22 - 22 )
+Partition 5 (size_24(D) - 24 )
+Partition 6 (i_26 - 26 )
+Partition 7 (i_27 - 27 )
+Partition 8 (i_29 - 29 )
+Partition 9 (_31(D) - 31 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) i_13 <-> i_22
+(2147483646, 0) i_13 <-> i_26
+(2147483646, 0) i_14 <-> i_27
+(2147483646, 0) i_14 <-> i_29
+
+Partition map 
+
+Partition 0 (i_13 - 13 )
+Partition 1 (i_14 - 14 )
+Partition 2 (dstptr_18(D) - 18 )
+Partition 3 (srcptr_20(D) - 20 )
+Partition 4 (i_22 - 22 )
+Partition 5 (size_24(D) - 24 )
+Partition 6 (i_26 - 26 )
+Partition 7 (i_27 - 27 )
+Partition 8 (i_29 - 29 )
+Partition 9 (_31(D) - 31 )
+
+Coalesce list: (13)i_13 & (22)i_22 [map: 0, 4] : Success -> 0
+Coalesce list: (13)i_13 & (26)i_26 [map: 0, 6] : Success -> 0
+Coalesce list: (14)i_14 & (27)i_27 [map: 1, 7] : Success -> 1
+Coalesce list: (14)i_14 & (29)i_29 [map: 1, 8] : Success -> 1
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (i_13 - 13 22 26 )
+Partition 13 (i_14 - 14 27 29 )
+Partition 14 (dstptr_18(D) - 18 )
+Partition 15 (dst_19 - 19 )
+Partition 16 (srcptr_20(D) - 20 )
+Partition 17 (src_21 - 21 )
+Partition 18 (size_24(D) - 24 )
+Partition 19 (_30 - 30 )
+Partition 20 (_31(D) - 31 )
+
+memcpy (void * dstptr, void * srcptr, uint64_t size)
+{
+  uint64_t i;
+  uint64_t i;
+  uint8_t * src;
+  uint8_t * dst;
+  void * D.1088;
+  sizetype _1;
+  uint8_t * _2;
+  sizetype _3;
+  uint8_t * _4;
+  unsigned char _5;
+  unsigned int _6;
+  unsigned int _7;
+  uint8_t * _8;
+  unsigned int _9;
+  unsigned int _10;
+  uint8_t * _11;
+  unsigned char _12;
+  void * _30;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  dst_19 = dstptr_18(D);
+  src_21 = srcptr_20(D);
+  if (dst_19 < src_21)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       3
+;;                7
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  i_22 = 0;
+;;    succ:       4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+;;                5
+  # i_13 = PHI <i_22(3), i_26(5)>
+  if (i_13 >= size_24(D))
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       6
+;;                5
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  _1 = (sizetype) i_13;
+  _2 = src_21 + _1;
+  _3 = (sizetype) i_13;
+  _4 = dst_19 + _3;
+  _5 = *_2;
+  *_4 = _5;
+  i_26 = i_13 + 1;
+  goto <bb 4>; [INV]
+;;    succ:       4
+
+;;   basic block 6, loop depth 0
+;;    pred:       4
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 7, loop depth 0
+;;    pred:       2
+  i_27 = size_24(D);
+;;    succ:       8
+
+;;   basic block 8, loop depth 1
+;;    pred:       7
+;;                9
+  # i_14 = PHI <i_27(7), i_29(9)>
+  if (i_14 == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 9>; [INV]
+;;    succ:       10
+;;                9
+
+;;   basic block 9, loop depth 1
+;;    pred:       8
+  _6 = (unsigned int) i_14;
+  _7 = _6 + 4294967295;
+  _8 = src_21 + _7;
+  _9 = (unsigned int) i_14;
+  _10 = _9 + 4294967295;
+  _11 = dst_19 + _10;
+  _12 = *_8;
+  *_11 = _12;
+  i_29 = i_14 + 18446744073709551615;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 10, loop depth 0
+;;    pred:       6
+;;                8
+  _30 = dstptr_18(D);
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       10
+<L9>:
+  return _30;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; dst_19 = dstptr_18(D);
+
+(insn 9 8 10 (set (reg/f:SI 104)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 dstptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":4 -1
+     (nil))
+
+(insn 10 9 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+        (reg/f:SI 104)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":4 -1
+     (nil))
+
+;; src_21 = srcptr_20(D);
+
+(insn 11 10 12 (set (reg/f:SI 105)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [3 srcptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":5 -1
+     (nil))
+
+(insn 12 11 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+        (reg/f:SI 105)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":5 -1
+     (nil))
+
+;; if (dst_19 < src_21)
+
+(insn 13 12 14 (set (reg/f:SI 106)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil))
+
+(insn 14 13 15 (set (reg:CC 17 flags)
+        (compare:CC (reg/f:SI 106)
+            (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil))
+
+(jump_insn 15 14 0 (set (pc)
+        (if_then_else (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; i_22 = 0;
+
+(insn 17 16 0 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; if (i_13 >= size_24(D))
+
+(insn 19 18 20 (set (reg:DI 107)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+(insn 20 19 21 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 107) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -40 [0xffffffffffffffd8])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+(insn 21 20 22 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 107) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -36 [0xffffffffffffffdc])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+(jump_insn 22 21 0 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _1 = (sizetype) i_13;
+
+(insn 24 23 0 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+;; _2 = src_21 + _1;
+
+(insn 25 24 26 (set (reg/f:SI 108)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+(insn 26 25 0 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg:SI 88 [ _1 ])
+                    (reg/f:SI 108)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+            (reg:SI 88 [ _1 ]))
+        (nil)))
+
+;; _3 = (sizetype) i_13;
+
+(insn 27 26 0 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+;; _4 = dst_19 + _3;
+
+(insn 28 27 29 (set (reg/f:SI 109)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+(insn 29 28 0 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg:SI 90 [ _3 ])
+                    (reg/f:SI 109)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+            (reg:SI 90 [ _3 ]))
+        (nil)))
+
+;; _5 = *_2;
+
+(insn 30 29 0 (set (reg:QI 92 [ _5 ])
+        (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+;; *_4 = _5;
+
+(insn 31 30 0 (set (mem:QI (reg/f:SI 91 [ _4 ]) [0 *_4+0 S1 A8])
+        (reg:QI 92 [ _5 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+
+;; i_26 = i_13 + 1;
+
+(insn 32 31 0 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; 
+
+(code_label 36 35 37 3 (nil) [0 uses])
+
+(note 37 36 0 NOTE_INSN_BASIC_BLOCK)
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 40 39 41 2 (nil) [0 uses])
+
+(note 41 40 0 NOTE_INSN_BASIC_BLOCK)
+
+;; i_27 = size_24(D);
+
+(insn 42 41 43 (set (reg:DI 110)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [1 size+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+(insn 43 42 0 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+        (reg:DI 110)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; if (i_14 == 0)
+
+(insn 45 44 46 (set (reg:SI 112)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+(insn 46 45 47 (parallel [
+            (set (subreg:SI (reg:DI 111) 0)
+                (xor:SI (reg:SI 112)
+                    (const_int 0 [0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (expr_list:REG_EQUAL (xor:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])
+            (const_int 0 [0]))
+        (nil)))
+
+(insn 47 46 48 (set (reg:SI 113)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 i+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+(insn 48 47 49 (parallel [
+            (set (subreg:SI (reg:DI 111) 4)
+                (xor:SI (reg:SI 113)
+                    (const_int 0 [0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (expr_list:REG_EQUAL (xor:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 i+4 S4 A32])
+            (const_int 0 [0]))
+        (nil)))
+
+(insn 49 48 50 (parallel [
+            (set (reg:SI 114)
+                (ior:SI (subreg:SI (reg:DI 111) 4)
+                    (subreg:SI (reg:DI 111) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+(insn 50 49 51 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 114)
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+(jump_insn 51 50 0 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; _6 = (unsigned int) i_14;
+
+(insn 53 52 0 (set (reg:SI 93 [ _6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; _7 = _6 + 4294967295;
+
+(insn 54 53 0 (parallel [
+            (set (reg:SI 94 [ _7 ])
+                (plus:SI (reg:SI 93 [ _6 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; _8 = src_21 + _7;
+
+(insn 55 54 56 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+(insn 56 55 0 (parallel [
+            (set (reg/f:SI 95 [ _8 ])
+                (plus:SI (reg:SI 94 [ _7 ])
+                    (reg/f:SI 115)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+            (reg:SI 94 [ _7 ]))
+        (nil)))
+
+;; _9 = (unsigned int) i_14;
+
+(insn 57 56 0 (set (reg:SI 96 [ _9 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; _10 = _9 + 4294967295;
+
+(insn 58 57 0 (parallel [
+            (set (reg:SI 97 [ _10 ])
+                (plus:SI (reg:SI 96 [ _9 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; _11 = dst_19 + _10;
+
+(insn 59 58 60 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+(insn 60 59 0 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg:SI 97 [ _10 ])
+                    (reg/f:SI 116)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+            (reg:SI 97 [ _10 ]))
+        (nil)))
+
+;; _12 = *_8;
+
+(insn 61 60 0 (set (reg:QI 99 [ _12 ])
+        (mem:QI (reg/f:SI 95 [ _8 ]) [0 *_8+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; *_11 = _12;
+
+(insn 62 61 0 (set (mem:QI (reg/f:SI 98 [ _11 ]) [0 *_11+0 S1 A8])
+        (reg:QI 99 [ _12 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+
+;; i_29 = i_14 + 18446744073709551615;
+
+(insn 63 62 0 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 10
+
+;; 
+
+(code_label 67 66 68 5 (nil) [0 uses])
+
+(note 68 67 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _30 = dstptr_18(D);
+
+(insn 69 68 0 (set (reg/f:SI 100 [ _30 ])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 dstptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":13 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; <L9>:
+
+(code_label 70 69 71 7 (nil) [0 uses])
+
+(note 71 70 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _30;
+
+(insn 72 71 73 (set (reg/f:SI 101 [ <retval> ])
+        (reg/f:SI 100 [ _30 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":13 -1
+     (nil))
+
+(jump_insn 73 72 74 (set (pc)
+        (label_ref 0)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":13 -1
+     (nil))
+
+(barrier 74 73 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 5->7 redirected to 11
+deleting block 7
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 73.
+Merging block 13 into block 11...
+Merged blocks 11 and 13.
+Merged 11 and 13 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg:SI 102)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 size+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":3 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [1 size+0 S4 A64])
+        (reg:SI 102)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":3 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 103)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [1 size+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":3 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 size+4 S4 A32])
+        (reg:SI 103)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":3 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 104)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 dstptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":4 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+        (reg/f:SI 104)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":4 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 105)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [3 srcptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":5 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+        (reg/f:SI 105)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":5 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 106)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/f:SI 106)
+            (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 40)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":6 -1
+     (nil)
+ -> 40)
+;;  succ:       4 (FALLTHRU)
+;;              8
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 33 4 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+;;  succ:       5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;;              6 (DFS_BACK)
+(code_label 33 17 18 5 4 (nil) [1 uses])
+(note 18 33 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:DI 107)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 107) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -40 [0xffffffffffffffd8])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+(insn 21 20 22 5 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 107) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -36 [0xffffffffffffffdc])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+(jump_insn 22 21 23 5 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 67)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 548 {*jcc}
+     (nil)
+ -> 67)
+;;  succ:       11
+;;              6 (FALLTHRU)
+
+;; basic block 6, loop depth 1, maybe hot
+;;  prev block 5, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 23 22 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 25 24 26 6 (set (reg/f:SI 108)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 26 25 27 6 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg:SI 88 [ _1 ])
+                    (reg/f:SI 108)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+            (reg:SI 88 [ _1 ]))
+        (nil)))
+(insn 27 26 28 6 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 28 27 29 6 (set (reg/f:SI 109)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 29 28 30 6 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg:SI 90 [ _3 ])
+                    (reg/f:SI 109)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+            (reg:SI 90 [ _3 ]))
+        (nil)))
+(insn 30 29 31 6 (set (reg:QI 92 [ _5 ])
+        (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 31 30 32 6 (set (mem:QI (reg/f:SI 91 [ _4 ]) [0 *_4+0 S1 A8])
+        (reg:QI 92 [ _5 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":8 -1
+     (nil))
+(insn 32 31 34 6 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil))
+(jump_insn 34 32 35 6 (set (pc)
+        (label_ref 33)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":7 -1
+     (nil)
+ -> 33)
+;;  succ:       5 (DFS_BACK)
+
+(barrier 35 34 40)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 6, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+(code_label 40 35 41 8 2 (nil) [1 uses])
+(note 41 40 42 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 8 (set (reg:DI 110)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [1 size+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(insn 43 42 64 8 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+        (reg:DI 110)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 1, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8 (FALLTHRU)
+;;              10 (DFS_BACK)
+(code_label 64 43 44 9 6 (nil) [1 uses])
+(note 44 64 45 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 9 (set (reg:SI 112)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(insn 46 45 47 9 (parallel [
+            (set (subreg:SI (reg:DI 111) 0)
+                (xor:SI (reg:SI 112)
+                    (const_int 0 [0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (expr_list:REG_EQUAL (xor:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])
+            (const_int 0 [0]))
+        (nil)))
+(insn 47 46 48 9 (set (reg:SI 113)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 i+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(insn 48 47 49 9 (parallel [
+            (set (subreg:SI (reg:DI 111) 4)
+                (xor:SI (reg:SI 113)
+                    (const_int 0 [0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (expr_list:REG_EQUAL (xor:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 i+4 S4 A32])
+            (const_int 0 [0]))
+        (nil)))
+(insn 49 48 50 9 (parallel [
+            (set (reg:SI 114)
+                (ior:SI (subreg:SI (reg:DI 111) 4)
+                    (subreg:SI (reg:DI 111) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(insn 50 49 51 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 114)
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(jump_insn 51 50 52 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil)
+ -> 67)
+;;  succ:       11
+;;              10 (FALLTHRU)
+
+;; basic block 10, loop depth 1, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9 (FALLTHRU)
+(note 52 51 53 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 10 (set (reg:SI 93 [ _6 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 54 53 55 10 (parallel [
+            (set (reg:SI 94 [ _7 ])
+                (plus:SI (reg:SI 93 [ _6 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 55 54 56 10 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 56 55 57 10 (parallel [
+            (set (reg/f:SI 95 [ _8 ])
+                (plus:SI (reg:SI 94 [ _7 ])
+                    (reg/f:SI 115)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [2 src+0 S4 A32])
+            (reg:SI 94 [ _7 ]))
+        (nil)))
+(insn 57 56 58 10 (set (reg:SI 96 [ _9 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 58 57 59 10 (parallel [
+            (set (reg:SI 97 [ _10 ])
+                (plus:SI (reg:SI 96 [ _9 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 59 58 60 10 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 60 59 61 10 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg:SI 97 [ _10 ])
+                    (reg/f:SI 116)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 dst+0 S4 A32])
+            (reg:SI 97 [ _10 ]))
+        (nil)))
+(insn 61 60 62 10 (set (reg:QI 99 [ _12 ])
+        (mem:QI (reg/f:SI 95 [ _8 ]) [0 *_8+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 62 61 63 10 (set (mem:QI (reg/f:SI 98 [ _11 ]) [0 *_11+0 S1 A8])
+        (reg:QI 99 [ _12 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":11 -1
+     (nil))
+(insn 63 62 65 10 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -16 [0xfffffffffffffff0])) [1 i+0 S8 A64])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil))
+(jump_insn 65 63 66 10 (set (pc)
+        (label_ref 64)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":10 -1
+     (nil)
+ -> 64)
+;;  succ:       9 (DFS_BACK)
+
+(barrier 66 65 67)
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+;;              9
+(code_label 67 66 68 11 5 (nil) [2 uses])
+(note 68 67 69 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 72 11 (set (reg/f:SI 100 [ _30 ])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 dstptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":13 -1
+     (nil))
+(insn 72 69 76 11 (set (reg/f:SI 101 [ <retval> ])
+        (reg/f:SI 100 [ _30 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":13 -1
+     (nil))
+(insn 76 72 77 11 (set (reg/i:SI 0 ax)
+        (reg/f:SI 101 [ <retval> ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":14 -1
+     (nil))
+(insn 77 76 0 11 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":14 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function memcmp (_Z6memcmpPvS_y, funcdef_no=7, decl_uid=1044, cgraph_uid=7, symbol_order=7)
+
+memcmp (void * aptr, void * bptr, uint64_t size)
+{
+  uint32_t i;
+  uint8_t * b;
+  uint8_t * a;
+  bool D.1094;
+  long long unsigned int _1;
+  uint8_t * _2;
+  unsigned char _3;
+  uint8_t * _4;
+  unsigned char _5;
+  bool _7;
+  bool _15;
+  bool _17;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  a_9 = aptr_8(D);
+  b_11 = bptr_10(D);
+  i_12 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # i_6 = PHI <i_12(2), i_16(6)>
+  _1 = (long long unsigned int) i_6;
+  if (size_13(D) <= _1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _2 = a_9 + i_6;
+  _3 = *_2;
+  _4 = b_11 + i_6;
+  _5 = *_4;
+  if (_3 != _5)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _15 = 0;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_16 = i_6 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _17 = 1;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _7 = PHI <_15(5), _17(7)>
+<L5>:
+  return _7;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (i_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (aptr_8(D) - 8 )
+Partition 9 (a_9 - 9 )
+Partition 10 (bptr_10(D) - 10 )
+Partition 11 (b_11 - 11 )
+Partition 12 (i_12 - 12 )
+Partition 13 (size_13(D) - 13 )
+Partition 15 (_15 - 15 )
+Partition 16 (i_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18(D) - 18 )
+
+
+Partition map 
+
+Partition 0 (i_6 - 6 )
+Partition 1 (_7 - 7 )
+Partition 2 (aptr_8(D) - 8 )
+Partition 3 (bptr_10(D) - 10 )
+Partition 4 (i_12 - 12 )
+Partition 5 (size_13(D) - 13 )
+Partition 6 (_15 - 15 )
+Partition 7 (i_16 - 16 )
+Partition 8 (_17 - 17 )
+Partition 9 (_18(D) - 18 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) i_6 <-> i_12
+(2147483646, 0) i_6 <-> i_16
+(10000, 0) _7 <-> _15
+(10000, 0) _7 <-> _17
+
+Partition map 
+
+Partition 0 (i_6 - 6 )
+Partition 1 (_7 - 7 )
+Partition 2 (aptr_8(D) - 8 )
+Partition 3 (bptr_10(D) - 10 )
+Partition 4 (i_12 - 12 )
+Partition 5 (size_13(D) - 13 )
+Partition 6 (_15 - 15 )
+Partition 7 (i_16 - 16 )
+Partition 8 (_17 - 17 )
+Partition 9 (_18(D) - 18 )
+
+Coalesce list: (6)i_6 & (12)i_12 [map: 0, 4] : Success -> 0
+Coalesce list: (6)i_6 & (16)i_16 [map: 0, 7] : Success -> 0
+Coalesce list: (7)_7 & (15)_15 [map: 1, 6] : Success -> 1
+Coalesce list: (7)_7 & (17)_17 [map: 1, 8] : Success -> 1
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (i_6 - 6 12 16 )
+Partition 6 (_7 - 7 15 17 )
+Partition 7 (aptr_8(D) - 8 )
+Partition 8 (a_9 - 9 )
+Partition 9 (bptr_10(D) - 10 )
+Partition 10 (b_11 - 11 )
+Partition 11 (size_13(D) - 13 )
+Partition 12 (_18(D) - 18 )
+
+memcmp (void * aptr, void * bptr, uint64_t size)
+{
+  uint32_t i;
+  uint8_t * b;
+  uint8_t * a;
+  bool D.1094;
+  long long unsigned int _1;
+  uint8_t * _2;
+  unsigned char _3;
+  uint8_t * _4;
+  unsigned char _5;
+  bool _7;
+  bool _15;
+  bool _17;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  a_9 = aptr_8(D);
+  b_11 = bptr_10(D);
+  i_12 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # i_6 = PHI <i_12(2), i_16(6)>
+  _1 = (long long unsigned int) i_6;
+  if (size_13(D) <= _1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _2 = a_9 + i_6;
+  _3 = *_2;
+  _4 = b_11 + i_6;
+  _5 = *_4;
+  if (_3 != _5)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _15 = 0;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_16 = i_6 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _17 = 1;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _7 = PHI <_15(5), _17(7)>
+<L5>:
+  return _7;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; a_9 = aptr_8(D);
+
+(insn 9 8 10 (set (reg/f:SI 97)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 aptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":17 -1
+     (nil))
+
+(insn 10 9 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])
+        (reg/f:SI 97)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":17 -1
+     (nil))
+
+;; b_11 = bptr_10(D);
+
+(insn 11 10 12 (set (reg/f:SI 98)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [3 bptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":18 -1
+     (nil))
+
+(insn 12 11 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])
+        (reg/f:SI 98)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":18 -1
+     (nil))
+
+;; i_12 = 0;
+
+(insn 13 12 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; _1 = (long long unsigned int) i_6;
+
+(insn 15 14 0 (set (reg:DI 88 [ _1 ])
+        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+;; if (size_13(D) <= _1)
+
+(insn 16 15 17 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 88 [ _1 ]) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+(insn 17 16 18 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 88 [ _1 ]) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -20 [0xffffffffffffffec])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+(jump_insn 18 17 0 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _2 = a_9 + i_6;
+
+(insn 20 19 21 (set (reg/f:SI 99)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+(insn 21 20 22 (set (reg:SI 100)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+(insn 22 21 0 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg/f:SI 99)
+                    (reg:SI 100)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))
+        (nil)))
+
+;; _3 = *_2;
+
+(insn 23 22 0 (set (reg:QI 90 [ _3 ])
+        (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+;; _4 = b_11 + i_6;
+
+(insn 24 23 25 (set (reg/f:SI 101)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+(insn 25 24 26 (set (reg:SI 102)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+(insn 26 25 0 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg/f:SI 101)
+                    (reg:SI 102)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))
+        (nil)))
+
+;; _5 = *_4;
+
+(insn 27 26 0 (set (reg:QI 92 [ _5 ])
+        (mem:QI (reg/f:SI 91 [ _4 ]) [0 *_4+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+;; if (_3 != _5)
+
+(insn 28 27 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 90 [ _3 ])
+            (reg:QI 92 [ _5 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+(jump_insn 29 28 0 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _15 = 0;
+
+(insn 31 30 0 (set (reg:QI 93 [ _7 ])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":21 -1
+     (nil))
+
+;; // predicted unlikely by early return (on trees) predictor.
+
+(nil)
+
+;; Generating RTL for gimple basic block 6
+
+;; 
+
+(code_label 34 33 35 10 (nil) [0 uses])
+
+(note 35 34 0 NOTE_INSN_BASIC_BLOCK)
+
+;; i_16 = i_6 + 1;
+
+(insn 36 35 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 40 39 41 9 (nil) [0 uses])
+
+(note 41 40 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _17 = 1;
+
+(insn 42 41 0 (set (reg:QI 93 [ _7 ])
+        (const_int 1 [0x1])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":24 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; <L5>:
+
+(code_label 43 42 44 11 (nil) [0 uses])
+
+(note 44 43 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _7;
+
+(insn 45 44 46 (set (reg:QI 94 [ <retval> ])
+        (reg:QI 93 [ _7 ])) -1
+     (nil))
+
+(jump_insn 46 45 47 (set (pc)
+        (label_ref 0)) -1
+     (nil))
+
+(barrier 47 46 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 46.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg:SI 95)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 size+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":16 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 size+0 S4 A64])
+        (reg:SI 95)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":16 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 96)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [1 size+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":16 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 size+4 S4 A32])
+        (reg:SI 96)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":16 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 97)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 aptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":17 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])
+        (reg/f:SI 97)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":17 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 98)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [3 bptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":18 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])
+        (reg/f:SI 98)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":18 -1
+     (nil))
+(insn 13 12 37 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              7 (DFS_BACK)
+(code_label 37 13 14 4 12 (nil) [1 uses])
+(note 14 37 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:DI 88 [ _1 ])
+        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 88 [ _1 ]) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+(insn 17 16 18 4 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 88 [ _1 ]) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -20 [0xffffffffffffffec])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 40)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil)
+ -> 40)
+;;  succ:       8
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg/f:SI 99)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 100)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 22 21 23 5 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg/f:SI 99)
+                    (reg:SI 100)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 a+0 S4 A32])
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))
+        (nil)))
+(insn 23 22 24 5 (set (reg:QI 90 [ _3 ])
+        (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:SI 101)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 102)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 26 25 27 5 (parallel [
+            (set (reg/f:SI 91 [ _4 ])
+                (plus:SI (reg/f:SI 101)
+                    (reg:SI 102)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 b+0 S4 A32])
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32]))
+        (nil)))
+(insn 27 26 28 5 (set (reg:QI 92 [ _5 ])
+        (mem:QI (reg/f:SI 91 [ _4 ]) [0 *_4+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 90 [ _3 ])
+            (reg:QI 92 [ _5 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil))
+(jump_insn 29 28 30 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":20 -1
+     (nil)
+ -> 34)
+;;  succ:       6 (FALLTHRU)
+;;              7
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg:QI 93 [ _7 ])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":21 -1
+     (nil))
+(jump_insn 32 31 33 6 (set (pc)
+        (label_ref 43)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":21 -1
+     (nil)
+ -> 43)
+;;  succ:       9
+
+(barrier 33 32 34)
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+(code_label 34 33 35 7 10 (nil) [1 uses])
+(note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 38 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [4 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil))
+(jump_insn 38 36 39 7 (set (pc)
+        (label_ref 37)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":19 -1
+     (nil)
+ -> 37)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 39 38 40)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 40 39 41 8 9 (nil) [1 uses])
+(note 41 40 42 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 8 (set (reg:QI 93 [ _7 ])
+        (const_int 1 [0x1])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":24 -1
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+;;              8 (FALLTHRU)
+(code_label 43 42 44 9 11 (nil) [1 uses])
+(note 44 43 45 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 49 9 (set (reg:QI 94 [ <retval> ])
+        (reg:QI 93 [ _7 ])) -1
+     (nil))
+(insn 49 45 50 9 (set (reg/i:QI 0 ax)
+        (reg:QI 94 [ <retval> ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":25 -1
+     (nil))
+(insn 50 49 0 9 (use (reg/i:QI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":25 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function memset (_Z6memsetPvhy, funcdef_no=8, decl_uid=1048, cgraph_uid=8, symbol_order=8)
+
+memset (void * bufptr, uint8_t value, uint64_t size)
+{
+  uint64_t i;
+  uint8_t * buf;
+  void * D.1098;
+  sizetype _1;
+  uint8_t * _2;
+  void * _13;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  buf_6 = bufptr_5(D);
+  i_7 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                4
+  # i_3 = PHI <i_7(2), i_12(4)>
+  if (i_3 >= size_9(D))
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       5
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _1 = (sizetype) i_3;
+  _2 = buf_6 + _1;
+  *_2 = value_10(D);
+  i_12 = i_3 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 5, loop depth 0
+;;    pred:       3
+  _13 = bufptr_5(D);
+;;    succ:       6
+
+;;   basic block 6, loop depth 0
+;;    pred:       5
+<L3>:
+  return _13;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (i_3 - 3 )
+Partition 5 (bufptr_5(D) - 5 )
+Partition 6 (buf_6 - 6 )
+Partition 7 (i_7 - 7 )
+Partition 9 (size_9(D) - 9 )
+Partition 10 (value_10(D) - 10 )
+Partition 12 (i_12 - 12 )
+Partition 13 (_13 - 13 )
+Partition 14 (_14(D) - 14 )
+
+
+Partition map 
+
+Partition 0 (i_3 - 3 )
+Partition 1 (bufptr_5(D) - 5 )
+Partition 2 (i_7 - 7 )
+Partition 3 (size_9(D) - 9 )
+Partition 4 (value_10(D) - 10 )
+Partition 5 (i_12 - 12 )
+Partition 6 (_14(D) - 14 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) i_3 <-> i_7
+(2147483646, 0) i_3 <-> i_12
+
+Partition map 
+
+Partition 0 (i_3 - 3 )
+Partition 1 (bufptr_5(D) - 5 )
+Partition 2 (i_7 - 7 )
+Partition 3 (size_9(D) - 9 )
+Partition 4 (value_10(D) - 10 )
+Partition 5 (i_12 - 12 )
+Partition 6 (_14(D) - 14 )
+
+Coalesce list: (3)i_3 & (7)i_7 [map: 0, 2] : Success -> 0
+Coalesce list: (3)i_3 & (12)i_12 [map: 0, 5] : Success -> 0
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (i_3 - 3 7 12 )
+Partition 3 (bufptr_5(D) - 5 )
+Partition 4 (buf_6 - 6 )
+Partition 5 (size_9(D) - 9 )
+Partition 6 (value_10(D) - 10 )
+Partition 7 (_13 - 13 )
+Partition 8 (_14(D) - 14 )
+
+memset (void * bufptr, uint8_t value, uint64_t size)
+{
+  uint64_t i;
+  uint8_t * buf;
+  void * D.1098;
+  sizetype _1;
+  uint8_t * _2;
+  void * _13;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  buf_6 = bufptr_5(D);
+  i_7 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                4
+  # i_3 = PHI <i_7(2), i_12(4)>
+  if (i_3 >= size_9(D))
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       5
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _1 = (sizetype) i_3;
+  _2 = buf_6 + _1;
+  *_2 = value_10(D);
+  i_12 = i_3 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 5, loop depth 0
+;;    pred:       3
+  _13 = bufptr_5(D);
+;;    succ:       6
+
+;;   basic block 6, loop depth 0
+;;    pred:       5
+<L3>:
+  return _13;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; buf_6 = bufptr_5(D);
+
+(insn 12 11 13 (set (reg/f:SI 96)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 bufptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":28 -1
+     (nil))
+
+(insn 13 12 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])
+        (reg/f:SI 96)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":28 -1
+     (nil))
+
+;; i_7 = 0;
+
+(insn 14 13 0 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; if (i_3 >= size_9(D))
+
+(insn 16 15 17 (set (reg:DI 97)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+(insn 17 16 18 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 97) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+(insn 18 17 19 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 97) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -28 [0xffffffffffffffe4])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+(jump_insn 19 18 0 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _1 = (sizetype) i_3;
+
+(insn 21 20 0 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+
+;; _2 = buf_6 + _1;
+
+(insn 22 21 23 (set (reg/f:SI 98)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+
+(insn 23 22 0 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg:SI 88 [ _1 ])
+                    (reg/f:SI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])
+            (reg:SI 88 [ _1 ]))
+        (nil)))
+
+;; *_2 = value_10(D);
+
+(insn 24 23 25 (set (reg:QI 99)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 value+0 S1 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+
+(insn 25 24 0 (set (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])
+        (reg:QI 99)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+
+;; i_12 = i_3 + 1;
+
+(insn 26 25 0 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; 
+
+(code_label 30 29 31 14 (nil) [0 uses])
+
+(note 31 30 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _13 = bufptr_5(D);
+
+(insn 32 31 0 (set (reg/f:SI 90 [ _13 ])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 bufptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":32 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; <L3>:
+
+(code_label 33 32 34 16 (nil) [0 uses])
+
+(note 34 33 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _13;
+
+(insn 35 34 36 (set (reg/f:SI 91 [ <retval> ])
+        (reg/f:SI 90 [ _13 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":32 -1
+     (nil))
+
+(jump_insn 36 35 37 (set (pc)
+        (label_ref 0)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":32 -1
+     (nil))
+
+(barrier 37 36 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 36.
+Merging block 8 into block 6...
+Merged blocks 6 and 8.
+Merged 6 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 10 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 10 3 2 (set (reg:SI 92)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [0 value+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 93)
+        (subreg:QI (reg:SI 92) 0)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 value+0 S1 A32])
+        (reg:QI 93)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 5 4 6 2 (set (reg:SI 94)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 size+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [1 size+0 S4 A64])
+        (reg:SI 94)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 95)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [1 size+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [1 size+4 S4 A32])
+        (reg:SI 95)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":27 -1
+     (nil))
+(note 9 8 12 2 NOTE_INSN_FUNCTION_BEG)
+(insn 12 9 13 2 (set (reg/f:SI 96)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 bufptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":28 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])
+        (reg/f:SI 96)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":28 -1
+     (nil))
+(insn 14 13 27 2 (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              5 (DFS_BACK)
+(code_label 27 14 15 4 15 (nil) [1 uses])
+(note 15 27 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg:DI 97)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:CC 17 flags)
+        (compare:CC (subreg:SI (reg:DI 97) 0)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [1 size+0 S4 A64]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:CCC 17 flags)
+                (compare:CCC (zero_extend:DI (subreg:SI (reg:DI 97) 4))
+                    (plus:DI (ltu:DI (reg:CC 17 flags)
+                            (const_int 0 [0]))
+                        (zero_extend:DI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                                    (const_int -28 [0xffffffffffffffe4])) [1 size+4 S4 A32])))))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (geu (reg:CCC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil)
+ -> 30)
+;;  succ:       6
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 i+0 S4 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+(insn 22 21 23 5 (set (reg/f:SI 98)
+        (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+(insn 23 22 24 5 (parallel [
+            (set (reg/f:SI 89 [ _2 ])
+                (plus:SI (reg:SI 88 [ _1 ])
+                    (reg/f:SI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 buf+0 S4 A32])
+            (reg:SI 88 [ _1 ]))
+        (nil)))
+(insn 24 23 25 5 (set (reg:QI 99)
+        (mem/c:QI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 value+0 S1 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+(insn 25 24 26 5 (set (mem:QI (reg/f:SI 89 [ _2 ]) [0 *_2+0 S1 A8])
+        (reg:QI 99)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":30 -1
+     (nil))
+(insn 26 25 28 5 (parallel [
+            (set (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                (plus:DI (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 i+0 S8 A64])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil))
+(jump_insn 28 26 29 5 (set (pc)
+        (label_ref 27)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":29 -1
+     (nil)
+ -> 27)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 29 28 30)
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 30 29 31 6 14 (nil) [1 uses])
+(note 31 30 32 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 35 6 (set (reg/f:SI 90 [ _13 ])
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [3 bufptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":32 -1
+     (nil))
+(insn 35 32 39 6 (set (reg/f:SI 91 [ <retval> ])
+        (reg/f:SI 90 [ _13 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":32 -1
+     (nil))
+(insn 39 35 40 6 (set (reg/i:SI 0 ax)
+        (reg/f:SI 91 [ <retval> ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":33 -1
+     (nil))
+(insn 40 39 0 6 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp":33 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

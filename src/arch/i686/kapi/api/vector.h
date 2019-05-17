@@ -1,6 +1,7 @@
 #pragma once
 #include <stdint.h>
 #include <kapi.h>
+#include <memory.h>
 
 template <class T>
 class vector {
@@ -35,7 +36,7 @@ vector<T>::vector() {
 template<class T>
 vector<T>::vector(const vector<T>& v) {
     _items = (T*)kapi::api.mm.malloc(sizeof(T) * v.itemCount);
-    kapi::api.mm.memcpy(_items, v._items, sizeof(T) * v.itemCount);
+    memcpy(_items, v._items, sizeof(T) * v.itemCount);
     itemCount = v.itemCount;
     _init = true;
 }
@@ -76,7 +77,7 @@ template<class T>
 void vector<T>::push_front(T item) {
     itemCount++;
     _items = (T*)kapi::api.mm.realloc(_items, itemCount * sizeof(T));
-    kapi::api.mm.memcpy(_items + sizeof(T), _items, (itemCount - 1) * sizeof(T));
+    memcpy(_items + sizeof(T), _items, (itemCount - 1) * sizeof(T));
     _items[0] = item;
 }
 
@@ -87,14 +88,14 @@ T vector<T>::pop_front() {
     }
     itemCount--;
     T item = _items[0];
-    kapi::api.mm.memcpy(&_items[0], &_items[1], itemCount * sizeof(T));
+    memcpy(&_items[0], &_items[1], itemCount * sizeof(T));
     _items = (T*)kapi::api.mm.realloc(_items, itemCount * sizeof(T));
     return item;
 }
 
 template<class T>
 void vector<T>::remove(uint32_t index) {
-    kapi::api.mm.memcpy(&_items[index], &_items[index + 1], (itemCount - (index + 1)) * sizeof(T));
+    memcpy(&_items[index], &_items[index + 1], (itemCount - (index + 1)) * sizeof(T));
     itemCount--;
     _items = (T*)kapi::api.mm.realloc(_items, itemCount * sizeof(T));
 }
@@ -115,7 +116,7 @@ vector<T>& vector<T>::operator=(const vector<T>& v) {
         kapi::api.mm.free(_items);
     }
     _items = (T*)kapi::api.mm.malloc(sizeof(T) * v.itemCount);
-    kapi::api.mm.memcpy(_items, v._items, sizeof(T) * v.itemCount);
+    memcpy(_items, v._items, sizeof(T) * v.itemCount);
     itemCount = v.itemCount;
     return *this;
 }

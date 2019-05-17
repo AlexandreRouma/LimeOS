@@ -4,7 +4,7 @@
 rm ../ramfs/mod/*
 
 # Copy drivers
-cp ../bin/i686/drivers/* ../ramfs/mod/
+cp ../bin/i686/drivers/*.elf ../ramfs/mod/
 
 # Build tar archive
 cd ../ramfs

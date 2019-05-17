@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <kapi.h>
+#include <memory.h>
 
 uint32_t strlen(char* str){
     uint32_t len = 0;
@@ -91,7 +92,7 @@ bool strsw(char* str, char* match) {
 string::string(const string& str) {
 	this->_length = strlen(str._str);
 	this->_str = (char*)kapi::api.mm.malloc(this->_length + 1);
-	kapi::api.mm.memcpy(this->_str, str._str, this->_length);
+	memcpy(this->_str, str._str, this->_length);
 	this->_str[this->_length] = 0x00;
 	_init = true;
 }
@@ -99,7 +100,7 @@ string::string(const string& str) {
 string::string(char* str) {
 	this->_length = strlen(str);
 	this->_str = (char*)kapi::api.mm.malloc(this->_length + 1);
-	kapi::api.mm.memcpy(this->_str, str, this->_length);
+	memcpy(this->_str, str, this->_length);
 	this->_str[this->_length] = 0x00;
 	_init = true;
 }
@@ -132,7 +133,7 @@ string string::operator+(char c) {
 
 void string::operator+=(string str) {
 	this->_str = (char*)kapi::api.mm.realloc(this->_str, this->_length + str.length() + 1);
-	kapi::api.mm.memcpy(this->_str + this->_length, str.toCharArray(), str.length());
+	memcpy(this->_str + this->_length, str.toCharArray(), str.length());
 	this->_str[this->_length + str.length()] = 0x00;
 	this->_length += str.length();
 }
@@ -175,7 +176,7 @@ void string::operator=(string str) {
 	}
 	this->_length = str.length();
 	this->_str = (char*)kapi::api.mm.malloc(this->_length + 1);
-	kapi::api.mm.memcpy(this->_str, str.toCharArray(), this->_length);
+	memcpy(this->_str, str.toCharArray(), this->_length);
 	this->_str[this->_length] = 0x00;
 }
 
@@ -185,7 +186,7 @@ void string::operator=(char* str) {
 	}
 	this->_length = strlen(str);
 	this->_str = (char*)kapi::api.mm.malloc(this->_length + 1);
-	kapi::api.mm.memcpy(this->_str, str, this->_length);
+	memcpy(this->_str, str, this->_length);
 	this->_str[this->_length] = 0x00;
 }
 

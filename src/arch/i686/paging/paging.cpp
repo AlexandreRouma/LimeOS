@@ -125,6 +125,10 @@ namespace paging {
         return n;
     }
 
+    uint32_t sizeToPages(uint32_t size) {
+        return (size / 4096) + 1;
+    }
+
     void invlpg(uint32_t addr) {
         asm volatile("invlpg (%0)" ::"r" (addr) : "memory");
     }

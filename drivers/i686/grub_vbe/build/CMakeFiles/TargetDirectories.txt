@@ -1,3 +1,3 @@
-/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles/rebuild_cache.dir
-/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles/vga_textmode.dir
-/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles/edit_cache.dir
+/mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles/grub_vbe.dir
+/mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles/edit_cache.dir

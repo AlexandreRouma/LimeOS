@@ -16,7 +16,8 @@ namespace kmod {
 
     bool load(char* path) {
         stream_t s = vfs::getStream(path);
-        char* buf = (char*)malloc(s.slen);
+        uint32_t pages = paging::sizeToPages(s.slen);
+        char* buf = (char*)paging::allocPages(pages);
         stream::read(s, buf, s.slen);
         stream::close(s);
         ELFExec mod((uint32_t)buf);
@@ -56,6 +57,7 @@ namespace kmod {
         
         bool ret = func_ptr(kapi::api);
         if (ret == true) {
+            paging::setAbsent((uint32_t)buf, pages);
             // TODO: Save module
         }
         return ret;

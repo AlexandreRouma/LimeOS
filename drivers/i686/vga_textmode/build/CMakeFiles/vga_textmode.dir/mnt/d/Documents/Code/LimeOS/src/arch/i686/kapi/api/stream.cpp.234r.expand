@@ -1,0 +1,4491 @@
+
+;; Function stream::create (_ZN6stream6createEjyPFj8stream_tjyES2_PFvS0_EPv, funcdef_no=6, decl_uid=1069, cgraph_uid=6, symbol_order=6)
+
+stream::create (uint32_t buffersz, uint64_t slen, uint32_t (*<T2b6>) (struct stream_t, uint32_t, uint64_t) writeHndlr, uint32_t (*<T2b6>) (struct stream_t, uint32_t, uint64_t) readHndlr, void (*<T2b4>) (struct stream_t) closeHndlr, void * tag)
+{
+  struct stream_t s [value-expr: <retval>];
+  void * (*<T2f3>) (uint32_t) _1;
+  void * _2;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  <retval>.buffersz = buffersz_4(D);
+  <retval>.slen = slen_6(D);
+  <retval>.rpos = 0;
+  <retval>.wpos = 0;
+  <retval>.writeHndlr = writeHndlr_10(D);
+  <retval>.readHndlr = readHndlr_12(D);
+  <retval>.closeHndlr = closeHndlr_14(D);
+  <retval>.tag = tag_16(D);
+  _1 = api.mm.malloc;
+  _2 = _1 (buffersz_4(D));
+  <retval>.buffer = _2;
+;;    succ:       3
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+<L0>:
+  return <retval>;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 4 (buffersz_4(D) - 4 )
+Partition 6 (slen_6(D) - 6 )
+Partition 10 (writeHndlr_10(D) - 10 )
+Partition 12 (readHndlr_12(D) - 12 )
+Partition 14 (closeHndlr_14(D) - 14 )
+Partition 16 (tag_16(D) - 16 )
+
+
+Partition map 
+
+Partition 0 (buffersz_4(D) - 4 )
+Partition 1 (slen_6(D) - 6 )
+Partition 2 (writeHndlr_10(D) - 10 )
+Partition 3 (readHndlr_12(D) - 12 )
+Partition 4 (closeHndlr_14(D) - 14 )
+Partition 5 (tag_16(D) - 16 )
+
+
+Conflict graph:
+
+After sorting:
+Coalesce List:
+
+Partition map 
+
+Partition 0 (buffersz_4(D) - 4 )
+Partition 1 (slen_6(D) - 6 )
+Partition 2 (writeHndlr_10(D) - 10 )
+Partition 3 (readHndlr_12(D) - 12 )
+Partition 4 (closeHndlr_14(D) - 14 )
+Partition 5 (tag_16(D) - 16 )
+
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (buffersz_4(D) - 4 )
+Partition 3 (slen_6(D) - 6 )
+Partition 4 (writeHndlr_10(D) - 10 )
+Partition 5 (readHndlr_12(D) - 12 )
+Partition 6 (closeHndlr_14(D) - 14 )
+Partition 7 (tag_16(D) - 16 )
+
+stream::create (uint32_t buffersz, uint64_t slen, uint32_t (*<T2b6>) (struct stream_t, uint32_t, uint64_t) writeHndlr, uint32_t (*<T2b6>) (struct stream_t, uint32_t, uint64_t) readHndlr, void (*<T2b4>) (struct stream_t) closeHndlr, void * tag)
+{
+  struct stream_t s [value-expr: <retval>];
+  void * (*<T2f3>) (uint32_t) _1;
+  void * _2;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  <retval>.buffersz = buffersz_4(D);
+  <retval>.slen = slen_6(D);
+  <retval>.rpos = 0;
+  <retval>.wpos = 0;
+  <retval>.writeHndlr = writeHndlr_10(D);
+  <retval>.readHndlr = readHndlr_12(D);
+  <retval>.closeHndlr = closeHndlr_14(D);
+  <retval>.tag = tag_16(D);
+  _1 = api.mm.malloc;
+  _2 = _1 (buffersz_4(D));
+  <retval>.buffer = _2;
+;;    succ:       3
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+<L0>:
+  return <retval>;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; <retval>.buffersz = buffersz_4(D);
+
+(insn 9 8 10 (set (reg/f:SI 92)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+
+(insn 10 9 11 (set (reg:SI 93)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+
+(insn 11 10 0 (set (mem/c:SI (reg/f:SI 92) [2 <retval>.buffersz+0 S4 A32])
+        (reg:SI 93)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+
+;; <retval>.slen = slen_6(D);
+
+(insn 12 11 13 (set (reg/f:SI 94)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+
+(insn 13 12 14 (set (reg:DI 95)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 slen+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+
+(insn 14 13 0 (set (mem/c:DI (plus:SI (reg/f:SI 94)
+                (const_int 4 [0x4])) [3 <retval>.slen+0 S8 A32])
+        (reg:DI 95)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+
+;; <retval>.rpos = 0;
+
+(insn 15 14 16 (set (reg/f:SI 96)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 -1
+     (nil))
+
+(insn 16 15 0 (set (mem/c:DI (plus:SI (reg/f:SI 96)
+                (const_int 20 [0x14])) [3 <retval>.rpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 -1
+     (nil))
+
+;; <retval>.wpos = 0;
+
+(insn 17 16 18 (set (reg/f:SI 97)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 -1
+     (nil))
+
+(insn 18 17 0 (set (mem/c:DI (plus:SI (reg/f:SI 97)
+                (const_int 12 [0xc])) [3 <retval>.wpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 -1
+     (nil))
+
+;; <retval>.writeHndlr = writeHndlr_10(D);
+
+(insn 19 18 20 (set (reg/f:SI 98)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+
+(insn 20 19 21 (set (reg/f:SI 99)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [4 writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+
+(insn 21 20 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 98)
+                (const_int 36 [0x24])) [4 <retval>.writeHndlr+0 S4 A32])
+        (reg/f:SI 99)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+
+;; <retval>.readHndlr = readHndlr_12(D);
+
+(insn 22 21 23 (set (reg/f:SI 100)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+
+(insn 23 22 24 (set (reg/f:SI 101)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [4 readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+
+(insn 24 23 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 100)
+                (const_int 40 [0x28])) [4 <retval>.readHndlr+0 S4 A32])
+        (reg/f:SI 101)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+
+;; <retval>.closeHndlr = closeHndlr_14(D);
+
+(insn 25 24 26 (set (reg/f:SI 102)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+
+(insn 26 25 27 (set (reg/f:SI 103)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [5 closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+
+(insn 27 26 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 102)
+                (const_int 44 [0x2c])) [5 <retval>.closeHndlr+0 S4 A32])
+        (reg/f:SI 103)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+
+;; <retval>.tag = tag_16(D);
+
+(insn 28 27 29 (set (reg/f:SI 104)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+
+(insn 29 28 30 (set (reg/f:SI 105)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [6 tag+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+
+(insn 30 29 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 104)
+                (const_int 32 [0x20])) [6 <retval>.tag+0 S4 A32])
+        (reg/f:SI 105)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+
+;; _1 = api.mm.malloc;
+
+(insn 31 30 32 (set (reg/f:SI 106)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+
+(insn 32 31 0 (set (reg/f:SI 88 [ _1 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 106)
+                (const_int 16 [0x10])) [16 api.mm.malloc+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+
+;; _2 = _1 (buffersz_4(D));
+
+(insn 33 32 34 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 34 33 35 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(call_insn 35 34 36 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 88 [ _1 ]) [0 *_1 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil)
+    (nil))
+
+(insn 36 35 37 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+(insn 37 36 0 (set (reg/f:SI 89 [ _2 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+
+;; <retval>.buffer = _2;
+
+(insn 38 37 39 (set (reg/f:SI 107)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+
+(insn 39 38 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 107)
+                (const_int 28 [0x1c])) [8 <retval>.buffer+0 S4 A32])
+        (reg/f:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; <L0>:
+
+(code_label 40 39 41 2 (nil) [0 uses])
+
+(note 41 40 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return <retval>;
+
+(jump_insn 42 41 43 (set (pc)
+        (label_ref 0)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":16 -1
+     (nil))
+
+(barrier 43 42 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 2->4 to 5 failed.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 42.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg:SI 90)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [3 slen+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 slen+0 S4 A64])
+        (reg:SI 90)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 91)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 slen+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [3 slen+4 S4 A32])
+        (reg:SI 91)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":5 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 92)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 93)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (reg/f:SI 92) [2 <retval>.buffersz+0 S4 A32])
+        (reg:SI 93)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":7 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 94)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 95)
+        (mem/c:DI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [3 slen+0 S8 A64])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/c:DI (plus:SI (reg/f:SI 94)
+                (const_int 4 [0x4])) [3 <retval>.slen+0 S8 A32])
+        (reg:DI 95)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":8 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 96)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 -1
+     (nil))
+(insn 16 15 17 2 (set (mem/c:DI (plus:SI (reg/f:SI 96)
+                (const_int 20 [0x14])) [3 <retval>.rpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":9 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 97)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/c:DI (plus:SI (reg/f:SI 97)
+                (const_int 12 [0xc])) [3 <retval>.wpos+0 S8 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":10 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 98)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 99)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [4 writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 98)
+                (const_int 36 [0x24])) [4 <retval>.writeHndlr+0 S4 A32])
+        (reg/f:SI 99)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":11 -1
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 100)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 101)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [4 readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 100)
+                (const_int 40 [0x28])) [4 <retval>.readHndlr+0 S4 A32])
+        (reg/f:SI 101)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":12 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:SI 102)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 103)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [5 closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+(insn 27 26 28 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 102)
+                (const_int 44 [0x2c])) [5 <retval>.closeHndlr+0 S4 A32])
+        (reg/f:SI 103)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":13 -1
+     (nil))
+(insn 28 27 29 2 (set (reg/f:SI 104)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+(insn 29 28 30 2 (set (reg/f:SI 105)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [6 tag+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+(insn 30 29 31 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 104)
+                (const_int 32 [0x20])) [6 <retval>.tag+0 S4 A32])
+        (reg/f:SI 105)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":14 -1
+     (nil))
+(insn 31 30 32 2 (set (reg/f:SI 106)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+(insn 32 31 33 2 (set (reg/f:SI 88 [ _1 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 106)
+                (const_int 16 [0x10])) [16 api.mm.malloc+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 34 33 35 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 35 34 36 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 88 [ _1 ]) [0 *_1 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil)
+    (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 37 36 38 2 (set (reg/f:SI 89 [ _2 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+(insn 38 37 39 2 (set (reg/f:SI 107)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+(insn 39 38 48 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 107)
+                (const_int 28 [0x1c])) [8 <retval>.buffer+0 S4 A32])
+        (reg/f:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":15 -1
+     (nil))
+(insn 48 39 45 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":16 -1
+     (nil))
+(insn 45 48 46 2 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (reg/f:SI 81 virtual-incoming-args) [1 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":17 -1
+     (nil))
+(insn 46 45 0 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":17 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function stream::close (_ZN6stream5closeE8stream_t, funcdef_no=7, decl_uid=1079, cgraph_uid=7, symbol_order=7)
+
+stream::close (struct stream_t s)
+{
+  void (*<T2b3>) (struct stream_t) _1;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.closeHndlr;
+  _1 (s);
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+
+stream::close (struct stream_t s)
+{
+  void (*<T2b3>) (struct stream_t) _1;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.closeHndlr;
+  _1 (s);
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = s.closeHndlr;
+
+(insn 5 4 0 (set (reg/f:SI 88 [ _1 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [5 s.closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (nil))
+
+;; _1 (s);
+
+(insn 6 5 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+
+(insn 7 6 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+
+(insn 8 7 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 9 8 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(insn 10 9 11 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+
+(insn 11 10 12 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+
+(insn 12 11 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+
+(insn 13 12 14 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+
+(insn 14 13 15 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+
+(insn 15 14 16 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+
+(insn 16 15 17 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+
+(insn 17 16 18 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+
+(call_insn 18 17 19 (call (mem:QI (reg/f:SI 88 [ _1 ]) [0 *_1 S1 A8])
+        (const_int 48 [0x30])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (nil)
+    (nil))
+
+(insn 19 18 0 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 48 [0x30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 88 [ _1 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [5 s.closeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (nil))
+(insn 6 5 7 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 7 6 8 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 8 7 9 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 9 8 10 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 10 9 11 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 11 10 12 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 14 13 15 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 15 14 16 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 16 15 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 17 16 18 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(call_insn 18 17 19 2 (call (mem:QI (reg/f:SI 88 [ _1 ]) [0 *_1 S1 A8])
+        (const_int 48 [0x30])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (nil)
+    (nil))
+(insn 19 18 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 48 [0x30])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":20 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 22 19 0 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":21 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function stream::write (_ZN6stream5writeE8stream_tPcj, funcdef_no=8, decl_uid=1073, cgraph_uid=8, symbol_order=8)
+
+stream::write (struct stream_t s, char * buf, uint32_t len)
+{
+  int w;
+  int i;
+  int w;
+  int written;
+  int last;
+  int n;
+  uint32_t D.1325;
+  unsigned int _1;
+  unsigned int _2;
+  unsigned int _3;
+  unsigned int _4;
+  void * (*<T2f7>) (void *, void *, uint64_t) _5;
+  unsigned int _6;
+  long long unsigned int _7;
+  unsigned int _8;
+  unsigned int i.0_9;
+  unsigned int _10;
+  char * _11;
+  char * _12;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _13;
+  long long unsigned int _14;
+  unsigned int _15;
+  unsigned int _16;
+  long long unsigned int _17;
+  long long unsigned int _18;
+  long long unsigned int _19;
+  void * (*<T2f7>) (void *, void *, uint64_t) _20;
+  unsigned int _21;
+  long long unsigned int _22;
+  unsigned int _23;
+  unsigned int n.1_24;
+  unsigned int _25;
+  char * _26;
+  char * _27;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _28;
+  long long unsigned int _29;
+  unsigned int last.2_30;
+  unsigned int _31;
+  long long unsigned int _32;
+  long long unsigned int _33;
+  long long unsigned int _34;
+  uint32_t _37;
+  uint32_t _52;
+  uint32_t _59;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.buffersz;
+  _2 = len_41(D) / _1;
+  n_42 = (int) _2;
+  _3 = s.buffersz;
+  _4 = len_41(D) % _3;
+  last_43 = (int) _4;
+  written_44 = 0;
+  i_45 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # written_35 = PHI <written_44(2), written_51(6)>
+  # i_36 = PHI <i_45(2), i_53(6)>
+  if (i_36 >= n_42)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _5 = api.mm.memcpy;
+  _6 = s.buffersz;
+  _7 = (long long unsigned int) _6;
+  _8 = s.buffersz;
+  i.0_9 = (unsigned int) i_36;
+  _10 = _8 * i.0_9;
+  _11 = buf_46(D) + _10;
+  _12 = s.buffer;
+  _5 (_12, _11, _7);
+  _13 = s.writeHndlr;
+  _14 = s.wpos;
+  _15 = s.buffersz;
+  _16 = _13 (s, _15, _14);
+  w_49 = (int) _16;
+  _17 = s.wpos;
+  _18 = (long long unsigned int) w_49;
+  _19 = _17 + _18;
+  s.wpos = _19;
+  written_51 = written_35 + w_49;
+  if (w_49 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _52 = (uint32_t) written_51;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_53 = i_36 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _20 = api.mm.memcpy;
+  _21 = s.buffersz;
+  _22 = (long long unsigned int) _21;
+  _23 = s.buffersz;
+  n.1_24 = (unsigned int) n_42;
+  _25 = _23 * n.1_24;
+  _26 = buf_46(D) + _25;
+  _27 = s.buffer;
+  _20 (_27, _26, _22);
+  _28 = s.writeHndlr;
+  _29 = s.wpos;
+  last.2_30 = (unsigned int) last_43;
+  _31 = _28 (s, last.2_30, _29);
+  w_56 = (int) _31;
+  _32 = s.wpos;
+  _33 = (long long unsigned int) w_56;
+  _34 = _32 + _33;
+  s.wpos = _34;
+  written_58 = written_35 + w_56;
+  _59 = (uint32_t) written_58;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _37 = PHI <_52(5), _59(7)>
+<L5>:
+  return _37;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (i.0_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 16 (_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18 - 18 )
+Partition 19 (_19 - 19 )
+Partition 20 (_20 - 20 )
+Partition 21 (_21 - 21 )
+Partition 22 (_22 - 22 )
+Partition 23 (_23 - 23 )
+Partition 24 (n.1_24 - 24 )
+Partition 25 (_25 - 25 )
+Partition 26 (_26 - 26 )
+Partition 27 (_27 - 27 )
+Partition 28 (_28 - 28 )
+Partition 29 (_29 - 29 )
+Partition 30 (last.2_30 - 30 )
+Partition 31 (_31 - 31 )
+Partition 32 (_32 - 32 )
+Partition 33 (_33 - 33 )
+Partition 34 (_34 - 34 )
+Partition 35 (written_35 - 35 )
+Partition 36 (i_36 - 36 )
+Partition 37 (_37 - 37 )
+Partition 41 (len_41(D) - 41 )
+Partition 42 (n_42 - 42 )
+Partition 43 (last_43 - 43 )
+Partition 44 (written_44 - 44 )
+Partition 45 (i_45 - 45 )
+Partition 46 (buf_46(D) - 46 )
+Partition 49 (w_49 - 49 )
+Partition 51 (written_51 - 51 )
+Partition 52 (_52 - 52 )
+Partition 53 (i_53 - 53 )
+Partition 56 (w_56 - 56 )
+Partition 58 (written_58 - 58 )
+Partition 59 (_59 - 59 )
+Partition 60 (_60(D) - 60 )
+
+
+Partition map 
+
+Partition 0 (written_35 - 35 )
+Partition 1 (i_36 - 36 )
+Partition 2 (_37 - 37 )
+Partition 3 (len_41(D) - 41 )
+Partition 4 (written_44 - 44 )
+Partition 5 (i_45 - 45 )
+Partition 6 (buf_46(D) - 46 )
+Partition 7 (written_51 - 51 )
+Partition 8 (_52 - 52 )
+Partition 9 (i_53 - 53 )
+Partition 10 (written_58 - 58 )
+Partition 11 (_59 - 59 )
+Partition 12 (_60(D) - 60 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) written_35 <-> written_44
+(2147483646, 0) written_35 <-> written_51
+(2147483646, 0) i_36 <-> i_45
+(2147483646, 0) i_36 <-> i_53
+(2147483646, 0) written_35 <-> written_58
+(10000, 0) _37 <-> _52
+(10000, 0) _37 <-> _59
+
+Partition map 
+
+Partition 0 (written_35 - 35 )
+Partition 1 (i_36 - 36 )
+Partition 2 (_37 - 37 )
+Partition 3 (len_41(D) - 41 )
+Partition 4 (written_44 - 44 )
+Partition 5 (i_45 - 45 )
+Partition 6 (buf_46(D) - 46 )
+Partition 7 (written_51 - 51 )
+Partition 8 (_52 - 52 )
+Partition 9 (i_53 - 53 )
+Partition 10 (written_58 - 58 )
+Partition 11 (_59 - 59 )
+Partition 12 (_60(D) - 60 )
+
+Coalesce list: (35)written_35 & (44)written_44 [map: 0, 4] : Success -> 0
+Coalesce list: (35)written_35 & (51)written_51 [map: 0, 7] : Success -> 0
+Coalesce list: (36)i_36 & (45)i_45 [map: 1, 5] : Success -> 1
+Coalesce list: (36)i_36 & (53)i_53 [map: 1, 9] : Success -> 1
+Coalesce list: (35)written_35 & (58)written_58 [map: 0, 10] : Success -> 0
+Coalesce list: (37)_37 & (52)_52 [map: 2, 8] : Success -> 2
+Coalesce list: (37)_37 & (59)_59 [map: 2, 11] : Success -> 2
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (i.0_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (_13 - 13 )
+Partition 13 (_14 - 14 )
+Partition 14 (_15 - 15 )
+Partition 15 (_16 - 16 )
+Partition 16 (_17 - 17 )
+Partition 17 (_18 - 18 )
+Partition 18 (_19 - 19 )
+Partition 19 (_20 - 20 )
+Partition 20 (_21 - 21 )
+Partition 21 (_22 - 22 )
+Partition 22 (_23 - 23 )
+Partition 23 (n.1_24 - 24 )
+Partition 24 (_25 - 25 )
+Partition 25 (_26 - 26 )
+Partition 26 (_27 - 27 )
+Partition 27 (_28 - 28 )
+Partition 28 (_29 - 29 )
+Partition 29 (last.2_30 - 30 )
+Partition 30 (_31 - 31 )
+Partition 31 (_32 - 32 )
+Partition 32 (_33 - 33 )
+Partition 33 (_34 - 34 )
+Partition 34 (written_35 - 35 44 51 58 )
+Partition 35 (i_36 - 36 45 53 )
+Partition 36 (_37 - 37 52 59 )
+Partition 37 (len_41(D) - 41 )
+Partition 38 (n_42 - 42 )
+Partition 39 (last_43 - 43 )
+Partition 40 (buf_46(D) - 46 )
+Partition 41 (w_49 - 49 )
+Partition 42 (w_56 - 56 )
+Partition 43 (_60(D) - 60 )
+
+stream::write (struct stream_t s, char * buf, uint32_t len)
+{
+  int w;
+  int i;
+  int w;
+  int written;
+  int last;
+  int n;
+  uint32_t D.1325;
+  unsigned int _1;
+  unsigned int _2;
+  unsigned int _3;
+  unsigned int _4;
+  void * (*<T2f7>) (void *, void *, uint64_t) _5;
+  unsigned int _6;
+  long long unsigned int _7;
+  unsigned int _8;
+  unsigned int i.0_9;
+  unsigned int _10;
+  char * _11;
+  char * _12;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _13;
+  long long unsigned int _14;
+  unsigned int _15;
+  unsigned int _16;
+  long long unsigned int _17;
+  long long unsigned int _18;
+  long long unsigned int _19;
+  void * (*<T2f7>) (void *, void *, uint64_t) _20;
+  unsigned int _21;
+  long long unsigned int _22;
+  unsigned int _23;
+  unsigned int n.1_24;
+  unsigned int _25;
+  char * _26;
+  char * _27;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _28;
+  long long unsigned int _29;
+  unsigned int last.2_30;
+  unsigned int _31;
+  long long unsigned int _32;
+  long long unsigned int _33;
+  long long unsigned int _34;
+  uint32_t _37;
+  uint32_t _52;
+  uint32_t _59;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.buffersz;
+  _2 = len_41(D) / _1;
+  n_42 = (int) _2;
+  _3 = s.buffersz;
+  _4 = len_41(D) % _3;
+  last_43 = (int) _4;
+  written_44 = 0;
+  i_45 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # written_35 = PHI <written_44(2), written_51(6)>
+  # i_36 = PHI <i_45(2), i_53(6)>
+  if (i_36 >= n_42)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _5 = api.mm.memcpy;
+  _6 = s.buffersz;
+  _7 = (long long unsigned int) _6;
+  _8 = s.buffersz;
+  i.0_9 = (unsigned int) i_36;
+  _10 = _8 * i.0_9;
+  _11 = buf_46(D) + _10;
+  _12 = s.buffer;
+  _5 (_12, _11, _7);
+  _13 = s.writeHndlr;
+  _14 = s.wpos;
+  _15 = s.buffersz;
+  _16 = _13 (s, _15, _14);
+  w_49 = (int) _16;
+  _17 = s.wpos;
+  _18 = (long long unsigned int) w_49;
+  _19 = _17 + _18;
+  s.wpos = _19;
+  written_51 = written_35 + w_49;
+  if (w_49 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _52 = (uint32_t) written_51;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_53 = i_36 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _20 = api.mm.memcpy;
+  _21 = s.buffersz;
+  _22 = (long long unsigned int) _21;
+  _23 = s.buffersz;
+  n.1_24 = (unsigned int) n_42;
+  _25 = _23 * n.1_24;
+  _26 = buf_46(D) + _25;
+  _27 = s.buffer;
+  _20 (_27, _26, _22);
+  _28 = s.writeHndlr;
+  _29 = s.wpos;
+  last.2_30 = (unsigned int) last_43;
+  _31 = _28 (s, last.2_30, _29);
+  w_56 = (int) _31;
+  _32 = s.wpos;
+  _33 = (long long unsigned int) w_56;
+  _34 = _32 + _33;
+  s.wpos = _34;
+  written_58 = written_35 + w_56;
+  _59 = (uint32_t) written_58;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _37 = PHI <_52(5), _59(7)>
+<L5>:
+  return _37;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = s.buffersz;
+
+(insn 5 4 0 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+
+;; _2 = len_41(D) / _1;
+
+(insn 6 5 7 (set (reg:SI 126)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+
+(insn 7 6 8 (parallel [
+            (set (reg:SI 124)
+                (udiv:SI (reg:SI 126)
+                    (reg:SI 88 [ _1 ])))
+            (set (reg:SI 125)
+                (umod:SI (reg:SI 126)
+                    (reg:SI 88 [ _1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+
+(insn 8 7 0 (set (reg:SI 89 [ _2 ])
+        (reg:SI 124)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+
+;; n_42 = (int) _2;
+
+(insn 9 8 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])
+        (reg:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+
+;; _3 = s.buffersz;
+
+(insn 10 9 0 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+
+;; _4 = len_41(D) % _3;
+
+(insn 11 10 12 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+
+(insn 12 11 13 (parallel [
+            (set (reg:SI 129)
+                (udiv:SI (reg:SI 127)
+                    (reg:SI 90 [ _3 ])))
+            (set (reg:SI 128)
+                (umod:SI (reg:SI 127)
+                    (reg:SI 90 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+
+(insn 13 12 0 (set (reg:SI 91 [ _4 ])
+        (reg:SI 128)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+
+;; last_43 = (int) _4;
+
+(insn 14 13 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])
+        (reg:SI 91 [ _4 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+
+;; written_44 = 0;
+
+(insn 15 14 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":26 -1
+     (nil))
+
+;; i_45 = 0;
+
+(insn 16 15 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; if (i_36 >= n_42)
+
+(insn 18 17 19 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+
+(insn 19 18 20 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 130)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+
+(jump_insn 20 19 0 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _5 = api.mm.memcpy;
+
+(insn 22 21 23 (set (reg/f:SI 131)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+(insn 23 22 0 (set (reg/f:SI 92 [ _5 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 131)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _6 = s.buffersz;
+
+(insn 24 23 0 (set (reg:SI 93 [ _6 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _7 = (long long unsigned int) _6;
+
+(insn 25 24 0 (set (reg:DI 94 [ _7 ])
+        (zero_extend:DI (reg:SI 93 [ _6 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _8 = s.buffersz;
+
+(insn 26 25 0 (set (reg:SI 95 [ _8 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; i.0_9 = (unsigned int) i_36;
+
+(insn 27 26 0 (set (reg:SI 96 [ i.0_9 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _10 = _8 * i.0_9;
+
+(insn 28 27 0 (parallel [
+            (set (reg:SI 97 [ _10 ])
+                (mult:SI (reg:SI 95 [ _8 ])
+                    (reg:SI 96 [ i.0_9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _11 = buf_46(D) + _10;
+
+(insn 29 28 30 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+(insn 30 29 0 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg:SI 97 [ _10 ])
+                    (reg/f:SI 132)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 97 [ _10 ]))
+        (nil)))
+
+;; _12 = s.buffer;
+
+(insn 31 30 0 (set (reg/f:SI 99 [ _12 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+
+;; _5 (_12, _11, _7);
+
+(insn 32 31 33 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 94 [ _7 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+
+(insn 33 32 34 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 98 [ _11 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 34 33 35 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 99 [ _12 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(call_insn 35 34 36 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 92 [ _5 ]) [0 *_5 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil)
+    (nil))
+
+(insn 36 35 0 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; _13 = s.writeHndlr;
+
+(insn 37 36 0 (set (reg/f:SI 100 [ _13 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+
+;; _14 = s.wpos;
+
+(insn 38 37 0 (set (reg:DI 101 [ _14 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+
+;; _15 = s.buffersz;
+
+(insn 39 38 0 (set (reg:SI 102 [ _15 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+
+;; _16 = _13 (s, _15, _14);
+
+(insn 40 39 41 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+
+(insn 41 40 42 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 101 [ _14 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 42 41 43 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 102 [ _15 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(insn 43 42 44 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+
+(insn 44 43 45 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+
+(insn 45 44 46 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+
+(insn 46 45 47 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+
+(insn 47 46 48 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+
+(insn 48 47 49 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+
+(insn 49 48 50 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+
+(insn 50 49 51 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+
+(insn 51 50 52 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+
+(insn 52 51 53 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+
+(insn 53 52 54 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+
+(insn 54 53 55 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+
+(call_insn 55 54 56 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 100 [ _13 ]) [0 *_13 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil)
+    (nil))
+
+(insn 56 55 57 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+(insn 57 56 0 (set (reg:SI 103 [ _16 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+
+;; w_49 = (int) _16;
+
+(insn 58 57 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])
+        (reg:SI 103 [ _16 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+
+;; _17 = s.wpos;
+
+(insn 59 58 0 (set (reg:DI 104 [ _17 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+
+;; _18 = (long long unsigned int) w_49;
+
+(insn 60 59 61 (set (reg:SI 133)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+
+(insn 61 60 0 (parallel [
+            (set (reg:DI 105 [ _18 ])
+                (sign_extend:DI (reg:SI 133)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+
+;; _19 = _17 + _18;
+
+(insn 62 61 0 (parallel [
+            (set (reg:DI 106 [ _19 ])
+                (plus:DI (reg:DI 104 [ _17 ])
+                    (reg:DI 105 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+
+;; s.wpos = _19;
+
+(insn 63 62 0 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])
+        (reg:DI 106 [ _19 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+
+;; written_51 = written_35 + w_49;
+
+(insn 64 63 65 (set (reg:SI 134)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 -1
+     (nil))
+
+(insn 65 64 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                    (reg:SI 134)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 -1
+     (nil))
+
+;; if (w_49 == 0)
+
+(insn 66 65 67 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 -1
+     (nil))
+
+(jump_insn 67 66 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _52 = (uint32_t) written_51;
+
+(insn 69 68 0 (set (reg:SI 122 [ _37 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":33 -1
+     (nil))
+
+;; // predicted unlikely by early return (on trees) predictor.
+
+(nil)
+
+;; Generating RTL for gimple basic block 6
+
+;; 
+
+(code_label 72 71 73 6 (nil) [0 uses])
+
+(note 73 72 0 NOTE_INSN_BASIC_BLOCK)
+
+;; i_53 = i_36 + 1;
+
+(insn 74 73 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 78 77 79 5 (nil) [0 uses])
+
+(note 79 78 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _20 = api.mm.memcpy;
+
+(insn 80 79 81 (set (reg/f:SI 135)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+(insn 81 80 0 (set (reg/f:SI 107 [ _20 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 135)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _21 = s.buffersz;
+
+(insn 82 81 0 (set (reg:SI 108 [ _21 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _22 = (long long unsigned int) _21;
+
+(insn 83 82 0 (set (reg:DI 109 [ _22 ])
+        (zero_extend:DI (reg:SI 108 [ _21 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _23 = s.buffersz;
+
+(insn 84 83 0 (set (reg:SI 110 [ _23 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; n.1_24 = (unsigned int) n_42;
+
+(insn 85 84 0 (set (reg:SI 111 [ n.1_24 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _25 = _23 * n.1_24;
+
+(insn 86 85 0 (parallel [
+            (set (reg:SI 112 [ _25 ])
+                (mult:SI (reg:SI 110 [ _23 ])
+                    (reg:SI 111 [ n.1_24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _26 = buf_46(D) + _25;
+
+(insn 87 86 88 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+(insn 88 87 0 (parallel [
+            (set (reg/f:SI 113 [ _26 ])
+                (plus:SI (reg:SI 112 [ _25 ])
+                    (reg/f:SI 136)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 112 [ _25 ]))
+        (nil)))
+
+;; _27 = s.buffer;
+
+(insn 89 88 0 (set (reg/f:SI 114 [ _27 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+
+;; _20 (_27, _26, _22);
+
+(insn 90 89 91 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 109 [ _22 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+
+(insn 91 90 92 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 113 [ _26 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 92 91 93 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 114 [ _27 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(call_insn 93 92 94 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 107 [ _20 ]) [0 *_20 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil)
+    (nil))
+
+(insn 94 93 0 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; _28 = s.writeHndlr;
+
+(insn 95 94 0 (set (reg/f:SI 115 [ _28 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+
+;; _29 = s.wpos;
+
+(insn 96 95 0 (set (reg:DI 116 [ _29 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+
+;; last.2_30 = (unsigned int) last_43;
+
+(insn 97 96 0 (set (reg:SI 117 [ last.2_30 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+
+;; _31 = _28 (s, last.2_30, _29);
+
+(insn 98 97 99 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+
+(insn 99 98 100 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 116 [ _29 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 100 99 101 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 117 [ last.2_30 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(insn 101 100 102 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+
+(insn 102 101 103 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+
+(insn 103 102 104 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+
+(insn 104 103 105 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+
+(insn 105 104 106 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+
+(insn 106 105 107 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+
+(insn 107 106 108 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+
+(insn 108 107 109 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+
+(insn 109 108 110 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+
+(insn 110 109 111 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+
+(insn 111 110 112 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+
+(insn 112 111 113 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+
+(call_insn 113 112 114 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 115 [ _28 ]) [0 *_28 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil)
+    (nil))
+
+(insn 114 113 115 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+(insn 115 114 0 (set (reg:SI 118 [ _31 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+
+;; w_56 = (int) _31;
+
+(insn 116 115 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])
+        (reg:SI 118 [ _31 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+
+;; _32 = s.wpos;
+
+(insn 117 116 0 (set (reg:DI 119 [ _32 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+
+;; _33 = (long long unsigned int) w_56;
+
+(insn 118 117 119 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+
+(insn 119 118 0 (parallel [
+            (set (reg:DI 120 [ _33 ])
+                (sign_extend:DI (reg:SI 137)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+
+;; _34 = _32 + _33;
+
+(insn 120 119 0 (parallel [
+            (set (reg:DI 121 [ _34 ])
+                (plus:DI (reg:DI 119 [ _32 ])
+                    (reg:DI 120 [ _33 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+
+;; s.wpos = _34;
+
+(insn 121 120 0 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])
+        (reg:DI 121 [ _34 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+
+;; written_58 = written_35 + w_56;
+
+(insn 122 121 123 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 -1
+     (nil))
+
+(insn 123 122 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                    (reg:SI 138)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 -1
+     (nil))
+
+;; _59 = (uint32_t) written_58;
+
+(insn 124 123 0 (set (reg:SI 122 [ _37 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":40 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; <L5>:
+
+(code_label 125 124 126 7 (nil) [0 uses])
+
+(note 126 125 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _37;
+
+(insn 127 126 128 (set (reg:SI 123 [ <retval> ])
+        (reg:SI 122 [ _37 ])) -1
+     (nil))
+
+(jump_insn 128 127 129 (set (pc)
+        (label_ref 0)) -1
+     (nil))
+
+(barrier 129 128 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 128.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 126)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg:SI 124)
+                (udiv:SI (reg:SI 126)
+                    (reg:SI 88 [ _1 ])))
+            (set (reg:SI 125)
+                (umod:SI (reg:SI 126)
+                    (reg:SI 88 [ _1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 89 [ _2 ])
+        (reg:SI 124)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])
+        (reg:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":24 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 129)
+                (udiv:SI (reg:SI 127)
+                    (reg:SI 90 [ _3 ])))
+            (set (reg:SI 128)
+                (umod:SI (reg:SI 127)
+                    (reg:SI 90 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 91 [ _4 ])
+        (reg:SI 128)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])
+        (reg:SI 91 [ _4 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":25 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":26 -1
+     (nil))
+(insn 16 15 75 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              7 (DFS_BACK)
+(code_label 75 16 17 4 8 (nil) [1 uses])
+(note 17 75 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 130)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 78)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil)
+ -> 78)
+;;  succ:       8
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg/f:SI 131)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 23 22 24 5 (set (reg/f:SI 92 [ _5 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 131)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 93 [ _6 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 94 [ _7 ])
+        (zero_extend:DI (reg:SI 93 [ _6 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 95 [ _8 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:SI 96 [ i.0_9 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 28 27 29 5 (parallel [
+            (set (reg:SI 97 [ _10 ])
+                (mult:SI (reg:SI 95 [ _8 ])
+                    (reg:SI 96 [ i.0_9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 29 28 30 5 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 30 29 31 5 (parallel [
+            (set (reg/f:SI 98 [ _11 ])
+                (plus:SI (reg:SI 97 [ _10 ])
+                    (reg/f:SI 132)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 97 [ _10 ]))
+        (nil)))
+(insn 31 30 32 5 (set (reg/f:SI 99 [ _12 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil))
+(insn 32 31 33 5 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 94 [ _7 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 33 32 34 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 98 [ _11 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 34 33 35 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 99 [ _12 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 35 34 36 5 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 92 [ _5 ]) [0 *_5 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (nil)
+    (nil))
+(insn 36 35 37 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":28 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 37 36 38 5 (set (reg/f:SI 100 [ _13 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 101 [ _14 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:SI 102 [ _15 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+(insn 40 39 41 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 41 40 42 5 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 101 [ _14 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 42 41 43 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 102 [ _15 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 43 42 44 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 44 43 45 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 45 44 46 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 46 45 47 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 47 46 48 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 48 47 49 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 49 48 50 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 50 49 51 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 51 50 52 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 52 51 53 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 53 52 54 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 54 53 55 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 55 54 56 5 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 100 [ _13 ]) [0 *_13 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil)
+    (nil))
+(insn 56 55 57 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 57 56 58 5 (set (reg:SI 103 [ _16 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+(insn 58 57 59 5 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])
+        (reg:SI 103 [ _16 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":29 -1
+     (nil))
+(insn 59 58 60 5 (set (reg:DI 104 [ _17 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+(insn 60 59 61 5 (set (reg:SI 133)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+(insn 61 60 62 5 (parallel [
+            (set (reg:DI 105 [ _18 ])
+                (sign_extend:DI (reg:SI 133)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+(insn 62 61 63 5 (parallel [
+            (set (reg:DI 106 [ _19 ])
+                (plus:DI (reg:DI 104 [ _17 ])
+                    (reg:DI 105 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+(insn 63 62 64 5 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])
+        (reg:DI 106 [ _19 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":30 -1
+     (nil))
+(insn 64 63 65 5 (set (reg:SI 134)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 -1
+     (nil))
+(insn 65 64 66 5 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                    (reg:SI 134)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":31 -1
+     (nil))
+(insn 66 65 67 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 w+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 -1
+     (nil))
+(jump_insn 67 66 68 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":32 -1
+     (nil)
+ -> 72)
+;;  succ:       6 (FALLTHRU)
+;;              7
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 68 67 69 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 6 (set (reg:SI 122 [ _37 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":33 -1
+     (nil))
+(jump_insn 70 69 71 6 (set (pc)
+        (label_ref 125)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":33 -1
+     (nil)
+ -> 125)
+;;  succ:       9
+
+(barrier 71 70 72)
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+(code_label 72 71 73 7 6 (nil) [1 uses])
+(note 73 72 74 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 76 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil))
+(jump_insn 76 74 77 7 (set (pc)
+        (label_ref 75)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":27 -1
+     (nil)
+ -> 75)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 77 76 78)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 78 77 79 8 5 (nil) [1 uses])
+(note 79 78 80 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 8 (set (reg/f:SI 135)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 81 80 82 8 (set (reg/f:SI 107 [ _20 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 135)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 82 81 83 8 (set (reg:SI 108 [ _21 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 83 82 84 8 (set (reg:DI 109 [ _22 ])
+        (zero_extend:DI (reg:SI 108 [ _21 ]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 84 83 85 8 (set (reg:SI 110 [ _23 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 85 84 86 8 (set (reg:SI 111 [ n.1_24 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 86 85 87 8 (parallel [
+            (set (reg:SI 112 [ _25 ])
+                (mult:SI (reg:SI 110 [ _23 ])
+                    (reg:SI 111 [ n.1_24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 87 86 88 8 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 88 87 89 8 (parallel [
+            (set (reg/f:SI 113 [ _26 ])
+                (plus:SI (reg:SI 112 [ _25 ])
+                    (reg/f:SI 136)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 112 [ _25 ]))
+        (nil)))
+(insn 89 88 90 8 (set (reg/f:SI 114 [ _27 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil))
+(insn 90 89 91 8 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 109 [ _22 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 91 90 92 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 113 [ _26 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 92 91 93 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 114 [ _27 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 93 92 94 8 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 107 [ _20 ]) [0 *_20 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (nil)
+    (nil))
+(insn 94 93 95 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":36 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 95 94 96 8 (set (reg/f:SI 115 [ _28 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [4 s.writeHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+(insn 96 95 97 8 (set (reg:DI 116 [ _29 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+(insn 97 96 98 8 (set (reg:SI 117 [ last.2_30 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+(insn 98 97 99 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 99 98 100 8 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 116 [ _29 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 100 99 101 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 117 [ last.2_30 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 101 100 102 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 102 101 103 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 103 102 104 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 104 103 105 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 105 104 106 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 106 105 107 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 107 106 108 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 108 107 109 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 109 108 110 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 110 109 111 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 111 110 112 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 112 111 113 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 113 112 114 8 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 115 [ _28 ]) [0 *_28 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil)
+    (nil))
+(insn 114 113 115 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 115 114 116 8 (set (reg:SI 118 [ _31 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+(insn 116 115 117 8 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])
+        (reg:SI 118 [ _31 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":37 -1
+     (nil))
+(insn 117 116 118 8 (set (reg:DI 119 [ _32 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+(insn 118 117 119 8 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+(insn 119 118 120 8 (parallel [
+            (set (reg:DI 120 [ _33 ])
+                (sign_extend:DI (reg:SI 137)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+(insn 120 119 121 8 (parallel [
+            (set (reg:DI 121 [ _34 ])
+                (plus:DI (reg:DI 119 [ _32 ])
+                    (reg:DI 120 [ _33 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+(insn 121 120 122 8 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [3 s.wpos+0 S8 A32])
+        (reg:DI 121 [ _34 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":38 -1
+     (nil))
+(insn 122 121 123 8 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 w+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 -1
+     (nil))
+(insn 123 122 124 8 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])
+                    (reg:SI 138)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":39 -1
+     (nil))
+(insn 124 123 125 8 (set (reg:SI 122 [ _37 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 written+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":40 -1
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+;;              8 (FALLTHRU)
+(code_label 125 124 126 9 7 (nil) [1 uses])
+(note 126 125 127 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 131 9 (set (reg:SI 123 [ <retval> ])
+        (reg:SI 122 [ _37 ])) -1
+     (nil))
+(insn 131 127 132 9 (set (reg/i:SI 0 ax)
+        (reg:SI 123 [ <retval> ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":41 -1
+     (nil))
+(insn 132 131 0 9 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":41 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function stream::read (_ZN6stream4readE8stream_tPcj, funcdef_no=9, decl_uid=1077, cgraph_uid=9, symbol_order=9)
+
+stream::read (struct stream_t s, char * buf, uint32_t len)
+{
+  int r;
+  int i;
+  int r;
+  int read;
+  int last;
+  int n;
+  uint32_t D.1331;
+  unsigned int _1;
+  unsigned int _2;
+  unsigned int _3;
+  unsigned int _4;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _5;
+  long long unsigned int _6;
+  unsigned int _7;
+  unsigned int _8;
+  void * (*<T2f7>) (void *, void *, uint64_t) _9;
+  long long unsigned int _10;
+  char * _11;
+  unsigned int _12;
+  unsigned int i.3_13;
+  unsigned int _14;
+  char * _15;
+  long long unsigned int _16;
+  long long unsigned int _17;
+  long long unsigned int _18;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _19;
+  long long unsigned int _20;
+  unsigned int last.4_21;
+  unsigned int _22;
+  void * (*<T2f7>) (void *, void *, uint64_t) _23;
+  long long unsigned int _24;
+  char * _25;
+  unsigned int _26;
+  unsigned int n.5_27;
+  unsigned int _28;
+  char * _29;
+  long long unsigned int _30;
+  long long unsigned int _31;
+  long long unsigned int _32;
+  uint32_t _35;
+  uint32_t _50;
+  uint32_t _57;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.buffersz;
+  _2 = len_39(D) / _1;
+  n_40 = (int) _2;
+  _3 = s.buffersz;
+  _4 = len_39(D) % _3;
+  last_41 = (int) _4;
+  read_42 = 0;
+  i_43 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # read_33 = PHI <read_42(2), read_49(6)>
+  # i_34 = PHI <i_43(2), i_51(6)>
+  if (i_34 >= n_40)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _5 = s.readHndlr;
+  _6 = s.rpos;
+  _7 = s.buffersz;
+  _8 = _5 (s, _7, _6);
+  r_45 = (int) _8;
+  _9 = api.mm.memcpy;
+  _10 = (long long unsigned int) r_45;
+  _11 = s.buffer;
+  _12 = s.buffersz;
+  i.3_13 = (unsigned int) i_34;
+  _14 = _12 * i.3_13;
+  _15 = buf_46(D) + _14;
+  _9 (_15, _11, _10);
+  _16 = s.rpos;
+  _17 = (long long unsigned int) r_45;
+  _18 = _16 + _17;
+  s.rpos = _18;
+  read_49 = read_33 + r_45;
+  if (r_45 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _50 = (uint32_t) read_49;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_51 = i_34 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _19 = s.readHndlr;
+  _20 = s.rpos;
+  last.4_21 = (unsigned int) last_41;
+  _22 = _19 (s, last.4_21, _20);
+  r_53 = (int) _22;
+  _23 = api.mm.memcpy;
+  _24 = (long long unsigned int) r_53;
+  _25 = s.buffer;
+  _26 = s.buffersz;
+  n.5_27 = (unsigned int) n_40;
+  _28 = _26 * n.5_27;
+  _29 = buf_46(D) + _28;
+  _23 (_29, _25, _24);
+  _30 = s.rpos;
+  _31 = (long long unsigned int) r_53;
+  _32 = _30 + _31;
+  s.rpos = _32;
+  read_56 = read_33 + r_53;
+  _57 = (uint32_t) read_56;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _35 = PHI <_50(5), _57(7)>
+<L5>:
+  return _35;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (i.3_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 16 (_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18 - 18 )
+Partition 19 (_19 - 19 )
+Partition 20 (_20 - 20 )
+Partition 21 (last.4_21 - 21 )
+Partition 22 (_22 - 22 )
+Partition 23 (_23 - 23 )
+Partition 24 (_24 - 24 )
+Partition 25 (_25 - 25 )
+Partition 26 (_26 - 26 )
+Partition 27 (n.5_27 - 27 )
+Partition 28 (_28 - 28 )
+Partition 29 (_29 - 29 )
+Partition 30 (_30 - 30 )
+Partition 31 (_31 - 31 )
+Partition 32 (_32 - 32 )
+Partition 33 (read_33 - 33 )
+Partition 34 (i_34 - 34 )
+Partition 35 (_35 - 35 )
+Partition 39 (len_39(D) - 39 )
+Partition 40 (n_40 - 40 )
+Partition 41 (last_41 - 41 )
+Partition 42 (read_42 - 42 )
+Partition 43 (i_43 - 43 )
+Partition 45 (r_45 - 45 )
+Partition 46 (buf_46(D) - 46 )
+Partition 49 (read_49 - 49 )
+Partition 50 (_50 - 50 )
+Partition 51 (i_51 - 51 )
+Partition 53 (r_53 - 53 )
+Partition 56 (read_56 - 56 )
+Partition 57 (_57 - 57 )
+Partition 58 (_58(D) - 58 )
+
+
+Partition map 
+
+Partition 0 (read_33 - 33 )
+Partition 1 (i_34 - 34 )
+Partition 2 (_35 - 35 )
+Partition 3 (len_39(D) - 39 )
+Partition 4 (read_42 - 42 )
+Partition 5 (i_43 - 43 )
+Partition 6 (buf_46(D) - 46 )
+Partition 7 (read_49 - 49 )
+Partition 8 (_50 - 50 )
+Partition 9 (i_51 - 51 )
+Partition 10 (read_56 - 56 )
+Partition 11 (_57 - 57 )
+Partition 12 (_58(D) - 58 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) read_33 <-> read_42
+(2147483646, 0) read_33 <-> read_49
+(2147483646, 0) i_34 <-> i_43
+(2147483646, 0) i_34 <-> i_51
+(2147483646, 0) read_33 <-> read_56
+(10000, 0) _35 <-> _50
+(10000, 0) _35 <-> _57
+
+Partition map 
+
+Partition 0 (read_33 - 33 )
+Partition 1 (i_34 - 34 )
+Partition 2 (_35 - 35 )
+Partition 3 (len_39(D) - 39 )
+Partition 4 (read_42 - 42 )
+Partition 5 (i_43 - 43 )
+Partition 6 (buf_46(D) - 46 )
+Partition 7 (read_49 - 49 )
+Partition 8 (_50 - 50 )
+Partition 9 (i_51 - 51 )
+Partition 10 (read_56 - 56 )
+Partition 11 (_57 - 57 )
+Partition 12 (_58(D) - 58 )
+
+Coalesce list: (33)read_33 & (42)read_42 [map: 0, 4] : Success -> 0
+Coalesce list: (33)read_33 & (49)read_49 [map: 0, 7] : Success -> 0
+Coalesce list: (34)i_34 & (43)i_43 [map: 1, 5] : Success -> 1
+Coalesce list: (34)i_34 & (51)i_51 [map: 1, 9] : Success -> 1
+Coalesce list: (33)read_33 & (56)read_56 [map: 0, 10] : Success -> 0
+Coalesce list: (35)_35 & (50)_50 [map: 2, 8] : Success -> 2
+Coalesce list: (35)_35 & (57)_57 [map: 2, 11] : Success -> 2
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (i.3_13 - 13 )
+Partition 13 (_14 - 14 )
+Partition 14 (_15 - 15 )
+Partition 15 (_16 - 16 )
+Partition 16 (_17 - 17 )
+Partition 17 (_18 - 18 )
+Partition 18 (_19 - 19 )
+Partition 19 (_20 - 20 )
+Partition 20 (last.4_21 - 21 )
+Partition 21 (_22 - 22 )
+Partition 22 (_23 - 23 )
+Partition 23 (_24 - 24 )
+Partition 24 (_25 - 25 )
+Partition 25 (_26 - 26 )
+Partition 26 (n.5_27 - 27 )
+Partition 27 (_28 - 28 )
+Partition 28 (_29 - 29 )
+Partition 29 (_30 - 30 )
+Partition 30 (_31 - 31 )
+Partition 31 (_32 - 32 )
+Partition 32 (read_33 - 33 42 49 56 )
+Partition 33 (i_34 - 34 43 51 )
+Partition 34 (_35 - 35 50 57 )
+Partition 35 (len_39(D) - 39 )
+Partition 36 (n_40 - 40 )
+Partition 37 (last_41 - 41 )
+Partition 38 (r_45 - 45 )
+Partition 39 (buf_46(D) - 46 )
+Partition 40 (r_53 - 53 )
+Partition 41 (_58(D) - 58 )
+
+stream::read (struct stream_t s, char * buf, uint32_t len)
+{
+  int r;
+  int i;
+  int r;
+  int read;
+  int last;
+  int n;
+  uint32_t D.1331;
+  unsigned int _1;
+  unsigned int _2;
+  unsigned int _3;
+  unsigned int _4;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _5;
+  long long unsigned int _6;
+  unsigned int _7;
+  unsigned int _8;
+  void * (*<T2f7>) (void *, void *, uint64_t) _9;
+  long long unsigned int _10;
+  char * _11;
+  unsigned int _12;
+  unsigned int i.3_13;
+  unsigned int _14;
+  char * _15;
+  long long unsigned int _16;
+  long long unsigned int _17;
+  long long unsigned int _18;
+  uint32_t (*<T2af>) (struct stream_t, uint32_t, uint64_t) _19;
+  long long unsigned int _20;
+  unsigned int last.4_21;
+  unsigned int _22;
+  void * (*<T2f7>) (void *, void *, uint64_t) _23;
+  long long unsigned int _24;
+  char * _25;
+  unsigned int _26;
+  unsigned int n.5_27;
+  unsigned int _28;
+  char * _29;
+  long long unsigned int _30;
+  long long unsigned int _31;
+  long long unsigned int _32;
+  uint32_t _35;
+  uint32_t _50;
+  uint32_t _57;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = s.buffersz;
+  _2 = len_39(D) / _1;
+  n_40 = (int) _2;
+  _3 = s.buffersz;
+  _4 = len_39(D) % _3;
+  last_41 = (int) _4;
+  read_42 = 0;
+  i_43 = 0;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                6
+  # read_33 = PHI <read_42(2), read_49(6)>
+  # i_34 = PHI <i_43(2), i_51(6)>
+  if (i_34 >= n_40)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       7
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _5 = s.readHndlr;
+  _6 = s.rpos;
+  _7 = s.buffersz;
+  _8 = _5 (s, _7, _6);
+  r_45 = (int) _8;
+  _9 = api.mm.memcpy;
+  _10 = (long long unsigned int) r_45;
+  _11 = s.buffer;
+  _12 = s.buffersz;
+  i.3_13 = (unsigned int) i_34;
+  _14 = _12 * i.3_13;
+  _15 = buf_46(D) + _14;
+  _9 (_15, _11, _10);
+  _16 = s.rpos;
+  _17 = (long long unsigned int) r_45;
+  _18 = _16 + _17;
+  s.rpos = _18;
+  read_49 = read_33 + r_45;
+  if (r_45 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  _50 = (uint32_t) read_49;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 6, loop depth 1
+;;    pred:       4
+  i_51 = i_34 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 7, loop depth 0
+;;    pred:       3
+  _19 = s.readHndlr;
+  _20 = s.rpos;
+  last.4_21 = (unsigned int) last_41;
+  _22 = _19 (s, last.4_21, _20);
+  r_53 = (int) _22;
+  _23 = api.mm.memcpy;
+  _24 = (long long unsigned int) r_53;
+  _25 = s.buffer;
+  _26 = s.buffersz;
+  n.5_27 = (unsigned int) n_40;
+  _28 = _26 * n.5_27;
+  _29 = buf_46(D) + _28;
+  _23 (_29, _25, _24);
+  _30 = s.rpos;
+  _31 = (long long unsigned int) r_53;
+  _32 = _30 + _31;
+  s.rpos = _32;
+  read_56 = read_33 + r_53;
+  _57 = (uint32_t) read_56;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       5
+;;                7
+  # _35 = PHI <_50(5), _57(7)>
+<L5>:
+  return _35;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = s.buffersz;
+
+(insn 5 4 0 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+
+;; _2 = len_39(D) / _1;
+
+(insn 6 5 7 (set (reg:SI 124)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+
+(insn 7 6 8 (parallel [
+            (set (reg:SI 122)
+                (udiv:SI (reg:SI 124)
+                    (reg:SI 88 [ _1 ])))
+            (set (reg:SI 123)
+                (umod:SI (reg:SI 124)
+                    (reg:SI 88 [ _1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+
+(insn 8 7 0 (set (reg:SI 89 [ _2 ])
+        (reg:SI 122)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+
+;; n_40 = (int) _2;
+
+(insn 9 8 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])
+        (reg:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+
+;; _3 = s.buffersz;
+
+(insn 10 9 0 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+
+;; _4 = len_39(D) % _3;
+
+(insn 11 10 12 (set (reg:SI 125)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+
+(insn 12 11 13 (parallel [
+            (set (reg:SI 127)
+                (udiv:SI (reg:SI 125)
+                    (reg:SI 90 [ _3 ])))
+            (set (reg:SI 126)
+                (umod:SI (reg:SI 125)
+                    (reg:SI 90 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+
+(insn 13 12 0 (set (reg:SI 91 [ _4 ])
+        (reg:SI 126)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+
+;; last_41 = (int) _4;
+
+(insn 14 13 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])
+        (reg:SI 91 [ _4 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+
+;; read_42 = 0;
+
+(insn 15 14 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":46 -1
+     (nil))
+
+;; i_43 = 0;
+
+(insn 16 15 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; if (i_34 >= n_40)
+
+(insn 18 17 19 (set (reg:SI 128)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+
+(insn 19 18 20 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 128)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+
+(jump_insn 20 19 0 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _5 = s.readHndlr;
+
+(insn 22 21 0 (set (reg/f:SI 92 [ _5 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+
+;; _6 = s.rpos;
+
+(insn 23 22 0 (set (reg:DI 93 [ _6 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+
+;; _7 = s.buffersz;
+
+(insn 24 23 0 (set (reg:SI 94 [ _7 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+
+;; _8 = _5 (s, _7, _6);
+
+(insn 25 24 26 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+
+(insn 26 25 27 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 93 [ _6 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 27 26 28 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 94 [ _7 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(insn 28 27 29 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+
+(insn 29 28 30 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+
+(insn 30 29 31 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+
+(insn 31 30 32 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+
+(insn 32 31 33 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+
+(insn 33 32 34 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+
+(insn 34 33 35 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+
+(insn 35 34 36 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+
+(insn 36 35 37 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+
+(insn 37 36 38 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+
+(insn 38 37 39 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+
+(insn 39 38 40 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+
+(call_insn 40 39 41 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 92 [ _5 ]) [0 *_5 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil)
+    (nil))
+
+(insn 41 40 42 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+(insn 42 41 0 (set (reg:SI 95 [ _8 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+
+;; r_45 = (int) _8;
+
+(insn 43 42 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])
+        (reg:SI 95 [ _8 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+
+;; _9 = api.mm.memcpy;
+
+(insn 44 43 45 (set (reg/f:SI 129)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+(insn 45 44 0 (set (reg/f:SI 96 [ _9 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 129)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; _10 = (long long unsigned int) r_45;
+
+(insn 46 45 47 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+(insn 47 46 0 (parallel [
+            (set (reg:DI 97 [ _10 ])
+                (sign_extend:DI (reg:SI 130)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; _11 = s.buffer;
+
+(insn 48 47 0 (set (reg/f:SI 98 [ _11 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; _12 = s.buffersz;
+
+(insn 49 48 0 (set (reg:SI 99 [ _12 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; i.3_13 = (unsigned int) i_34;
+
+(insn 50 49 0 (set (reg:SI 100 [ i.3_13 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; _14 = _12 * i.3_13;
+
+(insn 51 50 0 (parallel [
+            (set (reg:SI 101 [ _14 ])
+                (mult:SI (reg:SI 99 [ _12 ])
+                    (reg:SI 100 [ i.3_13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+;; _15 = buf_46(D) + _14;
+
+(insn 52 51 53 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+
+(insn 53 52 0 (parallel [
+            (set (reg/f:SI 102 [ _15 ])
+                (plus:SI (reg:SI 101 [ _14 ])
+                    (reg/f:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 101 [ _14 ]))
+        (nil)))
+
+;; _9 (_15, _11, _10);
+
+(insn 54 53 55 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 97 [ _10 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+
+(insn 55 54 56 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 98 [ _11 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 56 55 57 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 102 [ _15 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(call_insn 57 56 58 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 96 [ _9 ]) [0 *_9 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil)
+    (nil))
+
+(insn 58 57 0 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; _16 = s.rpos;
+
+(insn 59 58 0 (set (reg:DI 103 [ _16 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+
+;; _17 = (long long unsigned int) r_45;
+
+(insn 60 59 61 (set (reg:SI 132)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+
+(insn 61 60 0 (parallel [
+            (set (reg:DI 104 [ _17 ])
+                (sign_extend:DI (reg:SI 132)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+
+;; _18 = _16 + _17;
+
+(insn 62 61 0 (parallel [
+            (set (reg:DI 105 [ _18 ])
+                (plus:DI (reg:DI 103 [ _16 ])
+                    (reg:DI 104 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+
+;; s.rpos = _18;
+
+(insn 63 62 0 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])
+        (reg:DI 105 [ _18 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+
+;; read_49 = read_33 + r_45;
+
+(insn 64 63 65 (set (reg:SI 133)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 -1
+     (nil))
+
+(insn 65 64 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                    (reg:SI 133)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 -1
+     (nil))
+
+;; if (r_45 == 0)
+
+(insn 66 65 67 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 -1
+     (nil))
+
+(jump_insn 67 66 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _50 = (uint32_t) read_49;
+
+(insn 69 68 0 (set (reg:SI 120 [ _35 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":53 -1
+     (nil))
+
+;; // predicted unlikely by early return (on trees) predictor.
+
+(nil)
+
+;; Generating RTL for gimple basic block 6
+
+;; 
+
+(code_label 72 71 73 11 (nil) [0 uses])
+
+(note 73 72 0 NOTE_INSN_BASIC_BLOCK)
+
+;; i_51 = i_34 + 1;
+
+(insn 74 73 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 78 77 79 10 (nil) [0 uses])
+
+(note 79 78 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _19 = s.readHndlr;
+
+(insn 80 79 0 (set (reg/f:SI 106 [ _19 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+
+;; _20 = s.rpos;
+
+(insn 81 80 0 (set (reg:DI 107 [ _20 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+
+;; last.4_21 = (unsigned int) last_41;
+
+(insn 82 81 0 (set (reg:SI 108 [ last.4_21 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+
+;; _22 = _19 (s, last.4_21, _20);
+
+(insn 83 82 84 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+
+(insn 84 83 85 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 107 [ _20 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 85 84 86 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 108 [ last.4_21 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(insn 86 85 87 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+
+(insn 87 86 88 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+
+(insn 88 87 89 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+
+(insn 89 88 90 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+
+(insn 90 89 91 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+
+(insn 91 90 92 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+
+(insn 92 91 93 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+
+(insn 93 92 94 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+
+(insn 94 93 95 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+
+(insn 95 94 96 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+
+(insn 96 95 97 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+
+(insn 97 96 98 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+
+(call_insn 98 97 99 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 106 [ _19 ]) [0 *_19 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil)
+    (nil))
+
+(insn 99 98 100 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+(insn 100 99 0 (set (reg:SI 109 [ _22 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+
+;; r_53 = (int) _22;
+
+(insn 101 100 0 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])
+        (reg:SI 109 [ _22 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+
+;; _23 = api.mm.memcpy;
+
+(insn 102 101 103 (set (reg/f:SI 134)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+(insn 103 102 0 (set (reg/f:SI 110 [ _23 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 134)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; _24 = (long long unsigned int) r_53;
+
+(insn 104 103 105 (set (reg:SI 135)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+(insn 105 104 0 (parallel [
+            (set (reg:DI 111 [ _24 ])
+                (sign_extend:DI (reg:SI 135)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; _25 = s.buffer;
+
+(insn 106 105 0 (set (reg/f:SI 112 [ _25 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; _26 = s.buffersz;
+
+(insn 107 106 0 (set (reg:SI 113 [ _26 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; n.5_27 = (unsigned int) n_40;
+
+(insn 108 107 0 (set (reg:SI 114 [ n.5_27 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; _28 = _26 * n.5_27;
+
+(insn 109 108 0 (parallel [
+            (set (reg:SI 115 [ _28 ])
+                (mult:SI (reg:SI 113 [ _26 ])
+                    (reg:SI 114 [ n.5_27 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+;; _29 = buf_46(D) + _28;
+
+(insn 110 109 111 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+
+(insn 111 110 0 (parallel [
+            (set (reg/f:SI 116 [ _29 ])
+                (plus:SI (reg:SI 115 [ _28 ])
+                    (reg/f:SI 136)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 115 [ _28 ]))
+        (nil)))
+
+;; _23 (_29, _25, _24);
+
+(insn 112 111 113 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 111 [ _24 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+
+(insn 113 112 114 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 112 [ _25 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+
+(insn 114 113 115 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 116 [ _29 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+
+(call_insn 115 114 116 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 110 [ _23 ]) [0 *_23 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil)
+    (nil))
+
+(insn 116 115 0 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+
+;; _30 = s.rpos;
+
+(insn 117 116 0 (set (reg:DI 117 [ _30 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+
+;; _31 = (long long unsigned int) r_53;
+
+(insn 118 117 119 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+
+(insn 119 118 0 (parallel [
+            (set (reg:DI 118 [ _31 ])
+                (sign_extend:DI (reg:SI 137)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+
+;; _32 = _30 + _31;
+
+(insn 120 119 0 (parallel [
+            (set (reg:DI 119 [ _32 ])
+                (plus:DI (reg:DI 117 [ _30 ])
+                    (reg:DI 118 [ _31 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+
+;; s.rpos = _32;
+
+(insn 121 120 0 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])
+        (reg:DI 119 [ _32 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+
+;; read_56 = read_33 + r_53;
+
+(insn 122 121 123 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 -1
+     (nil))
+
+(insn 123 122 0 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                    (reg:SI 138)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 -1
+     (nil))
+
+;; _57 = (uint32_t) read_56;
+
+(insn 124 123 0 (set (reg:SI 120 [ _35 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":60 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; <L5>:
+
+(code_label 125 124 126 12 (nil) [0 uses])
+
+(note 126 125 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _35;
+
+(insn 127 126 128 (set (reg:SI 121 [ <retval> ])
+        (reg:SI 120 [ _35 ])) -1
+     (nil))
+
+(jump_insn 128 127 129 (set (pc)
+        (label_ref 0)) -1
+     (nil))
+
+(barrier 129 128 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 128.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 88 [ _1 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 124)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg:SI 122)
+                (udiv:SI (reg:SI 124)
+                    (reg:SI 88 [ _1 ])))
+            (set (reg:SI 123)
+                (umod:SI (reg:SI 124)
+                    (reg:SI 88 [ _1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 89 [ _2 ])
+        (reg:SI 122)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])
+        (reg:SI 89 [ _2 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":44 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 90 [ _3 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 125)
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 52 [0x34])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 127)
+                (udiv:SI (reg:SI 125)
+                    (reg:SI 90 [ _3 ])))
+            (set (reg:SI 126)
+                (umod:SI (reg:SI 125)
+                    (reg:SI 90 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 91 [ _4 ])
+        (reg:SI 126)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])
+        (reg:SI 91 [ _4 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":45 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":46 -1
+     (nil))
+(insn 16 15 75 2 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              7 (DFS_BACK)
+(code_label 75 16 17 4 13 (nil) [1 uses])
+(note 17 75 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 128)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 128)
+            (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 78)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil)
+ -> 78)
+;;  succ:       8
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg/f:SI 92 [ _5 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:DI 93 [ _6 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 94 [ _7 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+(insn 25 24 26 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 26 25 27 5 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 93 [ _6 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 27 26 28 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 94 [ _7 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 28 27 29 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 29 28 30 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 30 29 31 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 31 30 32 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 32 31 33 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 33 32 34 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 34 33 35 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 35 34 36 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 36 35 37 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 37 36 38 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 38 37 39 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 39 38 40 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 40 39 41 5 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 92 [ _5 ]) [0 *_5 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil)
+    (nil))
+(insn 41 40 42 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 42 41 43 5 (set (reg:SI 95 [ _8 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+(insn 43 42 44 5 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])
+        (reg:SI 95 [ _8 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":48 -1
+     (nil))
+(insn 44 43 45 5 (set (reg/f:SI 129)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 45 44 46 5 (set (reg/f:SI 96 [ _9 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 129)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 47 46 48 5 (parallel [
+            (set (reg:DI 97 [ _10 ])
+                (sign_extend:DI (reg:SI 130)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 48 47 49 5 (set (reg/f:SI 98 [ _11 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 49 48 50 5 (set (reg:SI 99 [ _12 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:SI 100 [ i.3_13 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 51 50 52 5 (parallel [
+            (set (reg:SI 101 [ _14 ])
+                (mult:SI (reg:SI 99 [ _12 ])
+                    (reg:SI 100 [ i.3_13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 52 51 53 5 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil))
+(insn 53 52 54 5 (parallel [
+            (set (reg/f:SI 102 [ _15 ])
+                (plus:SI (reg:SI 101 [ _14 ])
+                    (reg/f:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 101 [ _14 ]))
+        (nil)))
+(insn 54 53 55 5 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 97 [ _10 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 55 54 56 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 98 [ _11 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 56 55 57 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 102 [ _15 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 57 56 58 5 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 96 [ _9 ]) [0 *_9 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (nil)
+    (nil))
+(insn 58 57 59 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":49 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 59 58 60 5 (set (reg:DI 103 [ _16 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+(insn 60 59 61 5 (set (reg:SI 132)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+(insn 61 60 62 5 (parallel [
+            (set (reg:DI 104 [ _17 ])
+                (sign_extend:DI (reg:SI 132)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+(insn 62 61 63 5 (parallel [
+            (set (reg:DI 105 [ _18 ])
+                (plus:DI (reg:DI 103 [ _16 ])
+                    (reg:DI 104 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+(insn 63 62 64 5 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])
+        (reg:DI 105 [ _18 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":50 -1
+     (nil))
+(insn 64 63 65 5 (set (reg:SI 133)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 -1
+     (nil))
+(insn 65 64 66 5 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                    (reg:SI 133)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":51 -1
+     (nil))
+(insn 66 65 67 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [2 r+0 S4 A32])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 -1
+     (nil))
+(jump_insn 67 66 68 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":52 -1
+     (nil)
+ -> 72)
+;;  succ:       6 (FALLTHRU)
+;;              7
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 68 67 69 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 6 (set (reg:SI 120 [ _35 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":53 -1
+     (nil))
+(jump_insn 70 69 71 6 (set (pc)
+        (label_ref 125)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":53 -1
+     (nil)
+ -> 125)
+;;  succ:       9
+
+(barrier 71 70 72)
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+(code_label 72 71 73 7 11 (nil) [1 uses])
+(note 73 72 74 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 76 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil))
+(jump_insn 76 74 77 7 (set (pc)
+        (label_ref 75)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":47 -1
+     (nil)
+ -> 75)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 77 76 78)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 78 77 79 8 10 (nil) [1 uses])
+(note 79 78 80 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 81 8 (set (reg/f:SI 106 [ _19 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [4 s.readHndlr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+(insn 81 80 82 8 (set (reg:DI 107 [ _20 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+(insn 82 81 83 8 (set (reg:SI 108 [ last.4_21 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 last+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+(insn 83 82 84 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 84 83 85 8 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 107 [ _20 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 85 84 86 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 108 [ last.4_21 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 86 85 87 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 44 [0x2c])) [7 s+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 87 86 88 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 40 [0x28])) [7 s+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 88 87 89 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 36 [0x24])) [7 s+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 89 88 90 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 32 [0x20])) [7 s+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 90 89 91 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [7 s+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 36 [0x24])
+        (nil)))
+(insn 91 90 92 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [7 s+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 92 91 93 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [7 s+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 44 [0x2c])
+        (nil)))
+(insn 93 92 94 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 s+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 94 93 95 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 12 [0xc])) [7 s+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 52 [0x34])
+        (nil)))
+(insn 95 94 96 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [7 s+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 96 95 97 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 4 [0x4])) [7 s+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 60 [0x3c])
+        (nil)))
+(insn 97 96 98 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [7 s+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(call_insn 98 97 99 8 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 106 [ _19 ]) [0 *_19 S1 A8])
+            (const_int 64 [0x40]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil)
+    (nil))
+(insn 99 98 100 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 100 99 101 8 (set (reg:SI 109 [ _22 ])
+        (reg:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+(insn 101 100 102 8 (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])
+        (reg:SI 109 [ _22 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":56 -1
+     (nil))
+(insn 102 101 103 8 (set (reg/f:SI 134)
+        (mem/u/c:SI (plus:SI (reg:SI 87)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7faddca081b0 api>)
+                        ] UNSPEC_GOT))) [21  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 103 102 104 8 (set (reg/f:SI 110 [ _23 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 134)
+                (const_int 24 [0x18])) [18 api.mm.memcpy+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 104 103 105 8 (set (reg:SI 135)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 105 104 106 8 (parallel [
+            (set (reg:DI 111 [ _24 ])
+                (sign_extend:DI (reg:SI 135)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 106 105 107 8 (set (reg/f:SI 112 [ _25 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 28 [0x1c])) [8 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 107 106 108 8 (set (reg:SI 113 [ _26 ])
+        (mem/c:SI (reg/f:SI 81 virtual-incoming-args) [2 s.buffersz+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 108 107 109 8 (set (reg:SI 114 [ n.5_27 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 n+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 109 108 110 8 (parallel [
+            (set (reg:SI 115 [ _28 ])
+                (mult:SI (reg:SI 113 [ _26 ])
+                    (reg:SI 114 [ n.5_27 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 110 109 111 8 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 48 [0x30])) [8 buf+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil))
+(insn 111 110 112 8 (parallel [
+            (set (reg/f:SI 116 [ _29 ])
+                (plus:SI (reg:SI 115 [ _28 ])
+                    (reg/f:SI 136)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                    (const_int 48 [0x30])) [8 buf+0 S4 A32])
+            (reg:SI 115 [ _28 ]))
+        (nil)))
+(insn 112 111 113 8 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [3  S8 A64])
+        (reg:DI 111 [ _24 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 113 112 114 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 112 [ _25 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 114 113 115 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg/f:SI 116 [ _29 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 115 114 116 8 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 110 [ _23 ]) [0 *_23 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (nil)
+    (nil))
+(insn 116 115 117 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":57 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 117 116 118 8 (set (reg:DI 117 [ _30 ])
+        (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+(insn 118 117 119 8 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+(insn 119 118 120 8 (parallel [
+            (set (reg:DI 118 [ _31 ])
+                (sign_extend:DI (reg:SI 137)))
+            (clobber (reg:CC 17 flags))
+            (clobber (scratch:SI))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+(insn 120 119 121 8 (parallel [
+            (set (reg:DI 119 [ _32 ])
+                (plus:DI (reg:DI 117 [ _30 ])
+                    (reg:DI 118 [ _31 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+(insn 121 120 122 8 (set (mem/c:DI (plus:SI (reg/f:SI 81 virtual-incoming-args)
+                (const_int 20 [0x14])) [3 s.rpos+0 S8 A32])
+        (reg:DI 119 [ _32 ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":58 -1
+     (nil))
+(insn 122 121 123 8 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 r+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 -1
+     (nil))
+(insn 123 122 124 8 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])
+                    (reg:SI 138)))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":59 -1
+     (nil))
+(insn 124 123 125 8 (set (reg:SI 120 [ _35 ])
+        (mem/c:SI (plus:SI (reg/f:SI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [2 read+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":60 -1
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+;;              8 (FALLTHRU)
+(code_label 125 124 126 9 12 (nil) [1 uses])
+(note 126 125 127 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 131 9 (set (reg:SI 121 [ <retval> ])
+        (reg:SI 120 [ _35 ])) -1
+     (nil))
+(insn 131 127 132 9 (set (reg/i:SI 0 ax)
+        (reg:SI 121 [ <retval> ])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":61 -1
+     (nil))
+(insn 132 131 0 9 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp":61 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

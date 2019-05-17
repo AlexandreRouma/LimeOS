@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode
+CMAKE_SOURCE_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build
+CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/vga_textmode.dir
+# Target rules for target CMakeFiles/grub_vbe.dir
 
 # All Build rule for target.
-CMakeFiles/vga_textmode.dir/all:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/depend
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles --progress-num=1,2,3,4 "Built target vga_textmode"
-.PHONY : CMakeFiles/vga_textmode.dir/all
+CMakeFiles/grub_vbe.dir/all:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/depend
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target grub_vbe"
+.PHONY : CMakeFiles/grub_vbe.dir/all
 
 # Include target in all.
-all: CMakeFiles/vga_textmode.dir/all
+all: CMakeFiles/grub_vbe.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/vga_textmode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/vga_textmode.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles 0
-.PHONY : CMakeFiles/vga_textmode.dir/rule
+CMakeFiles/grub_vbe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/grub_vbe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles 0
+.PHONY : CMakeFiles/grub_vbe.dir/rule
 
 # Convenience name for target.
-vga_textmode: CMakeFiles/vga_textmode.dir/rule
+grub_vbe: CMakeFiles/grub_vbe.dir/rule
 
-.PHONY : vga_textmode
-
-# clean rule for target.
-CMakeFiles/vga_textmode.dir/clean:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/clean
-.PHONY : CMakeFiles/vga_textmode.dir/clean
+.PHONY : grub_vbe
 
 # clean rule for target.
-clean: CMakeFiles/vga_textmode.dir/clean
+CMakeFiles/grub_vbe.dir/clean:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/clean
+.PHONY : CMakeFiles/grub_vbe.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/grub_vbe.dir/clean
 
 .PHONY : clean
 

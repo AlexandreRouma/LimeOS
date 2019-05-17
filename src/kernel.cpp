@@ -70,32 +70,15 @@ void printFile(char* path) {
     }
 }
 
-uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
-    char* buf = (char*)malloc(len + 1);
-    memcpy(buf, s.buffer, len);
-    buf[len] = 0;
-    Terminal.print(buf);
-    free(buf);
-    return len;
-}
-
-uint32_t _readHndlr(stream_t s, uint32_t len, uint64_t pos) {
-    return 0;
-}
-
-void _closeHndlr(stream_t s) {
-    
-}
-
-stream_t teststream;
-
-stream_t provider() {
-    return teststream;
-}
-
 extern "C"
 void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     _init(multiboot_info);
+
+    // Protect modules
+    multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
+    for (int i = 0; i < multiboot_info->mods_count; i++) {
+        allocModule(mods[i]);
+    }
 
     // Init VFS
     vfs::init();
@@ -104,16 +87,11 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     fio::init();
     miscstrms::init();
 
-    // Init term driver
-    teststream = stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, NULL);
-    fio::mountStreamProvider("/dev/tty1", FS_FLAG_O_W, provider);
 
     // Redirect kernel stdout
-    kio::stdout = vfs::getStream("/fio/dev/tty1");
+    kio::stdout = vfs::getStream("/fio/dev/null");
 
     // Load ram filesystem
-    multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
-    kio::println("Loading ramfs...");
     int id = -1;
 
     for (int i = 0; i < multiboot_info->mods_count; i++) {
@@ -124,19 +102,116 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     if (id == -1) {
         kpanic("Couldn't load RAMFS", 0);
     }
-    allocModule(mods[id]);
     tarfs::init(mods[id].mod_start, "/");
 
     // Init module interface
     kmod::init(multiboot_info);
-
-    listNodes("/fio/dev");
 
     // run kscript
     ksc::init();
     ksc::run("/conf/init.ksc");
 
     listNodes("/fio/dev");
+
+    kio::printf("1) Using %u bytes\n", paging::getUsedPages() * 4096);
+
+
+
+    // stream_t framebuffer = vfs::getStream("/fio/dev/fb0");
+    // stream_t image = vfs::getStream("/misc/lime2.bmp");
+    // stream_t font = vfs::getStream("/misc/font.bmp");
+
+    // uint32_t bitmapAlloc = paging::sizeToPages(image.slen);
+    // uint32_t fontAlloc = paging::sizeToPages(font.slen);
+    // uint32_t screenAlloc = paging::sizeToPages(1920 * 1080 * 4);
+
+    // uint8_t* bmp = (uint8_t*)paging::allocPages(bitmapAlloc);
+    // uint8_t* fnt = (uint8_t*)paging::allocPages(fontAlloc);
+    // uint8_t* screen = (uint8_t*)paging::allocPages(screenAlloc);
+    // stream::read(image, (char*)bmp, image.slen);
+    // stream::close(image);
+
+    // stream::read(font, (char*)fnt, font.slen);
+    // stream::close(font);
+
+    // uint8_t* data = bmp + 0x36;
+    // uint8_t* fData = fnt + 0x36;
+
+    // for (int y = 0; y < 1080; y++) {
+    //     for (int x = 0; x < 1920; x++) {
+    //         uint32_t screenOffset = ((y * 1920) + x) * 4;
+    //         uint32_t imgOffset = ((y * 1920) + x) * 3;
+    //         uint32_t fntOffset = (((255 - y) * 256) + x) * 3;
+    //         if (x >= 256 || y >= 256) {
+    //             fntOffset = 0;
+    //         }
+
+    //         uint8_t r = 0;
+    //         uint8_t g = 0;
+    //         uint8_t b = 0;
+
+    //         if (y < 16 && y > 0) {
+    //             r = 255;
+    //             g = 0;
+    //             b = 0;
+    //         }
+    //         else if (y < 32 && y > 16) {
+    //             r = 255;
+    //             g = 127;
+    //             b = 0;
+    //         }
+    //         else if (y < 48 && y > 32) {
+    //             r = 255;
+    //             g = 255;
+    //             b = 0;
+    //         }
+    //         else if (y < 56 && y > 48) {
+    //             r = 127;
+    //             g = 255;
+    //             b = 0;
+    //         }
+    //         else if (y < 64 && y > 56) {
+    //             r = 0;
+    //             g = 255;
+    //             b = 0;
+    //         }
+    //         else if (y < 80 && y > 64) {
+    //             r = 0;
+    //             g = 255;
+    //             b = 127;
+    //         }
+    //         else if (y < 96 && y > 80) {
+    //             r = 0;
+    //             g = 255;
+    //             b = 255;
+    //         }
+    //         else if (y < 112 && y > 96) {
+    //             r = 0;
+    //             g = 0;
+    //             b = 255;
+    //         }
+    //         else {
+    //             r = 255;
+    //             g = 255;
+    //             b = 255;
+    //         }
+
+    //         float fCoef = (float)fData[fntOffset] / 255.0f;
+    //         float bCoef = (1.0f - fCoef) / 6;
+    //         screen[screenOffset] = (data[imgOffset + 0] * bCoef) + (fCoef * b);
+    //         screen[screenOffset + 1] = (data[imgOffset + 1] * bCoef) + (fCoef * g);
+    //         screen[screenOffset + 2] = (data[imgOffset + 2] * bCoef) + (fCoef * r);
+    //     }
+    // }
+
+    // stream::write(framebuffer, (char*)screen, 1920 * 1080 * 4);
+
+    // paging::setAbsent((uint32_t)bmp, bitmapAlloc);
+    // paging::setAbsent((uint32_t)screen, screenAlloc);
+    // stream::close(framebuffer);
+
+    kio::printf("2) Using %u bytes\n", paging::getUsedPages() * 4096);
+    
 
     /*
     - drivers are loaded via a kernscript

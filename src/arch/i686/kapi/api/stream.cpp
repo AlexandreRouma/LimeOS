@@ -1,5 +1,7 @@
 #include <stream.h>
 #include <kapi.h>
+#include <memory.h>
+#include <string.h>
 
 namespace stream {
     stream_t create(uint32_t buffersz, uint64_t slen, uint32_t (*writeHndlr)(stream_t,uint32_t,uint64_t), uint32_t (*readHndlr)(stream_t,uint32_t,uint64_t), void (*closeHndlr)(stream_t), void* tag) {
@@ -24,8 +26,9 @@ namespace stream {
         int n = len / s.buffersz;
         int last = len % s.buffersz;
         int written = 0;
+
         for (int i = 0; i < n; i++) {
-            kapi::api.mm.memcpy(s.buffer, buf + (s.buffersz * i), s.buffersz);
+            memcpy(s.buffer, buf + (s.buffersz * i), s.buffersz);
             int w = s.writeHndlr(s, s.buffersz, s.wpos);
             s.wpos += w;
             written += w;
@@ -33,8 +36,11 @@ namespace stream {
                 return written;
             }
         }
-        kapi::api.mm.memcpy(s.buffer, buf + (s.buffersz * n), s.buffersz);
-        int w = s.writeHndlr(s, last, s.wpos);
+        int w = 0;
+        if (last > 0) {
+            memcpy(s.buffer, buf + (s.buffersz * n), last);
+            w = s.writeHndlr(s, last, s.wpos);
+        }
         s.wpos += w;
         written += w;
         return written;
@@ -46,15 +52,18 @@ namespace stream {
         int read = 0;
         for (int i = 0; i < n; i++) {
             int r = s.readHndlr(s, s.buffersz, s.rpos);
-            kapi::api.mm.memcpy(buf + (s.buffersz * i), s.buffer, r);
+            memcpy(buf + (s.buffersz * i), s.buffer, r);
             s.rpos += r;
             read += r;
             if (r == 0) {
                 return read;
             }
         }
-        int r = s.readHndlr(s, last, s.rpos);
-        kapi::api.mm.memcpy(buf + (s.buffersz * n), s.buffer, r);
+        int r = 0;
+        if (last > 0) {
+            r = s.readHndlr(s, last, s.rpos);
+            memcpy(buf + (s.buffersz * n), s.buffer, r);
+        }
         s.rpos += r;
         read += r;
         return read;

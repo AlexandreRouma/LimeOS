@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode
+CMAKE_SOURCE_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build
+CMAKE_BINARY_DIR = /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Documents/Code/LimeOS/drivers/i686/grub_vbe/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vga_textmode
+# Target rules for targets named grub_vbe
 
 # Build rule for target.
-vga_textmode: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vga_textmode
-.PHONY : vga_textmode
+grub_vbe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grub_vbe
+.PHONY : grub_vbe
 
 # fast build rule for target.
-vga_textmode/fast:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/build
-.PHONY : vga_textmode/fast
+grub_vbe/fast:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/build
+.PHONY : grub_vbe/fast
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.o: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o
 
@@ -129,7 +129,7 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.o: mnt/d/Documents/Code/
 
 # target to build an object file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.i: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.i
@@ -138,7 +138,7 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.i: mnt/d/Documents/Code/
 
 # target to preprocess a source file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.i:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.i
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.i
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.i
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.s: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.s
@@ -147,8 +147,62 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.s: mnt/d/Documents/Code/
 
 # target to generate assembly for a file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.s:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.s
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.s
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.s
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.o: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.o
+
+# target to build an object file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.i: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.i
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.i
+
+# target to preprocess a source file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.i:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.i
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.i
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.s: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.s
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.s
+
+# target to generate assembly for a file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.s:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.s
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.s
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.o: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.o
+
+# target to build an object file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.i: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.i
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.i
+
+# target to preprocess a source file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.i:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.i
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.i
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.s: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.s
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.s
+
+# target to generate assembly for a file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.s:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.s
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.s
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.o: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o
 
@@ -156,7 +210,7 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.o: mnt/d/Documents/Cod
 
 # target to build an object file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.i: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.i
@@ -165,7 +219,7 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.i: mnt/d/Documents/Cod
 
 # target to preprocess a source file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.i:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.i
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.i
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.i
 
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.s: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.s
@@ -174,8 +228,35 @@ mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.s: mnt/d/Documents/Cod
 
 # target to generate assembly for a file
 mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.s:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.s
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.s
 .PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.s
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.o: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.o
+
+# target to build an object file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.i: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.i
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.i
+
+# target to preprocess a source file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.i:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.i
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.i
+
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.s: mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.s
+
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.s
+
+# target to generate assembly for a file
+mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.s:
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.s
+.PHONY : mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -183,7 +264,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -192,7 +273,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -201,7 +282,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/vga_textmode.dir/build.make CMakeFiles/vga_textmode.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/grub_vbe.dir/build.make CMakeFiles/grub_vbe.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -211,14 +292,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... vga_textmode"
+	@echo "... grub_vbe"
 	@echo "... edit_cache"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.o"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.i"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.s"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.o"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.i"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.s"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.o"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.i"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.s"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.o"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.i"
 	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.s"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.o"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.i"
+	@echo "... mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

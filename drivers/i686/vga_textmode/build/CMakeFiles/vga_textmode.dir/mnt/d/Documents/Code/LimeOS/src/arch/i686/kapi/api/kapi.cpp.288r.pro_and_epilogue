@@ -1,0 +1,66 @@
+
+;; Function kapi::init (_ZN4kapi4initEv, funcdef_no=6, decl_uid=1235, cgraph_uid=6, symbol_order=6)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+starting the processing of deferred insns
+ending the processing of deferred insns
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+scanning new insn with uid = 12.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+kapi::init
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={2d} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 8{6d,2u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }}
+;; lr  in  	 7 [sp]
+;; lr  use 	 7 [sp]
+;; lr  def 	 0 [ax] 17 [flags]
+(note 3 1 10 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 10 3 8 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 8 10 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 8 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 11 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp":6 584 {nop}
+     (nil))
+(note 11 7 12 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 12 11 13 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp":6 -1
+     (nil)
+ -> simple_return)
+;;  succ:       EXIT [always] 
+;; lr  out 	 7 [sp]
+
+(barrier 13 12 9)
+(note 9 13 0 NOTE_INSN_DELETED)

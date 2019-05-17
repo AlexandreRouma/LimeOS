@@ -1,7 +1,9 @@
 #include <kapi/api/kapi.h>
 #include <kernio/kernio.h>
 #include <vfs/fileio.h>
+#include <vfs/vfs.h>
 #include <misc/liballoc.h>
+#include <paging/paging.h>
 
 namespace kapi {
     void init(multiboot_info* info) {
@@ -16,11 +18,19 @@ namespace kapi {
         // Memory Management
         api.mm.malloc = malloc;
         api.mm.free = free;
-        api.mm.memcpy = memcpy;
         api.mm.realloc = realloc;
+        api.mm.allocPages = paging::allocPages;
+        api.mm.setPresent = paging::setPresent;
 
         // Info
         api.boot_info = info;
+
+        // VFS
+        api.vfs.createNode = vfs::createNode;
+        api.vfs.deleteNode = vfs::deleteNode;
+        api.vfs.listNodes = vfs::listNodes;
+        api.vfs.nodeExists = vfs::nodeExists;
+        api.vfs.getStream = vfs::getStream;
     }
 
     KAPI_t api;

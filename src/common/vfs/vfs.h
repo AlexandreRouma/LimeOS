@@ -35,7 +35,7 @@ struct FSHandler_t {
 namespace vfs {
     void init();
     vector<FSNode_t> listNodes(char* dir);
-    int createNode(char* dir);
+    int createNode(char* dir, uint32_t flags);
     int deleteNode(char* dir);
     bool nodeExists(char* dir);
     stream_t getStream(char* dir);

@@ -5,8 +5,10 @@
 
 #ifdef KERNEL_CODE
 #include <multiboot/multiboot.h>
+#include <vfs/vfs.h>
 #else
 #include <multiboot.h>
+#include <vfs.h>
 #endif
 
 struct FIOAPI_t {
@@ -22,14 +24,25 @@ struct KIOAPI_t {
 struct MMAPI_t {
     void* (*malloc)(uint32_t size);
     void (*free)(void*);
-    void* (*memcpy)(void*, void*, uint64_t);
     void* (*realloc)(void*, uint32_t);
+    uint32_t (*allocPages)(uint32_t count);
+    void (*setPresent)(uint32_t virt, uint32_t count);
+};
+
+struct VFSAPI_t {
+    vector<FSNode_t> (*listNodes)(char* dir);
+    int (*createNode)(char* dir, uint32_t flags);
+    int (*deleteNode)(char* dir);
+    bool (*nodeExists)(char* dir);
+    stream_t (*getStream)(char* dir);
+    bool (*registerFSHndlr)(FSHandler_t handler);
 };
 
 struct KAPI_t {
     KIOAPI_t kio;
     FIOAPI_t fio;
     MMAPI_t mm;
+    VFSAPI_t vfs;
     multiboot_info* boot_info;
 };
 

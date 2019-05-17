@@ -32,6 +32,7 @@ namespace paging {
     uint32_t findPages(uint32_t count);
     uint32_t allocPages(uint32_t count);
     uint32_t getUsedPages();
+    uint32_t sizeToPages(uint32_t size);
     void invlpg(uint32_t addr);
 };
 

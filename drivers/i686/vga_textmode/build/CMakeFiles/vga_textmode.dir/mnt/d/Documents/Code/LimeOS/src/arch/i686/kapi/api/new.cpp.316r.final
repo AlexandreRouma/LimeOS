@@ -1,0 +1,596 @@
+
+;; Function operator new (_Znwm, funcdef_no=6, decl_uid=994, cgraph_uid=6, symbol_order=6)
+
+
+
+operator new
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,5u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 120{95d,25u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 23 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 23 3 24 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":5 60 {*pushsi2}
+     (nil))
+(insn/f 24 23 25 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":5 79 {*movsi_internal}
+     (nil))
+(insn/f 25 24 26 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":5 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 26 25 21 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 21 26 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 21 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [91])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [91])
+                (const_int 16 [0x10])) [9 api.mm.malloc+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 size+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 565 {*call_value}
+     (nil)
+    (nil))
+(insn 10 9 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":6 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 10 27 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":7 -1
+     (nil))
+(note 27 19 28 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 28 27 29 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":7 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 29 28 30 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":7 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 30 29 22)
+(note 22 30 0 NOTE_INSN_DELETED)
+
+;; Function operator new [] (_Znam, funcdef_no=7, decl_uid=995, cgraph_uid=7, symbol_order=7)
+
+
+
+operator new []
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,5u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 120{95d,25u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 23 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 23 3 24 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":10 60 {*pushsi2}
+     (nil))
+(insn/f 24 23 25 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":10 79 {*movsi_internal}
+     (nil))
+(insn/f 25 24 26 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":10 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 26 25 21 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 21 26 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 21 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [91])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [91])
+                (const_int 16 [0x10])) [9 api.mm.malloc+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [1 size+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 565 {*call_value}
+     (nil)
+    (nil))
+(insn 10 9 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":11 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 10 27 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":12 -1
+     (nil))
+(note 27 19 28 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 28 27 29 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":12 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 29 28 30 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":12 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 30 29 22)
+(note 22 30 0 NOTE_INSN_DELETED)
+
+;; Function operator delete (_ZdlPv, funcdef_no=8, decl_uid=996, cgraph_uid=8, symbol_order=8)
+
+
+
+operator delete
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,3u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 118{95d,23u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 16 3 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":15 60 {*pushsi2}
+     (nil))
+(insn/f 17 16 18 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn/f 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":15 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 19 18 14 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 14 19 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 14 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [89])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [89])
+                (const_int 20 [0x14])) [10 api.mm.free+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [15 p+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 554 {*call}
+     (nil)
+    (nil))
+(insn 10 9 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":16 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 10 20 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":17 584 {nop}
+     (nil))
+(note 20 13 21 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 21 20 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":17 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 22 21 23 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":17 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 23 22 15)
+(note 15 23 0 NOTE_INSN_DELETED)
+
+;; Function operator delete (_ZdlPvm, funcdef_no=9, decl_uid=998, cgraph_uid=9, symbol_order=9)
+
+
+
+operator delete
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,3u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 118{95d,23u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 16 3 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":19 60 {*pushsi2}
+     (nil))
+(insn/f 17 16 18 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":19 79 {*movsi_internal}
+     (nil))
+(insn/f 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":19 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 19 18 14 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 14 19 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 14 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [89])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [89])
+                (const_int 20 [0x14])) [10 api.mm.free+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [15 p+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 554 {*call}
+     (nil)
+    (nil))
+(insn 10 9 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":20 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 10 20 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":21 584 {nop}
+     (nil))
+(note 20 13 21 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 21 20 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":21 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 22 21 23 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":21 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 23 22 15)
+(note 15 23 0 NOTE_INSN_DELETED)
+
+;; Function operator delete [] (_ZdaPv, funcdef_no=10, decl_uid=997, cgraph_uid=10, symbol_order=10)
+
+
+
+operator delete []
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,3u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 118{95d,23u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 16 3 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":24 60 {*pushsi2}
+     (nil))
+(insn/f 17 16 18 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":24 79 {*movsi_internal}
+     (nil))
+(insn/f 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":24 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 19 18 14 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 14 19 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 14 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [89])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [89])
+                (const_int 20 [0x14])) [10 api.mm.free+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [15 p+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 554 {*call}
+     (nil)
+    (nil))
+(insn 10 9 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":25 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 10 20 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":26 584 {nop}
+     (nil))
+(note 20 13 21 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 21 20 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":26 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 22 21 23 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":26 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 23 22 15)
+(note 15 23 0 NOTE_INSN_DELETED)
+
+;; Function operator delete [] (_ZdaPvm, funcdef_no=11, decl_uid=999, cgraph_uid=11, symbol_order=11)
+
+
+
+operator delete []
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,3u} r1={2d} r2={2d} r6={3d,6u} r7={7d,13u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 118{95d,23u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 16 3 17 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg/f:SI 6 bp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":29 60 {*pushsi2}
+     (nil))
+(insn/f 17 16 18 2 (set (reg/f:SI 6 bp)
+        (reg/f:SI 7 sp)) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":29 79 {*movsi_internal}
+     (nil))
+(insn/f 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":29 822 {pro_epilogue_adjust_stack_si_add}
+     (nil))
+(note 19 18 14 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 14 19 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 14 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [89])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7f0ca28071b0 api>)
+                        ] UNSPEC_GOT))) [14  S4 A8])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [89])
+                (const_int 20 [0x14])) [10 api.mm.free+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 8 7 9 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [15 p+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 9 8 10 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 554 {*call}
+     (nil)
+    (nil))
+(insn 10 9 13 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":30 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 13 10 20 2 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":31 584 {nop}
+     (nil))
+(note 20 13 21 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 21 20 22 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int 4 [0x4])))
+            (set (reg/f:SI 6 bp)
+                (mem:SI (reg/f:SI 6 bp) [0  S4 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":31 591 {leave}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 6 bp)
+        (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4]))
+            (nil))))
+(jump_insn 22 21 23 2 (simple_return) "/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp":31 579 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 23 22 15)
+(note 15 23 0 NOTE_INSN_DELETED)

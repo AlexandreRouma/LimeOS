@@ -2,6 +2,7 @@
 #include <temp_vga/terminal.h>
 #include <panic.h>
 #include <syscalls.h>
+#include <kernio/kernio.h>
 
 /* This defines what the stack looks like after an ISR was running */
 struct regs
@@ -60,11 +61,14 @@ extern "C"
 
     uint16_t* fb = (uint16_t*)0xB8000;
 
+    int counter = 0;
+
     void ISR_KBD(void) {
         //Keyboard.update();
         outb(0x20,0x20);
-        Terminal.setColor(0x0E);
-        Terminal.println("KBD!");
+        kio::setFore(0x0E);
+        kio::printf("KBD! %u\n", counter);
+        counter++;
         uint8_t scancode = inb(0x60);
     }
 

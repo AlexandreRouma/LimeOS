@@ -3,32 +3,50 @@
 
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: ../../../../src/arch/i686/kapi/api/kapi.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: ../../../../src/arch/i686/kapi/api/multiboot.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: ../../../../src/arch/i686/kapi/api/stream.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: ../../../../src/arch/i686/kapi/api/vfs.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp.o: /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/kapi.cpp
 
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o: ../../../../src/arch/i686/kapi/api/memory.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp.o: /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/memory.cpp
 
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/kapi.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/multiboot.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/new.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/stream.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: ../../../../src/arch/i686/kapi/api/vfs.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp.o: /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/new.cpp
 
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/kapi.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/memory.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/multiboot.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/stream.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/string.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/vector.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: ../../../../src/arch/i686/kapi/api/vfs.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp.o: /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/stream.cpp
 
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/kapi.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/memory.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/multiboot.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/stream.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/string.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/vector.h
+CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: ../../../../src/arch/i686/kapi/api/vfs.h
 CMakeFiles/vga_textmode.dir/mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp.o: /mnt/d/Documents/Code/LimeOS/src/arch/i686/kapi/api/string.cpp
 
 CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/kapi.h
+CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/memory.h
 CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/multiboot.h
+CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/stdint.h
 CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/stream.h
+CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/string.h
+CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/vector.h
+CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../../../../src/arch/i686/kapi/api/vfs.h
 CMakeFiles/vga_textmode.dir/src/main.cpp.o: ../src/main.cpp
 

@@ -1,4 +1,8 @@
-loadmod /mod/vga_textmode.elf
-#stdout /fio/dev/tty0
+loadmod /mod/serial.elf
+stdout /fio/dev/ttySER0
+print Welcome to LimeOS
 
-print Everything worked!
+loadmod /mod/grub_vbe.elf
+loadmod /mod/gfx_term.elf
+
+print Done loading!

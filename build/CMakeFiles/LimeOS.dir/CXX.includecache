@@ -31,7 +31,11 @@ stream.h
 -
 multiboot/multiboot.h
 -
+vfs/vfs.h
+-
 multiboot.h
+-
+vfs.h
 -
 
 ../src/arch/i686/paging/paging.h
@@ -223,6 +227,8 @@ panic.h
 -
 syscalls.h
 -
+kernio/kernio.h
+-
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/interrupts/idt.cpp
 stdint.h
@@ -243,7 +249,11 @@ kernio/kernio.h
 -
 vfs/fileio.h
 -
+vfs/vfs.h
+-
 misc/liballoc.h
+-
+paging/paging.h
 -
 
 /mnt/d/Documents/Code/LimeOS/src/arch/i686/paging/paging.cpp

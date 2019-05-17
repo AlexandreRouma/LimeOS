@@ -29,11 +29,14 @@ CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o: ../src/kstd/vector.h
 CMakeFiles/LimeOS.dir/src/arch/i686/init/init.cpp.o: ../src/arch/i686/init/init.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/arch/i686/temp_vga/terminal.h
+CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/common/kernio/kernio.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/common/misc/cpuio.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/common/misc/liballoc.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/common/misc/memory.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/common/panic.h
+CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/stdarg.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/stdint.h
+CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/stream.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/string.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/syscalls.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/c_isr.cpp.o: ../src/kstd/vector.h
@@ -49,6 +52,7 @@ CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/kstd/stdint.h
 CMakeFiles/LimeOS.dir/src/arch/i686/interrupts/pic.cpp.o: ../src/arch/i686/interrupts/pic.cpp
 
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/kapi/api/kapi.h
+CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/paging/paging.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/arch/i686/temp_vga/terminal.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/kernio/kernio.h
 CMakeFiles/LimeOS.dir/src/arch/i686/kapi/kapi.cpp.o: ../src/common/misc/liballoc.h

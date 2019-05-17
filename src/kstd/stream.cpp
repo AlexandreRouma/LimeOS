@@ -23,6 +23,7 @@ namespace stream {
         int n = len / s.buffersz;
         int last = len % s.buffersz;
         int written = 0;
+
         for (int i = 0; i < n; i++) {
             memcpy(s.buffer, buf + (s.buffersz * i), s.buffersz);
             int w = s.writeHndlr(s, s.buffersz, s.wpos);
@@ -32,8 +33,11 @@ namespace stream {
                 return written;
             }
         }
-        memcpy(s.buffer, buf + (s.buffersz * n), s.buffersz);
-        int w = s.writeHndlr(s, last, s.wpos);
+        int w = 0;
+        if (last > 0) {
+            memcpy(s.buffer, buf + (s.buffersz * n), last);
+            w = s.writeHndlr(s, last, s.wpos);
+        }
         s.wpos += w;
         written += w;
         return written;
@@ -52,8 +56,11 @@ namespace stream {
                 return read;
             }
         }
-        int r = s.readHndlr(s, last, s.rpos);
-        memcpy(buf + (s.buffersz * n), s.buffer, r);
+        int r = 0;
+        if (last > 0) {
+            r = s.readHndlr(s, last, s.rpos);
+            memcpy(buf + (s.buffersz * n), s.buffer, r);
+        }
         s.rpos += r;
         read += r;
         return read;

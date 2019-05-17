@@ -1,0 +1,2650 @@
+
+;; Function printAnsi (_Z9printAnsiPc, funcdef_no=17, decl_uid=1486, cgraph_uid=6, symbol_order=7)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=32, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=16, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 41:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 5:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 8:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 9:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 11:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 12:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) =r  (1) g {*movsi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 15:  (0) r  (1) rm {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=6,losers=1,rld_nregs=1
+          alt=3,overall=0,losers=0,rld_nregs=0
+            alt=0,overall=6,losers=1 -- refuse
+            alt=1,overall=6,losers=1 -- refuse
+            alt=2,overall=6,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 20:  (0) r  (1) r  (2) le {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 21:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =rm  (1) 0  (2) cI {*ashlsi3_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 25
+	 Choosing alt 0 in insn 25:  (0) =r  (1) %0  (2) rme {*addsi_1}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=3: Bad operand -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 26:  (0) q  (1) m {*movqi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=4,overall=21,losers=2,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=7,overall=27,losers=2 -- refuse
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 27:  (0) m  (1) qn {*movqi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 28:  (0) rm  (1) 0  (2) re {*addsi_1}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+EBB 3 4
+EBB 6
+EBB 5
+
+********** Pseudo live ranges #1: **********
+
+  BB 5
+  BB 6
+   Insn 40: point = 0, n_alt = -1
+  BB 3
+   Insn 16: point = 0, n_alt = -1
+   Insn 15: point = 0, n_alt = 1
+   Insn 14: point = 1, n_alt = 0
+  BB 4
+   Insn 36: point = 3, n_alt = -1
+   Insn 28: point = 3, n_alt = 1
+   Insn 27: point = 3, n_alt = 8
+   Insn 26: point = 4, n_alt = 4
+   Insn 25: point = 6, n_alt = 0
+   Insn 24: point = 8, n_alt = 0
+   Insn 23: point = 10, n_alt = 0
+   Insn 22: point = 11, n_alt = 0
+   Insn 21: point = 13, n_alt = 0
+   Insn 20: point = 14, n_alt = 3
+   Insn 19: point = 16, n_alt = 0
+   Insn 18: point = 17, n_alt = 0
+  BB 2
+   Insn 12: point = 19, n_alt = 1
+   Insn 11: point = 19, n_alt = 1
+   Insn 10: point = 20, n_alt = -2
+   Insn 9: point = 21, n_alt = 0
+   Insn 8: point = 21, n_alt = 0
+   Insn 7: point = 21, n_alt = -2
+   Insn 6: point = 21, n_alt = 0
+   Insn 5: point = 21, n_alt = 0
+   Insn 41: point = 21, n_alt = 0
+ r87: [0..21]
+ r88: [19..20]
+ r89: [15..17]
+ r90: [5..14]
+ r91: [7..11]
+ r92: [9..10]
+ r93: [7..8]
+ r94: [3..6]
+ r95: [3..4]
+ r96: [0..1]
+ r97: [15..16]
+ r98: [12..13]
+Compressing live ranges: from 22 to 16 - 72%
+Ranges after the compression:
+ r87: [0..15]
+ r88: [14..15]
+ r89: [12..13]
+ r90: [4..11]
+ r91: [6..9]
+ r92: [8..9]
+ r93: [6..7]
+ r94: [2..5]
+ r95: [2..3]
+ r96: [0..1]
+ r97: [12..13]
+ r98: [10..11]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=32, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=16, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=-8)
+changing reg in insn 41
+changing reg in insn 21
+changing reg in insn 7
+changing reg in insn 10
+changing reg in insn 11
+changing reg in insn 18
+changing reg in insn 20
+changing reg in insn 20
+changing reg in insn 20
+changing reg in insn 26
+changing reg in insn 22
+changing reg in insn 23
+changing reg in insn 24
+changing reg in insn 24
+changing reg in insn 25
+changing reg in insn 27
+changing reg in insn 26
+changing reg in insn 27
+changing reg in insn 14
+changing reg in insn 15
+changing reg in insn 19
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 22
+deleting insn with uid = 7.
+deleting insn with uid = 10.
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 8.
+
+
+printAnsi
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={7d,6u} r1={6d,4u,1e} r2={3d,1u} r3={1d,2u} r6={1d,16u} r7={4d,12u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r16={1e} r17={9d,1u} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 147{102d,43u,2e} in 23{22 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 87 88
+(note 3 1 41 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 41 3 2 2 (parallel [
+            (set (reg:SI 3 bx [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 41 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":13 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 6 5 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [3 str+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":13 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 8 6 9 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("_Z6strlenPc") [flags 0x41]  <function_decl 0x7fefa4841500 strlen>) [0 strlen S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":13 565 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 9 8 11 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":13 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 11 9 12 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 len+0 S4 A32])
+        (reg:SI 0 ax [orig:88 _1 ] [88])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":13 79 {*movsi_internal}
+     (nil))
+(insn 12 11 29 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 79 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 96
+(code_label 29 12 13 3 3 (nil) [1 uses])
+(note 13 29 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 3 (set (reg:SI 0 ax [96])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 79 {*movsi_internal}
+     (nil))
+(insn 15 14 16 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 0 ax [96])
+            (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                    (const_int -16 [0xfffffffffffffff0])) [2 len+0 S4 A32]))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 11 {*cmpsi_1}
+     (nil))
+(jump_insn 16 15 17 3 (set (pc)
+        (if_then_else (ge (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 39)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 548 {*jcc}
+     (nil)
+ -> 39)
+;;  succ:       6
+;;              4 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 6, flags: (RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 17 [flags] 89 90 91 92 93 94 95 97 98
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 1 dx [orig:89 i.0_2 ] [89])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 19 18 20 4 (set (reg/f:SI 0 ax [97])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [3 str+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 20 19 21 4 (parallel [
+            (set (reg/f:SI 2 cx [orig:90 _3 ] [90])
+                (plus:SI (reg:SI 1 dx [orig:89 i.0_2 ] [89])
+                    (reg/f:SI 0 ax [97])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 194 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [3 str+0 S4 A32])
+            (reg:SI 1 dx [orig:89 i.0_2 ] [89]))
+        (nil)))
+(insn 21 20 22 4 (set (reg/f:SI 0 ax [98])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("fb")  <var_decl 0x7fefa483b120 fb>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 22 21 23 4 (set (reg/f:SI 0 ax [orig:91 fb.1_4 ] [91])
+        (mem/f/c:SI (reg/f:SI 0 ax [98]) [1 fb+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 1 dx [orig:92 i.2_5 ] [92])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 79 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg:SI 1 dx [orig:93 _6 ] [93])
+                (ashift:SI (reg:SI 1 dx [orig:92 i.2_5 ] [92])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 446 {*ashlsi3_1}
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:SI 1 dx [orig:94 _7 ] [94])
+                (plus:SI (reg:SI 1 dx [orig:93 _6 ] [93])
+                    (reg/f:SI 0 ax [orig:91 fb.1_4 ] [91])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 194 {*addsi_1}
+     (nil))
+(insn 26 25 27 4 (set (reg:QI 0 ax [orig:95 _8 ] [95])
+        (mem:QI (reg/f:SI 2 cx [orig:90 _3 ] [90]) [0 *_3+0 S1 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 81 {*movqi_internal}
+     (nil))
+(insn 27 26 28 4 (set (mem:QI (reg/f:SI 1 dx [orig:94 _7 ] [94]) [0 _7->c+0 S1 A8])
+        (reg:QI 0 ax [orig:95 _8 ] [95])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":15 81 {*movqi_internal}
+     (nil))
+(insn 28 27 36 4 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                        (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                            (const_int -12 [0xfffffffffffffff4])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 194 {*addsi_1}
+     (nil))
+(jump_insn 36 28 37 4 (set (pc)
+        (label_ref 29)) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":14 549 {jump}
+     (nil)
+ -> 29)
+;;  succ:       3 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+(barrier 37 36 39)
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 4, next block 5, flags: (RTL, MODIFIED)
+;;  pred:       3
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 39 37 38 6 4 (nil) [1 uses])
+(note 38 39 40 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 40 38 34 6 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":17 584 {nop}
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 6, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       6 [always]  (FALLTHRU)
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 34 40 35 5 1 (nil) [0 uses])
+(note 35 34 42 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 42 35 0 NOTE_INSN_DELETED)
+
+;; Function _writeHndlr (_Z11_writeHndlr8stream_tjy, funcdef_no=18, decl_uid=1529, cgraph_uid=7, symbol_order=9)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=8, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 2:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 3:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 4:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 5:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 17: point = 0, n_alt = -1
+   Insn 16: point = 0, n_alt = -2
+   Insn 12: point = 1, n_alt = -2
+   Insn 9: point = 3, n_alt = 0
+   Insn 5: point = 4, n_alt = 1
+   Insn 4: point = 5, n_alt = 0
+   Insn 3: point = 6, n_alt = 1
+   Insn 2: point = 7, n_alt = 0
+   Insn 19: point = 8, n_alt = 0
+ r87: [8..8]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [6..7]
+ r91: [4..5]
+Compressing live ranges: from 9 to 9 - 100%
+Ranges after the compression:
+ r87: [8..8]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [6..7]
+ r91: [4..5]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=8, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+changing reg in insn 19
+changing reg in insn 9
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 16
+changing reg in insn 2
+changing reg in insn 3
+changing reg in insn 4
+changing reg in insn 5
+deleting insn with uid = 12.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+_writeHndlr
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 17 [flags]
+;;  ref usage 	r0={6d,5u} r1={1d} r2={1d} r6={1d,7u} r7={1d,2u} r17={1d} r20={1d,1u} 
+;;    total ref usage 27{12d,15u,0e} in 8{8 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 17 [flags] 87 88 89 90 91
+(note 7 1 19 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 19 7 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(insn 2 19 3 2 (set (reg:SI 0 ax [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [8 pos+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":21 79 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [8 pos+0 S4 A64])
+        (reg:SI 0 ax [90])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":21 79 {*movsi_internal}
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 0 ax [91])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 64 [0x40])) [8 pos+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":21 79 {*movsi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [8 pos+4 S4 A32])
+        (reg:SI 0 ax [91])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":21 79 {*movsi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 16 2 (set (reg:SI 0 ax [orig:88 _2 ] [88])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 56 [0x38])) [2 len+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":22 79 {*movsi_internal}
+     (nil))
+(insn 16 9 17 2 (set (reg/i:SI 0 ax)
+        (reg:SI 0 ax [orig:89 <retval> ] [89])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":23 79 {*movsi_internal}
+     (nil))
+(insn 17 16 20 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":23 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 20 17 0 NOTE_INSN_DELETED)
+
+;; Function _readHndlr (_Z10_readHndlr8stream_tjy, funcdef_no=19, decl_uid=1534, cgraph_uid=8, symbol_order=10)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=8, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 2:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 3:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 4:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 5:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 17: point = 0, n_alt = -1
+   Insn 16: point = 0, n_alt = -2
+   Insn 12: point = 1, n_alt = -2
+   Insn 9: point = 3, n_alt = 0
+   Insn 5: point = 4, n_alt = 1
+   Insn 4: point = 5, n_alt = 0
+   Insn 3: point = 6, n_alt = 1
+   Insn 2: point = 7, n_alt = 0
+   Insn 19: point = 8, n_alt = 0
+ r87: [8..8]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [6..7]
+ r91: [4..5]
+Compressing live ranges: from 9 to 9 - 100%
+Ranges after the compression:
+ r87: [8..8]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [6..7]
+ r91: [4..5]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=8, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+changing reg in insn 19
+changing reg in insn 9
+changing reg in insn 12
+changing reg in insn 12
+changing reg in insn 16
+changing reg in insn 2
+changing reg in insn 3
+changing reg in insn 4
+changing reg in insn 5
+deleting insn with uid = 12.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+_readHndlr
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 6 [bp] 17 [flags]
+;;  ref usage 	r0={6d,5u} r1={1d} r2={1d} r6={1d,6u} r7={1d,2u} r17={1d} r20={1d,1u} 
+;;    total ref usage 26{12d,14u,0e} in 8{8 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 17 [flags] 87 88 89 90 91
+(note 7 1 19 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 19 7 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(insn 2 19 3 2 (set (reg:SI 0 ax [90])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 60 [0x3c])) [8 pos+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [8 pos+0 S4 A64])
+        (reg:SI 0 ax [90])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 4 3 5 2 (set (reg:SI 0 ax [91])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 64 [0x40])) [8 pos+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":25 79 {*movsi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [8 pos+4 S4 A32])
+        (reg:SI 0 ax [91])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":25 79 {*movsi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 16 2 (set (reg:SI 0 ax [orig:88 _1 ] [88])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":26 79 {*movsi_internal}
+     (nil))
+(insn 16 9 17 2 (set (reg/i:SI 0 ax)
+        (reg:SI 0 ax [orig:89 <retval> ] [89])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":27 79 {*movsi_internal}
+     (nil))
+(insn 17 16 20 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":27 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 20 17 0 NOTE_INSN_DELETED)
+
+;; Function _closeHndlr (_Z11_closeHndlr8stream_t, funcdef_no=20, decl_uid=1537, cgraph_uid=9, symbol_order=11)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 12:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) lBwBz {*call} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 15:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) m  (1) re {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2 3
+EBB 5
+EBB 4
+
+********** Pseudo live ranges #1: **********
+
+  BB 4
+  BB 5
+   Insn 25: point = 0, n_alt = -1
+  BB 3
+   Insn 16: point = 0, n_alt = 1
+   Insn 15: point = 0, n_alt = 0
+   Insn 14: point = 0, n_alt = 0
+   Insn 13: point = 1, n_alt = 0
+   Insn 12: point = 2, n_alt = 0
+   Insn 11: point = 2, n_alt = 0
+   Insn 10: point = 3, n_alt = 0
+   Insn 9: point = 5, n_alt = 0
+  BB 2
+   Insn 7: point = 8, n_alt = -1
+   Insn 6: point = 8, n_alt = 0
+   Insn 5: point = 9, n_alt = 0
+   Insn 26: point = 10, n_alt = 0
+ r87: [6..10]
+ r88: [8..9]
+ r89: [0..3]
+ r90: [1..2]
+ r91: [4..5]
+Compressing live ranges: from 11 to 6 - 54%
+Ranges after the compression:
+ r87: [4..5]
+ r88: [4..5]
+ r89: [0..1]
+ r90: [0..1]
+ r91: [2..3]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=-8)
+changing reg in insn 26
+changing reg in insn 9
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 10
+changing reg in insn 14
+changing reg in insn 11
+changing reg in insn 13
+changing reg in insn 9
+changing reg in insn 10
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 14.
+
+
+_closeHndlr
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,3u} r1={4d,2u} r2={2d} r6={1d,8u} r7={4d,11u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d,1u} r18={1d} r19={1d} r20={1d,1u} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 118{92d,26u,0e} in 13{12 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 87 88
+(note 3 1 26 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 26 3 2 2 (parallel [
+            (set (reg:SI 0 ax [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 26 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 1 dx [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [3 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":30 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 1 dx [orig:88 _1 ] [88])
+            (const_int 0 [0]))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":30 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 7 6 8 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 24)
+            (pc))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":30 548 {*jcc}
+     (nil)
+ -> 24)
+;;  succ:       3 (FALLTHRU)
+;;              5
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 87
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 89 90 91
+(note 8 7 9 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 9 8 10 3 (set (reg/f:SI 0 ax [91])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7fefa48071b0 api>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 3 (set (reg/f:SI 0 ax [orig:89 _2 ] [89])
+        (mem/f/c:SI (plus:SI (reg/f:SI 0 ax [91])
+                (const_int 20 [0x14])) [20 api.mm.free+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 3 (set (reg/f:SI 1 dx [orig:90 _3 ] [90])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [3 s.buffer+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 13 12 14 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 1 dx [orig:90 _3 ] [90])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 14 13 15 3 (call (mem:QI (reg/f:SI 0 ax [orig:89 _2 ] [89]) [0 *_2 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 554 {*call}
+     (nil)
+    (nil))
+(insn 15 14 16 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":31 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 24 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [3 s.buffer+0 S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":32 79 {*movsi_internal}
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL, MODIFIED)
+;;  pred:       2
+;;              3 [always]  (FALLTHRU)
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 24 16 23 5 11 (nil) [1 uses])
+(note 23 24 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 23 19 5 (const_int 0 [0]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":34 584 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 19 25 20 4 9 (nil) [0 uses])
+(note 20 19 27 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 27 20 0 NOTE_INSN_DELETED)
+
+;; Function _provider (_Z9_providerv, funcdef_no=21, decl_uid=1539, cgraph_uid=10, symbol_order=12)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=8, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 39:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 8:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 10:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 12:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 14:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 17:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 18:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 20:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 21:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 22:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 24:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 26:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 27:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 28:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 29:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 30:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 36:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 37: point = 0, n_alt = -1
+   Insn 36: point = 0, n_alt = 0
+   Insn 30: point = 0, n_alt = 1
+   Insn 29: point = 1, n_alt = 0
+   Insn 28: point = 3, n_alt = 1
+   Insn 27: point = 4, n_alt = 0
+   Insn 26: point = 5, n_alt = 1
+   Insn 25: point = 6, n_alt = 0
+   Insn 24: point = 7, n_alt = 1
+   Insn 23: point = 8, n_alt = 0
+   Insn 22: point = 9, n_alt = 1
+   Insn 21: point = 10, n_alt = 0
+   Insn 20: point = 11, n_alt = 1
+   Insn 19: point = 12, n_alt = 0
+   Insn 18: point = 13, n_alt = 1
+   Insn 17: point = 14, n_alt = 0
+   Insn 16: point = 15, n_alt = 1
+   Insn 15: point = 16, n_alt = 0
+   Insn 14: point = 17, n_alt = 1
+   Insn 13: point = 18, n_alt = 0
+   Insn 12: point = 19, n_alt = 1
+   Insn 11: point = 20, n_alt = 0
+   Insn 10: point = 21, n_alt = 1
+   Insn 9: point = 22, n_alt = 0
+   Insn 8: point = 23, n_alt = 1
+   Insn 7: point = 24, n_alt = 0
+   Insn 6: point = 25, n_alt = 0
+   Insn 5: point = 27, n_alt = 0
+   Insn 39: point = 28, n_alt = 0
+ r87: [26..28]
+ r88: [0..27]
+ r89: [2..25]
+ r90: [23..24]
+ r91: [21..22]
+ r92: [19..20]
+ r93: [17..18]
+ r94: [15..16]
+ r95: [13..14]
+ r96: [11..12]
+ r97: [9..10]
+ r98: [7..8]
+ r99: [5..6]
+ r100: [3..4]
+ r101: [0..1]
+Compressing live ranges: from 29 to 26 - 89%
+Ranges after the compression:
+ r87: [24..25]
+ r88: [0..25]
+ r89: [2..23]
+ r90: [22..23]
+ r91: [20..21]
+ r92: [18..19]
+ r93: [16..17]
+ r94: [14..15]
+ r95: [12..13]
+ r96: [10..11]
+ r97: [8..9]
+ r98: [6..7]
+ r99: [4..5]
+ r100: [2..3]
+ r101: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=8, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=0, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+changing reg in insn 39
+changing reg in insn 6
+changing reg in insn 5
+changing reg in insn 30
+changing reg in insn 28
+changing reg in insn 26
+changing reg in insn 24
+changing reg in insn 22
+changing reg in insn 20
+changing reg in insn 18
+changing reg in insn 16
+changing reg in insn 14
+changing reg in insn 12
+changing reg in insn 10
+changing reg in insn 8
+changing reg in insn 6
+changing reg in insn 29
+changing reg in insn 27
+changing reg in insn 25
+changing reg in insn 23
+changing reg in insn 21
+changing reg in insn 19
+changing reg in insn 17
+changing reg in insn 15
+changing reg in insn 13
+changing reg in insn 11
+changing reg in insn 9
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 9
+changing reg in insn 10
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 14
+changing reg in insn 15
+changing reg in insn 16
+changing reg in insn 17
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 22
+changing reg in insn 23
+changing reg in insn 24
+changing reg in insn 25
+changing reg in insn 26
+changing reg in insn 27
+changing reg in insn 28
+changing reg in insn 29
+changing reg in insn 30
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+_provider
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 17 [flags]
+;;  ref usage 	r0={3d,14u} r1={4d,14u} r2={12d,11u} r6={1d,4u} r7={1d,2u} r17={1d} r20={1d,1u} 
+;;    total ref usage 69{23d,46u,0e} in 29{29 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 17 [flags] 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101
+(note 3 1 39 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 39 3 2 2 (parallel [
+            (set (reg:SI 1 dx [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 39 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [24 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 1 dx [89])
+        (mem/u/c:SI (plus:SI (reg:SI 1 dx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_stream")  <var_decl 0x7fefa48403f0 _stream>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 2 cx [90])
+        (mem/c:SI (reg/f:SI 1 dx [89]) [7 _stream+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SI (reg/f:SI 0 ax [88]) [7 <retval>+0 S4 A32])
+        (reg:SI 2 cx [90])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 2 cx [91])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 4 [0x4])) [7 _stream+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 4 [0x4])) [7 <retval>+4 S4 A32])
+        (reg:SI 2 cx [91])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 2 cx [92])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 8 [0x8])) [7 _stream+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 8 [0x8])) [7 <retval>+8 S4 A32])
+        (reg:SI 2 cx [92])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 2 cx [93])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 12 [0xc])) [7 _stream+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 12 [0xc])) [7 <retval>+12 S4 A32])
+        (reg:SI 2 cx [93])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 2 cx [94])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 16 [0x10])) [7 _stream+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 16 [0x10])) [7 <retval>+16 S4 A32])
+        (reg:SI 2 cx [94])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 2 cx [95])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 20 [0x14])) [7 _stream+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 20 [0x14])) [7 <retval>+20 S4 A32])
+        (reg:SI 2 cx [95])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 2 cx [96])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 24 [0x18])) [7 _stream+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 20 19 21 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 24 [0x18])) [7 <retval>+24 S4 A32])
+        (reg:SI 2 cx [96])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 2 cx [97])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 28 [0x1c])) [7 _stream+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 28 [0x1c])) [7 <retval>+28 S4 A32])
+        (reg:SI 2 cx [97])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 2 cx [98])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 32 [0x20])) [7 _stream+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 24 23 25 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 32 [0x20])) [7 <retval>+32 S4 A32])
+        (reg:SI 2 cx [98])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 2 cx [99])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 36 [0x24])) [7 _stream+36 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 26 25 27 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 36 [0x24])) [7 <retval>+36 S4 A32])
+        (reg:SI 2 cx [99])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 2 cx [100])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 40 [0x28])) [7 _stream+40 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 28 27 29 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 40 [0x28])) [7 <retval>+40 S4 A32])
+        (reg:SI 2 cx [100])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 1 dx [101])
+        (mem/c:SI (plus:SI (reg/f:SI 1 dx [89])
+                (const_int 44 [0x2c])) [7 _stream+44 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 30 29 36 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [88])
+                (const_int 44 [0x2c])) [7 <retval>+44 S4 A32])
+        (reg:SI 1 dx [101])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":37 79 {*movsi_internal}
+     (nil))
+(insn 36 30 37 2 (set (reg/i:SI 0 ax)
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [24 .result_ptr+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":38 79 {*movsi_internal}
+     (nil))
+(insn 37 36 40 2 (use (reg/i:SI 0 ax)) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":38 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 40 37 0 NOTE_INSN_DELETED)
+
+;; Function _start (_start, funcdef_no=22, decl_uid=1543, cgraph_uid=11, symbol_order=13)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=0)
+Can't eliminate 20 to 7 (offset=48, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 104:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 7:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 8:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 9:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 11:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 13:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 15:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 16:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 17:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 19:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 20:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 21:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 23:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 25:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =r  (1) Ts {*leasi} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 27:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 28:  (0) lBwBz {*call} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 29:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 30:  (0) =r  (1) g {*movsi_internal}
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+          alt=0,overall=10,losers=1,rld_nregs=1
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+          alt=1,overall=10,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 31:  (0) r  (1) r  (2) le {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 33:  (0) =r  (1) g {*movsi_internal} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 36:  (0) =r  (1) g {*movsi_internal} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 39:  (0) =r  (1) g {*movsi_internal} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 41:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 42:  (0) =<  (1) riF*o {*pushdi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 43:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 44:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 46:  (0) lBwBz  (2) i {*call_pop} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 47:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 48:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 49:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 51:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 52:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 53:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 54:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 55:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 56:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 57:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 58:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 59:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 60:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 61:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 62:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 63:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 64:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 65:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 66:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 67:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 68:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 69:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 70:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 71:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 72:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 73:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 74:  (0) =r  (1) g {*movsi_internal} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 76:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 77:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 78:  (0) =r  (1) Ts {*leasi} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 79:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 80:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 81:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 82:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 83:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 84:  (0) =r  (1) Ts {*leasi} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 85:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 86:  (0) lBwBz {*call} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 87:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 88:  (0) =r  (1) %0  (2) rme {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 89:  (0) =r  (1) Ts {*leasi} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 90:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 92:  (0) lBwBz {*call} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 93:  (0) =r  (1) %0  (2) rme {*addsi_1} (sp_off=-16)
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 94:  (0) q  (1) n {*movqi_internal}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 102: point = 0, n_alt = -1
+   Insn 101: point = 0, n_alt = -2
+   Insn 97: point = 1, n_alt = -2
+   Insn 94: point = 3, n_alt = 3
+   Insn 93: point = 4, n_alt = 0
+   Insn 92: point = 4, n_alt = 0
+   Insn 91: point = 4, n_alt = -2
+   Insn 90: point = 5, n_alt = 0
+   Insn 89: point = 6, n_alt = 0
+   Insn 88: point = 7, n_alt = 0
+   Insn 87: point = 7, n_alt = 0
+   Insn 86: point = 7, n_alt = 0
+   Insn 85: point = 8, n_alt = 0
+   Insn 84: point = 9, n_alt = 0
+   Insn 83: point = 10, n_alt = 0
+   Insn 82: point = 10, n_alt = 0
+   Insn 81: point = 11, n_alt = 0
+   Insn 80: point = 11, n_alt = 0
+   Insn 79: point = 12, n_alt = 0
+   Insn 78: point = 13, n_alt = 0
+   Insn 77: point = 14, n_alt = 0
+   Insn 76: point = 14, n_alt = 0
+   Insn 75: point = 15, n_alt = -2
+   Insn 74: point = 17, n_alt = 0
+   Insn 73: point = 18, n_alt = 0
+   Insn 72: point = 18, n_alt = 0
+   Insn 71: point = 19, n_alt = 1
+   Insn 70: point = 20, n_alt = 0
+   Insn 69: point = 21, n_alt = 1
+   Insn 68: point = 22, n_alt = 0
+   Insn 67: point = 23, n_alt = 1
+   Insn 66: point = 24, n_alt = 0
+   Insn 65: point = 25, n_alt = 1
+   Insn 64: point = 26, n_alt = 0
+   Insn 63: point = 27, n_alt = 1
+   Insn 62: point = 28, n_alt = 0
+   Insn 61: point = 29, n_alt = 1
+   Insn 60: point = 30, n_alt = 0
+   Insn 59: point = 31, n_alt = 1
+   Insn 58: point = 32, n_alt = 0
+   Insn 57: point = 33, n_alt = 1
+   Insn 56: point = 34, n_alt = 0
+   Insn 55: point = 35, n_alt = 1
+   Insn 54: point = 36, n_alt = 0
+   Insn 53: point = 37, n_alt = 1
+   Insn 52: point = 38, n_alt = 0
+   Insn 51: point = 39, n_alt = 1
+   Insn 50: point = 40, n_alt = 0
+   Insn 49: point = 41, n_alt = 1
+   Insn 48: point = 42, n_alt = 0
+   Insn 47: point = 43, n_alt = 0
+   Insn 46: point = 43, n_alt = 0
+   Insn 45: point = 43, n_alt = -2
+   Insn 44: point = 43, n_alt = 0
+   Insn 43: point = 44, n_alt = 0
+   Insn 42: point = 44, n_alt = 0
+   Insn 41: point = 44, n_alt = 0
+   Insn 40: point = 45, n_alt = -2
+   Insn 39: point = 47, n_alt = 0
+   Insn 38: point = 48, n_alt = 0
+   Insn 37: point = 49, n_alt = -2
+   Insn 36: point = 51, n_alt = 0
+   Insn 35: point = 52, n_alt = 0
+   Insn 34: point = 53, n_alt = -2
+   Insn 33: point = 55, n_alt = 0
+   Insn 32: point = 56, n_alt = 0
+   Insn 31: point = 56, n_alt = 3
+   Insn 30: point = 57, n_alt = 0
+   Insn 29: point = 58, n_alt = 0
+   Insn 28: point = 58, n_alt = 0
+   Insn 27: point = 59, n_alt = 0
+   Insn 26: point = 60, n_alt = 0
+   Insn 25: point = 61, n_alt = 0
+   Insn 24: point = 61, n_alt = 0
+   Insn 23: point = 62, n_alt = 1
+   Insn 22: point = 63, n_alt = 0
+   Insn 21: point = 64, n_alt = 1
+   Insn 20: point = 65, n_alt = 0
+   Insn 19: point = 66, n_alt = 1
+   Insn 18: point = 67, n_alt = 0
+   Insn 17: point = 68, n_alt = 1
+   Insn 16: point = 69, n_alt = 0
+   Insn 15: point = 70, n_alt = 1
+   Insn 14: point = 71, n_alt = 0
+   Insn 13: point = 72, n_alt = 1
+   Insn 12: point = 73, n_alt = 0
+   Insn 11: point = 74, n_alt = 1
+   Insn 10: point = 75, n_alt = 0
+   Insn 9: point = 76, n_alt = 1
+   Insn 8: point = 77, n_alt = 0
+   Insn 7: point = 78, n_alt = 1
+   Insn 6: point = 79, n_alt = 0
+   Insn 5: point = 80, n_alt = 0
+   Insn 104: point = 81, n_alt = 0
+ r87: [4..81]
+ r88: [58..61]
+ r89: [11..18]
+ r90: [7..10]
+ r91: [2..3]
+ r92: [0..1]
+ r93: [62..80]
+ r94: [78..79]
+ r95: [76..77]
+ r96: [74..75]
+ r97: [72..73]
+ r98: [70..71]
+ r99: [68..69]
+ r100: [66..67]
+ r101: [64..65]
+ r102: [62..63]
+ r103: [59..60]
+ r104: [19..57]
+ r105: [43..56]
+ r106: [52..53]
+ r107: [54..55]
+ r108: [48..49]
+ r109: [50..51]
+ r110: [44..45]
+ r111: [46..47]
+ r112: [41..42]
+ r113: [39..40]
+ r114: [37..38]
+ r115: [35..36]
+ r116: [33..34]
+ r117: [31..32]
+ r118: [29..30]
+ r119: [27..28]
+ r120: [25..26]
+ r121: [23..24]
+ r122: [21..22]
+ r123: [19..20]
+ r124: [14..15]
+ r125: [16..17]
+ r126: [12..13]
+ r127: [8..9]
+ r128: [5..6]
+Compressing live ranges: from 82 to 70 - 85%
+Ranges after the compression:
+ r87: [4..69]
+ r88: [50..51]
+ r89: [8..13]
+ r90: [6..7]
+ r91: [2..3]
+ r92: [0..1]
+ r93: [52..69]
+ r94: [68..69]
+ r95: [66..67]
+ r96: [64..65]
+ r97: [62..63]
+ r98: [60..61]
+ r99: [58..59]
+ r100: [56..57]
+ r101: [54..55]
+ r102: [52..53]
+ r103: [50..51]
+ r104: [14..49]
+ r105: [38..49]
+ r106: [46..47]
+ r107: [48..49]
+ r108: [42..43]
+ r109: [44..45]
+ r110: [38..39]
+ r111: [40..41]
+ r112: [36..37]
+ r113: [34..35]
+ r114: [32..33]
+ r115: [30..31]
+ r116: [28..29]
+ r117: [26..27]
+ r118: [24..25]
+ r119: [22..23]
+ r120: [20..21]
+ r121: [18..19]
+ r122: [16..17]
+ r123: [14..15]
+ r124: [10..11]
+ r125: [12..13]
+ r126: [8..9]
+ r127: [6..7]
+ r128: [4..5]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=8, prev_offset=8)
+Can't eliminate 20 to 7 (offset=48, prev_offset=0)
+Can eliminate 20 to 6 (offset=-8, prev_offset=-8)
+changing reg in insn 104
+changing reg in insn 91
+changing reg in insn 89
+changing reg in insn 84
+changing reg in insn 78
+changing reg in insn 74
+changing reg in insn 45
+changing reg in insn 39
+changing reg in insn 36
+changing reg in insn 33
+changing reg in insn 30
+changing reg in insn 26
+changing reg in insn 5
+changing reg in insn 24
+changing reg in insn 28
+changing reg in insn 72
+changing reg in insn 80
+changing reg in insn 82
+changing reg in insn 86
+changing reg in insn 94
+changing reg in insn 97
+changing reg in insn 97
+changing reg in insn 101
+changing reg in insn 5
+changing reg in insn 23
+changing reg in insn 21
+changing reg in insn 19
+changing reg in insn 17
+changing reg in insn 15
+changing reg in insn 13
+changing reg in insn 11
+changing reg in insn 9
+changing reg in insn 7
+changing reg in insn 6
+changing reg in insn 7
+changing reg in insn 8
+changing reg in insn 9
+changing reg in insn 10
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 13
+changing reg in insn 14
+changing reg in insn 15
+changing reg in insn 16
+changing reg in insn 17
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 22
+changing reg in insn 23
+changing reg in insn 26
+changing reg in insn 27
+changing reg in insn 30
+changing reg in insn 71
+changing reg in insn 69
+changing reg in insn 67
+changing reg in insn 65
+changing reg in insn 63
+changing reg in insn 61
+changing reg in insn 59
+changing reg in insn 57
+changing reg in insn 55
+changing reg in insn 53
+changing reg in insn 51
+changing reg in insn 49
+changing reg in insn 31
+changing reg in insn 44
+changing reg in insn 34
+changing reg in insn 35
+changing reg in insn 33
+changing reg in insn 34
+changing reg in insn 37
+changing reg in insn 38
+changing reg in insn 36
+changing reg in insn 37
+changing reg in insn 40
+changing reg in insn 41
+changing reg in insn 39
+changing reg in insn 40
+changing reg in insn 48
+changing reg in insn 49
+changing reg in insn 50
+changing reg in insn 51
+changing reg in insn 52
+changing reg in insn 53
+changing reg in insn 54
+changing reg in insn 55
+changing reg in insn 56
+changing reg in insn 57
+changing reg in insn 58
+changing reg in insn 59
+changing reg in insn 60
+changing reg in insn 61
+changing reg in insn 62
+changing reg in insn 63
+changing reg in insn 64
+changing reg in insn 65
+changing reg in insn 66
+changing reg in insn 67
+changing reg in insn 68
+changing reg in insn 69
+changing reg in insn 70
+changing reg in insn 71
+changing reg in insn 75
+changing reg in insn 76
+changing reg in insn 74
+changing reg in insn 75
+changing reg in insn 78
+changing reg in insn 79
+changing reg in insn 84
+changing reg in insn 85
+changing reg in insn 89
+changing reg in insn 90
+deleting insn with uid = 34.
+deleting insn with uid = 37.
+deleting insn with uid = 40.
+deleting insn with uid = 45.
+deleting insn with uid = 75.
+deleting insn with uid = 91.
+deleting insn with uid = 97.
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 28.
+verify found no changes in insn with uid = 46.
+rescanning insn with uid = 80.
+rescanning insn with uid = 86.
+verify found no changes in insn with uid = 92.
+
+
+_start
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 3 [bx] 4 [si] 6 [bp] 7 [sp] 17 [flags]
+;;  ref usage 	r0={26d,29u} r1={22d,16u} r2={6d} r3={1d,12u} r4={1d,12u} r6={1d,27u} r7={24d,40u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r17={16d} r18={5d} r19={5d} r20={1d,1u} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r40={5d} r41={5d} r42={5d} r43={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} r76={5d} r77={5d} r78={5d} r79={5d} r80={5d} 
+;;    total ref usage 585{448d,137u,0e} in 87{82 regular + 5 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 7 [sp] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [] 22 [] 23 [] 24 [] 25 [] 26 [] 27 [] 28 [] 29 [] 30 [] 31 [] 32 [] 33 [] 34 [] 35 [] 36 [] 37 [] 38 [] 39 [] 40 [] 41 [] 42 [] 43 [] 44 [] 45 [] 46 [] 47 [] 48 [] 49 [] 50 [] 51 [] 52 [] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128
+(note 3 1 104 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 104 3 2 2 (parallel [
+            (set (reg:SI 3 bx [87])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 587 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 104 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [93])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_ZN4kapi3apiE") [flags 0x40]  <var_decl 0x7fefa48071b0 api>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 1 dx [94])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 8 [0x8])) [12 api+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (reg/f:SI 0 ax [93]) [12 api+0 S4 A32])
+        (reg:SI 1 dx [94])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 dx [95])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [12 api+4 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 4 [0x4])) [12 api+4 S4 A32])
+        (reg:SI 1 dx [95])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 dx [96])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 16 [0x10])) [12 api+8 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 8 [0x8])) [12 api+8 S4 A32])
+        (reg:SI 1 dx [96])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 1 dx [97])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [12 api+12 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 12 [0xc])) [12 api+12 S4 A32])
+        (reg:SI 1 dx [97])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 1 dx [98])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 24 [0x18])) [12 api+16 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 16 [0x10])) [12 api+16 S4 A32])
+        (reg:SI 1 dx [98])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 1 dx [99])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 28 [0x1c])) [12 api+20 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 20 [0x14])) [12 api+20 S4 A32])
+        (reg:SI 1 dx [99])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 1 dx [100])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 32 [0x20])) [12 api+24 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 24 [0x18])) [12 api+24 S4 A32])
+        (reg:SI 1 dx [100])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 1 dx [101])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 36 [0x24])) [12 api+28 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 21 20 22 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 28 [0x1c])) [12 api+28 S4 A32])
+        (reg:SI 1 dx [101])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 1 dx [102])
+        (mem/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 40 [0x28])) [12 api+32 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 23 22 24 2 (set (mem/c:SI (plus:SI (reg/f:SI 0 ax [93])
+                (const_int 32 [0x20])) [12 api+32 S4 A32])
+        (reg:SI 1 dx [102])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":42 79 {*movsi_internal}
+     (nil))
+(insn 24 23 25 2 (set (reg/f:SI 0 ax [orig:88 _1 ] [88])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [14 api.kio.println+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 79 {*movsi_internal}
+     (nil))
+(insn 25 24 26 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 26 25 27 2 (set (reg/f:SI 1 dx [103])
+        (plus:SI (reg:SI 3 bx [87])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fefa485c480 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 191 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fefa485c480 *.LC0>)
+        (nil)))
+(insn 27 26 28 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 1 dx [103])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 28 27 29 2 (call (mem:QI (reg/f:SI 0 ax [orig:88 _1 ] [88]) [0 *_1 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 554 {*call}
+     (nil)
+    (nil))
+(insn 29 28 30 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":43 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 30 29 31 2 (set (reg/f:SI 4 si [104])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_stream")  <var_decl 0x7fefa48403f0 _stream>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 31 30 32 2 (parallel [
+            (set (reg:SI 0 ax [105])
+                (plus:SI (reg/f:SI 6 bp)
+                    (const_int -56 [0xffffffffffffffc8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 194 {*addsi_1}
+     (nil))
+(insn 32 31 33 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [9  S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 33 32 35 2 (set (reg:SI 1 dx [107])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_Z11_closeHndlr8stream_t") [flags 0x1]  <function_decl 0x7fefa484c000 _closeHndlr>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 35 33 36 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (reg/f:SI 1 dx [106])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 36 35 38 2 (set (reg:SI 1 dx [109])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_Z10_readHndlr8stream_tjy") [flags 0x1]  <function_decl 0x7fefa4848f00 _readHndlr>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 38 36 39 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
+        (reg/f:SI 1 dx [108])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 39 38 41 2 (set (reg:SI 1 dx [111])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_Z11_writeHndlr8stream_tjy") [flags 0x1]  <function_decl 0x7fefa4848d00 _writeHndlr>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 41 39 42 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
+        (reg/f:SI 1 dx [110])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 42 41 43 2 (set (mem:DI (pre_dec:SI (reg/f:SI 7 sp)) [8  S8 A64])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 59 {*pushdi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 43 42 44 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 4096 [0x1000])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 44 43 46 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [24  S4 A32])
+        (reg:SI 0 ax [105])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 46 44 47 2 (parallel [
+            (call (mem:QI (symbol_ref:SI ("_ZN6stream6createEjyPFj8stream_tjyES2_PFvS0_EPv") [flags 0x41]  <function_decl 0x7fefa4812200 create>) [0 create S1 A8])
+                (const_int 32 [0x20]))
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 562 {*call_pop}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 47 46 48 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 28 [0x1c])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 48 47 49 2 (set (reg:SI 0 ax [112])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 49 48 50 2 (set (mem/c:SI (reg/f:SI 4 si [104]) [7 _stream+0 S4 A32])
+        (reg:SI 0 ax [112])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 50 49 51 2 (set (reg:SI 0 ax [113])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 51 50 52 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 4 [0x4])) [7 _stream+4 S4 A32])
+        (reg:SI 0 ax [113])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 52 51 53 2 (set (reg:SI 0 ax [114])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 53 52 54 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 8 [0x8])) [7 _stream+8 S4 A32])
+        (reg:SI 0 ax [114])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 54 53 55 2 (set (reg:SI 0 ax [115])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 55 54 56 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 12 [0xc])) [7 _stream+12 S4 A32])
+        (reg:SI 0 ax [115])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 56 55 57 2 (set (reg:SI 0 ax [116])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 57 56 58 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 16 [0x10])) [7 _stream+16 S4 A32])
+        (reg:SI 0 ax [116])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 58 57 59 2 (set (reg:SI 0 ax [117])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 59 58 60 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 20 [0x14])) [7 _stream+20 S4 A32])
+        (reg:SI 0 ax [117])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 60 59 61 2 (set (reg:SI 0 ax [118])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 61 60 62 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 24 [0x18])) [7 _stream+24 S4 A32])
+        (reg:SI 0 ax [118])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 62 61 63 2 (set (reg:SI 0 ax [119])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 63 62 64 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 28 [0x1c])) [7 _stream+28 S4 A32])
+        (reg:SI 0 ax [119])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 64 63 65 2 (set (reg:SI 0 ax [120])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 65 64 66 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 32 [0x20])) [7 _stream+32 S4 A32])
+        (reg:SI 0 ax [120])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 66 65 67 2 (set (reg:SI 0 ax [121])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 67 66 68 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 36 [0x24])) [7 _stream+36 S4 A32])
+        (reg:SI 0 ax [121])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 68 67 69 2 (set (reg:SI 0 ax [122])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 69 68 70 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 40 [0x28])) [7 _stream+40 S4 A32])
+        (reg:SI 0 ax [122])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 70 69 71 2 (set (reg:SI 0 ax [123])
+        (mem:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [7  S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 71 70 72 2 (set (mem/c:SI (plus:SI (reg/f:SI 4 si [104])
+                (const_int 44 [0x2c])) [7 _stream+44 S4 A32])
+        (reg:SI 0 ax [123])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":44 79 {*movsi_internal}
+     (nil))
+(insn 72 71 73 2 (set (reg/f:SI 0 ax [orig:89 _2 ] [89])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 20 [0x14])) [17 api.fio.mountStreamProvider+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 73 72 74 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 74 73 76 2 (set (reg:SI 1 dx [125])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [87])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("_Z9_providerv") [flags 0x1]  <function_decl 0x7fefa484c200 _provider>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 79 {*movsi_internal}
+     (nil))
+(insn 76 74 77 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [25  S4 A32])
+        (reg/f:SI 1 dx [124])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 77 76 78 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (const_int 0 [0])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 78 77 79 2 (set (reg/f:SI 1 dx [126])
+        (plus:SI (reg:SI 3 bx [87])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fefa485c5a0 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 191 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fefa485c5a0 *.LC1>)
+        (nil)))
+(insn 79 78 80 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 1 dx [126])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 80 79 81 2 (set (reg:QI 0 ax)
+        (call (mem:QI (reg/f:SI 0 ax [orig:89 _2 ] [89]) [0 *_2 S1 A8])
+            (const_int 16 [0x10]))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 565 {*call_value}
+     (nil)
+    (nil))
+(insn 81 80 82 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":45 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 82 81 83 2 (set (reg/f:SI 0 ax [orig:90 _3 ] [90])
+        (mem/f/c:SI (plus:SI (reg/f:SI 6 bp)
+                (const_int 12 [0xc])) [14 api.kio.println+0 S4 A32])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 79 {*movsi_internal}
+     (nil))
+(insn 83 82 84 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 84 83 85 2 (set (reg/f:SI 1 dx [127])
+        (plus:SI (reg:SI 3 bx [87])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fefa485c630 *.LC2>)
+                    ] UNSPEC_GOTOFF)))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 191 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fefa485c630 *.LC2>)
+        (nil)))
+(insn 85 84 86 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 1 dx [127])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 86 85 87 2 (call (mem:QI (reg/f:SI 0 ax [orig:90 _3 ] [90]) [0 *_3 S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 554 {*call}
+     (nil)
+    (nil))
+(insn 87 86 88 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":46 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 88 87 89 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":47 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 89 88 90 2 (set (reg/f:SI 0 ax [128])
+        (plus:SI (reg:SI 3 bx [87])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7fefa485c6c0 *.LC3>)
+                    ] UNSPEC_GOTOFF)))) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":47 191 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7fefa485c6c0 *.LC3>)
+        (nil)))
+(insn 90 89 92 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg/f:SI 0 ax [128])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":47 60 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 92 90 93 2 (call (mem:QI (symbol_ref:SI ("_Z9printAnsiPc") [flags 0x1]  <function_decl 0x7fefa4841e00 printAnsi>) [0 printAnsi S1 A8])
+        (const_int 16 [0x10])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":47 554 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 93 92 94 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":47 194 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 94 93 101 2 (set (reg:QI 0 ax [orig:91 _11 ] [91])
+        (const_int 1 [0x1])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":48 81 {*movqi_internal}
+     (nil))
+(insn 101 94 102 2 (set (reg/i:QI 0 ax)
+        (reg:QI 0 ax [orig:92 <retval> ] [92])) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":49 81 {*movqi_internal}
+     (nil))
+(insn 102 101 105 2 (use (reg/i:QI 0 ax)) "/mnt/d/Documents/Code/LimeOS/drivers/i686/vga_textmode/src/main.cpp":49 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [ax] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 105 102 0 NOTE_INSN_DELETED)
