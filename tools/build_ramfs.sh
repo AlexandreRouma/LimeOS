@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# Cleaning up drivers
+# Cleaning up modules
 rm ../ramfs/mod/*
 
-# Copy drivers
-cp ../bin/i686/drivers/*.elf ../ramfs/mod/
+# Copy modules
+cp ../bin/i686/modules/*.elf ../ramfs/mod/
 
 # Build tar archive
 cd ../ramfs

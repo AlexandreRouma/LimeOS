@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9)
-project(serial)
+project(grub_vbe)
 
 enable_language(ASM)
 
@@ -14,10 +14,10 @@ file(GLOB API_SRC "../../../src/arch/i686/kapi/api/*.cpp" "../../../src/arch/i68
 
 set(SRCS ${MOD_SRC} ${API_SRC})
 
-include_directories(serial "../../../src/arch/i686/kapi/api")
+include_directories(grub_vbe "../../../src/arch/i686/kapi/api")
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "../../../../bin/i686/drivers")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "../../../../bin/i686/modules")
 
-add_executable(serial ${SRCS})
+add_executable(grub_vbe ${SRCS})
 
-set_target_properties(serial PROPERTIES OUTPUT_NAME "serial.elf")
+set_target_properties(grub_vbe PROPERTIES OUTPUT_NAME "grub_vbe.elf")
