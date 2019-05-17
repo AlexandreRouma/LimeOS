@@ -14,3 +14,7 @@ bin/i686/iso/boot/LimeOS.bin
 # Kernel build
 **/build/*
 !**/build/.gitkeep
+
+# Misc
+**/.old
+.vscode/ipch
