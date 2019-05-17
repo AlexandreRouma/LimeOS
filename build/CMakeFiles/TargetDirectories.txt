@@ -1,5 +1,0 @@
-/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/rebuild_cache.dir
-/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/edit_cache.dir
-/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/LimeOS.dir
-/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/iso.dir
-/mnt/d/Documents/Code/LimeOS/build/CMakeFiles/ramfs.dir

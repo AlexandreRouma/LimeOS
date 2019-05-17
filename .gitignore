@@ -12,5 +12,5 @@ bin/i686/iso/ramfs.tar
 bin/i686/iso/boot/LimeOS.bin
 
 # Kernel build
-src/build/*
-!src/build/.gitkeep
+**/build/*
+!**/build/.gitkeep
