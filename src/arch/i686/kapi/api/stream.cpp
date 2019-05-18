@@ -56,6 +56,7 @@ namespace stream {
             s.rpos += r;
             read += r;
             if (r == 0) {
+                kapi::api.kio.println("READ ERROR!!!");
                 return read;
             }
         }

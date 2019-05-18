@@ -4,6 +4,7 @@
 #include <vfs/vfs.h>
 #include <misc/liballoc.h>
 #include <paging/paging.h>
+#include <kmod/mctl.h>
 
 namespace kapi {
     void init(multiboot_info* info) {
@@ -31,6 +32,10 @@ namespace kapi {
         api.vfs.listNodes = vfs::listNodes;
         api.vfs.nodeExists = vfs::nodeExists;
         api.vfs.getStream = vfs::getStream;
+
+        // MCTL
+        api.mctl.call = mctl::call;
+        api.mctl.registerHndlr = mctl::registerHndlr;
     }
 
     KAPI_t api;

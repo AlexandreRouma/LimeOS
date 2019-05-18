@@ -1,6 +1,7 @@
 #include <kapi.h>
 #include <memory.h>
 #include <string.h>
+#include <stdctl/framebuffer.h>
 
 char* fb;
 
@@ -42,6 +43,18 @@ char* genDevName() {
     return name;
 }
 
+FramebufferInfo_t fbInfo;
+
+int _mctlHndlr(void* tag, uint32_t id, void* in, void* out) {
+    if (id == 1) { // FB_MCTL_CMD_GETINFO
+        memcpy(out, &fbInfo, sizeof(fbInfo));
+        return sizeof(FramebufferInfo_t);
+    }
+    else {
+        return -1;
+    }
+}
+
 extern "C"
 bool _start(KAPI_t api) {
     kapi::api = api;
@@ -52,13 +65,24 @@ bool _start(KAPI_t api) {
     for (int i = 0; i < length; i++) {
         fb[i] = 0;
     }
+    fbInfo.addr = api.boot_info->framebuffer_addr;
+    fbInfo.width = api.boot_info->framebuffer_width;
+    fbInfo.height = api.boot_info->framebuffer_height;
+    fbInfo.bpp = api.boot_info->framebuffer_bpp;
+    fbInfo.pitch = api.boot_info->framebuffer_pitch;
 
     char* name = genDevName();
     api.kio.print("[grub_vbe] Mounting ");
     api.kio.print(name);
     api.kio.println(" ...");
 
-    api.fio.mountStreamProvider("/dev/fb0", 0, _provider);
+    api.fio.mountStreamProvider(name, 0, _provider);
+
+    MCTLHandler_t mctlHandler;
+    mctlHandler.tag = 0;
+    mctlHandler._handler = _mctlHndlr;
+    api.mctl.registerHndlr(name, mctlHandler);
+
     api.kio.println("[grub_vbe] Done.");
     return true;
 }

@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <paging/paging.h>
 #include <temp_vga/terminal.h>
+#include <panic.h>
 
 namespace paging {
     uint32_t page_directory[1024] __attribute__((aligned(4096)));
@@ -88,6 +89,8 @@ namespace paging {
 
     uint32_t findPages(uint32_t count) {
         uint32_t continous = 0;
+        uint32_t startDir = 0;
+        uint32_t startPage = 0;
         for (uint32_t i = 0; i < 1024; i++) {
             for (uint32_t j = 0; j < 1024; j++) {
                 if ((page_tables[i][j] & PT_PRESENT) == 0) {
@@ -95,14 +98,15 @@ namespace paging {
                 }
                 else {
                     continous = 0;
+                    startDir = i;
+                    startPage = j + 1;
                 }
                 if (continous == count) {
-                    return (i * 0x400000) + (j * 0x1000);
+                    return (startDir * 0x400000) + (startPage * 0x1000);
                 }
             }
         }
         // TODO: Add a kernel panic
-        //kernel_panic(0xF0CC, "Out of memory :/");
         return 0;
     }
 

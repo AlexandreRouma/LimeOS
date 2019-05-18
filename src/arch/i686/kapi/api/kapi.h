@@ -6,9 +6,11 @@
 #ifdef KERNEL_CODE
 #include <multiboot/multiboot.h>
 #include <vfs/vfs.h>
+#include <kmod/mctl.h>
 #else
 #include <multiboot.h>
 #include <vfs.h>
+#include <mctl.h>
 #endif
 
 struct FIOAPI_t {
@@ -19,6 +21,11 @@ struct FIOAPI_t {
 struct KIOAPI_t {
     void (*print)(char*);
     void (*println)(char*);
+};
+
+struct MCTLAPI_t {
+    void (*registerHndlr)(char* dev, MCTLHandler_t handler);
+    int (*call)(char* dev, uint32_t id, void* in, void* out);
 };
 
 struct MMAPI_t {
@@ -43,6 +50,7 @@ struct KAPI_t {
     FIOAPI_t fio;
     MMAPI_t mm;
     VFSAPI_t vfs;
+    MCTLAPI_t mctl;
     multiboot_info* boot_info;
 };
 
