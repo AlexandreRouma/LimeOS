@@ -17,6 +17,10 @@
 #include <kscript/kscript.h>
 #include <kmod/modules.h>
 #include <kmod/mctl.h>
+#include <misc/cpuio.h>
+#include <context/switch_context.h>
+
+#define BochsBreak() outw(0x8A00,0x8A00); outw(0x8A00,0x08AE0);
 
 struct VBEPMTable_t {
     uint16_t f5_offset;
@@ -71,6 +75,13 @@ void printFile(char* path) {
     }
 }
 
+void testTask() {
+    while(1) {
+        //kio::setFore(12);
+        //kio::println("Hello from thread 2!");
+    }
+}
+
 extern "C"
 void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     _init(multiboot_info);
@@ -114,18 +125,36 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     ksc::init();
     ksc::run("/conf/init.ksc");
 
+    listNodes("/");
+    listNodes("/fio");
     listNodes("/fio/dev");
 
     kio::printf("1) Using %u bytes\n", paging::getUsedPages() * 4096);
 
     kio::printf("2) Using %u bytes\n", paging::getUsedPages() * 4096);
-    
+
+    kio::println("");
+
+    kio::setFore(10);
+    kio::print("urmom@fakeshell");
+    kio::setFore(15);
+    kio::print(":");
+    kio::setFore(12);
+    kio::print("/fio/dev");
+    kio::setFore(15);
+    kio::print("$ ls");
+
+    //BochsBreak();
+    uint32_t stackPage = paging::allocPages(1) + 4091;
+    kio::printf("thread addr: 0x%08X, stack addr: 0x%08X", (uint32_t)testTask, stackPage);
+    addTask((uint32_t)testTask, stackPage);
 
     /*
     - drivers are loaded via a kernscript
     */
 
     while(1) {
-        
+        //kio::setFore(9);
+        //kio::println("Hello from thread 1!");
     }
 }

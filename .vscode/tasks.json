@@ -26,7 +26,7 @@
         {
             "label": "Run",
             "type": "shell",
-            "command": "bash --login -c 'cd build && make -j4'; &('C:/Program Files/qemu/qemu-system-i386') -kernel bin/i686/LimeOS.bin -serial mon:stdio",
+            "command": "bash --login -c 'cd build && make -j4'; &('C:/Program Files/qemu/qemu-system-i386') -kernel bin/i686/LimeOS.bin -serial mon:stdio -accel hax",
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -35,7 +35,7 @@
         {
             "label": "Run (With ISO)",
             "type": "shell",
-            "command": "bash --login -c 'cd build && make -j4 iso'; &('C:/Program Files/qemu/qemu-system-i386') -cdrom bin/i686/LimeOS.iso -serial mon:stdio",
+            "command": "bash --login -c 'cd build && make -j4 iso'; &('C:/Program Files/qemu/qemu-system-i386') -cdrom bin/i686/LimeOS.iso -serial mon:stdio -accel hax",
             "group": {
                 "kind": "test",
                 "isDefault": true
