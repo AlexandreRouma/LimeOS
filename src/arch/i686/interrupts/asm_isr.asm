@@ -267,6 +267,11 @@ ASM_ISR_PIT:
     popw %es
     popw %ds
     popal
+
+    pushf
+    push %cs
+    call _ASM_SWITCH_TASK_ISR
+
     iret
 
 .extern _ASM_SWITCH_TASK_ISR
@@ -291,8 +296,6 @@ ASM_ISR_KBD:
     popw %es
     popw %ds
     popal
-
-    call _ASM_SWITCH_TASK_ISR
 
     iret
 

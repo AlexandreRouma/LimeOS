@@ -8,7 +8,7 @@
                 "${workspaceFolder}/src/common",
                 "${workspaceFolder}/src/arch/i686",
                 "${workspaceFolder}/src/arch/i686/kapi/api",
-                "${workspaceFolder}/drivers/i686/**"
+                "${workspaceFolder}/modules/i686/**"
             ],
             "defines": [
                 "_DEBUG",

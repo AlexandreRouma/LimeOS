@@ -28,6 +28,8 @@ namespace kio {
         stream::write(stdout, _str.c_str(), _str.length());
     }
 
+    bool busy = false;
+
     void printf(string str, ...) {
         string _str = str;
         string out = "";

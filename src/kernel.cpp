@@ -75,10 +75,59 @@ void printFile(char* path) {
     }
 }
 
-void testTask() {
-    while(1) {
-        //kio::setFore(12);
-        //kio::println("Hello from thread 2!");
+int id = 2;
+
+void testTask2() {
+    while (1) {
+        kio::printf("Task 2\n");
+    }
+}
+
+void testTask3() {
+    while (1) {
+        kio::printf("Task 3\n");
+    }
+}
+
+void testTask4() {
+    while (1) {
+        kio::printf("Task 4\n");
+    }
+}
+
+void testTask5() {
+    while (1) {
+        kio::printf("Task 5\n");
+    }
+}
+
+void testTask6() {
+    while (1) {
+        kio::printf("Task 6\n");
+    }
+}
+
+void testTask7() {
+    while (1) {
+        kio::printf("Task 7\n");
+    }
+}
+
+void testTask8() {
+    while (1) {
+        kio::printf("Task 8\n");
+    }
+}
+
+void testTask9() {
+    while (1) {
+        kio::printf("Task 9\n");
+    }
+}
+
+void testTask10() {
+    while (1) {
+        kio::printf("Task 10\n");
     }
 }
 
@@ -145,16 +194,42 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     kio::print("$ ls");
 
     //BochsBreak();
-    uint32_t stackPage = paging::allocPages(1) + 4091;
-    kio::printf("thread addr: 0x%08X, stack addr: 0x%08X", (uint32_t)testTask, stackPage);
-    addTask((uint32_t)testTask, stackPage);
+
+
+    uint32_t stackPage = 0;
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    scheduler::createTask((uint32_t)testTask2, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    scheduler::createTask((uint32_t)testTask3, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    scheduler::createTask((uint32_t)testTask4, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    scheduler::createTask((uint32_t)testTask5, stackPage, 4096, 0, 0);
+    
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    scheduler::createTask((uint32_t)testTask6, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    //scheduler::createTask((uint32_t)testTask7, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    //scheduler::createTask((uint32_t)testTask8, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    //scheduler::createTask((uint32_t)testTask9, stackPage, 4096, 0, 0);
+
+    stackPage = paging::allocPages(1) + 2048; // Get page top
+    //scheduler::createTask((uint32_t)testTask10, stackPage, 4096, 0, 0);
 
     /*
     - drivers are loaded via a kernscript
     */
 
     while(1) {
-        //kio::setFore(9);
-        //kio::println("Hello from thread 1!");
+        kio::println("Task 1");
     }
 }

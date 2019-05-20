@@ -10,9 +10,13 @@ _ASM_SWITCH_TASK_ISR:
     # pop %esp
     mov %eax, %esp
 
+    
+
     popa
     popf
 
-    ret
-    # iret
+    
+
+    # ret
+    iret
 
