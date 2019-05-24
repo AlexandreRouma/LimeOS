@@ -4,7 +4,9 @@
 #include <interrupts/idt.h>
 #include <interrupts/pic.h>
 #include <paging/paging.h>
+#include <pit/pit.h>
 #include <temp_vga/terminal.h>
+#include <scheduler/scheduler.h>
 
 void _init(multiboot_info* multiboot_info) {
     // Temporary VGA for debug
@@ -21,6 +23,13 @@ void _init(multiboot_info* multiboot_info) {
     paging::enable();
 
     // ========== MEMORY MANAGEMENT ENABLED ==========
+
+    // Init the scheduler
+    scheduler::init();
+
+    // Configure the PIT
+    pit::command(PIT_MODE_RATE_GEN | PIT_ACCESS_BOTH | PIT_CHAN_0);
+    pit::setFrequency(PIT_PORT_CHAN_0, 2000);
 
     // Remap PIC
     pic::init();

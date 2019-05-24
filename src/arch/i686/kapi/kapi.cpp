@@ -5,6 +5,7 @@
 #include <misc/liballoc.h>
 #include <paging/paging.h>
 #include <kmod/mctl.h>
+#include <scheduler/scheduler.h>
 
 namespace kapi {
     void init(multiboot_info* info) {
@@ -36,6 +37,9 @@ namespace kapi {
         // MCTL
         api.mctl.call = mctl::call;
         api.mctl.registerHndlr = mctl::registerHndlr;
+
+        // Scheduler
+        api.scheduler.yield = scheduler::yield;
     }
 
     KAPI_t api;

@@ -18,7 +18,7 @@
 #include <kmod/modules.h>
 #include <kmod/mctl.h>
 #include <misc/cpuio.h>
-#include <context/switch_context.h>
+#include <scheduler/scheduler.h>
 
 #define BochsBreak() outw(0x8A00,0x8A00); outw(0x8A00,0x08AE0);
 
@@ -79,55 +79,64 @@ int id = 2;
 
 void testTask2() {
     while (1) {
-        kio::printf("Task 2\n");
+        kio::print("Task 2\n");
+        scheduler::sleep(576);
     }
 }
 
 void testTask3() {
     while (1) {
-        kio::printf("Task 3\n");
+        kio::print("Task 3\n");
+        scheduler::sleep(689);
     }
 }
 
 void testTask4() {
     while (1) {
-        kio::printf("Task 4\n");
+        kio::print("Task 4\n");
+        scheduler::sleep(731);
     }
 }
 
 void testTask5() {
     while (1) {
-        kio::printf("Task 5\n");
+        kio::print("Task 5\n");
+        scheduler::sleep(597);
     }
 }
 
 void testTask6() {
     while (1) {
-        kio::printf("Task 6\n");
+        kio::print("Task 6\n");
+        scheduler::sleep(832);
     }
 }
 
 void testTask7() {
     while (1) {
-        kio::printf("Task 7\n");
+        kio::print("Task 7\n");
+        scheduler::sleep(477);
     }
 }
 
 void testTask8() {
     while (1) {
-        kio::printf("Task 8\n");
+        kio::print("Task 8\n");
+        scheduler::sleep(621);
     }
 }
 
 void testTask9() {
     while (1) {
-        kio::printf("Task 9\n");
+        kio::print("Task 9\n");
+        scheduler::sleep(666);
     }
 }
 
 void testTask10() {
     while (1) {
-        kio::printf("Task 10\n");
+        kio::print("Task 10\n");
+        scheduler::sleep(420);
     }
 }
 
@@ -195,41 +204,48 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
 
     //BochsBreak();
 
+    for (int i = 10; i > 0; i--) {
+        kio::printf("Please wait %u seconds...\n", i);
+        scheduler::sleep(1000);
+    }
 
     uint32_t stackPage = 0;
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
     scheduler::createTask((uint32_t)testTask2, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
     scheduler::createTask((uint32_t)testTask3, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
     scheduler::createTask((uint32_t)testTask4, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
     scheduler::createTask((uint32_t)testTask5, stackPage, 4096, 0, 0);
-    
-    stackPage = paging::allocPages(1) + 2048; // Get page top
+
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
     scheduler::createTask((uint32_t)testTask6, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
-    //scheduler::createTask((uint32_t)testTask7, stackPage, 4096, 0, 0);
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
+    scheduler::createTask((uint32_t)testTask7, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
-    //scheduler::createTask((uint32_t)testTask8, stackPage, 4096, 0, 0);
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
+    scheduler::createTask((uint32_t)testTask8, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
-    //scheduler::createTask((uint32_t)testTask9, stackPage, 4096, 0, 0);
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
+    scheduler::createTask((uint32_t)testTask9, stackPage, 4096, 0, 0);
 
-    stackPage = paging::allocPages(1) + 2048; // Get page top
-    //scheduler::createTask((uint32_t)testTask10, stackPage, 4096, 0, 0);
+    stackPage = paging::allocPages(1) + 0x800; // Get page top
+    scheduler::createTask((uint32_t)testTask10, stackPage, 4096, 0, 0);
 
     /*
     - drivers are loaded via a kernscript
     */
 
+   // NOTE: This loop is for the scheduler to fall back to when no task is currently running
     while(1) {
-        kio::println("Task 1");
+        kio::printf("Task 1 <======== TEST ========>\n");
+        //scheduler::yield();
+        scheduler::sleep(1000);
     }
 }

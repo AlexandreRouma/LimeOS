@@ -74,7 +74,7 @@ void loadBgImg(char* path) {
     for (int y = 0; y < fbInfo.height; y++) {
         for (int x = 0; x < fbInfo.width; x++) {
             int ix = xfact * x;
-            int iy = yfact * y;
+            int iy = 1079 - (yfact * y);
             background[((y * fbInfo.width) + x) * 4] = (float)data[((iy * 1920) + ix) * 3] * 0.2f;
             background[((y * fbInfo.width) + x) * 4 + 1] = (float)data[((iy * 1920) + ix) * 3 + 1] * 0.2f;
             background[((y * fbInfo.width) + x) * 4 + 2] = (float)data[((iy * 1920) + ix) * 3 + 2] * 0.2f;
@@ -263,10 +263,7 @@ uint32_t _readHndlr(stream_t s, uint32_t len, uint64_t pos) {
 }
 
 void _closeHndlr(stream_t s) {
-    if (s.buffer != 0) {
-        kapi::api.mm.free(s.buffer);
-        s.buffer = 0;
-    }
+    
 }
 
 stream_t _provider() {
@@ -297,7 +294,7 @@ bool _start(KAPI_t api) {
 
     api.kio.println("[gfx_term] Loading background...");
     background = (uint8_t*)api.mm.malloc(fbInfo.height * fbInfo.pitch);
-    loadBgImg("/usr/images/lime.bmp");
+    loadBgImg("/usr/images/dragon.bmp");
     drawBackground();
 
     api.kio.println("[gfx_term] Loading font...");

@@ -45,12 +45,17 @@ struct VFSAPI_t {
     bool (*registerFSHndlr)(FSHandler_t handler);
 };
 
+struct SchedulerAPI_t {
+    void (*yield)();
+};
+
 struct KAPI_t {
     KIOAPI_t kio;
     FIOAPI_t fio;
     MMAPI_t mm;
     VFSAPI_t vfs;
     MCTLAPI_t mctl;
+    SchedulerAPI_t scheduler;
     multiboot_info* boot_info;
 };
 

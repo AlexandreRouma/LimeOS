@@ -1,9 +1,6 @@
 #include <stdint.h>
 #include <interrupts/idt.h>
-#include <context/switch_context.h>
-//#include <libs/kernel/io.h>
-//#include <libs/std/string.h>
-//#include <libs/kernel/panic.h>
+#include <scheduler/scheduler.h>
 
 #define IDT_ENTRY_COUNT 256
 
@@ -79,7 +76,7 @@ namespace idt {
         encodeIdtEntry(0x21, (uint32_t)&ASM_ISR_KBD, 0x01, IDT_ATTR_PRESENT | IDT_ATTR_TYPE_INT);        // Keyboard
         encodeIdtEntry(0x26, (uint32_t)&ASM_ISR_FLOPPY, 0x01, IDT_ATTR_PRESENT | IDT_ATTR_TYPE_INT);     // Floppy
         encodeIdtEntry(0x69, (uint32_t)&ASM_ISR_SYSCALL, 0x01, IDT_ATTR_PRESENT | IDT_ATTR_TYPE_TRAP | IDT_ATTR_PRIV_3);   // Syscall
-        encodeIdtEntry(0x42, (uint32_t)&_ASM_SWITCH_TASK_ISR, 0x01, IDT_ATTR_PRESENT | IDT_ATTR_TYPE_TRAP | IDT_ATTR_PRIV_3); 
+        encodeIdtEntry(0x42, (uint32_t)&ASM_ISR_YIELD, 0x01, IDT_ATTR_PRESENT | IDT_ATTR_TYPE_TRAP | IDT_ATTR_PRIV_3); // Yield
     }
 
     void load() {

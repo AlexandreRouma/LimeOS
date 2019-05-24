@@ -42,11 +42,12 @@ if(${ARCH} STREQUAL "i686")
     file(GLOB LIB_PAGING "src/arch/i686/paging/*.cpp" "src/arch/i686/paging/*.asm")
     file(GLOB LIB_VGA "src/arch/i686/temp_vga/*.cpp" "src/arch/i686/temp_vga/*.asm")
     file(GLOB LIB_KAPI "src/arch/i686/kapi/*.cpp" "src/arch/i686/kapi/*.asm")
-    file(GLOB LIB_CNTX "src/arch/i686/context/*.cpp" "src/arch/i686/context/*.asm")
+    file(GLOB LIB_SCHD "src/arch/i686/scheduler/*.cpp" "src/arch/i686/scheduler/*.asm")
+    file(GLOB LIB_PIT "src/arch/i686/pit/*.cpp" "src/arch/i686/pit/*.asm")
 
     include_directories(LimeOS "src/arch/i686")
 
-    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF} ${LIB_KSC} ${LIB_KMOD} ${LIB_KAPI} ${LIB_CNTX})
+    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF} ${LIB_KSC} ${LIB_KMOD} ${LIB_KAPI} ${LIB_SCHD} ${LIB_PIT})
     
     # GRUB target
     add_custom_target(iso COMMAND sh ../tools/build_iso.sh)

@@ -1,13 +1,21 @@
 #include <misc/liballoc.h>
 #include <paging/paging.h>
+#include <scheduler/scheduler.h>
 
 // =============================== MY PART ===============================
 
+bool locked = false;
+
 int liballoc_lock() {
+	while (locked) {
+		scheduler::yield();
+	}
+	locked = true;
 	return 0;
 }
 
 int liballoc_unlock() {
+	locked = false;
 	return 0;
 }
 

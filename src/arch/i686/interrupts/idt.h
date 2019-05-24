@@ -24,6 +24,7 @@ extern "C"
     extern void ASM_ISR_KBD(void);
     extern void ASM_ISR_FLOPPY(void);
     extern void ASM_ISR_SYSCALL(void);
+    extern void ASM_ISR_YIELD(void);
     extern void _isr0(void);
     extern void _isr1(void);
     extern void _isr2(void);

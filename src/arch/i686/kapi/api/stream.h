@@ -1,17 +1,24 @@
 #pragma once
 #include <stdint.h>
 
+struct StreamGlobal_t {
+    uint64_t wpos;     // Write Position
+    uint64_t rpos;     // Read Position
+    bool busy;
+    bool open;
+};
+
 struct stream_t {
     uint32_t buffersz; // Buffer size
     uint64_t slen;     // Stream length
-    uint64_t wpos;     // Write Position
-    uint64_t rpos;     // Read Position
     char* buffer;
     void* tag;
 
     uint32_t (*writeHndlr)(stream_t,uint32_t,uint64_t);
     uint32_t (*readHndlr)(stream_t,uint32_t,uint64_t);
     void (*closeHndlr)(stream_t);
+
+    StreamGlobal_t* globalData;
 };
 
 namespace stream {

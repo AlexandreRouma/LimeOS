@@ -227,6 +227,7 @@ isr_common_stub:
 
 .global ASM_ISR_0
 ASM_ISR_0:
+    cli
     pushal
     pushw %ds
     pushw %es
@@ -249,6 +250,7 @@ ASM_ISR_0:
 
 .global ASM_ISR_PIT
 ASM_ISR_PIT:
+    cli
     pushal
     pushw %ds
     pushw %es
@@ -278,6 +280,7 @@ ASM_ISR_PIT:
 
 .global ASM_ISR_KBD
 ASM_ISR_KBD:
+    cli
     pushal
     pushw %ds
     pushw %es
@@ -288,7 +291,7 @@ ASM_ISR_KBD:
     movw %bx,%ds
     popl %ebx
 
-    cld /* C code following the sysV ABI requires DF to be clear on function entry */
+    # cld /* C code following the sysV ABI requires DF to be clear on function entry */
     call ISR_KBD
 
     popw %gs
@@ -301,6 +304,7 @@ ASM_ISR_KBD:
 
 .global ASM_ISR_FLOPPY
 ASM_ISR_FLOPPY:
+    cli
     pushal
     pushw %ds
     pushw %es
@@ -323,6 +327,7 @@ ASM_ISR_FLOPPY:
 
 .global ASM_ISR_SYSCALL
 ASM_ISR_SYSCALL:
+    cli
     pushal
     pushw %ds
     pushw %es
@@ -349,4 +354,11 @@ ASM_ISR_SYSCALL:
     popw %es
     popw %ds
     popal
+    iret
+
+
+.global ASM_ISR_YIELD
+ASM_ISR_YIELD:
+    cli
+    call _ASM_SWITCH_TASK_YIELD
     iret

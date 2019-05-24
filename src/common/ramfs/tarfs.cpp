@@ -198,10 +198,7 @@ namespace tarfs {
     }
 
     void _closeHndlr(stream_t s) {
-        if (s.buffer != 0) {
-            free(s.buffer);
-            s.buffer = 0;
-        }
+        
     }
 
     stream_t getStream(char* dir) {

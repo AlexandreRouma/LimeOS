@@ -15,10 +15,7 @@ uint32_t _readHndlr(stream_t s, uint32_t len, uint64_t pos) {
 }
 
 void _closeHndlr(stream_t s) {
-    if (s.buffer != 0) {
-        kapi::api.mm.free(s.buffer);
-        s.buffer = 0;
-    }
+    
 }
 
 stream_t _provider() {

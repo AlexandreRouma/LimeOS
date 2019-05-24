@@ -15,7 +15,7 @@ struct regs
 
 char *exception_messages[] ={
     "Division By Zero",
-    "Debug",
+    "Debug <test>",
     "Non Maskable Interrupt",
     "Break Point",
     "Into Detect Overflow",
@@ -48,6 +48,8 @@ char *exception_messages[] ={
     "Reserved"
 };
 
+uint64_t timer_counter = 0;
+
 extern "C" 
 {
     void ISR_0(void) {
@@ -56,7 +58,6 @@ extern "C"
 
     void ISR_PIT(void) {
         outb(0x20,0x20);
-        //PIT.system_ticks++;
     }
 
     uint16_t* fb = (uint16_t*)0xB8000;
@@ -66,8 +67,9 @@ extern "C"
     void ISR_KBD(void) {
         //Keyboard.update();
         outb(0x20,0x20);
-        kio::setFore(0x0E);
-        kio::printf("KBD! %u\n", counter);
+        //kio::setFore(0x0E);
+        //kio::print("KBD! %u\n");
+        //kio::setFore(0x0F);
         counter++;
         uint8_t scancode = inb(0x60);
     }
@@ -82,13 +84,17 @@ extern "C"
     }
 
     void _fault_handler(struct regs *r) {
-        if (r->int_no < 32)
+        if (r->int_no < 32 && r->int_no != 1)
         {
             uint32_t val;
             asm volatile ( "mov %%cr2, %0" : "=r"(val) );
             //kernel_panic(val, exception_messages[r->int_no]);
             kpanic(exception_messages[r->int_no], val);
             for (;;);
+        }
+
+        if (r->int_no == 1) {
+            kio::println("<== DEBUG EXCEPTION ==>");
         }
     }
 }

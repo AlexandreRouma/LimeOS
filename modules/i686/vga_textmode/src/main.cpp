@@ -93,17 +93,12 @@ void print(char* str) {
     }
 }
 
-static bool busy = false;
-
 uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
-    //while (busy);
-    //busy = true;
-    char* buf = (char*)kapi::api.mm.malloc(len + 1);
-    memcpy(buf, s.buffer, len);
-    buf[len] = 0;
-    print(buf);
-    kapi::api.mm.free(buf);
-    //busy = false;
+    char* str = (char*)kapi::api.mm.malloc(len + 1);
+    memcpy(str, s.buffer, len);
+    str[len] = 0;
+    print(str);
+    kapi::api.mm.free(str);
     return len;
 }
 
@@ -112,10 +107,7 @@ uint32_t _readHndlr(stream_t s, uint32_t len, uint64_t pos) {
 }
 
 void _closeHndlr(stream_t s) {
-    if (s.buffer != 0) {
-        kapi::api.mm.free(s.buffer);
-        s.buffer = 0;
-    }
+    
 }
 
 stream_t _provider() {
@@ -129,10 +121,10 @@ bool _start(KAPI_t api) {
     cursorY = 0;
     fgColor = 0xF;
     bgColor = 0x0;
-    busy = false;
     fb = (VGAChar_t*)0xB8000;//api.boot_info->framebuffer_addr;
     TERM_WIDTH = 80;//api.boot_info->framebuffer_width;
     TERM_HEIGHT = 25;//api.boot_info->framebuffer_height;
+    api.mm.setPresent(0xB8000, 2);
     api.kio.println("[vga_textmode] Mounting tty device...");
     api.fio.mountStreamProvider("/dev/tty0", 0, _provider);
     api.kio.println("[vga_textmode] Done.");
