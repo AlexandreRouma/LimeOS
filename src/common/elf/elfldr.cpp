@@ -17,11 +17,21 @@ ELFExec::ELFExec(uint32_t addr) {
             STStringTable = (char*)(addr + sectionHeader[sectionHeader[i].link].offset);
             STEntryCount = sectionHeader[i].size / sizeof(ELFSymbolTableEntry_t);
         }
+        if (sectionHeader[i].type == ELF_SHT_DYNSYM) {
+            DynSymbolTable = (ELFSymbolTableEntry_t*)(addr + sectionHeader[i].offset);
+            DynSTStringTable = (char*)(addr + sectionHeader[sectionHeader[i].link].offset);
+            DynSTEntryCount = sectionHeader[i].size / sizeof(ELFSymbolTableEntry_t);
+        }
+        if (sectionHeader[i].type == ELF_SHT_REL) {
+            relocs = (ELFReloc_t*)(addr + sectionHeader[i].offset);
+            relocCount = sectionHeader[i].size / sizeof(ELFReloc_t);
+        }
     }
 }
 
 vector<ELFSection_t> ELFExec::getSections() {
     vector<ELFSection_t> v;
+    v.reserve(SHEntryCount);
     for (int i = 0; i < SHEntryCount; i++) {
         ELFSection_t s;
         s.name = &SHStringTable[sectionHeader[i].name];
@@ -40,17 +50,45 @@ vector<ELFSection_t> ELFExec::getSections() {
     return v;
 }
 
-vector<ELFSymbol_t> ELFExec::getSymbols() {
+vector<ELFSymbol_t> ELFExec::getSymbols(bool dynsym) {
     vector<ELFSymbol_t> v;
-    for (int i = 0; i < STEntryCount; i++) {
-        ELFSymbol_t s;
-        s.name = &STStringTable[symbolTable[i].name];
-        s.addr = symbolTable[i].addr;
-        s.size = symbolTable[i].size;
-        s.info = symbolTable[i].info;
-        s.other = symbolTable[i].other;
-        s.sectionHeaderIndex = symbolTable[i].sectionHeaderIndex;
-        v.push_back(s);
+    if (dynsym) {
+        v.reserve(DynSTEntryCount);
+        for (int i = 0; i < DynSTEntryCount; i++) {
+            ELFSymbol_t s;
+            s.name = &DynSTStringTable[DynSymbolTable[i].name];
+            s.addr = DynSymbolTable[i].addr;
+            s.size = DynSymbolTable[i].size;
+            s.info = DynSymbolTable[i].info;
+            s.other = DynSymbolTable[i].other;
+            s.sectionHeaderIndex = DynSymbolTable[i].sectionHeaderIndex;
+            v.push_back(s);
+        }
+    }
+    else {
+        v.reserve(STEntryCount);
+        for (int i = 0; i < STEntryCount; i++) {
+            ELFSymbol_t s;
+            s.name = &STStringTable[symbolTable[i].name];
+            s.addr = symbolTable[i].addr;
+            s.size = symbolTable[i].size;
+            s.info = symbolTable[i].info;
+            s.other = symbolTable[i].other;
+            s.sectionHeaderIndex = symbolTable[i].sectionHeaderIndex;
+            v.push_back(s);
+        }
+    }
+    return v;
+}
+
+vector<ELFRelocate_t> ELFExec::getRelocs() {
+    vector<ELFRelocate_t> v;
+    v.reserve(relocCount);
+    for (int i = 0; i < relocCount; i++) {
+        ELFRelocate_t r;
+        r.addr = relocs[i].addr;
+        r.info = relocs[i].info;
+        v.push_back(r);
     }
     return v;
 }

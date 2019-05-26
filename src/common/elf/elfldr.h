@@ -26,20 +26,33 @@ struct ELFSymbol_t{
     uint16_t sectionHeaderIndex;
 };
 
+struct ELFRelocate_t{
+    uint32_t addr;
+    uint32_t info;
+    uint32_t addend;
+    bool addend_valid;
+};
+
 class ELFExec {
 public:
     ELFExec(uint32_t addr);
     vector<ELFSection_t> getSections();
-    vector<ELFSymbol_t> getSymbols();
+    vector<ELFSymbol_t> getSymbols(bool dynsym = false);
+    vector<ELFRelocate_t> getRelocs();
 
     char* data;
     ELFHeader_t* header;
     uint32_t SHEntryCount;
     ELFSectionHeader_t* sectionHeader;
     uint32_t STEntryCount;
+    uint32_t DynSTEntryCount;
     ELFSymbolTableEntry_t* symbolTable;
+    ELFSymbolTableEntry_t* DynSymbolTable;
     char* SHStringTable;
     char* STStringTable;
+    char* DynSTStringTable;
+    uint32_t relocCount;
+    ELFReloc_t* relocs;
 
 private:
     uint32_t _addr;

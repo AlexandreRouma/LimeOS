@@ -130,7 +130,11 @@ namespace paging {
     }
 
     uint32_t sizeToPages(uint32_t size) {
-        return (size / 4096) + 1;
+        uint32_t n = size / 4096;
+        if ((size % 4096) > 0) {
+            n++;
+        }
+        return n;
     }
 
     void invlpg(uint32_t addr) {

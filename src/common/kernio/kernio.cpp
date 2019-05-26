@@ -153,10 +153,41 @@ namespace kio {
     }
     
     void setCursor(uint32_t x, uint32_t y) {
-        printf("\x1B[%u;%uH", y, x);
+        printf("\x1B[%u;%uH", y + 1, x + 1);
+    }
+
+    void setColumn(uint32_t col) {
+        printf("\x1B[%uG", col + 1);
     }
     
     void clear() {
         // TODO: Implement
+    }
+
+    void ok() {
+        setColumn(3);
+        setFore(ANSI_COL_GREEN);
+        println("OK");
+        setFore(ANSI_COL_WHITE);
+    }
+
+    void warn() {
+        setColumn(2);
+        setFore(ANSI_COL_YELLOW);
+        println("WARN");
+        setFore(ANSI_COL_WHITE);
+    }
+
+    void failed() {
+        setColumn(1);
+        setFore(ANSI_COL_RED);
+        println("FAILED");
+        setFore(ANSI_COL_WHITE);
+    }
+    
+    void info() {
+        setColumn(2);
+        setFore(ANSI_COL_CYAN);
+        println("INFO");
     }
 }

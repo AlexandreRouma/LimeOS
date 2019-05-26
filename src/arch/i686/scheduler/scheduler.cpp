@@ -16,6 +16,8 @@ struct TastState_t {
     bool used;
     uint32_t priority;
     uint32_t countdown;
+    uint32_t stackBase;
+    uint32_t stackPages;
 };
 
 TastState_t tasks[SLOT_COUNT];
@@ -50,9 +52,22 @@ void nextTask() {
     currentId = SLOT_COUNT - 1;
 }
 
+void cleanUnused() {
+    uint32_t newHighId = 0;
+    for (int i = 0; i <= highId; i++) {
+        if (!tasks[i].used) {
+            paging::setAbsent(tasks[i].stackBase, tasks[i].stackPages);
+            continue;
+        }
+        newHighId = i;
+    }
+    highId = newHighId;
+}
+
 extern "C"
 uint32_t _cpp_switch_task(uint32_t esp) {
     tasks[currentId].esp = esp;
+    cleanUnused();
     doCountdowns();
     nextTask();
     return tasks[currentId].esp;
@@ -87,7 +102,7 @@ namespace scheduler {
         tasks[0].countdown = 0;
         
         // Init fallback task
-        uint32_t stackTop = paging::allocPages(1) + 0x800; 
+        uint32_t stackTop = paging::allocPages(1) + 0xFCB; 
         TastState_t state;
         state.used = true;
         state.esp = stackTop;
@@ -111,36 +126,46 @@ namespace scheduler {
         return -1;
     }
 
-    Task_t createTask(uint32_t entry, uint32_t stackTop, uint32_t stackSize, uint32_t priority, uint32_t parentPID) {
+    Task_t createTask(uint32_t entry, uint32_t stackSize, uint32_t priority, uint32_t parentPID) {
+        Task_t task;
+        uint32_t stackPages = paging::sizeToPages(stackSize);
+        uint32_t stackBase = paging::allocPages(stackPages);
+        uint32_t stackTop = ((stackPages - 1) * 4096) + 0xFCB + stackBase;
+
         TastState_t state;
         state.used = true;
         state.esp = stackTop;
         state.paused = false;
         state.countdown = 0;
+        state.stackBase = stackBase;
+        state.stackPages = stackPages;
         uint32_t* _stack = (uint32_t*)(stackTop); // EAX -> EDX + ESP -> EDI + EIP
         _stack[3] = stackTop; // esp
+        _stack[8] = 1 << 9; // eflags
         _stack[9] = entry; // eip
         _stack[10] = 8; // CS
         _stack[11] = 1 << 9; // EFLAGS with interrupt bit set
-        _stack[8] = 1 << 9;
+        _stack[12] = (uint32_t)endSelf;
         int id = findSlot();
         tasks[id] = state;
-        kio::printf("task_%u: 0x%08X", id, stackTop);
         if (id > highId) {
             highId = id;
         }
-        Task_t task;
         task.entryPoint = entry;
         task.id = id;
         task.parentProcessId = parentPID;
         task.priority = priority;
         task.stackTop = stackTop;
+        task.stackBase = stackBase;
         task.stackSize = stackSize;
         return task;
     }
 
     void endTask(Task_t task) {
         tasks[task.id].used = false;
+        if (task.id == currentId) {
+            _ASM_YIELD();
+        }
     }
 
     void sleep(uint32_t ticks) {
@@ -149,6 +174,11 @@ namespace scheduler {
     }
 
     void yield() {
+        _ASM_YIELD();
+    }
+
+    void endSelf() {
+        tasks[currentId].used = false;
         _ASM_YIELD();
     }
 }

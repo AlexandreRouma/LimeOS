@@ -14,6 +14,7 @@ public:
     T pop_front();
     uint32_t size();
     void remove(uint32_t index);
+    void reserve(uint32_t count);
 
      T & operator[](uint32_t index);
      vector<T> & operator=(const vector<T>& v);
@@ -23,6 +24,7 @@ public:
 private:
     T* _items;
     uint32_t itemCount = 0;
+    uint32_t reserved = 0;
     bool _init = false;
 };
 
@@ -30,6 +32,7 @@ template<class T>
 vector<T>::vector() {
     _items = (T*)malloc(sizeof(T));
     itemCount = 0;
+    reserved = 1;
     _init = true;
 }
 
@@ -38,6 +41,7 @@ vector<T>::vector(const vector<T>& v) {
     _items = (T*)malloc(sizeof(T) * v.itemCount);
     memcpy(_items, v._items, sizeof(T) * v.itemCount);
     itemCount = v.itemCount;
+    reserved = v.reserved;
     _init = true;
 }
 
@@ -48,18 +52,15 @@ vector<T>::~vector() {
     free(_items);
     _items = (T*)0;
     itemCount = 0;
+    reserved = 0;
     _init = true;
 }
 
 template<class T>
 void vector<T>::push_back(T item) {
-    T* temp = new T[itemCount + 1];
-    for (int i = 0; i < itemCount; i++) {
-        temp[i] = _items[i];
-    }
-    temp[itemCount] = item;
+    reserve(itemCount + 2);
+    _items[itemCount] = item;
     itemCount++;
-    _items = temp;
 }
 
 template<class T>
@@ -103,6 +104,19 @@ void vector<T>::remove(uint32_t index) {
 template<class T>
 uint32_t vector<T>::size() {
     return itemCount;
+}
+
+template<class T>
+void vector<T>::reserve(uint32_t count) {
+    if (count > reserved) {
+        T* temp = new T[count];
+        for (int i = 0; i < itemCount; i++) {
+            temp[i] = _items[i];
+        }
+        free(_items);
+        _items = temp;
+        reserved = count;
+    }
 }
 
 template<class T>

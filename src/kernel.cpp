@@ -19,6 +19,8 @@
 #include <kmod/mctl.h>
 #include <misc/cpuio.h>
 #include <scheduler/scheduler.h>
+#include <interrupts/idt.h>
+#include <multiboot/ksyms.h>
 
 #define BochsBreak() outw(0x8A00,0x8A00); outw(0x8A00,0x08AE0);
 
@@ -27,10 +29,6 @@ struct VBEPMTable_t {
     uint16_t f7_offset;
     uint16_t f9_offset;
 };
-
-void allocModule(multiboot_module_t mod) {
-    paging::setPresent(mod.mod_start, ((mod.mod_end - mod.mod_start) / 4096) + 1);
-}
 
 void listNodes(char* path) {
     kio::print("Listing ");
@@ -85,70 +83,18 @@ void testTask2() {
 }
 
 void testTask3() {
-    while (1) {
-        kio::print("Task 3\n");
-        scheduler::sleep(689);
+    for (int i = 1; i <= 5; i++) {
+        kio::printf("Countdown %u\n", i);
+        scheduler::sleep(1000);
     }
-}
-
-void testTask4() {
-    while (1) {
-        kio::print("Task 4\n");
-        scheduler::sleep(731);
-    }
-}
-
-void testTask5() {
-    while (1) {
-        kio::print("Task 5\n");
-        scheduler::sleep(597);
-    }
-}
-
-void testTask6() {
-    while (1) {
-        kio::print("Task 6\n");
-        scheduler::sleep(832);
-    }
-}
-
-void testTask7() {
-    while (1) {
-        kio::print("Task 7\n");
-        scheduler::sleep(477);
-    }
-}
-
-void testTask8() {
-    while (1) {
-        kio::print("Task 8\n");
-        scheduler::sleep(621);
-    }
-}
-
-void testTask9() {
-    while (1) {
-        kio::print("Task 9\n");
-        scheduler::sleep(666);
-    }
-}
-
-void testTask10() {
-    while (1) {
-        kio::print("Task 10\n");
-        scheduler::sleep(420);
-    }
+    //scheduler::endSelf();
 }
 
 extern "C"
 void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     _init(multiboot_info);
 
-    // Protect modules
-    multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
-    for (int i = 0; i < multiboot_info->mods_count; i++) {
-        allocModule(mods[i]);
-    }
+    ksyms::load(multiboot_info);
 
     // Init VFS
     vfs::init();
@@ -165,7 +111,7 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
 
     // Load ram filesystem
     int id = -1;
-
+    multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
     for (int i = 0; i < multiboot_info->mods_count; i++) {
         if (strcmp((char*)mods[i].cmdline, "ramfs")) {
             id = i;
@@ -187,65 +133,22 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     listNodes("/fio");
     listNodes("/fio/dev");
 
+
     kio::printf("1) Using %u bytes\n", paging::getUsedPages() * 4096);
 
-    kio::printf("2) Using %u bytes\n", paging::getUsedPages() * 4096);
 
-    kio::println("");
+    scheduler::sleep(2000);
 
-    kio::setFore(10);
-    kio::print("urmom@fakeshell");
-    kio::setFore(15);
-    kio::print(":");
-    kio::setFore(12);
-    kio::print("/fio/dev");
-    kio::setFore(15);
-    kio::print("$ ls");
+    kio::printf("\n\n");
 
-    //BochsBreak();
+    kmod::loadDyn("/bin/newModType.elf", multiboot_info);
 
-    for (int i = 10; i > 0; i--) {
-        kio::printf("Please wait %u seconds...\n", i);
-        scheduler::sleep(1000);
-    }
+    kio::printf("Module exited!");
 
-    uint32_t stackPage = 0;
 
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask2, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask3, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask4, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask5, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask6, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask7, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask8, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask9, stackPage, 4096, 0, 0);
-
-    stackPage = paging::allocPages(1) + 0x800; // Get page top
-    scheduler::createTask((uint32_t)testTask10, stackPage, 4096, 0, 0);
-
-    /*
-    - drivers are loaded via a kernscript
-    */
-
-   // NOTE: This loop is for the scheduler to fall back to when no task is currently running
+    // NOTE: This loop is for the scheduler to fall back to when no task is currently running
+    uint32_t uptime = 1;
     while(1) {
-        kio::printf("Task 1 <======== TEST ========>\n");
-        //scheduler::yield();
-        scheduler::sleep(1000);
+        
     }
 }

@@ -190,38 +190,67 @@ void newLine() {
 }
 
 int runEscCode(char* code) {
+    uint32_t codeLen = strlen(code);
+    uint32_t last = 0;
     if (code[0] == '[') {
-        uint8_t intensity = 0;
-        for (int i = 1; i < strlen(code); i++) {
-            if (code[i] == '1') {
-                intensity = 1;
-                i++;
+        uint32_t num = 0;
+        vector<int> values;
+        char suffix = '\0';
+        for (int i = 1; i < codeLen; i++) {
+            if (code[i] == ';') {
+                values.push_back(num);
+                num = 0;
+                continue;
             }
-            else if (code[i] == '3' && code[i + 2] == 'm') {
-                i++;
-                if (code[i] > '9' || code[i] < '0') {
-                    return i + 1;
+            if (code[i] >= '0' && code[i] <= '9') {
+                num *= 10;
+                num += code[i] - '0';
+                continue;
+            }
+            values.push_back(num);
+            suffix = code[i];
+            last = i;
+            break;
+        }
+
+        if (suffix == 'm') {
+            uint8_t intensity = 0;
+            for (int i = 0; i < values.size(); i++) {
+                if (values[i] == 1) {
+                    intensity = 1 << 3;
                 }
-                fgColor = ANSI_COLOR_PALLET[(code[i] - '0') | (intensity << 3)];
-                i++;
-            }
-            else if (code[i] == '4' && code[i + 2] == 'm') {
-                i++;
-                if (code[i] > '9' || code[i] < '0') {
-                    return i + 1;
+                if (values[i] >= 30 && values[i] <= 37) {
+                    fgColor = ANSI_COLOR_PALLET[(values[i] - 30) | intensity];
                 }
-                bgColor = ANSI_COLOR_PALLET[(code[i] - '0') | (intensity << 3)];
-                i++;
-            }
-            else {
-                return i + 1;
-            }
-            if (code[i] != ';') {
-                return i + 1;
+                if (values[i] >= 40 && values[i] <= 47) {
+                    bgColor = ANSI_COLOR_PALLET[(values[i] - 40) | intensity];
+                }
             }
         }
+        else if (suffix == 'H') {
+            if (values.size() != 2) {
+                return last + 1;
+            }
+            int posx = (values[1] + (values[1] == 0)) - 1;
+            int posy = (values[0] + (values[0] == 0)) - 1;
+            if (posx >= TERM_WIDTH || posy >= TERM_HEIGHT) {
+                return last + 1;
+            }
+            cursorX = posx;
+            cursorY = posy;
+        }
+        else if (suffix == 'G') {
+            if (values.size() != 1) {
+                return last + 1;
+            }
+            int posx = (values[0] + (values[0] == 0)) - 1;
+            if (posx >= TERM_WIDTH) {
+                return last + 1;
+            }
+            cursorX = posx;
+        }
     }
-    return 1;
+    return last + 1;
 }
 
 void print(char* str) {

@@ -112,3 +112,17 @@ struct ELFProgramHeader_t {
     uint32_t flags;
     uint32_t align;
 }__attribute__((packed));
+
+struct ELFReloc_t {
+    uint32_t addr;
+    uint32_t info;
+}__attribute__((packed));
+
+struct ELFRelocAddend_t {
+    uint32_t addr;
+    uint32_t info;
+    uint32_t addend;
+}__attribute__((packed));
+
+#define ELF_R_SYM(i)    ((i)>>8)
+#define ELF_R_TYPE(i)   ((uint8_t)(i))

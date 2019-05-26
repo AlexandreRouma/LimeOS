@@ -7,6 +7,7 @@
 #include <pit/pit.h>
 #include <temp_vga/terminal.h>
 #include <scheduler/scheduler.h>
+#include <elf/elf.h>
 
 void _init(multiboot_info* multiboot_info) {
     // Temporary VGA for debug
@@ -23,6 +24,19 @@ void _init(multiboot_info* multiboot_info) {
     paging::enable();
 
     // ========== MEMORY MANAGEMENT ENABLED ==========
+
+    // Protect modules
+    multiboot_module_t* mods = (multiboot_module_t*)multiboot_info->mods_addr;
+    for (int i = 0; i < multiboot_info->mods_count; i++) {
+        paging::setPresent(mods[i].mod_start, ((mods[i].mod_end - mods[i].mod_start) / 4096) + 1);
+    }
+
+    // Protect kernel symbols
+    paging::setPresent(multiboot_info->u.elf_sec.addr, paging::sizeToPages(multiboot_info->u.elf_sec.size * multiboot_info->u.elf_sec.num));
+    ELFSectionHeader_t* kern_sections = (ELFSectionHeader_t*)multiboot_info->u.elf_sec.addr;
+    for (int i = 0; i < multiboot_info->u.elf_sec.num; i++) {
+        paging::setPresent(kern_sections[i].addr, paging::sizeToPages(kern_sections[i].size));
+    }
 
     // Init the scheduler
     scheduler::init();

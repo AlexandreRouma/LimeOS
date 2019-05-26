@@ -14,6 +14,7 @@ public:
     T pop_front();
     uint32_t size();
     void remove(uint32_t index);
+    void reserve(uint32_t count);
 
      T & operator[](uint32_t index);
      vector<T> & operator=(const vector<T>& v);
@@ -38,6 +39,7 @@ vector<T>::vector(const vector<T>& v) {
     _items = (T*)kapi::api.mm.malloc(sizeof(T) * v.itemCount);
     memcpy(_items, v._items, sizeof(T) * v.itemCount);
     itemCount = v.itemCount;
+    reserved = v.reserved;
     _init = true;
 }
 
@@ -69,7 +71,6 @@ T vector<T>::pop_back() {
     }
     itemCount--;
     T item = _items[itemCount];
-    _items = (T*)kapi::api.mm.realloc(_items, itemCount * sizeof(T));
     return item;
 }
 

@@ -13,5 +13,6 @@ struct KModule_t {
 namespace kmod {
     void init(multiboot_info* boot_info);
     bool load(char* path);
+    bool loadDyn(char* path, multiboot_info* multiboot_info);
     bool unload(char* name);
 }

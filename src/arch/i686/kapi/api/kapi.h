@@ -7,10 +7,12 @@
 #include <multiboot/multiboot.h>
 #include <vfs/vfs.h>
 #include <kmod/mctl.h>
+#include <scheduler/scheduler.h>
 #else
 #include <multiboot.h>
 #include <vfs.h>
 #include <mctl.h>
+#include <scheduler.h>
 #endif
 
 struct FIOAPI_t {
@@ -45,8 +47,17 @@ struct VFSAPI_t {
     bool (*registerFSHndlr)(FSHandler_t handler);
 };
 
+struct IDTAPI_t {
+    void (*encodeIdtEntry)(uint8_t index, uint32_t offset, uint16_t selector, uint8_t type);
+    void (*load)();
+};
+
 struct SchedulerAPI_t {
+    Task_t (*createTask)(uint32_t entry, uint32_t stackSize, uint32_t priority, uint32_t parentPID);
+    void (*endTask)(Task_t task);
     void (*yield)();
+    void (*sleep)(uint32_t ticks);
+    void (*endSelf)();
 };
 
 struct KAPI_t {
@@ -56,6 +67,7 @@ struct KAPI_t {
     VFSAPI_t vfs;
     MCTLAPI_t mctl;
     SchedulerAPI_t scheduler;
+    IDTAPI_t idt;
     multiboot_info* boot_info;
 };
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <stdint.h>
 #include <vector.h>
 #include <temp_vga/terminal.h>
@@ -11,6 +12,7 @@ public:
     bool exists(K key);
     vector<K>& getKeys();
     vector<T>& getItems();
+    void reserve(uint32_t count);
 
 private:
     vector<K> _keys;
@@ -59,4 +61,11 @@ vector<K>& map<K,T>::getKeys() {
 template <class K, class T>
 vector<T>& map<K,T>::getItems() {
     return _items;
+}
+
+
+template <class K, class T>
+void map<K,T>::reserve(uint32_t count) {
+    _keys.reserve(count);
+    _items.reserve(count);
 }

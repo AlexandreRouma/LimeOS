@@ -25,6 +25,7 @@ file(GLOB LIB_KIO "src/common/kernio/*.cpp" "src/common/kernio/*.asm")
 file(GLOB LIB_ELF "src/common/elf/*.cpp" "src/common/elf/*.asm")
 file(GLOB LIB_KSC "src/common/kscript/*.cpp" "src/common/kscript/*.asm")
 file(GLOB LIB_KMOD "src/common/kmod/*.cpp" "src/common/kmod/*.asm")
+file(GLOB LIB_MBT "src/common/multiboot/*.cpp" "src/common/multiboot/*.asm")
 
 if(${ARCH} STREQUAL "i686")
     # Toolchain config
@@ -34,6 +35,7 @@ if(${ARCH} STREQUAL "i686")
 
     set(CMAKE_CXX_FLAGS "-DKERNEL_CODE -ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs -Wno-pointer-arith -Wno-varargs ${CMAKE_CXX_FLAGS}")
     set(CMAKE_EXE_LINKER_FLAGS "-T ../src/arch/i686/linker.ld -ffreestanding -O2 -nostdlib -lgcc -Wwrite-strings ${CMAKE_EXE_LINKER_FLAGS}")
+    set(CMAKE_SHARED_LINKER_FLAGS "-ffreestanding  -O2 -lgcc -nostdlib -Wwrite-strings -Wl,-shared${CMAKE_SHARED_LINKER_FLAGS}")
 
     # Library source
     file(GLOB LIB_INIT "src/arch/i686/init/*.cpp" "src/arch/i686/init/*.asm")
@@ -47,7 +49,7 @@ if(${ARCH} STREQUAL "i686")
 
     include_directories(LimeOS "src/arch/i686")
 
-    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF} ${LIB_KSC} ${LIB_KMOD} ${LIB_KAPI} ${LIB_SCHD} ${LIB_PIT})
+    set(SRCS ${KERN_SRC} ${LIB_COMMON} ${LIB_MISC} ${LIB_INIT} ${LIB_GDT} ${LIB_IDT} ${LIB_PAGING} ${LIB_VGA} ${LIB_KSTD} ${LIB_VFS} ${LIB_RAMFS} ${LIB_KIO} ${LIB_ELF} ${LIB_KSC} ${LIB_KMOD} ${LIB_KAPI} ${LIB_SCHD} ${LIB_PIT} ${LIB_MBT})
     
     # GRUB target
     add_custom_target(iso COMMAND sh ../tools/build_iso.sh)
@@ -60,6 +62,7 @@ if(${ARCH} STREQUAL "i686")
 
     # Output
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "../bin/i686/")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "../bin/i686/")
 
 elseif(${ARCH} STREQUAL "arm")
     # Toolchain config
@@ -80,6 +83,15 @@ elseif(${ARCH} STREQUAL "arm")
 
 endif()
 
-add_executable(LimeOS ${SRCS})
+# Fix this retard CMake bug...
+add_custom_target(_shared_lib_patch COMMAND echo ASM_FLAGS = >> CMakeFiles/LimeOS_lib.dir/flags.make && echo ASM_DEFINES = >> CMakeFiles/LimeOS_lib.dir/flags.make)
+
+add_library(myObjects OBJECT ${SRCS})
+
+add_executable(LimeOS $<TARGET_OBJECTS:myObjects>)
+add_library(LimeOS_lib SHARED $<TARGET_OBJECTS:myObjects>)
+
+add_dependencies(LimeOS_lib _shared_lib_patch)
 
 set_target_properties(LimeOS PROPERTIES OUTPUT_NAME "LimeOS.bin")
+set_target_properties(LimeOS_lib PROPERTIES OUTPUT_NAME "kernel")

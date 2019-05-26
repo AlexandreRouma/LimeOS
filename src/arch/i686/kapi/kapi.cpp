@@ -6,6 +6,7 @@
 #include <paging/paging.h>
 #include <kmod/mctl.h>
 #include <scheduler/scheduler.h>
+#include <interrupts/idt.h>
 
 namespace kapi {
     void init(multiboot_info* info) {
@@ -40,6 +41,11 @@ namespace kapi {
 
         // Scheduler
         api.scheduler.yield = scheduler::yield;
+        
+
+        // IDT
+        api.idt.encodeIdtEntry = idt::encodeIdtEntry;
+        api.idt.load = idt::load;
     }
 
     KAPI_t api;
