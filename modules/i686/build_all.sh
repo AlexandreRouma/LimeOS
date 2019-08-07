@@ -2,3 +2,4 @@
 (cd serial/build && make)
 (cd grub_vbe/build && make)
 (cd gfx_term/build && make)
+(cd pci/build && make)

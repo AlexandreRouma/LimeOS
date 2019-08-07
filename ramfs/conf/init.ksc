@@ -10,4 +10,7 @@ loadmod /mod/grub_vbe.elf
 loadmod /mod/gfx_term.elf
 stdout /fio/dev/tty0
 
+loadmod /mod/pci.elf
+
+print 
 print Done loading!

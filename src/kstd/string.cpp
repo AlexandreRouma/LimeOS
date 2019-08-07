@@ -309,4 +309,113 @@ int string::firstIndexOf(char c) {
 	return -1;
 }
 
+string sprintf(char* format, ...) {
+	string _str = format;
+	string out = "";
+	va_list arguments;
+	va_start(arguments, format);
+	for (int i = 0; i < _str.length(); i++) {
+		if (_str[i] == '%') {
+			i++;
+			int padding = 0;
+			char padChar;
+			
+			if (_str[i] < 'A' || _str[i] > 'z') {
+				padChar = _str[i];
+				i++;
+				bool first = true;
+				for (int j = i; j < _str.length(); j++) {
+					if (_str[i] >= 0x30 && _str[i] <= 0x39) {
+						if (!first) {
+							padding *= 10;
+						}
+						padding += _str[i] - 0x30;
+						first = false;
+						i++;
+					}
+					else {
+						break;
+					}
+				}
+			}
+			char length = 'i'; // int
+			if (_str[i] == 'h') {
+				length = 'h';
+				i++;
+			}
+			if (_str[i] == 'l') {
+				length = 'l';
+				i++;
+			}
+			
+			// Actual printing;
+			// TODO: Have sign ed printing, and float printing (Needs custom itoa)
+			string tmp = "";
+			if (_str[i] == 'u') {
+				if (length == 'i') {
+					tmp = itoa(va_arg(arguments, uint32_t), 10);
+				}
+				if (length == 'h') {
+					tmp = itoa(va_arg(arguments, uint16_t), 10);
+				}
+				if (length == 'l') {
+					tmp = itoa(va_arg(arguments, uint64_t), 10);
+				}
+			}
+			if (_str[i] == 'o') {
+				if (length == 'i') {
+					tmp = itoa(va_arg(arguments, uint32_t), 8);
+				}
+				if (length == 'h') {
+					tmp = itoa(va_arg(arguments, uint16_t), 8);
+				}
+				if (length == 'l') {
+					tmp = itoa(va_arg(arguments, uint64_t), 8);
+				}
+			}
+			if (_str[i] == 'x') {
+				if (length == 'i') {
+					tmp = itoa(va_arg(arguments, uint32_t), 16);
+				}
+				if (length == 'h') {
+					tmp = itoa(va_arg(arguments, uint16_t), 16);
+				}
+				if (length == 'l') {
+					tmp = itoa(va_arg(arguments, uint64_t), 16);
+				}
+				tmp = tmp.toLower();
+			}
+			if (_str[i] == 'X') {
+				if (length == 'i') {
+					tmp = itoa(va_arg(arguments, uint32_t), 16);
+				}
+				if (length == 'h') {
+					tmp = itoa(va_arg(arguments, uint16_t), 16);
+				}
+				if (length == 'l') {
+					tmp = itoa(va_arg(arguments, uint64_t), 16);
+				}
+			}
+			if (_str[i] == 's') {
+				tmp = va_arg(arguments, char*);
+			}
+			// Pad here
+			char pad[2] = {padChar, 0};
+			if (padding > tmp.length()) {
+				int len = tmp.length();
+				for (int j = 0; j < padding - len; j++) {
+					tmp = string(&pad[0]) + tmp;
+				}
+			}
+
+			out += tmp;
+		}
+		else {
+			out += _str[i];
+		}
+	}
+	va_end(arguments);
+	return out;
+}
+
 // <=============================== STRING CLASS ===============================>

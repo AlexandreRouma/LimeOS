@@ -6,7 +6,8 @@
 struct FILEIONode_t {
     char* path;
     uint16_t flags;
-    stream_t (*provider)();
+    void* tag;
+    stream_t (*provider)(void* tag);
 };
 
 namespace fio {
@@ -18,5 +19,5 @@ namespace fio {
     stream_t getStream(char* dir);
 
     bool createDir(char* dir);
-    bool mountStreamProvider(char* dir, uint16_t flags, stream_t (*_provider)());
+    bool mountStreamProvider(char* dir, uint16_t flags, stream_t (*_provider)(void* tag), void* tag);
 }

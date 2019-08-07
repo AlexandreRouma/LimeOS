@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <misc/liballoc.h>
 #include <vector.h>
+#include <stdarg.h>
 
 class string {
     public:
@@ -50,3 +51,5 @@ int strfio(char* str, char c);
 char* substr(char* str, uint32_t index);
 bool strsw(char* str, char* match);
 char* strcpy(char* str);
+
+string sprintf(char* format, ...);

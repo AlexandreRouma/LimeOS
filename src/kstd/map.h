@@ -7,6 +7,7 @@ template <class K, class T>
 class map {
 public:
     map();
+    ~map();
     void insert(K key, T item);
     T & operator[](K key);
     bool exists(K key);
@@ -24,6 +25,11 @@ template <class K, class T>
 map<K,T>::map() {
     _keys = vector<K>();
     _items = vector<T>();
+}
+
+template <class K, class T>
+map<K,T>::~map() {
+    //delete &_keys;
 }
 
 template <class K, class T>

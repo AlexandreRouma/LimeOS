@@ -38,18 +38,18 @@ vector<T>::vector() {
 
 template<class T>
 vector<T>::vector(const vector<T>& v) {
-    _items = (T*)malloc(sizeof(T) * v.itemCount);
-    memcpy(_items, v._items, sizeof(T) * v.itemCount);
+    _items = new T[v.itemCount];
+    for (int i = 0; i < v.itemCount; i++) {
+        _items[i] = v._items[i];
+    }
     itemCount = v.itemCount;
-    reserved = v.reserved;
+    reserved = v.itemCount;
     _init = true;
 }
 
 template<class T>
 vector<T>::~vector() {
-    //delete[] _items;
-    // TODO: FIX ALL THIS CRAP (use new to init items and fix delete)
-    free(_items);
+    delete[] _items;
     _items = (T*)0;
     itemCount = 0;
     reserved = 0;
@@ -98,7 +98,6 @@ template<class T>
 void vector<T>::remove(uint32_t index) {
     memcpy(&_items[index], &_items[index + 1], (itemCount - (index + 1)) * sizeof(T));
     itemCount--;
-    _items = (T*)realloc(_items, itemCount * sizeof(T));
 }
 
 template<class T>
@@ -113,7 +112,7 @@ void vector<T>::reserve(uint32_t count) {
         for (int i = 0; i < itemCount; i++) {
             temp[i] = _items[i];
         }
-        free(_items);
+        delete[] _items;
         _items = temp;
         reserved = count;
     }
@@ -126,11 +125,11 @@ T& vector<T>::operator[](uint32_t index) {
 
 template<class T>
 vector<T>& vector<T>::operator=(const vector<T>& v) {
-    if (_init) {
-        free(_items);
+    _items = new T[v.itemCount];
+    for (int i = 0; i < v.itemCount; i++) {
+        _items[i] = v._items[i];
     }
-    _items = (T*)malloc(sizeof(T) * v.itemCount);
-    memcpy(_items, v._items, sizeof(T) * v.itemCount);
     itemCount = v.itemCount;
+    reserved = v.itemCount;
     return *this;
 }

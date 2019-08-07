@@ -1,7 +1,10 @@
-#include <kapi.h>
-#include <memory.h>
+#include <misc/memory.h>
 #include <string.h>
-#include <cpuio.h>
+#include <misc/cpuio.h>
+#include <stream.h>
+#include <vfs/vfs.h>
+#include <vfs/fileio.h>
+#include <kernio/kernio.h>
 
 uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
     for (int i = 0; i < len; i++) {
@@ -18,14 +21,13 @@ void _closeHndlr(stream_t s) {
     
 }
 
-stream_t _provider() {
+stream_t _provider(void* tag) {
     return stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, 0);;
 }
 
 extern "C"
-bool _start(KAPI_t api) {
-    kapi::api = api;
-    api.kio.println("[serial] Initializing serial...");
+bool _start() {
+    kio::println("[serial] Initializing serial...");
 
     uint32_t addr = 0x3F8;
     uint32_t baud = 115200;
@@ -40,8 +42,8 @@ bool _start(KAPI_t api) {
     lcr &= 0x7F;
     outb(addr + 0x03, lcr);
 
-    api.kio.println("[serial] Mounting /dev/ttySER0...");
-    api.fio.mountStreamProvider("/dev/ttySER0", 0, _provider);
-    api.kio.println("[serial] Done.");
+    kio::println("[serial] Mounting /dev/ttySER0...");
+    fio::mountStreamProvider("/dev/ttySER0", 0, _provider, NULL);
+    kio::println("[serial] Done.");
     return true;
 }

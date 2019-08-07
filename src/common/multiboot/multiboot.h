@@ -282,3 +282,7 @@ extern "C"
     extern void ASM_STACK_BOTTOM(void);
     extern void ASM_STACK_TOP(void);
 }
+
+namespace msb {
+    extern multiboot_info_t* boot_info;
+}

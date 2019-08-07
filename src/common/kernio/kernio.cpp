@@ -115,6 +115,9 @@ namespace kio {
                         tmp = itoa(va_arg(arguments, uint64_t), 16);
                     }
                 }
+                if (_str[i] == 's') {
+                    tmp = va_arg(arguments, char*);
+                }
                 // Pad here
                 char pad[2] = {padChar, 0};
                 if (padding > tmp.length()) {
@@ -123,7 +126,6 @@ namespace kio {
                         tmp = string(&pad[0]) + tmp;
                     }
                 }
-
                 out += tmp;
             }
             else {

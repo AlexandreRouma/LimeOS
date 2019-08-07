@@ -1,8 +1,12 @@
-#include <kapi.h>
-#include <memory.h>
+#include <misc/memory.h>
 #include <string.h>
-#include <cpuio.h>
+#include <misc/cpuio.h>
 #include <stdctl/framebuffer.h>
+#include <stream.h>
+#include <vfs/vfs.h>
+#include <vfs/fileio.h>
+#include <kernio/kernio.h>
+#include <kmod/mctl.h>
 
 int TERM_WIDTH = 0;
 int TERM_HEIGHT = 0;
@@ -40,7 +44,7 @@ const RGBColor_t ANSI_COLOR_PALLET[16] = {
 };
 
 char* genDevName() {
-    vector<FSNode_t> nodes = kapi::api.vfs.listNodes("/fio/dev");
+    vector<FSNode_t> nodes = vfs::listNodes("/fio/dev");
     uint32_t count = 0;
     for (int i = 0; i < nodes.size(); i++) {
         if (strsw(nodes[i].name, "tty") && nodes[i].name[3] >= '0' && nodes[i].name[3] <= '9') {
@@ -49,7 +53,7 @@ char* genDevName() {
     }
     string num = itoa(count, 10);
     char* base = "/dev/tty";
-    char* name = (char*)kapi::api.mm.malloc(8 + num.length() + 1);
+    char* name = (char*)malloc(8 + num.length() + 1);
     memcpy(name, base, 8);
     memcpy(name + 8, num.c_str(), num.length());
     name[8 + num.length()] = 0;
@@ -61,8 +65,8 @@ uint8_t* font;
 FramebufferInfo_t fbInfo;
 
 void loadBgImg(char* path) {
-    stream_t img_stream = kapi::api.vfs.getStream(path);
-    char* buffer = (char*)kapi::api.mm.malloc(img_stream.slen);
+    stream_t img_stream = vfs::getStream(path);
+    char* buffer = (char*)malloc(img_stream.slen);
     stream::read(img_stream, buffer, img_stream.slen);
     stream::close(img_stream);
 
@@ -80,7 +84,7 @@ void loadBgImg(char* path) {
             background[((y * fbInfo.width) + x) * 4 + 2] = (float)data[((iy * 1920) + ix) * 3 + 2] * 0.2f;
         }
     }
-    kapi::api.mm.free(buffer);
+    free(buffer);
     // TODO: Add support different file and fb types.
 }
 
@@ -279,11 +283,11 @@ void print(char* str) {
 }
 
 uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
-    char* str = (char*)kapi::api.mm.malloc(len + 1);
+    char* str = (char*)malloc(len + 1);
     memcpy(str, s.buffer, len);
     str[len] = 0;
     print(str);
-    kapi::api.mm.free(str);
+    free(str);
     return len;
 }
 
@@ -295,40 +299,39 @@ void _closeHndlr(stream_t s) {
     
 }
 
-stream_t _provider() {
+stream_t _provider(void* tag) {
     return stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, 0);;
 }
 
 extern "C"
-bool _start(KAPI_t api) {
-    kapi::api = api;
-    api.kio.println("[gfx_term] Initializing graphic terminal...");
+bool _start() {
+    kio::println("[gfx_term] Initializing graphic terminal...");
 
-    if (!api.vfs.nodeExists("/fio/dev/fb0")) {
-        api.kio.println("[gfx_term] ERROR: No framebuffer device found!");
+    if (!vfs::nodeExists("/fio/dev/fb0")) {
+        kio::println("[gfx_term] ERROR: No framebuffer device found!");
         return false;
     }
 
-    int ret = api.mctl.call("/dev/fb0", FB_MCTL_CMD_GETINFO, 0, &fbInfo);
+    int ret = mctl::call("/dev/fb0", FB_MCTL_CMD_GETINFO, 0, &fbInfo);
     if (ret <= 0) {
-        api.kio.println("[gfx_term] ERROR: Could not get framebuffer information!");
+        kio::println("[gfx_term] ERROR: Could not get framebuffer information!");
         return false;
     }
     if (fbInfo.bpp != 32) {
-        api.kio.println("[gfx_term] ERROR: Only 32bpp framebuffers are currently supported!");
+        kio::println("[gfx_term] ERROR: Only 32bpp framebuffers are currently supported!");
         return false;
     }
     char* buf = (char*)fbInfo.addr;
     memset(buf, 0x00, fbInfo.pitch * fbInfo.height);
 
-    api.kio.println("[gfx_term] Loading background...");
-    background = (uint8_t*)api.mm.malloc(fbInfo.height * fbInfo.pitch);
+    kio::println("[gfx_term] Loading background...");
+    background = (uint8_t*)malloc(fbInfo.height * fbInfo.pitch);
     loadBgImg("/usr/images/dragon.bmp");
     drawBackground();
 
-    api.kio.println("[gfx_term] Loading font...");
-    stream_t font_s = api.vfs.getStream("/usr/fonts/consolas.bms");
-    font = (uint8_t*)api.mm.malloc(font_s.slen);
+    kio::println("[gfx_term] Loading font...");
+    stream_t font_s = vfs::getStream("/usr/fonts/consolas.bms");
+    font = (uint8_t*)malloc(font_s.slen);
     stream::read(font_s, (char*)font, font_s.slen);
     stream::close(font_s);
 
@@ -342,7 +345,7 @@ bool _start(KAPI_t api) {
     CHAR_HEIGHT = be_uint16(&font[6]);
     TERM_WIDTH = fbInfo.width / CHAR_WIDTH;
     TERM_HEIGHT = fbInfo.height / CHAR_HEIGHT;
-    cbuf = (TermChar_t*)api.mm.malloc(TERM_WIDTH * TERM_HEIGHT * sizeof(TermChar_t));
+    cbuf = (TermChar_t*)malloc(TERM_WIDTH * TERM_HEIGHT * sizeof(TermChar_t));
     for (int i = 0; i < TERM_WIDTH * TERM_HEIGHT; i++) {
         cbuf[i].c = ' ';
         cbuf[i].fg = fgColor;
@@ -351,17 +354,17 @@ bool _start(KAPI_t api) {
 
     drawCursor();
 
-    api.kio.print("[gfx_term] Char WIDTHxHEIGHT: ");
-    api.kio.print(itoa(CHAR_WIDTH, 10).c_str());
-    api.kio.print("x");
-    api.kio.println(itoa(CHAR_HEIGHT, 10).c_str());
+    kio::print("[gfx_term] Char WIDTHxHEIGHT: ");
+    kio::print(itoa(CHAR_WIDTH, 10).c_str());
+    kio::print("x");
+    kio::println(itoa(CHAR_HEIGHT, 10).c_str());
 
     char* name = genDevName();
-    api.kio.print("[gfx_term] Mounting ");
-    api.kio.print(name);
-    api.kio.println(" ...");
+    kio::print("[gfx_term] Mounting ");
+    kio::print(name);
+    kio::println(" ...");
 
-    api.fio.mountStreamProvider(name, FS_FLAG_O_W | FS_FLAG_O_R, _provider);
-    api.kio.println("[gfx_term] Done.");
+    fio::mountStreamProvider(name, FS_FLAG_O_W | FS_FLAG_O_R, _provider, NULL);
+    kio::println("[gfx_term] Done.");
     return true;
 }

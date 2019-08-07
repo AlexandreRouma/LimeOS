@@ -3,7 +3,6 @@
 #include <panic.h>
 #include <kernio/kernio.h>
 #include <map.h>
-#include <elf/elfldr.h>
 #include <kmod/modules.h>
 
 namespace ksc {
@@ -22,14 +21,6 @@ namespace ksc {
         kio::stdout = vfs::getStream(text.c_str());
     }
 
-    void _cmd_run(string text, vector<string> args) {
-        if (!vfs::nodeExists(text.c_str())) {
-            kpanic("Tried to switch stdout to non-existant file", 0);
-            return;
-        }
-        elfldr::run(text.c_str());
-    }
-
     void _cmd_loadmod(string text, vector<string> args) {
         if (!vfs::nodeExists(text.c_str())) {
             kpanic("Tried to load inexistant module", 0);
@@ -43,7 +34,6 @@ namespace ksc {
         commands = map<string, void (*)(string, vector<string>)>();
         commands.insert("print", _cmd_print);
         commands.insert("stdout", _cmd_stdout);
-        commands.insert("run", _cmd_run);
         commands.insert("loadmod", _cmd_loadmod);
     }
 

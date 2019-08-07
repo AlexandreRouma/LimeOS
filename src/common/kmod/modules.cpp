@@ -1,141 +1,75 @@
 #include <kmod/modules.h>
-#include <elf/elfldr.h>
 #include <map.h>
 #include <paging/paging.h>
 #include <kernio/kernio.h>
 #include <vfs/vfs.h>
-#include <kapi/api/kapi.h>
 #include <multiboot/ksyms.h>
+#include <elf/elfparser.h>
 
 namespace kmod {
     map<string,KModule_t> modules;
 
     void init(multiboot_info* boot_info) {
         modules = map<string, KModule_t>();
-        kapi::init(boot_info);
     }
 
     bool load(char* path) {
-        stream_t s = vfs::getStream(path);
-        uint32_t pages = paging::sizeToPages(s.slen);
-        char* buf = (char*)paging::allocPages(pages);
-        stream::read(s, buf, s.slen);
-        stream::close(s);
-        ELFExec mod((uint32_t)buf);
+        ELFFile_t mod = elfparser::load(path);
 
-        uint32_t end = 0;
-        vector<ELFSection_t> sect = mod.getSections();
-        for (int i = 0; i < sect.size(); i++) {
-            if (sect[i].addr + sect[i].size > end) {
-                end = sect[i].addr + sect[i].size;
+        // Load
+        uint32_t length = 0;
+        for (int i = 0; i < mod.programHeader.entryCount; i++) {
+            if (mod.programHeader.entries[i].p_vaddr + mod.programHeader.entries[i].p_memsz > length && mod.programHeader.entries[i].type == ELF_PT_LOAD) {
+                length = mod.programHeader.entries[i].p_vaddr + mod.programHeader.entries[i].p_memsz;
             }
         }
-
-        // Allocate pages
-        char* loadAddr = (char*)paging::allocPages(paging::sizeToPages(end));
-
-        // Load sections
-        for (int i = 0; i < sect.size(); i++) {
-            if (sect[i].flags & ELF_SHF_ALLOC) {
-                memcpy(sect[i].addr + loadAddr, sect[i].data, sect[i].size);
+        uint32_t basePage = paging::allocPages(paging::sizeToPages(length));
+        for (int i = 0; i < mod.programHeader.entryCount; i++) {
+            if (mod.programHeader.entries[i].type == ELF_PT_LOAD) {
+                memset((void*)(basePage + mod.programHeader.entries[i].p_vaddr), 0, mod.programHeader.entries[i].p_memsz);
+                memcpy((void*)(basePage + mod.programHeader.entries[i].p_vaddr), &mod.data[mod.programHeader.entries[i].p_offset], mod.programHeader.entries[i].p_filesz);
             }
         }
-
-        uint32_t entryPtr = 0;
-
-        vector<ELFSymbol_t> syms = mod.getSymbols();
-        for (int i = 0; i < syms.size(); i++) {
-            if (strcmp(syms[i].name, "_start")) {
-                entryPtr = syms[i].addr + (uint32_t)loadAddr;
-            }
-        }
-
-        if (entryPtr == 0) {
-            return false;
-        }
-
-        bool (*func_ptr)(KAPI_t) = (bool (*)(KAPI_t))(entryPtr);
         
-        bool ret = func_ptr(kapi::api);
-        if (ret == true) {
-            paging::setAbsent((uint32_t)buf, pages);
-            // TODO: Save module
-        }
-        return ret;
-    }
-
-    bool loadDyn(char* path, multiboot_info* multiboot_info) {
-        kio::println("Loading module...");
-        stream_t s = vfs::getStream(path);
-        uint32_t pages = paging::sizeToPages(s.slen);
-        char* buf = (char*)paging::allocPages(pages);
-        stream::read(s, buf, s.slen);
-        stream::close(s);
-        ELFExec mod((uint32_t)buf);
-
-        kio::println("Loading sections...");
-        uint32_t end = 0;
-        vector<ELFSection_t> sect = mod.getSections();
-        for (int i = 0; i < sect.size(); i++) {
-            if (sect[i].addr + sect[i].size > end) {
-                end = sect[i].addr + sect[i].size;
+        // Relocate
+        for (int tbl = 0; tbl < mod.relocTables.size(); tbl++) {
+            if (mod.relocTables[tbl].type == ELF_SHT_RELA) {
+                kio::println("OH GOD OH FUCK, ITS NOT IMPLEMENTED!!!");
+            }
+            else {
+                ELFSymbolTable_t symtab = mod.symbolTables[elfparser::getSymbolTableId(mod, mod.relocTables[tbl].symTab)];
+                for (int i = 0; i < mod.relocTables[tbl].entryCount; i++) {
+                    if (ELF_R_TYPE(mod.relocTables[tbl].relocs[i].info) == ELF_R_386_JMP_SLOT) {
+                        ELFSymbolTableEntry_t sym = symtab.symbols[mod.relocTables[tbl].relocs[i].info >> 8];
+                        if (!ksyms::symbols.exists(ELFGetString(symtab.stringTable, sym.name))) {
+                            return false;
+                        }
+                        uint32_t* ptr = (uint32_t*)(mod.relocTables[tbl].relocs[i].addr + basePage);
+                        ptr[0] = ksyms::symbols[ELFGetString(symtab.stringTable, sym.name)].addr;
+                    }
+                    if (ELF_R_TYPE(mod.relocTables[tbl].relocs[i].info) == ELF_R_386_GLOB_DAT) {
+                        ELFSymbolTableEntry_t sym = symtab.symbols[mod.relocTables[tbl].relocs[i].info >> 8];
+                        if (!ksyms::symbols.exists(ELFGetString(symtab.stringTable, sym.name))) {
+                            return false;
+                        }
+                        uint32_t* ptr = (uint32_t*)(mod.relocTables[tbl].relocs[i].addr + basePage);
+                        ptr[0] = ksyms::symbols[ELFGetString(symtab.stringTable, sym.name)].addr;
+                    }
+                    else if (ELF_R_TYPE(mod.relocTables[tbl].relocs[i].info) == ELF_R_386_RELATIVE) {
+                        uint32_t* ptr = (uint32_t*)(mod.relocTables[tbl].relocs[i].addr + basePage);
+                        ptr[0] = mod.offset + ptr[0];
+                    }
+                }
             }
         }
 
-        // Allocate pages
-        char* loadAddr = (char*)paging::allocPages(paging::sizeToPages(end));
+        // TODO: Might need to call array init and shit
 
-        // Load sections
-        kio::println("Copying sections...");
-        for (int i = 0; i < sect.size(); i++) {
-            if (sect[i].flags & ELF_SHF_ALLOC) {
-                memcpy(sect[i].addr + loadAddr, sect[i].data, sect[i].size);
-            }
-        }
+        // Call
+        bool (*func_ptr)() = (bool (*)())(mod.header->progEntryPos + basePage);
+        bool ret = func_ptr();
 
-        uint32_t entryPtr = 0;
-
-        kio::println("Loading symbols...");
-        vector<ELFSymbol_t> syms = mod.getSymbols(true);
-        for (int i = 0; i < syms.size(); i++) {
-            kio::println(syms[i].name);
-            if (strcmp(syms[i].name, "_start")) {
-                entryPtr = syms[i].addr + (uint32_t)loadAddr;
-            }
-        }
-
-        if (entryPtr == 0) {
-            kio::println("NO ENTRY POINT FOUND !!!!!!...");
-            return false;
-        }
-
-        // PATCH GOT
-
-        vector<ELFRelocate_t> relocs = mod.getRelocs();
-        kio::printf("Reloc count: %u\n", relocs.size());
-        for (int i = 0; i < relocs.size(); i++) {
-            kio::printf("Symbol index: 0x%08X,0x%08X\n", relocs[i].info >> 8, relocs[i].addr);
-            ELFSymbol_t sym = syms[relocs[i].info >> 8];
-            if (!ksyms::symbols.exists(sym.name)) {
-                kio::print("ERROR: Missing symbole: ");
-                kio::println(sym.name);
-                return false;
-            }
-            kio::print("Relocating: ");
-            kio::println(sym.name);
-            uint32_t* ptr = (uint32_t*)(relocs[i].addr + (uint32_t)loadAddr);
-            ptr[0] = ksyms::symbols[sym.name].addr;
-        }
-
-        // PATCH GOT
-
-        bool (*func_ptr)(KAPI_t) = (bool (*)(KAPI_t))(entryPtr);
-        
-        bool ret = func_ptr(kapi::api);
-        if (ret == true) {
-            paging::setAbsent((uint32_t)buf, pages);
-            // TODO: Save module
-        }
+        // TODO, free memory
         return ret;
     }
     

@@ -8,8 +8,12 @@ namespace mctl {
         _index = map<string, MCTLHandler_t>();
     }
 
-    void registerHndlr(char* dev, MCTLHandler_t handler) {
+    bool registerHndlr(char* dev, MCTLHandler_t handler) {
+        if (_index.exists(dev)) {
+            return false;
+        }
         _index.insert(dev, handler);
+        return true;
     }
 
     int call(char* dev, uint32_t id, void* in, void* out) {

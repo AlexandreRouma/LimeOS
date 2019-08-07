@@ -1,5 +1,9 @@
-#include <kapi.h>
 #include <string.h>
+#include <stream.h>
+#include <vfs/fileio.h>
+#include <paging/paging.h>
+#include <kernio/kernio.h>
+#include <misc/cpuio.h>
 
 uint32_t TERM_WIDTH = 80;
 uint32_t  TERM_HEIGHT = 25;
@@ -8,6 +12,10 @@ struct VGAChar_t {
     char c;
     uint8_t fore:4;
     uint8_t back:4;
+};
+
+const uint8_t ANSI_COLOR_PALLET[16] = {
+    0, 4, 2, 6, 1, 5, 3, 7, 8, 12, 10, 14, 9, 13, 11, 15
 };
 
 VGAChar_t* fb = (VGAChar_t*)0xB8000;
@@ -35,39 +43,77 @@ void newLine() {
     cursorY++;
 }
 
+void updateCursor(int x, int y)
+{
+	uint16_t pos = (y * TERM_WIDTH) + x;
+	outb(0x3D4, 0x0F);
+	outb(0x3D5, pos & 0xFF);
+	outb(0x3D4, 0x0E);
+	outb(0x3D5, (pos >> 8) & 0xFF);
+}
+
 int runEscCode(char* code) {
+    uint32_t codeLen = strlen(code);
+    uint32_t last = 0;
     if (code[0] == '[') {
-        uint8_t intensity = 0;
-        for (int i = 1; i < strlen(code); i++) {
-            if (code[i] == '1') {
-                intensity = 1;
-                i++;
+        uint32_t num = 0;
+        vector<int> values;
+        char suffix = '\0';
+        for (int i = 1; i < codeLen; i++) {
+            if (code[i] == ';') {
+                values.push_back(num);
+                num = 0;
+                continue;
             }
-            else if (code[i] == '3' && code[i + 2] == 'm') {
-                i++;
-                if (code[i] > '9' || code[i] < '0') {
-                    return i + 1;
+            if (code[i] >= '0' && code[i] <= '9') {
+                num *= 10;
+                num += code[i] - '0';
+                continue;
+            }
+            values.push_back(num);
+            suffix = code[i];
+            last = i;
+            break;
+        }
+
+        if (suffix == 'm') {
+            uint8_t intensity = 0;
+            for (int i = 0; i < values.size(); i++) {
+                if (values[i] == 1) {
+                    intensity = 1 << 3;
                 }
-                fgColor = (code[i] - '0') | (intensity << 3);
-                i++;
-            }
-            else if (code[i] == '4' && code[i + 2] == 'm') {
-                i++;
-                if (code[i] > '9' || code[i] < '0') {
-                    return i + 1;
+                if (values[i] >= 30 && values[i] <= 37) {
+                    fgColor = ANSI_COLOR_PALLET[(values[i] - 30) | intensity];
                 }
-                bgColor = (code[i] - '0') | (intensity << 3);
-                i++;
-            }
-            else {
-                return i + 1;
-            }
-            if (code[i] != ';') {
-                return i + 1;
+                if (values[i] >= 40 && values[i] <= 47) {
+                    bgColor =ANSI_COLOR_PALLET[(values[i] - 40) | intensity];
+                }
             }
         }
+        else if (suffix == 'H') {
+            if (values.size() != 2) {
+                return last + 1;
+            }
+            int posx = (values[1] + (values[1] == 0)) - 1;
+            int posy = (values[0] + (values[0] == 0)) - 1;
+            if (posx >= TERM_WIDTH || posy >= TERM_HEIGHT) {
+                return last + 1;
+            }
+            cursorX = posx;
+            cursorY = posy;
+        }
+        else if (suffix == 'G') {
+            if (values.size() != 1) {
+                return last + 1;
+            }
+            int posx = (values[0] + (values[0] == 0)) - 1;
+            if (posx >= TERM_WIDTH) {
+                return last + 1;
+            }
+            cursorX = posx;
+        }
     }
-    return 1;
+    return last + 1;
 }
 
 void print(char* str) {
@@ -91,14 +137,15 @@ void print(char* str) {
             continue;
         }  
     }
+    updateCursor(cursorX, cursorY);
 }
 
 uint32_t _writeHndlr(stream_t s, uint32_t len, uint64_t pos) {
-    char* str = (char*)kapi::api.mm.malloc(len + 1);
+    char* str = (char*)malloc(len + 1);
     memcpy(str, s.buffer, len);
     str[len] = 0;
     print(str);
-    kapi::api.mm.free(str);
+    free(str);
     return len;
 }
 
@@ -110,13 +157,13 @@ void _closeHndlr(stream_t s) {
     
 }
 
-stream_t _provider() {
+stream_t _provider(void* tag) {
     return stream::create(0x1000, 0, _writeHndlr, _readHndlr, _closeHndlr, 0);;
 }
 
 extern "C"
-bool _start(KAPI_t api) {
-    kapi::api = api;
+bool _start() {
+    kio::println("[vga_textmode] HELLO...");
     cursorX = 0;
     cursorY = 0;
     fgColor = 0xF;
@@ -124,10 +171,11 @@ bool _start(KAPI_t api) {
     fb = (VGAChar_t*)0xB8000;//api.boot_info->framebuffer_addr;
     TERM_WIDTH = 80;//api.boot_info->framebuffer_width;
     TERM_HEIGHT = 25;//api.boot_info->framebuffer_height;
-    api.mm.setPresent(0xB8000, 2);
-    api.kio.println("[vga_textmode] Mounting tty device...");
-    api.fio.mountStreamProvider("/dev/tty0", 0, _provider);
-    api.kio.println("[vga_textmode] Done.");
+    kio::println("[vga_textmode] HELLO2...");
+    paging::setPresent(0xB8000, 2);
+    kio::println("[vga_textmode] Mounting tty device...");
+    fio::mountStreamProvider("/dev/tty0", 0, _provider, NULL);
+    kio::println("[vga_textmode] Done.");
     for (int y = 0; y < TERM_HEIGHT; y++) {
         for (int x = 0; x < TERM_WIDTH; x++) {
             fb[(y * TERM_WIDTH) + x].c = ' ';

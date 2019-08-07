@@ -8,6 +8,6 @@ struct MCTLHandler_t {
 
 namespace mctl {
     void init();
-    void registerHndlr(char* dev, MCTLHandler_t handler);
+    bool registerHndlr(char* dev, MCTLHandler_t handler);
     int call(char* dev, uint32_t id, void* in, void* out);
 }

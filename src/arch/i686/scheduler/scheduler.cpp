@@ -70,6 +70,12 @@ uint32_t _cpp_switch_task(uint32_t esp) {
     cleanUnused();
     doCountdowns();
     nextTask();
+    if (currentId == 1) {
+        BochsBreak();
+    }
+    uint32_t* _stack = (uint32_t*)tasks[currentId].esp;
+    _stack[11] = 1 << 9; // EFLAGS with interrupt bit set
+    _stack[8] = 1 << 9;
     return tasks[currentId].esp;
 }
 

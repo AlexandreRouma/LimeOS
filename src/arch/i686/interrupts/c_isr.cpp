@@ -3,6 +3,7 @@
 #include <panic.h>
 #include <syscalls.h>
 #include <kernio/kernio.h>
+#include <misc/systicks.h>
 
 /* This defines what the stack looks like after an ISR was running */
 struct regs
@@ -57,6 +58,7 @@ extern "C"
     }
 
     void ISR_PIT(void) {
+        systicks::increment();
         outb(0x20,0x20);
     }
 

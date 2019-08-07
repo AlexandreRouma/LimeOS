@@ -22,7 +22,7 @@ void _init(multiboot_info* multiboot_info) {
     paging::init();
     paging::setPresent(0, ((uint32_t)ASM_KERNEL_END / 4096) + 1); // Allocate for the kernel
     paging::enable();
-
+    
     // ========== MEMORY MANAGEMENT ENABLED ==========
 
     // Protect modules
@@ -33,7 +33,7 @@ void _init(multiboot_info* multiboot_info) {
 
     // Protect kernel symbols
     paging::setPresent(multiboot_info->u.elf_sec.addr, paging::sizeToPages(multiboot_info->u.elf_sec.size * multiboot_info->u.elf_sec.num));
-    ELFSectionHeader_t* kern_sections = (ELFSectionHeader_t*)multiboot_info->u.elf_sec.addr;
+    ELFSectionHeaderEntry_t* kern_sections = (ELFSectionHeaderEntry_t*)multiboot_info->u.elf_sec.addr;
     for (int i = 0; i < multiboot_info->u.elf_sec.num; i++) {
         paging::setPresent(kern_sections[i].addr, paging::sizeToPages(kern_sections[i].size));
     }
