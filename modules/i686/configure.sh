@@ -1,0 +1,5 @@
+(cd vga_textmode/build && cmake ..)
+(cd serial/build && cmake ..)
+(cd grub_vbe/build && cmake ..)
+(cd gfx_term/build && cmake ..)
+(cd pci/build && cmake ..)
