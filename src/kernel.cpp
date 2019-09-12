@@ -24,7 +24,7 @@
 #include <stdctl/pci.h>
 #include <elf/elfparser.h>
 
-#define VERSION_STR "1.8.0"
+#define VERSION_STR "alpha-0.8.0"
 
 #ifndef ARCH_STR
 #define ARCH_STR "unknown"
@@ -511,6 +511,13 @@ void _kmain(uint32_t multiboot_magic, multiboot_info* multiboot_info) {
     kio::printf("\n\n");
 
     kio::println("LimeOS Kernel v" VERSION_STR "-" ARCH_STR " (Compiler version: " __VERSION__ ")\n\n");
+
+    int cnt = 0;
+    while (true) {
+        kio::printf("Hello %u\n", cnt);
+        cnt++;
+        scheduler::sleep(1000);
+    }
 
     lspci();
 

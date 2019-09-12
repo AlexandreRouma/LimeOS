@@ -1,14 +1,14 @@
 loadmod /mod/serial.elf
 stdout /fio/dev/ttySER0
 
-#loadmod /mod/vga_textmode.elf
-#stdout /fio/dev/tty0
+loadmod /mod/vga_textmode.elf
+stdout /fio/dev/tty0
 
 print Welcome to LimeOS
 
-loadmod /mod/grub_vbe.elf
-loadmod /mod/gfx_term.elf
-stdout /fio/dev/tty0
+#loadmod /mod/grub_vbe.elf
+#loadmod /mod/gfx_term.elf
+#stdout /fio/dev/tty0
 
 loadmod /mod/pci.elf
 
